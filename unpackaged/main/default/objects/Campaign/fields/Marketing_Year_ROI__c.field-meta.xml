@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Year_ROI__c</fullName>
+    <formula>IF( AmountWonOpportunities = 0, 
+
+0, 
+
+IF(Actual_Expenses_Fiscal_Year__c = 0, 
+
+0, 
+
+
+( HierarchyAmountWonOpportunities -  Actual_Expenses_Fiscal_Year__c  ) / Actual_Expenses_Fiscal_Year__c
+ 
+
+
+
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marketing Year ROI%</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Percent</type>
+</CustomField>

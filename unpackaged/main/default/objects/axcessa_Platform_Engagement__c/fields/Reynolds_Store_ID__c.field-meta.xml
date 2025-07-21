@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reynolds_Store_ID__c</fullName>
+    <description>RR store internal store ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>RR store internal store ID</inlineHelpText>
+    <label>Reynolds Store ID</label>
+    <length>7</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

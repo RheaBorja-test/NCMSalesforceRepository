@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Reviews</fullName>
+    <columns>NAME</columns>
+    <columns>Content_Review_Owner__c</columns>
+    <columns>NCM_Content_Request__c</columns>
+    <columns>NCM_Content_Version__c</columns>
+    <columns>Review_Begins__c</columns>
+    <columns>Review_Ends__c</columns>
+    <columns>Review_Summary__c</columns>
+    <columns>Version_Review_Code__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Review_Ends__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Active Reviews</label>
+</ListView>

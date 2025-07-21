@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnect_Details__c</fullName>
+    <label>Disconnect Detail</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Disconnect_Reason2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Cancel_and_Disconnect_Details</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Decreasing Company Expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>ATI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>CDK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>DSP 20 Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>Group Excellence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>NADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <valueName>NIADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Changed Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Group Dissolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Meeting Format</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Moderator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <valueName>Terminated by Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <valueName>Changed Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <valueName>Deceased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <valueName>Lost Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <valueName>Company Purchased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <valueName>Out of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Personnel Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Time Constraint</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

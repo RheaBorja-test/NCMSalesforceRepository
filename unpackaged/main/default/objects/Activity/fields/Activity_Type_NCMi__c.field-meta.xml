@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type_NCMi__c</fullName>
+    <label>Activity Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call: LVM</fullName>
+                <default>false</default>
+                <label>Call: LVM</label>
+            </value>
+            <value>
+                <fullName>Call: LVM &amp; Follow-Up Email</fullName>
+                <default>false</default>
+                <label>Call: LVM &amp; Follow-Up Email</label>
+            </value>
+            <value>
+                <fullName>Call: Not Connected</fullName>
+                <default>false</default>
+                <label>Call: Not Connected</label>
+            </value>
+            <value>
+                <fullName>Call: Not Connected &amp; Follow-Up Email</fullName>
+                <default>false</default>
+                <label>Call: Not Connected &amp; Follow-Up Email</label>
+            </value>
+            <value>
+                <fullName>Call Connect: Not Interested</fullName>
+                <default>false</default>
+                <label>Call Connect: Not Interested</label>
+            </value>
+            <value>
+                <fullName>Call Connect: Prospecting</fullName>
+                <default>false</default>
+                <label>Call Connect: Prospecting</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receives_Product_Once_Quarterly__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates these customers only receive products once per quarter and their shipping fees are adjusted accordingly.</description>
+    <inlineHelpText>Indicates these customers only receive products once per quarter and their shipping fees are adjusted accordingly.</inlineHelpText>
+    <label>Receives Product Once Quarterly</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

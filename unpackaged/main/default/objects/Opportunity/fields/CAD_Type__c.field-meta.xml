@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAD_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+    RecordTypeId,
+    &#39;012A00000000M24&#39;,&#39;Retail Ops Client&#39;,
+    &#39;0124A000000WhNT&#39;, &#39;Proprietary&#39;,
+    &#39;0124A000000WhNU&#39;, TEXT(Single_Member_Product__c),
+    &#39;0124A000001URjS&#39;, IF(
+        ISPICKVAL(Is_Second_Dealership__c, &#39;Yes&#39;),
+        &#39;20 Group Member - Second Dealership&#39;,
+        IF(
+            ISPICKVAL(Group_Id__r.Is_New_Org__c, &#39;Yes&#39;),
+            &#39;CIP Org Meeting&#39;,
+            &#39;Candidate&#39;
+
+        )
+    ),
+    &#39;-&#39;
+)</formula>
+    <label>CAD Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

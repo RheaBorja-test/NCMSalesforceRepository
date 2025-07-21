@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recovery_Product_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Temporary field for calculating Recovery in FFA</description>
+    <label>Create Recovery Journal</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

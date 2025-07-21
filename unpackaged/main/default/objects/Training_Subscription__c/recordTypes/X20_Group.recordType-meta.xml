@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group</fullName>
+    <active>true</active>
+    <label>20 Group</label>
+    <picklistValues>
+        <picklist>Lead_Source__c</picklist>
+        <values>
+            <fullName>BDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing - Convention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing - Email Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing - Print Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing - Web Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moderator%2FConsultant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Plan__c</picklist>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

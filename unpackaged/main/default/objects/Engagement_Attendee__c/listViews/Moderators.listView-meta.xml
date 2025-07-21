@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Moderators</fullName>
+    <columns>NAME</columns>
+    <columns>Engagement__c</columns>
+    <columns>Collateral_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Attendee_Type__c</field>
+        <operation>equals</operation>
+        <value>Moderator</value>
+    </filters>
+    <label>Moderators</label>
+</ListView>

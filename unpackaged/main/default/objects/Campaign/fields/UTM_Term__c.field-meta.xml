@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UTM_Term__c</fullName>
+    <description>Used when Marketo sends an activity to SFDC - this is then matched to the UTM Term Field on the Campaign to assign the opportunity/lead appropriately</description>
+    <inlineHelpText>Used when Marketo sends an activity to SFDC - this is then matched to the UTM Term Field on the Campaign to assign the opportunity/lead appropriately</inlineHelpText>
+    <label>UTM Term</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

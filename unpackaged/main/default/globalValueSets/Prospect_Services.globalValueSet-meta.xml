@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>No_CIP</fullName>
+        <default>false</default>
+        <label>No CIP</label>
+    </customValue>
+    <customValue>
+        <fullName>CIP</fullName>
+        <default>false</default>
+        <label>CIP</label>
+    </customValue>
+    <customValue>
+        <fullName>Choose Service</fullName>
+        <default>true</default>
+        <label>Choose Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck</fullName>
+        <default>false</default>
+        <label>Healthcheck</label>
+    </customValue>
+    <customValue>
+        <fullName>CIP with Healthcheck</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CIP with Healthcheck</label>
+    </customValue>
+    <description>Picklist for the CIP product and its variations</description>
+    <masterLabel>Prospect Services</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

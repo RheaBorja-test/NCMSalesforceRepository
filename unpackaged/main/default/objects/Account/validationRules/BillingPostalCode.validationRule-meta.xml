@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BillingPostalCode</fullName>
+    <active>false</active>
+    <description>Validates that the Account Billing Zip/Postal Code is in 99999 or 99999-9999 format if Billing Country is USA or blank.</description>
+    <errorConditionFormula>AND(
+OR(BillingCountry = &quot;USA&quot;, LEN(BillingCountry) = 0),
+OR(AND(LEN( BillingPostalCode ) &lt;&gt;5, LEN( BillingPostalCode ) &lt;&gt; 10),
+NOT(CONTAINS(&quot;0123456789&quot;, LEFT(  BillingPostalCode , 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 2, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 3, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 4, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 5, 1))),
+AND(
+LEN( BillingPostalCode ) = 10,
+OR(
+MID(  BillingPostalCode  , 6, 1) &lt;&gt; &quot;-&quot;,
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 7, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 8, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 9, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID(  BillingPostalCode  , 10, 1)))
+)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Billing zip code must be in 99999 or 99999-9999 format.</errorMessage>
+</ValidationRule>

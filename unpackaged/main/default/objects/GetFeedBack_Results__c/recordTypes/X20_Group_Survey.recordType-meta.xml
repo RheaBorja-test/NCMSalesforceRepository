@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Survey</fullName>
+    <active>true</active>
+    <label>20 Group Survey</label>
+    <picklistValues>
+        <picklist>Net_Promoter_Score__c</picklist>
+        <values>
+            <fullName>Detractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wants_to_be_Contacted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X20_Group_Survey_Mod_Preparedness_Txt__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neither agree nor disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

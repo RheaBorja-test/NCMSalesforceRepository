@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agenda__c</fullName>
+    <label>Agenda Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <label>Working</label>
+            </value>
+            <value>
+                <fullName>Sent for Instructor Approval</fullName>
+                <default>false</default>
+                <label>Sent for Instructor Approval</label>
+            </value>
+            <value>
+                <fullName>Sent for Client Approval</fullName>
+                <default>false</default>
+                <label>Sent for Client Approval</label>
+            </value>
+            <value>
+                <fullName>In-Production</fullName>
+                <default>false</default>
+                <label>In-Production</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

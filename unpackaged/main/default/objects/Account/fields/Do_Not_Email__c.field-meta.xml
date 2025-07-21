@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Do not email anyone at this dealership</inlineHelpText>
+    <label>Do Not Email</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

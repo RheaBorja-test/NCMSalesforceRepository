@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi</fullName>
+    <fields>Name</fields>
+    <fields>Engagement_Owner__c</fields>
+    <fields>Status__c</fields>
+    <fields>Engagement_Start__c</fields>
+    <fields>Engagement_End__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Course__c</fields>
+    <label>NCMi</label>
+</CompactLayout>

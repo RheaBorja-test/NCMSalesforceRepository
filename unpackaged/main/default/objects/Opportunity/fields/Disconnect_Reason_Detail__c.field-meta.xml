@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnect_Reason_Detail__c</fullName>
+    <label>Disconnect Reason Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Disconnected_Reason__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Changed Consultant</fullName>
+                <default>false</default>
+                <label>Changed Consultant</label>
+            </value>
+            <value>
+                <fullName>Changed NCM Product</fullName>
+                <default>false</default>
+                <label>Changed NCM Product</label>
+            </value>
+            <value>
+                <fullName>Contact - No response</fullName>
+                <default>false</default>
+                <label>Contact - No response</label>
+            </value>
+            <value>
+                <fullName>Contact - Cannot Reach Decision Maker</fullName>
+                <default>false</default>
+                <label>Contact - Cannot Reach Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Contact - Already NCM Customer</fullName>
+                <default>false</default>
+                <label>Contact - Already NCM Customer</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Value</fullName>
+                <default>false</default>
+                <label>Not Interested - Value</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Price</fullName>
+                <default>false</default>
+                <label>Not Interested - Price</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Timing</fullName>
+                <default>false</default>
+                <label>Not Interested - Timing</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Losing Dealership</fullName>
+                <default>false</default>
+                <label>Not Interested - Losing Dealership</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Business is up</fullName>
+                <default>false</default>
+                <label>Not Interested - Business is up</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Business is down</fullName>
+                <default>false</default>
+                <label>Not Interested - Business is down</label>
+            </value>
+            <value>
+                <fullName>Not Interested - With Competitor</fullName>
+                <default>false</default>
+                <label>Not Interested - With Competitor</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Doesn&#39;t Want Outside Help</fullName>
+                <default>false</default>
+                <label>Not Interested - Doesn&#39;t Want Outside Help</label>
+            </value>
+            <value>
+                <fullName>Constraint - Budget</fullName>
+                <default>false</default>
+                <label>Constraint - Budget</label>
+            </value>
+            <value>
+                <fullName>Constraint - Time</fullName>
+                <default>false</default>
+                <label>Constraint - Time</label>
+            </value>
+            <value>
+                <fullName>Group - Merged</fullName>
+                <default>false</default>
+                <label>Group - Merged</label>
+            </value>
+            <value>
+                <fullName>Group - Dissolved</fullName>
+                <default>false</default>
+                <label>Group - Dissolved</label>
+            </value>
+            <value>
+                <fullName>Group - Manufacturer Canceled</fullName>
+                <default>false</default>
+                <label>Group - Manufacturer Canceled</label>
+            </value>
+            <value>
+                <fullName>Group - Changed Groups</fullName>
+                <default>false</default>
+                <label>Group - Changed Groups</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Group - Consultant/Moderator</fullName>
+                <default>false</default>
+                <label>Incompatible with Group - Consultant/Moderator</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Group - Group Member</fullName>
+                <default>false</default>
+                <label>Incompatible with Group - Group Member</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Group - Member Dynamic</fullName>
+                <default>false</default>
+                <label>Incompatible with Group - Member Dynamic</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Group - Meeting Format</fullName>
+                <default>false</default>
+                <label>Incompatible with Group - Meeting Format</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Group - Market Conflict</fullName>
+                <default>false</default>
+                <label>Incompatible with Group - Market Conflict</label>
+            </value>
+            <value>
+                <fullName>Incompatible - Not Meeting Needs</fullName>
+                <default>false</default>
+                <label>Incompatible - Not Meeting Needs</label>
+            </value>
+            <value>
+                <fullName>Incompatible - Involuntary Move</fullName>
+                <default>false</default>
+                <label>Incompatible - Involuntary Move</label>
+            </value>
+            <value>
+                <fullName>Incompatible - Involuntarily Terminated by Group</fullName>
+                <default>false</default>
+                <label>Incompatible - Involuntarily Terminated by Group</label>
+            </value>
+            <value>
+                <fullName>Lost - Job</fullName>
+                <default>false</default>
+                <label>Lost - Job</label>
+            </value>
+            <value>
+                <fullName>Lost - Franchise</fullName>
+                <default>false</default>
+                <label>Lost - Franchise</label>
+            </value>
+            <value>
+                <fullName>Lost - Dealership</fullName>
+                <default>false</default>
+                <label>Lost - Dealership</label>
+            </value>
+            <value>
+                <fullName>Sold Dealership</fullName>
+                <default>false</default>
+                <label>Sold Dealership</label>
+            </value>
+            <value>
+                <fullName>Nonrecurring Service</fullName>
+                <default>false</default>
+                <label>Nonrecurring Service</label>
+            </value>
+            <value>
+                <fullName>NCMi - Did Not Register</fullName>
+                <default>false</default>
+                <label>NCMi - Did Not Register</label>
+            </value>
+            <value>
+                <fullName>NCMi - Class Cancelled</fullName>
+                <default>false</default>
+                <label>NCMi - Class Cancelled</label>
+            </value>
+            <value>
+                <fullName>NCMi - Individual Cancelled</fullName>
+                <default>false</default>
+                <label>NCMi - Individual Cancelled</label>
+            </value>
+            <value>
+                <fullName>NCMi - Individual No Show</fullName>
+                <default>false</default>
+                <label>NCMi - Individual No Show</label>
+            </value>
+            <value>
+                <fullName>Transferred to Other Consultant</fullName>
+                <default>false</default>
+                <label>Transferred to Other Consultant</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Program Completed</fullName>
+                <default>false</default>
+                <label>Program Completed</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Location</fullName>
+                <default>false</default>
+                <label>Not Interested - Location</label>
+            </value>
+            <value>
+                <fullName>Added Store to Subscription</fullName>
+                <default>false</default>
+                <label>Added Store to Subscription</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Changed Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <valueName>Contact - No response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <valueName>Contact - Cannot Reach Decision Maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <valueName>Contact - Already NCM Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Losing Dealership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Business is up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Business is down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - With Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Not Interested - Doesn&#39;t Want Outside Help</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Constraint - Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Constraint - Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Group - Merged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Group - Dissolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Group - Manufacturer Canceled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Group - Changed Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible with Group - Consultant/Moderator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible with Group - Group Member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible with Group - Member Dynamic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible with Group - Meeting Format</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible with Group - Market Conflict</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Lost - Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Lost - Franchise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Lost - Dealership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Sold Dealership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Prospect</controllingFieldValue>
+            <valueName>Not Interested - Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Changed NCM Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible - Not Meeting Needs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible - Involuntary Move</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Incompatible - Involuntarily Terminated by Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Nonrecurring Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>NCMi - Class Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>NCMi - Individual Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>NCMi - Individual No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Program Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost Customer</controllingFieldValue>
+            <valueName>Added Store to Subscription</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

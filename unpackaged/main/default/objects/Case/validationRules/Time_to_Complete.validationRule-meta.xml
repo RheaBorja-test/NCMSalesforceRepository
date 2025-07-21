@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_to_Complete</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+  ISPICKVAL(Status, &quot;Closed&quot;),
+ ISBLANK( Time_to_Complete__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Time_to_Complete__c</errorDisplayField>
+    <errorMessage>Please enter the number of hours and minutes as a decimal - ex: 3.25 equals 3 hours and quarter hours or 3 hours and 15 minutes.</errorMessage>
+</ValidationRule>

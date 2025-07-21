@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Member_missing_info</fullName>
+    <columns>Group_Member_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Original_Active_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Type__c</columns>
+    <columns>Group_Super_Type__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Active - Don&#39;t Bill,On Hold</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Full Member,Special_Composite,Additional_Store</value>
+    </filters>
+    <filters>
+        <field>Original_Active_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Group_Super_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Proprietary Groups,Inactive</value>
+    </filters>
+    <filters>
+        <field>Group_ID__c</field>
+        <operation>notContain</operation>
+        <value>Delete</value>
+    </filters>
+    <filters>
+        <field>Group_Super_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Samples</value>
+    </filters>
+    <label>20 Group Member Needs Data Access Date</label>
+    <sharedTo>
+        <role>Client_Success_Coordinator</role>
+        <role>Client_Success_Manager</role>
+    </sharedTo>
+</ListView>

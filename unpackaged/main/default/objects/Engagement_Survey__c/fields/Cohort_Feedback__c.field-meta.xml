@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cohort_Feedback__c</fullName>
+    <description>Survey Monkey Question: Please provide any specific feedback on the program as a whole</description>
+    <label>Cohort Feedback</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

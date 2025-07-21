@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Created__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>this is the case that created the Contact</inlineHelpText>
+    <label>Case Created</label>
+    <referenceTo>Client_Support_Ticket__c</referenceTo>
+    <relationshipLabel>Contacts</relationshipLabel>
+    <relationshipName>Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

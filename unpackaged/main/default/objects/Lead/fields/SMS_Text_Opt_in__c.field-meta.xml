@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMS_Text_Opt_in__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Opt In for SM Text Messages from NCM</description>
+    <inlineHelpText>Opt In for SM Text Messages from NCM</inlineHelpText>
+    <label>SMS Text Opt In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

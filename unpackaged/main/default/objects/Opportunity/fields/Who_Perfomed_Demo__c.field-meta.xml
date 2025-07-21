@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Who_Perfomed_Demo__c</fullName>
+    <description>Who demonstrated axcessa to the dealership?</description>
+    <label>Who Performed Demo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>David Spisak</fullName>
+                <default>false</default>
+                <label>David Spisak</label>
+            </value>
+            <value>
+                <fullName>Frank Sheets</fullName>
+                <default>false</default>
+                <label>Frank Sheets</label>
+            </value>
+            <value>
+                <fullName>Ken Runnells</fullName>
+                <default>false</default>
+                <label>Ken Runnells</label>
+            </value>
+            <value>
+                <fullName>Paul Faletti</fullName>
+                <default>false</default>
+                <label>Paul Faletti</label>
+            </value>
+            <value>
+                <fullName>Timothy Pooch</fullName>
+                <default>false</default>
+                <label>Timothy Pooch</label>
+            </value>
+            <value>
+                <fullName>Steve Eggett</fullName>
+                <default>false</default>
+                <label>Steve Eggett</label>
+            </value>
+            <value>
+                <fullName>Terence Rarick</fullName>
+                <default>false</default>
+                <label>Terence Rarick</label>
+            </value>
+            <value>
+                <fullName>Melinda Chaszeyka</fullName>
+                <default>false</default>
+                <label>Melinda Chaszeyka</label>
+            </value>
+            <value>
+                <fullName>Bonnie Clift</fullName>
+                <default>false</default>
+                <label>Bonnie Clift</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

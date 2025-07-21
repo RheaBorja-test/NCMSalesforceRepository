@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Source__c</fullName>
+    <label>Expense Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Client Advisory Board</fullName>
+                <default>false</default>
+                <label>Client Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Client Portal</fullName>
+                <default>false</default>
+                <label>Client Portal</label>
+            </value>
+            <value>
+                <fullName>Client Surveys</fullName>
+                <default>false</default>
+                <label>Client Surveys</label>
+            </value>
+            <value>
+                <fullName>Corporate events</fullName>
+                <default>false</default>
+                <label>Corporate events</label>
+            </value>
+            <value>
+                <fullName>Events &amp; Tradeshows</fullName>
+                <default>false</default>
+                <label>Events &amp; Tradeshows</label>
+            </value>
+            <value>
+                <fullName>Fulfillment</fullName>
+                <default>false</default>
+                <label>Fulfillment</label>
+            </value>
+            <value>
+                <fullName>Image Purchase</fullName>
+                <default>false</default>
+                <label>Image Purchase</label>
+            </value>
+            <value>
+                <fullName>Marketing Tools</fullName>
+                <default>false</default>
+                <label>Marketing Tools</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>RFP</fullName>
+                <default>false</default>
+                <label>RFP</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Site Hosting</fullName>
+                <default>false</default>
+                <label>Site Hosting</label>
+            </value>
+            <value>
+                <fullName>Tchotchkes</fullName>
+                <default>false</default>
+                <label>Tchotchkes</label>
+            </value>
+            <value>
+                <fullName>Team building</fullName>
+                <default>false</default>
+                <label>Team building</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Website Development</fullName>
+                <default>false</default>
+                <label>Website Development</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

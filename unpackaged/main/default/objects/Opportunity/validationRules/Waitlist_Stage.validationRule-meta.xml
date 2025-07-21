@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waitlist_Stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+   ISCHANGED(StageName), 
+   ISPICKVAL(PRIORVALUE(StageName), &#39;Waitlist&#39;),
+   NOT(ISPICKVAL(StageName, &#39;Validating Dates&#39;)),
+   NOT(ISPICKVAL(StageName, &#39;Closed Lost&#39;)),
+   NOT(ByPassValidation__c),
+   $Profile.Name &lt;&gt; &#39;System Administrator&#39;
+)</errorConditionFormula>
+    <errorMessage>On opportunity in Waitlist can only be moved to Validating Dates or Closed Lost.</errorMessage>
+</ValidationRule>

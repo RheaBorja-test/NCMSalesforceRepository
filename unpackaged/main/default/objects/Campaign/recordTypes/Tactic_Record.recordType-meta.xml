@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tactic_Record</fullName>
+    <active>true</active>
+    <description>Tactical level campaign record</description>
+    <label>Tactic Record</label>
+    <picklistValues>
+        <picklist>Ad_Type__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Goal__c</picklist>
+        <values>
+            <fullName>Cross-Sell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Acquisition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Win-Back</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Tactic__c</picklist>
+        <values>
+            <fullName>Adwords - PPC Keywords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ad External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ad Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beep DVM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Complex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Simple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Composite Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Linked In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Ad Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Ad Linked In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video In Studio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video On Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Core_Service_Type__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Talent Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM %2F Group Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>aXcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Creative_Piece__c</picklist>
+        <values>
+            <fullName>Exhibit Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postcard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Mailer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Focus_Area_Detail__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Composite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Dealership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Hosted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UVPIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Focus_Area__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event %2F Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General NCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM On-Demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>axcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NCM_Industry__c</picklist>
+        <values>
+            <fullName>Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Automotive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axcessa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCMi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning Stage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Banner Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beep DVM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

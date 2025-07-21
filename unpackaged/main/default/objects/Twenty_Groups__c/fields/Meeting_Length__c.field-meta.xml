@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Length__c</fullName>
+    <description>How many days long is each meeting?</description>
+    <label>Meeting Format</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-1/2 Days</fullName>
+                <default>false</default>
+                <label>1-1/2 Days</label>
+            </value>
+            <value>
+                <fullName>1st Night &amp; 1-1/2 Days</fullName>
+                <default>false</default>
+                <label>1st Night &amp; 1-1/2 Days</label>
+            </value>
+            <value>
+                <fullName>2 Full Days</fullName>
+                <default>false</default>
+                <label>2 Full Days</label>
+            </value>
+            <value>
+                <fullName>3, 1/2 Days</fullName>
+                <default>false</default>
+                <label>3, 1/2 Days</label>
+            </value>
+            <value>
+                <fullName>Varies by Cycle</fullName>
+                <default>false</default>
+                <label>Varies by Cycle</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Composite Only</fullName>
+                <default>false</default>
+                <label>Composite Only</label>
+            </value>
+            <value>
+                <fullName>Composite Only – Run on Request</fullName>
+                <default>false</default>
+                <label>Composite Only – Run on Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

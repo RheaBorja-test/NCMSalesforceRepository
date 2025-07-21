@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Waitlists__c</fullName>
+    <description>displays the total number of waitlists attached to a class that a student is about to be booked into.</description>
+    <label>Active Waitlists</label>
+    <summaryFilterItems>
+        <field>Engagement_Waitlist__c.Waitlist_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled, Expired</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Engagement_Waitlist__c.Engagement_Attendee__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Consulting_Program</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Consulting Program</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a06/e?Name={!Opportunity.Name}&amp;CF00NA0000001jKHt={!Contact.Name}&amp;CF00NG000000D3p2Z={!Opportunity.Name}&amp;CF00NG0000008RURe={!Opportunity.Account}&amp;00NA0000002SBUP={!Opportunity.LeadSource}&amp;00NG0000008SXy6={!Opportunity.Lead_Description__c}&amp;00NA0000001ks0b={!Opportunity.Consultant__c}&amp;00NA0000001jKJ5={!Opportunity.CloseDate}&amp;00NG0000008SmLY=&quot;Started Program&quot;&amp;RecordType=012A00000000Mhr&amp;ent=01IA00000003bVc</url>
+</WebLink>

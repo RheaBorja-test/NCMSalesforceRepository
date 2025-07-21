@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>20 Group Offer</fullName>
+        <default>false</default>
+        <label>20 Group Offer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Click</fullName>
+        <default>false</default>
+        <label>Click</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clickled</fullName>
+        <default>false</default>
+        <label>Clickled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Me</fullName>
+        <default>false</default>
+        <label>Contact Me</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Converted</fullName>
+        <default>false</default>
+        <label>Converted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Clicked</fullName>
+        <default>false</default>
+        <label>Email Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Opened</fullName>
+        <default>false</default>
+        <label>Email Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+        <label>Engaged</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Filled Out Form</fullName>
+        <default>false</default>
+        <label>Filled Out Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Filled-out Form</fullName>
+        <default>false</default>
+        <label>Filled-out Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Form Submission</fullName>
+        <default>false</default>
+        <label>Form Submission</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Form Submitted</fullName>
+        <default>false</default>
+        <label>Form Submitted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>I&#39;m Interested</fullName>
+        <default>false</default>
+        <label>I&#39;m Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Influenced</fullName>
+        <default>false</default>
+        <label>Influenced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested</fullName>
+        <default>false</default>
+        <label>Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested - NCMi</fullName>
+        <default>false</default>
+        <label>Interested - NCMi</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested - RS</fullName>
+        <default>false</default>
+        <label>Interested - RS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested - SS</fullName>
+        <default>false</default>
+        <label>Interested - SS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Known User - Downloaded</fullName>
+        <default>false</default>
+        <label>Known User - Downloaded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Let&#39;s Talk</fullName>
+        <default>false</default>
+        <label>Let&#39;s Talk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lets Talk</fullName>
+        <default>false</default>
+        <label>Lets Talk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Member</fullName>
+        <default>false</default>
+        <label>Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NCMi Offer</fullName>
+        <default>false</default>
+        <label>NCMi Offer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NCMi - Reserve Now</fullName>
+        <default>false</default>
+        <label>NCMi - Reserve Now</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NCM Lead</fullName>
+        <default>false</default>
+        <label>NCM Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Test</fullName>
+        <default>false</default>
+        <label>Test</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Form</fullName>
+        <default>false</default>
+        <label>Visited Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Webpage</fullName>
+        <default>false</default>
+        <label>Visited Webpage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Website</fullName>
+        <default>false</default>
+        <label>Visited Website</label>
+    </standardValue>
+</StandardValueSet>

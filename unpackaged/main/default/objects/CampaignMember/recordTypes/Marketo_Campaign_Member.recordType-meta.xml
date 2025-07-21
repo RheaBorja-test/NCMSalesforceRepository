@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketo_Campaign_Member</fullName>
+    <active>true</active>
+    <description>Campaign members added via Marketo sync</description>
+    <label>Marketo Campaign Member</label>
+</RecordType>

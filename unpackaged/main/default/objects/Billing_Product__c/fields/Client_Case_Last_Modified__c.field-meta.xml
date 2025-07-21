@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Case_Last_Modified__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is the last Case to have modified the Billing Product</description>
+    <label>Client Case Last Modified</label>
+    <referenceTo>Client_Support_Ticket__c</referenceTo>
+    <relationshipLabel>Billing Products (Client Case Last Modified)</relationshipLabel>
+    <relationshipName>Billing_Products_Last_Modified</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

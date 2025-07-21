@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consultant__c</fullName>
+    <label>Consultant</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>John Ahlstrom</fullName>
+                <default>false</default>
+                <label>John Ahlstrom</label>
+            </value>
+            <value>
+                <fullName>Tony Albertson</fullName>
+                <default>false</default>
+                <label>Tony Albertson</label>
+            </value>
+            <value>
+                <fullName>Ron Caruso</fullName>
+                <default>false</default>
+                <label>Ron Caruso</label>
+            </value>
+            <value>
+                <fullName>Gregory Criss</fullName>
+                <default>false</default>
+                <label>Gregory Criss</label>
+            </value>
+            <value>
+                <fullName>Tom Gietl</fullName>
+                <default>false</default>
+                <label>Tom Gietl</label>
+            </value>
+            <value>
+                <fullName>John Gilbert</fullName>
+                <default>false</default>
+                <label>John Gilbert</label>
+            </value>
+            <value>
+                <fullName>Dennis Gregg</fullName>
+                <default>false</default>
+                <label>Dennis Gregg</label>
+            </value>
+            <value>
+                <fullName>Garry House</fullName>
+                <default>false</default>
+                <label>Garry House</label>
+            </value>
+            <value>
+                <fullName>John Maddock</fullName>
+                <default>false</default>
+                <label>John Maddock</label>
+            </value>
+            <value>
+                <fullName>Bruce Mennella</fullName>
+                <default>false</default>
+                <label>Bruce Mennella</label>
+            </value>
+            <value>
+                <fullName>Don Rothrauff</fullName>
+                <default>false</default>
+                <label>Don Rothrauff</label>
+            </value>
+            <value>
+                <fullName>Paul Stowe</fullName>
+                <default>false</default>
+                <label>Paul Stowe</label>
+            </value>
+            <value>
+                <fullName>Terry Wichmann</fullName>
+                <default>false</default>
+                <label>Terry Wichmann</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

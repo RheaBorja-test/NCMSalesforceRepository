@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhoneTest__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK(Sponsor__r.MobilePhone ),
+NULL,
+&quot;(&quot;&amp;
+ MID(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( Sponsor__r.MobilePhone  , &quot;.&quot;, &#39;&#39;),&quot;-&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),1,3)&amp;
+ &quot;) &quot;&amp;
+ MID(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( Sponsor__r.MobilePhone  , &quot;.&quot;, &#39;&#39;),&quot;-&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),4,3)&amp;
+ &quot;-&quot;&amp;
+ MID(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( Sponsor__r.MobilePhone  , &quot;.&quot;, &#39;&#39;),&quot;-&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),7,4)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sponsor Mobile</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

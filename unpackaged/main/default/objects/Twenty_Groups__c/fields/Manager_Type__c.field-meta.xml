@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_Type__c</fullName>
+    <description>Select an option if Group Type = Manager/Direct and Dealer Group Manager</description>
+    <label>Manager Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Group_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CFO/Controller</fullName>
+                <default>false</default>
+                <label>CFO/Controller</label>
+            </value>
+            <value>
+                <fullName>Collison Body Shop Manager/Director</fullName>
+                <default>false</default>
+                <label>Collison Body Shop Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Finance Manager/Director</fullName>
+                <default>false</default>
+                <label>Finance Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Fixed Operations Manager/Director</fullName>
+                <default>false</default>
+                <label>Fixed Operations Manager/Director</label>
+            </value>
+            <value>
+                <fullName>HR Manager/Director</fullName>
+                <default>false</default>
+                <label>HR Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Internet/BDC Manager/Director</fullName>
+                <default>false</default>
+                <label>Internet/BDC Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Marketing Manager/Director</fullName>
+                <default>false</default>
+                <label>Marketing Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Parts Manager/Director</fullName>
+                <default>false</default>
+                <label>Parts Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Service Manager/Director</fullName>
+                <default>false</default>
+                <label>Service Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Manager/Director</fullName>
+                <default>false</default>
+                <label>Used Vehicle Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Variable Operations Manager/Director</fullName>
+                <default>false</default>
+                <label>Variable Operations Manager/Director</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>CFO/Controller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Collison Body Shop Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Finance Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Fixed Operations Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>HR Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Internet/BDC Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Marketing Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Parts Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Service Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Used Vehicle Manager/Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manager/Director</controllingFieldValue>
+            <controllingFieldValue>Dealer Group Manager</controllingFieldValue>
+            <valueName>Variable Operations Manager/Director</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

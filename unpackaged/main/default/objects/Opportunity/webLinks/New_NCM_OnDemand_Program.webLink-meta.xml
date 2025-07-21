@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_NCM_OnDemand_Program</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New NCM OnDemand Program</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a06/e?Name={!Opportunity.Name}&amp;CF00NG000000D4KdF= {!Opportunity.Course_Old__c}&amp;00NG0000008RIvq={!Opportunity.Amount}&amp;CF00NG0000008RBrX={!Opportunity.Group_Id__c }&amp;CF00NA0000001jKHt={!Contact.Name}&amp;CF00NG0000008RURe={!Opportunity.Account}&amp;CF00NG000000D3p2Z={!Opportunity.Name}&amp;CF00NG0000008RURe={!Opportunity.Account}&amp;00NG000000D4XgE={!Opportunity.OnDemand_Upgrade_Commission__c}&amp;00NG000000D4KdF={!Opportunity.Course_Old__c}&amp;00NA0000002SBUP={!Opportunity.LeadSource}&amp;00NG0000008RrKH={!Opportunity.CloseDate}&amp;00NG0000008SXy6={!Opportunity.Lead_Description__c}&amp;RecordType=012G0000000WLjx&amp;
+ent=01IA00000003bVc</url>
+</WebLink>

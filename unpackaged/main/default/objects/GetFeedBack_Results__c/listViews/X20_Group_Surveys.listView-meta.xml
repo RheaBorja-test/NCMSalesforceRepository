@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Surveys</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>X20_Group_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>X20_Group__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>GetFeedBack_Results__c.X20_Group_Survey</value>
+    </filters>
+    <label>20 Group Surveys</label>
+</ListView>

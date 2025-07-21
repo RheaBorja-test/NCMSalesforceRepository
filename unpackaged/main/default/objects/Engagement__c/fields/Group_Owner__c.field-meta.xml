@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Owner__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(X20_Group__r.NCM_Proprietor__r.FirstName),Proprietary_Group__r.Group_Owner__r.FirstName &amp; &quot; &quot; &amp; Proprietary_Group__r.Group_Owner__r.LastName,X20_Group__r.NCM_Proprietor__r.FirstName &amp; &quot; &quot; &amp; 
+X20_Group__r.NCM_Proprietor__r.LastName)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Group Owner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

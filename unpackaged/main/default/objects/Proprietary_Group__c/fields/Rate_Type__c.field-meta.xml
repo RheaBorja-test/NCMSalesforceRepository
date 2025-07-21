@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Type__c</fullName>
+    <label>Rate Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Monthly Fixed Dealer Rate</fullName>
+                <default>false</default>
+                <label>Monthly Fixed Dealer Rate</label>
+            </value>
+            <value>
+                <fullName>Monthly Fixed Group Rate</fullName>
+                <default>false</default>
+                <label>Monthly Fixed Group Rate</label>
+            </value>
+            <value>
+                <fullName>Monthly Rate Schedule</fullName>
+                <default>false</default>
+                <label>Monthly Rate Schedule</label>
+            </value>
+            <value>
+                <fullName>Moratorium - Monthly Fixed Dealer Rate</fullName>
+                <default>false</default>
+                <label>Moratorium - Monthly Fixed Dealer Rate</label>
+            </value>
+            <value>
+                <fullName>Moratorium - Monthly Fixed Group Rate</fullName>
+                <default>false</default>
+                <label>Moratorium - Monthly Fixed Group Rate</label>
+            </value>
+            <value>
+                <fullName>Special Bill - Per Attendee</fullName>
+                <default>false</default>
+                <label>Special Bill - Per Attendee</label>
+            </value>
+            <value>
+                <fullName>Special Bill - Per Day</fullName>
+                <default>false</default>
+                <label>Special Bill - Per Day</label>
+            </value>
+            <value>
+                <fullName>Special Bill - Per Dealer</fullName>
+                <default>false</default>
+                <label>Special Bill - Per Dealer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

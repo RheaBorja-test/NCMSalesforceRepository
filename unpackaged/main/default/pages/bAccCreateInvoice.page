@@ -1,0 +1,178 @@
+<apex:page standardController="Billing_Account__c" extensions="bAccCrtInvEXT" doctype="html-5.0" title="Billing Account: {!bAcc.Name}" sidebar="false" applyBodyTag="true" applyHtmlTag="true" lightningStylesheets="true">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
+    <apex:slds />
+        <apex:includeLightning />
+            <script>
+            var j$ = jQuery.noConflict();
+    </script>
+    
+    <div class="slds-page-header">
+        <div class="slds-media">
+            <div class="slds-media__figure">
+                <span title="Description of icon when needed" class="slds-icon_container slds-icon-custom-custom87">
+                    <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/custom-sprite/svg/symbols.svg#custom87')}" />
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h1 title="Billing Account: {!bAcc.Name}" class="slds-page-header__title slds-truncate slds-align-middle">Billing Account: {!bAcc.Name}</h1>
+                <p class="slds-text-body_small slds-line-height_reset"></p>
+            </div>
+        </div>
+    </div>
+    
+    <apex:form styleClass="slds-form"> 
+        <div class="slds-box">
+            <div class="slds-grid slds-grid_pull-padded-small slds-wrap">
+                <apex:repeat value="{!$ObjectType.Billing_Account__c.fieldsets.Highlight_Fields}" var="fieldValue">
+                    <div class="slds-col slds-p-horizontal_small slds-size_1-of-4">
+                        <div class="slds-form-element slds-form-element_edit slds-hint-parent">
+                            <label class="slds-form-element__label" for="assigned-to">
+                                {!fieldValue.Label}
+                            </label>
+                            <div class="slds-form-element__control">
+                                <apex:outputField id="assigned-to" value="{!bAcc[fieldValue]}" styleClass="slds-form-element__static"/>
+                            </div>
+                        </div>
+                    </div>
+                </apex:repeat>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_1-of-4">
+                <div class="slds-form-element slds-form-element_edit slds-hint-parent">
+                    <label class="slds-form-element__label" for="dim1">
+                        Dimension 1
+                    </label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField value="{!fBprod.Dimension_1__c}" id="dim1" required="true" styleClass="slds-input slds-combobox_container"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_1-of-4">
+                <div class="slds-form-element slds-form-element_edit slds-hint-parent">
+                    <label class="slds-form-element__label" for="dim1">
+                        Dimension 2
+                    </label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField value="{!fBprod.Dimension_2__c}" id="dim2" required="true" styleClass="slds-input slds-combobox_container"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-col slds-p-around_small slds-size_1-of-4">
+                <div class="slds-form-element slds-form-element_edit slds-hint-parent">
+                    <label class="slds-form-element__label" for="invDte">
+                        Custom Invoice Date
+                    </label>
+                    <div class="slds-form-element__control">
+                        <apex:input value="{!cstInvDate}" type="date" id="invDte" styleClass="slds-input "/>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-col slds-p-around_small slds-size_1-of-1">
+                <div class="slds-p-top_medium slds-p-bottom_medium slds-button-group">
+                    <apex:commandButton action="{!crt}" value="Create Invoice" styleClass="slds-button slds-button_success"/>
+                    <apex:commandLink action="{!Cancel}" value="Cancel" immediate="true" styleClass="slds-button slds-button_destructive"/>
+                </div>
+            </div>
+            
+            <div class="slds-col slds-p-around_small slds-size_1-of-1">
+                <div class="slds-p-top_medium slds-p-bottom_medium slds-button-group">
+                    <apex:commandButton action="{!slctAll}" value="Select All" reRender="bProdTable" styleClass="slds-button slds-button_outline-brand"/>
+                    <apex:commandButton action="{!unslctAll}" value="Unselect All" reRender="bProdTable" styleClass="slds-button slds-button_brand"/>
+                </div>
+
+                <div class="slds-p-top_medium slds-p-bottom_medium slds-button-group">
+                    <apex:commandButton action="{!fltr}" value="Filter" reRender="bProdTable" styleClass="slds-button slds-button_outline-brand"/>
+                </div>
+
+                <div class="slds-p-top_medium slds-p-bottom_medium slds-button-group">
+                    <apex:commandButton action="{!advAll}" value="Advance All" reRender="bProdTable" styleClass="slds-button slds-button_outline-brand"/>
+                    <apex:commandButton action="{!unadvAll}" value="Don't Advance Any" reRender="bProdTable" styleClass="slds-button slds-button_brand"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-top_small " title="Billing Products">Billing Products</span>
+            </h3>
+            
+            <div aria-hidden="false" class="slds-section__content" >
+                <apex:outputPanel id="bProdTable">
+                    <apex:dataTable value="{!bProds}" var="wBprod"  styleClass="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped" rowClasses="slds-truncate" columnClasses="slds-truncate">
+                        
+                        <apex:column >
+                            <apex:facet name="header"><div class="slds-text-title_caps">Select</div></apex:facet>
+                            <div class="slds-checkbox_add-button" >
+                                <apex:inputCheckbox styleclass="slds-assistive-text" id="checkbox" value="{!wBprod.selected}" />
+                                <apex:outputLabel for="checkbox" styleClass="slds-checkbox_faux">
+                                    <apex:outputPanel styleClass="slds-assistive-text">Add Product</apex:outputPanel>
+                                </apex:outputLabel>
+                            </div>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:facet name="header"><div class="slds-text-title_caps">Advance Cycle?</div></apex:facet>
+                            <label class="slds-checkbox_toggle slds-grid">
+                                <span class="slds-form-element__label slds-m-bottom_none">Advance?</span>
+                                <apex:inputCheckbox value="{!wBprod.advance}" title="checkbox-toggle-3" html-aria-describedby="checkbox-toggle-3"/>
+                                <span id="checkbox-toggle-3" class="slds-checkbox_faux_container" aria-live="assertive">
+                                    <span class="slds-checkbox_faux"></span>
+                                    <span class="slds-checkbox_on">Advance</span>
+                                    <span class="slds-checkbox_off">Leave Alone</span>
+                                </span>
+                            </label>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="slds-text-title_caps" value="CEM"/>
+                            </apex:facet>
+                            <a onclick="window.top.location.href = '/{!wBprod.bProd.CEM_Id__c}'" id="{!wBprod.bProd.CEM_Id__c}" position="relative"
+                               onblur="LookupHoverDetail.getHover('{!wBprod.bProd.CEM_Id__c}').hide();"
+                               onfocus="LookupHoverDetail.getHover('{!wBprod.bProd.CEM_Id__c}', '/{!wBprod.bProd.CEM_Id__c}/m?retURL=%2F{!wBprod.bProd.CEM_Id__c}&isAjaxRequest=1').show();"
+                               onmouseout="LookupHoverDetail.getHover('{!wBprod.bProd.CEM_Id__c}').hide();"
+                               onmouseover="LookupHoverDetail.getHover('{!wBprod.bProd.CEM_Id__c}', '/{!wBprod.bProd.CEM_Id__c}/m?retURL=%2F{!wBprod.bProd.CEM_Id__c}&isAjaxRequest=1').show();">
+                                {!wBprod.bProd.CEM_Name__c}
+                            </a>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="slds-text-title_caps" value="Billing Product"/>
+                            </apex:facet>
+                            <a onclick="window.top.location.href = '/{!wBprod.bProd.Id}'" id="{!wBprod.bProd.Id}" position="relative"
+                               onblur="LookupHoverDetail.getHover('{!wBprod.bProd.Id}').hide();"
+                               onfocus="LookupHoverDetail.getHover('{!wBprod.bProd.Id}', '/{!wBprod.bProd.Id}/m?retURL=%2F{!wBprod.bProd.Id}&isAjaxRequest=1').show();"
+                               onmouseout="LookupHoverDetail.getHover('{!wBprod.bProd.Id}').hide();"
+                               onmouseover="LookupHoverDetail.getHover('{!wBprod.bProd.Id}', '/{!wBprod.bProd.Id}/m?retURL=%2F{!wBprod.bProd.Id}&isAjaxRequest=1').show();">
+                                {!wBprod.bProd.Name}
+                            </a>
+                        </apex:column>
+                        
+                        <apex:repeat value="{!$ObjectType.Billing_Product__c.fieldsets.Billing_Configuration_Columns}" var="fieldValue">
+                            <apex:column >
+                                <apex:facet name="header"><div class="slds-text-title_caps">{!fieldValue.Label}</div></apex:facet>
+                                <apex:inputField value="{!wBprod.bProd[fieldValue]}" styleClass="slds-input slds-combobox_container"/>
+                            </apex:column>
+                        </apex:repeat>
+                        
+                    </apex:dataTable>
+                </apex:outputPanel>
+            </div>
+        </div>
+    </apex:form>
+    
+    <script>
+    j$('.slds-section__title-action').click(function(){
+        j$(this).parent().parent().toggleClass('slds-is-open');
+    }); 
+    </script>
+    
+</apex:page>

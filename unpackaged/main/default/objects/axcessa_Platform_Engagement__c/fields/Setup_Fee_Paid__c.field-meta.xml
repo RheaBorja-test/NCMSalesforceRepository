@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Setup_Fee_Paid__c</fullName>
+    <description>&quot;Setup fee from sales process - similar to CIP - if CC form filled out on reg form then immediately checked otherwise this is a follow up to Rey Rey
+&quot;</description>
+    <inlineHelpText>Setup fee from sales process - similar to CIP - if CC form filled out on reg form then immediately checked otherwise this is a follow up to Rey Rey</inlineHelpText>
+    <label>Setup Fee Paid</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

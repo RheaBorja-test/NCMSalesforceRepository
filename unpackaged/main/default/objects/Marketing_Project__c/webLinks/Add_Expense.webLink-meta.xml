@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Expense</fullName>
+    <availability>online</availability>
+    <description>Create a marketing expense record and attachment</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Add Expense</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/setup/ui/recordtypeselect.jsp?ent=01IG0000002qWF4&amp;retURL=%2Fa0K%2Fo&amp;save_new_url=%2Fa0K%2Fe%3FretURL%3D%252Fa0K%252Fo
+&amp;CF00NG000000EcZTI={!Marketing_Project__c.Name}
+&amp;CF00NG000000EcZTf={!Marketing_Project__c.Core_Service__c}
+&amp;00NG000000EcZTj={!Marketing_Project__c.Campaign_Tactic__c}
+&amp;retURL=%2F{!Marketing_Project__c.Id}</url>
+</WebLink>

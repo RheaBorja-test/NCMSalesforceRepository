@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Approved__c</fullName>
+    <label>If Approved</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Need HR to register me</fullName>
+                <default>false</default>
+                <label>Need HR to register me</label>
+            </value>
+            <value>
+                <fullName>Will register on my own</fullName>
+                <default>false</default>
+                <label>Will register on my own</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

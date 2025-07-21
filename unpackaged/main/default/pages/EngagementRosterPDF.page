@@ -1,0 +1,217 @@
+<apex:page standardController="Engagement__c" 
+    extensions="EngagementRosterPDFController" 
+    applyBodyTag="false" 
+    applyHtmlTag="false" 
+    standardStylesheets="false"
+    showHeader="false"
+    >
+
+    <html>
+        <head>
+            <style>                
+                @media print {                     
+                    header {
+                        position: fixed;
+                        top: 0;
+                    }
+                }
+                @page {
+                    size: letter;
+                    margin: 1cm;
+                }    
+                body { 
+                    font-family: 'Arial Unicode MS'; 
+                    font-size:{!fontSize}px;
+                    margin: 0px;
+                    padding: 10px;
+                }
+                .mainContainer{
+                    word-wrap:break-word;
+                }
+                .fixedTable {
+                    width: 100%;
+                    table-layout:fixed;
+                    border-collapse: collapse;
+                }
+                .hd {
+                    font-size: 12px;
+                }
+                .narrow{
+                    width:{!colWidth}px;
+                    text-align:center;
+                }
+                .vertical{
+                    writing-mode: vertical-lr;
+                    text-orientation: mixed;
+                }
+                .bottom-align{
+                    text-align:center;
+                    vertical-align:bottom;
+                }
+                .legend{
+                    width:{!legendWidth}px;
+                }
+                table tr td {                
+                    border: 1px solid;
+                    border-collapse: collapse;
+                    paginate: paginate;
+                }
+                .footerTable {
+                    border: 0px;
+                    margin-top: 10px;
+                    width: 100%;
+                    table-layout:fixed;
+                }
+                .greenFont {
+                    color: #32CD32;
+                }
+                .greyBG {
+                    background-color: #D3D3D3;
+                }
+            </style>
+        
+        </head>
+        <body>
+            <div class="mainContainer" >
+                <!--container table-->
+                <table>
+                    <thead>
+                    <tr>
+                        <td>
+
+                <table class="fixedTable hd">
+                    <!-- MEETING HEADER -->
+                    <tr>
+                        <td colspan="1">
+                            Hotel: {!eng.hotelName}<br/>
+                            Rooming Nights: {!eng.hotelStartDate} to {!eng.hotelEndDate}<br/>
+                            Meeting Dates: {!eng.startDate} to {!eng.endDate}<br/>
+                            Hotel Deadline: {!eng.hotelDeadline}
+                        </td>
+                        <td colspan="3">
+                            <p align="center">
+                                MEETING ACTIVITY / ATTENDANCE ROSTER<br/>
+                                GROUP {!eng.groupNumber} - CYCLE {!eng.meetingCycle}<br/>
+                                {!eng.groupName}
+                            </p>
+                        </td>
+                    </tr> 
+                </table>
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                <!-- Main Roster table column headers-->
+                <table class="fixedTable report-container">
+                    <thead>
+                    <tr>
+                        <td colspan="13" class="legend">
+                            <div class="greenFont"> Member Candidate</div>
+                            SP - Speaker<br/>
+                            VS - Visitor<br/>
+                            A - Attending<br/>
+                            D - Duplicate<br/>
+                            * - Not Attending<br/>
+                            ? - Awaiting Response
+                        </td>
+        
+                        <td rowspan="2" class="bottom-align vertical narrow">STATUS</td>
+                        <td rowspan="2" class="bottom-align vertical narrow">ADULTS</td>
+                        <td rowspan="2" class="bottom-align vertical narrow">TEENS</td>
+                        <td rowspan="2" class="bottom-align vertical narrow">CHILDREN</td>
+
+                        <td rowspan="2" class="bottom-align">ARRIVAL</td>
+
+                        <td rowspan="2" class="bottom-align vertical narrow" nowrap="true">HOTEL CONFIRMED</td>
+                        <td rowspan="2" class="bottom-align vertical narrow" nowrap="true">IN MEETING ROOM</td>
+                        <td rowspan="2" class="bottom-align">IN MEETING</td>
+                        <td rowspan="2" class="bottom-align">OTHER PEOPLE</td>
+                        <td rowspan="2" class="bottom-align vertical narrow">NUMBER OF ROOMS</td>
+        
+                        <apex:repeat value="{!eng.activities}" var="activity" id="engActivities">
+                            <td rowspan="2" class="bottom-align vertical narrow" nowrap="true">{!activity.Name}</td>
+                        </apex:repeat>
+                    </tr>
+                    
+
+                    <tr>
+                        <td colspan="2" class="bottom-align center-align">#</td> 
+                        <td colspan="11" class="bottom-align">MEMBER NAME</td>
+                    </tr>
+                </thead>
+        
+                    <apex:repeat value="{!eng.attendees}" var="att" id="attendeeList">
+                        <tr class="{!att.color2}">
+                            <td class="{!att.color}" colspan="2">{!att.memberNumber}</td>
+                            <td colspan="11">{!att.name}</td> 
+                            <td>{!att.attendeeStatus}</td>
+                            <td class="narrow">{!att.numAdults}</td>
+                            <td class="narrow">{!att.numTeens}</td>
+                            <td class="narrow">{!att.numChildren}</td>
+                            
+                            <td>
+                                <!--{!att.arrivalDetail}-->
+                                <apex:outputText rendered="{!att.attendeeStatus == '*'}">
+                                    Not Attending
+                                </apex:outputText>
+                                <apex:outputText rendered="{!att.attendeeStatus == 'D'}">
+                                    Duplicate
+                                </apex:outputText>
+                                <apex:outputText rendered="{!att.attendeeStatus == 'A'}">
+                                    {!att.arrivalDate} - {!att.departureDate}<br/>
+                                    {!att.hotelConfirmationNumber}
+                                </apex:outputText>
+                            </td>
+                            <td class="narrow">{!att.hotelConfirmed}</td>
+                            <td class="narrow">{!att.numInMeetingRoom}</td>
+                            <td class="bottom-align">{!att.peopleInMeeting}</td>
+                            <td class="bottom-align">{!att.otherPeople}</td>
+                            <td class="narrow">{!att.numRooms}</td>
+        
+                            <!-- These will vary by the number of activities -->
+                            <apex:repeat value="{!att.activities}" var="activity">
+                                <td class="narrow">{!activity.numParticipants}</td>
+                            </apex:repeat>
+        
+                        </tr>
+                    </apex:repeat>
+                    
+        
+                    <!-- table footer row -->
+                    <tr>
+                        <td colspan="13">Total</td>
+                        <td></td>
+                        <td class="narrow">{!eng.totalAdults}</td>
+                        <td class="narrow">{!eng.totalTeens}</td>
+                        <td class="narrow">{!eng.totalChildren}</td>
+                        <td></td>
+                        <td style="text-align: center"></td>
+                        <td class="narrow">{!eng.totalInMeetingRoom}</td>
+                        <td style="text-align: center"></td>
+                        <td style="text-align: center"></td>
+                        <td style="text-align: center">{!eng.totalRooms}</td>
+                        <!-- These will vary by the number of activities -->
+                        <apex:repeat value="{!eng.activities}" var="activity" id="engActivitieSummary">
+                            <td class="narrow">{!activity.headCount}</td>
+                        </apex:repeat>
+                    </tr>
+                <!-- footer -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="{!numCols}">
+                                Printed {!currDateTime}
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                    </td>
+                </tr>
+            </table>
+            </div>
+            
+        </body>
+    </html>
+
+</apex:page>

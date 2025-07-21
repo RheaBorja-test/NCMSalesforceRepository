@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesperson__c</fullName>
+    <description>Who is the salesperson responsible for working the deal</description>
+    <label>Salesperson</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>House Deal</fullName>
+                <default>false</default>
+                <label>House Deal</label>
+            </value>
+            <value>
+                <fullName>Jared Bowers</fullName>
+                <default>false</default>
+                <label>Jared Bowers</label>
+            </value>
+            <value>
+                <fullName>John Post</fullName>
+                <default>false</default>
+                <label>John Post</label>
+            </value>
+            <value>
+                <fullName>Jon Fink</fullName>
+                <default>false</default>
+                <label>Jon Fink</label>
+            </value>
+            <value>
+                <fullName>Melinda Chaszeyka</fullName>
+                <default>false</default>
+                <label>Melinda Chaszeyka</label>
+            </value>
+            <value>
+                <fullName>Rebecca Jewkes</fullName>
+                <default>false</default>
+                <label>Rebecca Jewkes</label>
+            </value>
+            <value>
+                <fullName>Steve Eggett</fullName>
+                <default>false</default>
+                <label>Steve Eggett</label>
+            </value>
+            <value>
+                <fullName>Terence Rarick</fullName>
+                <default>false</default>
+                <label>Terence Rarick</label>
+            </value>
+            <value>
+                <fullName>Whitney Young</fullName>
+                <default>false</default>
+                <label>Whitney Young</label>
+            </value>
+            <value>
+                <fullName>Josh Peterson</fullName>
+                <default>false</default>
+                <label>Josh Peterson</label>
+            </value>
+            <value>
+                <fullName>Julie Hekking</fullName>
+                <default>false</default>
+                <label>Julie Hekking</label>
+            </value>
+            <value>
+                <fullName>Bonnie Clift</fullName>
+                <default>false</default>
+                <label>Bonnie Clift</label>
+            </value>
+            <value>
+                <fullName>Ronnie Mills</fullName>
+                <default>false</default>
+                <label>Ronnie Mills</label>
+            </value>
+            <value>
+                <fullName>Kayla Thomas</fullName>
+                <default>false</default>
+                <label>Kayla Thomas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deferment_Starts__c</fullName>
+    <inlineHelpText>Date the attendee moved to Deferred status - the attendee has typically 180 days (6 months) to re-register or tuition will be forfeited.</inlineHelpText>
+    <label>Last Time Credit Filed Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

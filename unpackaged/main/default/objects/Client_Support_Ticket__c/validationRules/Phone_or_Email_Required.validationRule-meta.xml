@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_or_Email_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    AND(
+        ISBLANK( Contact__c ),
+        ISBLANK( First_Name__c ), 
+        ISBLANK( Last_Name__c ),
+        ISBLANK( Phone__c ),
+        ISBLANK( Email__c )
+    ),
+    FALSE,
+    IF(
+        ISBLANK( Contact__c ),
+        IF(
+            AND(
+                ISBLANK( Phone__c ), 
+                ISBLANK( Email__c )
+            ),
+            TRUE,
+            FALSE
+        ),
+        FALSE
+    )
+)</errorConditionFormula>
+    <errorMessage>You must provide either a Phone or Email to create a Contact</errorMessage>
+</ValidationRule>

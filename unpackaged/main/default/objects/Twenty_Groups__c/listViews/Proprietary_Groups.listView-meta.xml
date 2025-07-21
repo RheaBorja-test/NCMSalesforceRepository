@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proprietary_Groups</fullName>
+    <columns>NAME</columns>
+    <columns>SubType__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Moderator__c</columns>
+    <columns>Monthly_Membership_Fee__c</columns>
+    <columns>Billing_Notes__c</columns>
+    <columns>Group_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SuperType__c</field>
+        <operation>equals</operation>
+        <value>Proprietary Groups</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.Proprietary_Group</value>
+    </filters>
+    <label>Proprietary Groups</label>
+    <sharedTo>
+        <role>Senior_Manager_Business_Development</role>
+    </sharedTo>
+</ListView>

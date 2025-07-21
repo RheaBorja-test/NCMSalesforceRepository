@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Administrative</fullName>
+        <default>false</default>
+        <label>Administrative</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC/Internet</fullName>
+        <default>false</default>
+        <label>BDC/Internet</label>
+    </customValue>
+    <customValue>
+        <fullName>Body Shop/Collision</fullName>
+        <default>false</default>
+        <label>Body Shop/Collision</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial/Fleet</fullName>
+        <default>false</default>
+        <label>Commercial/Fleet</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Service</fullName>
+        <default>false</default>
+        <label>Customer Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive</fullName>
+        <default>false</default>
+        <label>Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>F&amp;I</fullName>
+        <default>false</default>
+        <label>F&amp;I</label>
+    </customValue>
+    <customValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>IT</fullName>
+        <default>false</default>
+        <label>IT</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>New Car</fullName>
+        <default>false</default>
+        <label>New Car</label>
+    </customValue>
+    <customValue>
+        <fullName>Parts</fullName>
+        <default>false</default>
+        <label>Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>Service</fullName>
+        <default>false</default>
+        <label>Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Speaker</fullName>
+        <default>false</default>
+        <label>Speaker</label>
+    </customValue>
+    <customValue>
+        <fullName>Used/Pre-Owned Car</fullName>
+        <default>false</default>
+        <label>Used/Pre-Owned Car</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <description>Values for all NCM Classification Departments</description>
+    <masterLabel>NCM Department</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

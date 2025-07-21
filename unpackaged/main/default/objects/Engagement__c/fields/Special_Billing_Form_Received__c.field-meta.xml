@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Billing_Form_Received__c</fullName>
+    <description>NSRC-11555 - 5/6/25 - RS requested field for Accounting purposes. Used for Moderator Commissions. Accounting will set the field to indicate an Engagement Moderator has completed their fulfillment obligations.</description>
+    <label>Special Billing Form Received</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course__c</fullName>
+    <label>Course</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Management Executive Program</fullName>
+                <default>false</default>
+                <label>General Management Executive Program</label>
+            </value>
+            <value>
+                <fullName>Dealer Executive Program</fullName>
+                <default>false</default>
+                <label>Dealer Executive Program</label>
+            </value>
+            <value>
+                <fullName>General Management I</fullName>
+                <default>false</default>
+                <label>General Management I</label>
+            </value>
+            <value>
+                <fullName>General Management II</fullName>
+                <default>false</default>
+                <label>General Management II</label>
+            </value>
+            <value>
+                <fullName>Financial Management I</fullName>
+                <default>false</default>
+                <label>Financial Management I</label>
+            </value>
+            <value>
+                <fullName>Financial Management II</fullName>
+                <default>false</default>
+                <label>Financial Management II</label>
+            </value>
+            <value>
+                <fullName>Effective Leadership</fullName>
+                <default>false</default>
+                <label>Effective Leadership</label>
+            </value>
+            <value>
+                <fullName>Hiring Top Talent</fullName>
+                <default>false</default>
+                <label>Hiring Top Talent</label>
+            </value>
+            <value>
+                <fullName>Success-Driven Pay Plans</fullName>
+                <default>false</default>
+                <label>Success-Driven Pay Plans</label>
+            </value>
+            <value>
+                <fullName>A GM&#39;s Guide to Service &amp; Parts</fullName>
+                <default>false</default>
+                <label>A GM&#39;s Guide to Service &amp; Parts</label>
+            </value>
+            <value>
+                <fullName>General Sales Management I</fullName>
+                <default>false</default>
+                <label>General Sales Management I</label>
+            </value>
+            <value>
+                <fullName>General Sales Management II</fullName>
+                <default>false</default>
+                <label>General Sales Management II</label>
+            </value>
+            <value>
+                <fullName>General Sales Management III</fullName>
+                <default>false</default>
+                <label>General Sales Management III</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Management I</fullName>
+                <default>false</default>
+                <label>Used Vehicle Management I</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Management II</fullName>
+                <default>false</default>
+                <label>Used Vehicle Management II</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Management III</fullName>
+                <default>false</default>
+                <label>Used Vehicle Management III</label>
+            </value>
+            <value>
+                <fullName>Mastering the Digital Marketplace</fullName>
+                <default>false</default>
+                <label>Mastering the Digital Marketplace</label>
+            </value>
+            <value>
+                <fullName>Internet/BDC Operations</fullName>
+                <default>false</default>
+                <label>Internet/BDC Operations</label>
+            </value>
+            <value>
+                <fullName>Desking &amp; F&amp;I Integration</fullName>
+                <default>false</default>
+                <label>Desking &amp; F&amp;I Integration</label>
+            </value>
+            <value>
+                <fullName>BHPH Collections</fullName>
+                <default>false</default>
+                <label>BHPH Collections</label>
+            </value>
+            <value>
+                <fullName>Fundamentals of Used Car Management</fullName>
+                <default>false</default>
+                <label>Fundamentals of Used Car Management</label>
+            </value>
+            <value>
+                <fullName>Fundamentals of Service Management</fullName>
+                <default>false</default>
+                <label>Fundamentals of Service Management</label>
+            </value>
+            <value>
+                <fullName>Fundamentals of Parts Management</fullName>
+                <default>false</default>
+                <label>Fundamentals of Parts Management</label>
+            </value>
+            <value>
+                <fullName>Service Advisor Training</fullName>
+                <default>false</default>
+                <label>Service Advisor Training</label>
+            </value>
+            <value>
+                <fullName>Service Management I</fullName>
+                <default>false</default>
+                <label>Service Management I</label>
+            </value>
+            <value>
+                <fullName>Service Management II</fullName>
+                <default>false</default>
+                <label>Service Management II</label>
+            </value>
+            <value>
+                <fullName>Service Management IIII</fullName>
+                <default>false</default>
+                <label>Service Management IIII</label>
+            </value>
+            <value>
+                <fullName>Parts Management I</fullName>
+                <default>false</default>
+                <label>Parts Management I</label>
+            </value>
+            <value>
+                <fullName>Parts Management II</fullName>
+                <default>false</default>
+                <label>Parts Management II</label>
+            </value>
+            <value>
+                <fullName>Express Service I</fullName>
+                <default>false</default>
+                <label>Express Service I</label>
+            </value>
+            <value>
+                <fullName>Express Service II</fullName>
+                <default>false</default>
+                <label>Express Service II</label>
+            </value>
+            <value>
+                <fullName>Collision Center Management</fullName>
+                <default>false</default>
+                <label>Collision Center Management</label>
+            </value>
+            <value>
+                <fullName>Financial Statement for OEM Personnel</fullName>
+                <default>false</default>
+                <label>Financial Statement for OEM Personnel</label>
+            </value>
+            <value>
+                <fullName>Financial Analysis for OEM Personnel</fullName>
+                <default>false</default>
+                <label>Financial Analysis for OEM Personnel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

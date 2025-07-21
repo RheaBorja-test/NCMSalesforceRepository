@@ -1,0 +1,17 @@
+<apex:page standardcontroller="Engagement_Attendee__c" recordSetVar="Engagement Attendees" extensions="MarkAsAttendedEngagementController">
+    <apex:form >
+        <br />
+        <apex:outputText style="font-style:bold" value="Please confirm that these users will be marked as 'Attended':" />
+        <br /><br /><br />
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!selected}" var="c">
+                <apex:column value="{!c.Name}"/>
+                <apex:column value="{!c.Contact__r.Name}"/>
+                <apex:column value="{!c.Attendance_Status__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <br />
+        <apex:commandButton action="{!save}" value="Confirm" id="theSaveButton"/>
+        <apex:commandButton action="{!cancel}" value="Cancel" id="theCancelButton"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Included_Product_cannot_be_more_than_2</fullName>
+    <active>false</active>
+    <description>ConSept Accounts Cannot have more than 3 included products</description>
+    <errorConditionFormula>AND( 
+
+(This_is_Included_Product__c = true) ,  
+
+OR( Value__c &gt;0, Value__c &lt;0,(Quantity__c &gt;2)) ,  
+
+( X20_Group_Account_Member__c  &lt;&gt; NULL)
+
+)</errorConditionFormula>
+    <errorMessage>This is a Proprietary Group included product - you cannot edit the quantity to be more than 3.</errorMessage>
+</ValidationRule>

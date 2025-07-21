@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guest_to_have_Associated_Attendee</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        RecordTypeId = &#39;Engagement_Attendee_Record_Type_Id&#39;,
+        RecordTypeId = &#39;NCM_Attendee_Record_Type_Id&#39;
+    ),
+    ISPICKVAL(Attendee_Type__c, &quot;Guest&quot;),
+    ISBLANK(Associated_Attendee__c)
+)</errorConditionFormula>
+    <errorDisplayField>Associated_Attendee__c</errorDisplayField>
+    <errorMessage>This validation rule will ensure that if an Engagement Attendee is of Type &quot;Guest&quot;, it must be associated with another Attendee who is not a guest, and it must be null if the attendee is not a guest.</errorMessage>
+</ValidationRule>

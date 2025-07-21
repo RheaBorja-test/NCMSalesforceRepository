@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ListServe_and_Group_Email</fullName>
+    <active>true</active>
+    <description>Requires a value in the Group EMail Address if Listserv Access = true</description>
+    <errorConditionFormula>AND( Group_List_Serv__c = True, Group_Email_Address_Members__c = &quot;&quot;)</errorConditionFormula>
+    <errorMessage>Group Email Address cannot be empty when the Group List Serv box is checked.</errorMessage>
+</ValidationRule>

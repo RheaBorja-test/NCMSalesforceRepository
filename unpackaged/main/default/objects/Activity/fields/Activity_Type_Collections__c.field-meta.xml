@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type_Collections__c</fullName>
+    <label>Collections Activity Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Successful Call</fullName>
+                <default>false</default>
+                <label>Successful Call</label>
+            </value>
+            <value>
+                <fullName>Voice Message</fullName>
+                <default>false</default>
+                <label>Voice Message</label>
+            </value>
+            <value>
+                <fullName>Email Client (Accounting)</fullName>
+                <default>false</default>
+                <label>Email Client (Accounting)</label>
+            </value>
+            <value>
+                <fullName>Email Client (Moderator)</fullName>
+                <default>false</default>
+                <label>Email Client (Moderator)</label>
+            </value>
+            <value>
+                <fullName>Email Moderator</fullName>
+                <default>false</default>
+                <label>Email Moderator</label>
+            </value>
+            <value>
+                <fullName>Returned call (from client)</fullName>
+                <default>false</default>
+                <label>Returned call (from client)</label>
+            </value>
+            <value>
+                <fullName>Incoming call (from client)</fullName>
+                <default>false</default>
+                <label>Incoming call (from client)</label>
+            </value>
+            <value>
+                <fullName>Resend copy of invoice</fullName>
+                <default>false</default>
+                <label>Resend copy of invoice</label>
+            </value>
+            <value>
+                <fullName>Escalation to Upper Management</fullName>
+                <default>false</default>
+                <label>Escalation to Upper Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

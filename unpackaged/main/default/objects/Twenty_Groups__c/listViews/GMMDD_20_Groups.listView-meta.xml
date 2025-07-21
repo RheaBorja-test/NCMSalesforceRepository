@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GMMDD_20_Groups</fullName>
+    <columns>x20GroupID_18__c</columns>
+    <columns>NAME</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Growth_Support_Needed__c</columns>
+    <columns>Franchise_s__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Manager_Type__c</columns>
+    <columns>Meetings_per_Year_upload__c</columns>
+    <columns>Meeting_Length__c</columns>
+    <columns>Meeting_Notes__c</columns>
+    <columns>Group_Notes__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.NCM_Group,Twenty_Groups__c.X20_Group_ConSept,Twenty_Groups__c.X20_Mega_Group</value>
+    </filters>
+    <filters>
+        <field>Group_Name__c</field>
+        <operation>contains</operation>
+        <value>GMMDD</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Deleted</value>
+    </filters>
+    <label>GMMDD 20 Groups</label>
+</ListView>

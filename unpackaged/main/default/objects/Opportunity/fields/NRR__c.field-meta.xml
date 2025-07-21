@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NRR__c</fullName>
+    <description>Non-Recurring Revenue</description>
+    <inlineHelpText>Non-Recurring Revenue</inlineHelpText>
+    <label>NRR</label>
+    <summarizedField>OpportunityLineItem.NRR__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

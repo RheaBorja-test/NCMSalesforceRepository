@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Second_Dealership__c</fullName>
+    <description>THIS IS DEPRECATED AND NEEDS TO BE REMOVED</description>
+    <label>Is Second Dealership? (DEL)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Binary</valueSetName>
+    </valueSet>
+</CustomField>

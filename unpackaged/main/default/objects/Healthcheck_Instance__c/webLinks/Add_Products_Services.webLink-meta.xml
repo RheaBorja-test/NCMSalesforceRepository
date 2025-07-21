@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Products_Services</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Add Products / Services</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/addBprods?id={!Healthcheck_Instance__c.Id}&amp;baid={!Healthcheck_Instance__c.Billing_AccountId__c}&amp;fmly=Healthcheck</url>
+</WebLink>

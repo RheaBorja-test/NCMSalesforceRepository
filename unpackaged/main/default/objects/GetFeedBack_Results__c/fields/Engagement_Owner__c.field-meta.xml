@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Owner__c</fullName>
+    <description>The engagement owner&#39;s name.</description>
+    <externalId>false</externalId>
+    <formula>Engagement__r.Engagement_Owner__r.Contact_Name__c</formula>
+    <inlineHelpText>The engagement owner&#39;s name.</inlineHelpText>
+    <label>Engagement Owner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

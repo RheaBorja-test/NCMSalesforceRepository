@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Client_Code__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Temporary field to evaluate if this account has an aXcessa store for the WinMaster INtegration</description>
+    <label>aXcessa Client (Code)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

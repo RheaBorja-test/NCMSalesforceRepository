@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Status__c</fullName>
+    <label>Job Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01-Open</fullName>
+                <default>true</default>
+                <label>01-Open</label>
+            </value>
+            <value>
+                <fullName>02-Sourcing</fullName>
+                <default>false</default>
+                <label>02-Sourcing</label>
+            </value>
+            <value>
+                <fullName>03-Interviewing</fullName>
+                <default>false</default>
+                <label>03-Interviewing</label>
+            </value>
+            <value>
+                <fullName>04-Offer Negotiation</fullName>
+                <default>false</default>
+                <label>04-Offer Negotiation</label>
+            </value>
+            <value>
+                <fullName>05-Routing Offer</fullName>
+                <default>false</default>
+                <label>05-Routing Offer</label>
+            </value>
+            <value>
+                <fullName>06-Offer Sent</fullName>
+                <default>false</default>
+                <label>06-Offer Sent</label>
+            </value>
+            <value>
+                <fullName>07-Offer Accepted</fullName>
+                <default>false</default>
+                <label>07-Offer Accepted</label>
+            </value>
+            <value>
+                <fullName>08-Filled</fullName>
+                <default>false</default>
+                <label>08-Filled</label>
+            </value>
+            <value>
+                <fullName>09-On Hold</fullName>
+                <default>false</default>
+                <label>09-On Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

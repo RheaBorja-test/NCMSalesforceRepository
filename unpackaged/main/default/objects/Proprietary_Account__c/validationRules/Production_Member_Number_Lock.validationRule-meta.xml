@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Member_Number_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ ISCHANGED( Member_Number__c ),
+ NOT( ISBLANK( Production_Record_Created__c ) )
+)</errorConditionFormula>
+    <errorDisplayField>Member_Number__c</errorDisplayField>
+    <errorMessage>This can no longer be modified.</errorMessage>
+</ValidationRule>

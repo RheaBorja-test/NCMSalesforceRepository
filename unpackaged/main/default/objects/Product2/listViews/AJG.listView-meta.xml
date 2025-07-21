@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AJG</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.RECORD_TYPE</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Level_1_Name__c</columns>
+    <columns>Level_2_Name__c</columns>
+    <columns>Locked_Frequency__c</columns>
+    <columns>PRODUCT2.CREATED_DATE</columns>
+    <columns>Spiff_Amount__c</columns>
+    <columns>Objects_Added_From__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>PRODUCT2.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>7/29/2024 12:00 AM</value>
+    </filters>
+    <label>Created Today</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_and_Amount_is_0</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        RecordTypeId = &#39;0124A000001BVDk&#39;
+    ),
+    Amount = 0,
+    IsClosed,
+    NOT(ISPICKVAL(StageName, &quot;Closed Lost&quot;))
+)</errorConditionFormula>
+    <errorMessage>The Amount cannot be 0 &amp; Closed. Please add or update a product value .</errorMessage>
+</ValidationRule>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New 20 Groups</fullName>
+    <description>replaces the old process with the new CIP</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Application %26 Fin Stmt Rec%27d</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Data Request %26 Research</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Proposal</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Proposal Sent</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Provisioning</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Submitted to Exec Committee</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

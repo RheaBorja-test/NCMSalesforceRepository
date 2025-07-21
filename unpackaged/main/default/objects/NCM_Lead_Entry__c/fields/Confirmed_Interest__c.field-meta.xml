@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmed_Interest__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Lead has been contacted via phone, email or in person and you have confirmed their interest in the selected product of interest.</inlineHelpText>
+    <label>Lead has been contacted &amp; confirmed?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

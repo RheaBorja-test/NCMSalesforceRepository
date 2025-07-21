@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthcheck_Instance</fullName>
+    <fields>Name</fields>
+    <fields>Healthcheck_Store__c</fields>
+    <fields>Status__c</fields>
+    <fields>Winmaster_Reference__c</fields>
+    <fields>RecordTypeId</fields>
+    <label>Healthcheck Instance</label>
+</CompactLayout>

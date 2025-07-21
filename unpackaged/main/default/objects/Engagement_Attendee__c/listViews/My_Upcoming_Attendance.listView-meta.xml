@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Upcoming_Attendance</fullName>
+    <columns>Engagement__c</columns>
+    <columns>NAME</columns>
+    <columns>Attendee_Type__c</columns>
+    <columns>Attendance_Status__c</columns>
+    <columns>Arrival__c</columns>
+    <columns>Departure__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsUser__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Departure__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>My Upcoming Attendance</label>
+</ListView>

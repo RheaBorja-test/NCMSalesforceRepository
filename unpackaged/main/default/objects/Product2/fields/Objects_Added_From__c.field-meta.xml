@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objects_Added_From__c</fullName>
+    <label>Objects Added From</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Object_Structure__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Group Member Account</fullName>
+                <default>false</default>
+                <label>20 Group Member Account</label>
+            </value>
+            <value>
+                <fullName>20 Groups</fullName>
+                <default>false</default>
+                <label>20 Groups</label>
+            </value>
+            <value>
+                <fullName>aXcessa Group</fullName>
+                <default>false</default>
+                <label>aXcessa Group</label>
+            </value>
+            <value>
+                <fullName>aXcessa Store</fullName>
+                <default>false</default>
+                <label>aXcessa Store</label>
+            </value>
+            <value>
+                <fullName>Echo Store</fullName>
+                <default>false</default>
+                <label>Echo Store</label>
+            </value>
+            <value>
+                <fullName>Engagement</fullName>
+                <default>false</default>
+                <label>Engagement</label>
+            </value>
+            <value>
+                <fullName>Engagement Attendee</fullName>
+                <default>false</default>
+                <label>Engagement Attendee</label>
+            </value>
+            <value>
+                <fullName>Healthcheck Instance</fullName>
+                <default>false</default>
+                <label>Healthcheck Instance</label>
+            </value>
+            <value>
+                <fullName>Healthcheck Store</fullName>
+                <default>false</default>
+                <label>Healthcheck Store</label>
+            </value>
+            <value>
+                <fullName>NCM Program</fullName>
+                <default>false</default>
+                <label>NCM Program</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Proprietary Account</fullName>
+                <default>false</default>
+                <label>Proprietary Account</label>
+            </value>
+            <value>
+                <fullName>Proprietary Group</fullName>
+                <default>false</default>
+                <label>Proprietary Group</label>
+            </value>
+            <value>
+                <fullName>Proprietary Master Group</fullName>
+                <default>false</default>
+                <label>Proprietary Master Group</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Training Credit</fullName>
+                <default>false</default>
+                <label>Training Credit</label>
+            </value>
+            <value>
+                <fullName>Training Subscription</fullName>
+                <default>false</default>
+                <label>Training Subscription</label>
+            </value>
+            <value>
+                <fullName>Training Subscription Account</fullName>
+                <default>false</default>
+                <label>Training Subscription Account</label>
+            </value>
+            <value>
+                <fullName>Training Subscription Term</fullName>
+                <default>false</default>
+                <label>Training Subscription Term</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <valueName>20 Group Member Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <valueName>20 Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>aXcessa</controllingFieldValue>
+            <valueName>aXcessa Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>aXcessa</controllingFieldValue>
+            <valueName>aXcessa Store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>aXcessa</controllingFieldValue>
+            <valueName>Echo Store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>Engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>Engagement Attendee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <valueName>Healthcheck Instance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <valueName>Healthcheck Store</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>NCM Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Proprietary Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Proprietary Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Proprietary Master Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Student</controllingFieldValue>
+            <valueName>Student</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Training Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Subscription</controllingFieldValue>
+            <valueName>Training Subscription</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Subscription</controllingFieldValue>
+            <valueName>Training Subscription Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Subscription</controllingFieldValue>
+            <valueName>Training Subscription Term</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

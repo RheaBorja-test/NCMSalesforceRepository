@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Curriculum_Content_Organized__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>1.1. Training Process   The curriculum content was organized and easy to follow.</inlineHelpText>
+    <label>Curriculum Content Organized</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

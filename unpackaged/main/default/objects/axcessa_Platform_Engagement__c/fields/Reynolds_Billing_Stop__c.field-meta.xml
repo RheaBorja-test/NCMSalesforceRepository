@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reynolds_Billing_Stop__c</fullName>
+    <inlineHelpText>Date Reynolds indicates billing will stop. This is not necessarily the same as the Reynolds Cancel Date</inlineHelpText>
+    <label>Reynolds Billing Stop</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

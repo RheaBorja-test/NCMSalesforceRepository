@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Data_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>This field is controlled by the Add New Contact process.</inlineHelpText>
+    <label>Financial Data Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>20 Groups Member Accounts (Financial Data Contact)</relationshipLabel>
+    <relationshipName>X20_Groups_Members5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

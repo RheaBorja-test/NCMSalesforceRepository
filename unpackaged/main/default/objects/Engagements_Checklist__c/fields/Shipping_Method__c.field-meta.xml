@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Method__c</fullName>
+    <label>Shipping Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Shipping_Provider__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Next Day Air</fullName>
+                <default>false</default>
+                <label>Next Day Air</label>
+            </value>
+            <value>
+                <fullName>2nd Day Air</fullName>
+                <default>false</default>
+                <label>2nd Day Air</label>
+            </value>
+            <value>
+                <fullName>3-Day Select</fullName>
+                <default>false</default>
+                <label>3-Day Select</label>
+            </value>
+            <value>
+                <fullName>Ground</fullName>
+                <default>false</default>
+                <label>Ground</label>
+            </value>
+            <value>
+                <fullName>Priority Mail Express</fullName>
+                <default>false</default>
+                <label>Priority Mail Express</label>
+            </value>
+            <value>
+                <fullName>Priority Mail</fullName>
+                <default>false</default>
+                <label>Priority Mail</label>
+            </value>
+            <value>
+                <fullName>USPS Retail Ground</fullName>
+                <default>false</default>
+                <label>USPS Retail Ground</label>
+            </value>
+            <value>
+                <fullName>Media Mail</fullName>
+                <default>false</default>
+                <label>Media Mail</label>
+            </value>
+            <value>
+                <fullName>First-Class Mail</fullName>
+                <default>false</default>
+                <label>First-Class Mail</label>
+            </value>
+            <value>
+                <fullName>First Overnight</fullName>
+                <default>false</default>
+                <label>First Overnight</label>
+            </value>
+            <value>
+                <fullName>Priority Overnight</fullName>
+                <default>false</default>
+                <label>Priority Overnight</label>
+            </value>
+            <value>
+                <fullName>Standard Overnight</fullName>
+                <default>false</default>
+                <label>Standard Overnight</label>
+            </value>
+            <value>
+                <fullName>2 Day AM</fullName>
+                <default>false</default>
+                <label>2 Day AM</label>
+            </value>
+            <value>
+                <fullName>2 Day</fullName>
+                <default>false</default>
+                <label>2 Day</label>
+            </value>
+            <value>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+                <label>Urgent</label>
+            </value>
+            <value>
+                <fullName>Regular</fullName>
+                <default>false</default>
+                <label>Regular</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>UPS</controllingFieldValue>
+            <valueName>Next Day Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPS</controllingFieldValue>
+            <valueName>2nd Day Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPS</controllingFieldValue>
+            <valueName>3-Day Select</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UPS</controllingFieldValue>
+            <valueName>Ground</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS</controllingFieldValue>
+            <valueName>Priority Mail Express</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS</controllingFieldValue>
+            <valueName>Priority Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS</controllingFieldValue>
+            <valueName>USPS Retail Ground</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS</controllingFieldValue>
+            <valueName>Media Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USPS</controllingFieldValue>
+            <valueName>First-Class Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>First Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>Priority Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>Standard Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>2 Day AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>2 Day</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Urgent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Regular</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpenTasks</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>SUBJECT</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>Email__c</columns>
+    <columns>DUE_DATE</columns>
+    <columns>STATUS</columns>
+    <columns>PRIORITY</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>STATUS</field>
+        <operation>notEqual</operation>
+        <value>Completed</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Task.System_Generated</value>
+    </filters>
+    <filters>
+        <field>STATUS</field>
+        <operation>notEqual</operation>
+        <value>Not Needed</value>
+    </filters>
+    <label>Open Tasks</label>
+</ListView>

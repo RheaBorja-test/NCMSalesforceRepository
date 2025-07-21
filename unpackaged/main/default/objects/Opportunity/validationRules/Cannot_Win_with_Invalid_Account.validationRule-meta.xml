@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Win_with_Invalid_Account</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    IsWon,
+    Account.RecordTypeId = &#39;0124A000001BV5v&#39;
+)</errorConditionFormula>
+    <errorMessage>You cannot Win an Opportunity for an Invalid Account. Please wait until it has been validated before proceeding any further</errorMessage>
+</ValidationRule>

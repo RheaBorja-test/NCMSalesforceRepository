@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dimension_1__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Product is related to this Dimension</description>
+    <label>Dimension 1</label>
+    <referenceTo>c2g__codaDimension1__c</referenceTo>
+    <relationshipLabel>Products</relationshipLabel>
+    <relationshipName>Products</relationshipName>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

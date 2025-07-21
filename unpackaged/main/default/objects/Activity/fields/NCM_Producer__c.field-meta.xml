@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Producer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The NCM Moderator, Consultant, etc who is responsible for this Customer</description>
+    <inlineHelpText>The NCM Moderator, Consultant, etc who is responsible for this Customer</inlineHelpText>
+    <label>NCM Producer</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Activities</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

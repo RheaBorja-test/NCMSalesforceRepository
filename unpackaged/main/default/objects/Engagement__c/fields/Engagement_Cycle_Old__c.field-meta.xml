@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Cycle_Old__c</fullName>
+    <externalId>false</externalId>
+    <formula>VALUE( 
+    RIGHT( 
+        TEXT( 
+            YEAR( 
+                DATEVALUE( Engagement_End__c ) 
+            ) 
+        ), 
+        2 
+    ) 
+) + 
+(
+    CEILING(
+        MONTH( 
+            DATEVALUE( Engagement_End__c ) 
+        )/4
+    )/10
+)</formula>
+    <label>Engagement Cycle Old</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

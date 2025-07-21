@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Sent_not_Completed__c</fullName>
+    <description>Indicates attendee has been sent a survey but has not yet completed it.</description>
+    <formula>AND(
+ NOT(ISBLANK(Survey_Sent__c)),
+ ISBLANK(Survey_Completed__c)
+)</formula>
+    <inlineHelpText>Indicates attendee has been sent a survey but has not yet completed it.</inlineHelpText>
+    <label>Survey Sent not Completed</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

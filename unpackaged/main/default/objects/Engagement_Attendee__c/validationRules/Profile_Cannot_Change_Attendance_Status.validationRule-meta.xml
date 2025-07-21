@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Cannot_Change_Attendance_Status</fullName>
+    <active>true</active>
+    <description>Only specific Profiles can select &quot;Removed&quot; as a Value on the Attendance Status field.
+(Retail Solutions Management, System Administrator)</description>
+    <errorConditionFormula>AND(
+ ISCHANGED( Attendance_Status__c ),
+ ISPICKVAL( Attendance_Status__c , &quot;Removed&quot; ), 
+ NOT($Permission.Engagement_Attendee_VR_Bypass_Attendance_Status)
+)</errorConditionFormula>
+    <errorDisplayField>Attendance_Status__c</errorDisplayField>
+    <errorMessage>You do not have permission to select &quot;Removed&quot; on Attendance Status.</errorMessage>
+</ValidationRule>

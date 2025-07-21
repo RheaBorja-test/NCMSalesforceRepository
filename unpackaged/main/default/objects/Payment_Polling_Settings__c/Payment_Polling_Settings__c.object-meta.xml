@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>These settings are used by the ChargeZoomUtility when retrieving payments. The number of payments retrieved must be from 1 to 999, The number of days back to retrieve must be from 0 to 9.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Payment Polling Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

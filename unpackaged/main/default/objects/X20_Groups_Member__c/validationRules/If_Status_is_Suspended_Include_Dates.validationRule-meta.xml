@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Status_is_Suspended_Include_Dates</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+Text( Status__c )= &quot;Suspended&quot;,
+
+OR ( isblank(Hold_End_Date__c),isblank( Hold_Start_Date__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Hold_End_Date__c</errorDisplayField>
+    <errorMessage>If Member status is Suspended the both a suspension start and end date are required!</errorMessage>
+</ValidationRule>

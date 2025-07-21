@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hotel_Booking_Method__c</fullName>
+    <label>Hotel Booking Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NCM</fullName>
+                <default>false</default>
+                <label>NCM</label>
+            </value>
+            <value>
+                <fullName>VRBO</fullName>
+                <default>false</default>
+                <label>VRBO</label>
+            </value>
+            <value>
+                <fullName>Stay with family</fullName>
+                <default>false</default>
+                <label>Stay with family</label>
+            </value>
+            <value>
+                <fullName>Alt hotel with points or discount</fullName>
+                <default>false</default>
+                <label>Alt hotel with points or discount</label>
+            </value>
+            <value>
+                <fullName>Alt hotel for other preference/reasons</fullName>
+                <default>false</default>
+                <label>Alt hotel for other preference/reasons</label>
+            </value>
+            <value>
+                <fullName>NCM preferred hotel on own</fullName>
+                <default>false</default>
+                <label>NCM preferred hotel on own</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

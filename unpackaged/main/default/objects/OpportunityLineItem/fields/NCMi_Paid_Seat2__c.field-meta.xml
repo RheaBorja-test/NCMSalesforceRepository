@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi_Paid_Seat2__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>populated by automation with the value of the formula field NCMi Paid Seat</description>
+    <label>NCMi Paid Seat</label>
+    <type>Checkbox</type>
+</CustomField>

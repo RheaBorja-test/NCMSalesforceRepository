@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20G_Must_Have_Membership_Type</fullName>
+    <active>true</active>
+    <description>When a 20Group opp is moved to another stage, the Membership Type must be populated.</description>
+    <errorConditionFormula>AND(
+ $Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+ RecordType.Name = &#39;20 Groups&#39;,
+ ISCHANGED( StageName ),
+ OR( 
+  ISPICKVAL(StageName,&#39;Submitted to Exec Committee&#39;),
+  ISPICKVAL(StageName,&#39;Proposal Sent&#39;),
+  ISPICKVAL(StageName,&#39;Closed Lost&#39;),
+  ISPICKVAL(StageName,&#39;Closed Won&#39;)
+ ),
+ ISBLANK(TEXT(Membership_Type__c))
+)</errorConditionFormula>
+    <errorDisplayField>Membership_Type__c</errorDisplayField>
+    <errorMessage>Please fill in the Membership Type field before moving to another stage.</errorMessage>
+</ValidationRule>

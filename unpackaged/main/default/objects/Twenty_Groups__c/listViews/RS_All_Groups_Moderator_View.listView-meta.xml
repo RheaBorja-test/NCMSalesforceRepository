@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_All_Groups_Moderator_View</fullName>
+    <columns>NAME</columns>
+    <columns>Country__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Franchise_s__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Monthly_Membership_Fee__c</columns>
+    <columns>Average_Meeting_Days__c</columns>
+    <columns>Meeting_Length__c</columns>
+    <columns>Billing_Frequency__c</columns>
+    <columns>Rate_Type__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>deleted</value>
+    </filters>
+    <filters>
+        <field>SuperType__c</field>
+        <operation>equals</operation>
+        <value>Dealer 20 Groups,Industry 20 Groups,Manager 20 Groups,Manufacturers Groups,Proprietary Groups</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.NCM_Group</value>
+    </filters>
+    <label>RS - All Groups - Moderator View.</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Country__c</fields>
+    <fields>Industry__c</fields>
+    <fields>Group_Type__c</fields>
+    <fields>NCM_Proprietor__c</fields>
+    <fields>Moderator_Team_Manager__c</fields>
+    <fields>NCM_Support_Staff__c</fields>
+    <label>20 Group Layout</label>
+</CompactLayout>

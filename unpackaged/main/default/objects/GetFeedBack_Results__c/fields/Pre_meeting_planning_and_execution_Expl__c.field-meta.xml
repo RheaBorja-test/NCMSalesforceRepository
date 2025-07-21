@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_meeting_planning_and_execution_Expl__c</fullName>
+    <inlineHelpText>Explanation: Pre-meeting planning and execution by the support teams and the moderator were in alignment with the expectations of the group.</inlineHelpText>
+    <label>Pre-meeting planning and execution Expl</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

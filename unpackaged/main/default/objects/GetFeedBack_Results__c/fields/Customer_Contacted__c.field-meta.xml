@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Contacted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Temporary Checkbox to allow for reporting on customers who have requested contact and have been subsequently contacted by NCM</description>
+    <inlineHelpText>Temporary Checkbox to allow for reporting on customers who have requested contact and have been subsequently contacted by NCM</inlineHelpText>
+    <label>Customer Contacted?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

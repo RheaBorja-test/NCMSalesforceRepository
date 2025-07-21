@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Moderator</fullName>
+        <default>false</default>
+        <label>Moderator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Educator</fullName>
+        <default>false</default>
+        <label>Educator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Composite Manager</fullName>
+        <default>false</default>
+        <label>Composite Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coordinator Sales</fullName>
+        <default>false</default>
+        <label>Coordinator Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CEC (sales)</fullName>
+        <default>false</default>
+        <label>CEC (sales)</label>
+    </standardValue>
+</StandardValueSet>

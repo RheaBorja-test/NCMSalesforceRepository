@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Print_Product__c</fullName>
+    <label>Default Print Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single</label>
+            </value>
+            <value>
+                <fullName>Multi</fullName>
+                <default>false</default>
+                <label>Multi</label>
+            </value>
+            <value>
+                <fullName>Grouped by Translation</fullName>
+                <default>false</default>
+                <label>Grouped by Translation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Billing_Start__c</fullName>
+    <inlineHelpText>Month NCM will begin billing client - typically 1 month after Reynolds Billing Start date.</inlineHelpText>
+    <label>NCM Billing Start</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

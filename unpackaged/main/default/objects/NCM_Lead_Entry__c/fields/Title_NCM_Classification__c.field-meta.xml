@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Title_NCM_Classification__c</fullName>
+    <label>Title (NCM Classification)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department_NCM_Classification__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>NCM_Title</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <valueName>Assistant Sales Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <valueName>Desk Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <valueName>Floor Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <valueName>Inventory Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Sales Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Sales Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Car</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Sales Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parts</controllingFieldValue>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Assistant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parts</controllingFieldValue>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <valueName>Counterperson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parts</controllingFieldValue>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <controllingFieldValue>F&amp;I</controllingFieldValue>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <controllingFieldValue>IT</controllingFieldValue>
+            <valueName>Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Advisor/Consultant/Writer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Assistant Service Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Cashier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Detail Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Express/Quicklane Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Foreman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Porter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Service Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Service Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Technician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <valueName>Clerk/Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <valueName>Collections Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Used/Pre-Owned Car</controllingFieldValue>
+            <valueName>Internet Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Accounting Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Accounts Payable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Accounts Receivable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Administration Assistant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Administrative Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <valueName>Advocate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Assistant Office Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Billing/Clerk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Business Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Compliance Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Executive Assistant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Human Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Office Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Payroll Clerk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Program Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Project Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <valueName>Receptionist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Rental Car Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Secretary/Treasurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Store Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Title Clerk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Training Coordinator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Variable Ops Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Variable Ops Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative</controllingFieldValue>
+            <valueName>Warranty Administrator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <valueName>BDC Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <valueName>BDC Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <valueName>BDC Rep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <valueName>Internet Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <valueName>Internet Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BDC/Internet</controllingFieldValue>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <controllingFieldValue>F&amp;I</controllingFieldValue>
+            <valueName>Advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <valueName>Assistant Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <valueName>Detailer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <controllingFieldValue>Commercial/Fleet</controllingFieldValue>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <controllingFieldValue>F&amp;I</controllingFieldValue>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <controllingFieldValue>IT</controllingFieldValue>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <valueName>Estimator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Body Shop/Collision</controllingFieldValue>
+            <valueName>Parts Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <valueName>Supervisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Area Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Board Member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Branch Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>CEO/ Chief Executive Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>CFO/ Chief Financial Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Chairman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Controller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>COO/ Chief Operating Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Co-Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Dealer Principal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Finance Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Fixed Ops Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Fixed Ops Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>General Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>General Sales Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>President</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive</controllingFieldValue>
+            <valueName>Vice President</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>F&amp;I</controllingFieldValue>
+            <valueName>Collector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Coordinator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT</controllingFieldValue>
+            <valueName>CIO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executing_Projects</fullName>
+    <columns>NAME</columns>
+    <columns>Marketing_Request__c</columns>
+    <columns>Core_Service__c</columns>
+    <columns>Project_Status__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Scheduled_Tactic_Start__c</columns>
+    <columns>Projected_Close_Date__c</columns>
+    <columns>Stage_LOE_Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project_Status__c</field>
+        <operation>equals</operation>
+        <value>Executing</value>
+    </filters>
+    <label>Executing Projects</label>
+</ListView>

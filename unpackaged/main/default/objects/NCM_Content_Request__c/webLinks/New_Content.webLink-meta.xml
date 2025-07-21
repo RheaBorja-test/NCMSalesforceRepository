@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Content</fullName>
+    <availability>online</availability>
+    <description>Creates new NCM CONTENT record</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Content</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/NCM_Content_Creation?&amp;varDivision={!NCM_Content_Request__c.Division__c}
+&amp;varNCMContentRequestID={!NCM_Content_Request__c.Id}
+&amp;varRequester={!NCM_Content_Request__c.RequesterId__c}
+&amp;varExistingContent={!NCM_Content_Request__c.Existing_NCM_ContentId__c}
+&amp;varRequestDescription={!NCM_Content_Request__c.Description__c}
+&amp;varDurationDays={!NCM_Content_Request__c.Duration_Days__c}
+&amp;retURL=%2F{!NCM_Content_Request__c.ContentRequestID_18__c}</url>
+</WebLink>

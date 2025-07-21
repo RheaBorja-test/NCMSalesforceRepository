@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prop_Group_or_New_Prop_Group_Reqd</fullName>
+    <active>true</active>
+    <description>Before a Proprietary opportunity can be moved to Closed Won, a Proprietary Group must be selected or a New Proprietary Group entered.</description>
+    <errorConditionFormula>AND(
+ RecordType.Name = &#39;Proprietary&#39;,
+ ISCHANGED(StageName),
+ ISPICKVAL(StageName,&#39;Closed Won&#39;),
+ AND(
+  ISBLANK(Proprietary_Group__c),
+  ISBLANK(New_Proprietary_Group__c)
+ )
+)</errorConditionFormula>
+    <errorMessage>Please either select a Proprietary Group or enter a New Proprietary Group before moving this opportunity to Closed Won</errorMessage>
+</ValidationRule>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Description__c</fullName>
+    <label>Engagement Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Engagement_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Regular</fullName>
+                <default>false</default>
+                <label>Regular</label>
+            </value>
+            <value>
+                <fullName>Variable Operations</fullName>
+                <default>false</default>
+                <label>Variable Operations</label>
+            </value>
+            <value>
+                <fullName>Fixed Operations</fullName>
+                <default>false</default>
+                <label>Fixed Operations</label>
+            </value>
+            <value>
+                <fullName>Service Advisor</fullName>
+                <default>false</default>
+                <label>Service Advisor</label>
+            </value>
+            <value>
+                <fullName>F&amp;I Department</fullName>
+                <default>false</default>
+                <label>F&amp;I Department</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Regular Cycle Mtg.</fullName>
+                <default>false</default>
+                <label>Regular Cycle Mtg.</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Controller</fullName>
+                <default>false</default>
+                <label>Controller</label>
+            </value>
+            <value>
+                <fullName>Agenda</fullName>
+                <default>false</default>
+                <label>Agenda</label>
+            </value>
+            <value>
+                <fullName>Candidate</fullName>
+                <default>false</default>
+                <label>Candidate</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Group Review</controllingFieldValue>
+            <valueName>Agenda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Review</controllingFieldValue>
+            <valueName>Candidate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Review</controllingFieldValue>
+            <valueName>Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Review</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <valueName>Regular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (Dealer Group)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (Dealer)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Variable Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (Dealer Group)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (Dealer)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Fixed Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (Dealer Group)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (Dealer)</controllingFieldValue>
+            <valueName>Regular Cycle Mtg.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (Dealer Group)</controllingFieldValue>
+            <controllingFieldValue>Special Meeting (Dealer)</controllingFieldValue>
+            <valueName>Consulting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Service Advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>F&amp;I Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Controller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Meeting (20 Group)</controllingFieldValue>
+            <valueName>Manager</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

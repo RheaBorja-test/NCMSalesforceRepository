@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mid_Cycle_Partial_Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>This is the product that will be used when the product is added mid-cycle in order to cover pro-rated fees to the client.</inlineHelpText>
+    <label>Mid-Cycle Partial Product</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Mid-Cycle Products</relationshipLabel>
+    <relationshipName>Products</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

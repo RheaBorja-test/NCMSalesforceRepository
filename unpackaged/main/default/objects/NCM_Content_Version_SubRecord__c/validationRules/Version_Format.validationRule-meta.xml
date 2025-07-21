@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Version_Format</fullName>
+    <active>true</active>
+    <description>V, followed by 6 digits</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Version_ID__c )),
+NOT(REGEX(Version_ID__c,&quot;[V]{1}[0-9]{6}&quot;)
+))</errorConditionFormula>
+    <errorDisplayField>Version_ID__c</errorDisplayField>
+    <errorMessage>Format Must be  V123456  - No Spaces, Capitol V, last 6 digits are numbers.</errorMessage>
+</ValidationRule>

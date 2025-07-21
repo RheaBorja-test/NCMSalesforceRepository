@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Member_Code__c</fullName>
+    <formula>OR(
+        ISPICKVAL( Contact_Type__c , &quot;Member&quot;),
+        ISPICKVAL( Contact_Type__c , &quot;Alternate Member&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Member (Code)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

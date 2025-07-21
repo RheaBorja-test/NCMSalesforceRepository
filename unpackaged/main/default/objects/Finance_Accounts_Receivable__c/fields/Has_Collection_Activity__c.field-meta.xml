@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Collection_Activity__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISBLANK( Collection_Activity__c )),
+        IMAGE(&quot;/servlet/servlet.FileDownload?file=0154A000023TJq5&quot;, &quot;*&quot;, 16, 16) &amp; 
+        &#39;Has Activity&#39; &amp; 
+        IMAGE(&quot;/servlet/servlet.FileDownload?file=0154A000023TJq5&quot;, &quot;*&quot;, 16, 16),
+    &#39;&#39;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has Collection Activity?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

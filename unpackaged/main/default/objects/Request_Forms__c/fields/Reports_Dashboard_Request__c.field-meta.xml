@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reports_Dashboard_Request__c</fullName>
+    <label>Reports &amp; Dashboard Request</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Creating a new Report</fullName>
+                <default>false</default>
+                <label>Creating a new Report</label>
+            </value>
+            <value>
+                <fullName>Finding an existing Report</fullName>
+                <default>false</default>
+                <label>Finding an existing Report</label>
+            </value>
+            <value>
+                <fullName>Building a new Dashboard</fullName>
+                <default>false</default>
+                <label>Building a new Dashboard</label>
+            </value>
+            <value>
+                <fullName>Adding a new component to Dashboard</fullName>
+                <default>false</default>
+                <label>Adding a new component to Dashboard</label>
+            </value>
+            <value>
+                <fullName>Creating a new Report Type</fullName>
+                <default>false</default>
+                <label>Creating a new Report Type</label>
+            </value>
+            <value>
+                <fullName>Pull a Marketing Prospect/Client List</fullName>
+                <default>false</default>
+                <label>Pull a Marketing Prospect/Client List</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

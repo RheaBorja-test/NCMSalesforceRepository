@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NADA_Lead_Info_Code__c</fullName>
+    <description>Used to transfer/hold data notes from NADA Show - this field is expected to be a one time use in 2018 to be deprecated by new capability for NADA 2019</description>
+    <label>NADA Lead Info (Code)</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

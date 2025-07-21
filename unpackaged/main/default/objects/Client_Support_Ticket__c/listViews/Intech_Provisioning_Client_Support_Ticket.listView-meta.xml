@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intech_Provisioning_Client_Support_Ticket</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Intech Provisioning</label>
+    <queue>Intech_Provisioning</queue>
+    <sharedTo>
+        <allInternalUsers />
+    </sharedTo>
+</ListView>

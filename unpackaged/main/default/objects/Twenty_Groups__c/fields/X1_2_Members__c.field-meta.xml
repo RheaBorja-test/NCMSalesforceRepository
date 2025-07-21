@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1_2_Members__c</fullName>
+    <description>(total number of 1/2 members with the status of active)</description>
+    <label>1/2 Members</label>
+    <summaryFilterItems>
+        <field>X20_Groups_Member__c.Type__c</field>
+        <operation>equals</operation>
+        <value>1/2 Member</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>X20_Groups_Member__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>X20_Groups_Member__c.Group_ID__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

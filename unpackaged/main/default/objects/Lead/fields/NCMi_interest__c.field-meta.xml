@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi_interest__c</fullName>
+    <description>NCMi Courses</description>
+    <label>NCMi Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Management I</fullName>
+                <default>false</default>
+                <label>General Management I</label>
+            </value>
+            <value>
+                <fullName>General Management II</fullName>
+                <default>false</default>
+                <label>General Management II</label>
+            </value>
+            <value>
+                <fullName>Service Management I</fullName>
+                <default>false</default>
+                <label>Service Management I</label>
+            </value>
+            <value>
+                <fullName>Service Management II</fullName>
+                <default>false</default>
+                <label>Service Management II</label>
+            </value>
+            <value>
+                <fullName>General Sales Management I</fullName>
+                <default>false</default>
+                <label>General Sales Management I</label>
+            </value>
+            <value>
+                <fullName>General Sales Management II</fullName>
+                <default>false</default>
+                <label>General Sales Management II</label>
+            </value>
+            <value>
+                <fullName>Internet/BDC Sales Mngmt I</fullName>
+                <default>false</default>
+                <label>Internet/BDC Sales Mngmt I</label>
+            </value>
+            <value>
+                <fullName>Internet/BDC Sales Mngmt II</fullName>
+                <default>false</default>
+                <label>Internet/BDC Sales Mngmt II</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Management I</fullName>
+                <default>false</default>
+                <label>Used Vehicle Management I</label>
+            </value>
+            <value>
+                <fullName>Used Vehicle Management II</fullName>
+                <default>false</default>
+                <label>Used Vehicle Management II</label>
+            </value>
+            <value>
+                <fullName>Financial Stmt Analysis Mngmt</fullName>
+                <default>false</default>
+                <label>Financial Stmt Analysis Mngmt</label>
+            </value>
+            <value>
+                <fullName>Advanced Financial  Mngmt II</fullName>
+                <default>false</default>
+                <label>Advanced Financial  Mngmt II</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

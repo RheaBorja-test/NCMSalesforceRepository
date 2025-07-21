@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_General_Marketing_Tactic</fullName>
+    <availability>online</availability>
+    <description>Creates a sub project for General Marketing</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create General Marketing Tactic</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Marketing_Project_Generation?!
+&amp;varMarketingRequestID={!Request_Forms__c.Id}
+&amp;retURL=%2F{!Request_Forms__c.Id}</url>
+</WebLink>

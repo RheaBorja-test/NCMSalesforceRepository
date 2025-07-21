@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>softSol_Contract_Received</fullName>
+    <description>this is used for Software Solutions Guided Selling</description>
+    <displayedFields>
+        <field>Contract_Date_Received__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>softSol Contract Received</label>
+</FieldSet>

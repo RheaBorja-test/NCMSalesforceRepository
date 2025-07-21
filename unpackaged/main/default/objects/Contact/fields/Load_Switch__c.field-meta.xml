@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Load_Switch__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for mass modifying records to kick off workflows and triggers based on a change in the record. A Demand Tools load is made and this check box is mass checked or unchecked to force a change to the record.</description>
+    <label>Load Switch</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

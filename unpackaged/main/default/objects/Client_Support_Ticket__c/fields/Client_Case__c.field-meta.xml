@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Case__c</fullName>
+    <displayFormat>CS-{0000000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>System generated case number</inlineHelpText>
+    <label>Case #</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

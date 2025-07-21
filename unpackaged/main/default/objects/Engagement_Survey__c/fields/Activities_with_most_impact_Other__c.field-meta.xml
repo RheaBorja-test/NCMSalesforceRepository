@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activities_with_most_impact_Other__c</fullName>
+    <description>Survey allows an &quot;other&quot; text box for user to specify other types of activities that would be helpful.</description>
+    <label>Activities with most impact - Other</label>
+    <length>4000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

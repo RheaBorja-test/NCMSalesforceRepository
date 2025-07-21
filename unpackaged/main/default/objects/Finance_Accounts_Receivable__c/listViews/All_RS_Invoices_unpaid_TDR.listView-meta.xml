@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_RS_Invoices_unpaid_TDR</fullName>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Group_Number__c</columns>
+    <columns>Account__c</columns>
+    <columns>NAME</columns>
+    <columns>Collection_Activity__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Billing_Contact__c</columns>
+    <columns>Days_Outstanding_Calc__c</columns>
+    <columns>Outstanding_Value__c</columns>
+    <columns>Finance_Contact_Email__c</columns>
+    <columns>Invoice_Emailed_to__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Paid_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Finance_Accounts_Receivable__c.X20_Groups,Finance_Accounts_Receivable__c.Consulting,Finance_Accounts_Receivable__c.Institute</value>
+    </filters>
+    <filters>
+        <field>Payment_Status__c</field>
+        <operation>notEqual</operation>
+        <value>not applicable,paid</value>
+    </filters>
+    <label>RS &amp; NCMi Invoices (All - unpaid) - TDR</label>
+</ListView>

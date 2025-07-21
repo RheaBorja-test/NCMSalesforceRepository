@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendee_Type__c</fullName>
+    <description>Engagement Attendee Type</description>
+    <label>Attendee Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Participant</fullName>
+                <default>false</default>
+                <label>Active Participant</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>Co-Member</fullName>
+                <default>false</default>
+                <label>Co-Member</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Engagement Support</fullName>
+                <default>false</default>
+                <label>Engagement Support</label>
+            </value>
+            <value>
+                <fullName>Guest</fullName>
+                <default>false</default>
+                <label>Guest</label>
+            </value>
+            <value>
+                <fullName>Guest Presenter</fullName>
+                <default>false</default>
+                <label>Guest Presenter</label>
+            </value>
+            <value>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+                <label>Industry Professional</label>
+            </value>
+            <value>
+                <fullName>Instructor</fullName>
+                <default>false</default>
+                <label>Instructor</label>
+            </value>
+            <value>
+                <fullName>Member</fullName>
+                <default>false</default>
+                <label>Member</label>
+            </value>
+            <value>
+                <fullName>Moderator</fullName>
+                <default>false</default>
+                <label>Moderator</label>
+            </value>
+            <value>
+                <fullName>NCM Guest</fullName>
+                <default>false</default>
+                <label>NCM Guest</label>
+            </value>
+            <value>
+                <fullName>NCM Resource</fullName>
+                <default>false</default>
+                <label>NCM Resource</label>
+            </value>
+            <value>
+                <fullName>Observer</fullName>
+                <default>false</default>
+                <label>Observer</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>3rd Party</fullName>
+                <default>false</default>
+                <label>3rd Party</label>
+            </value>
+            <value>
+                <fullName>Candidate</fullName>
+                <default>false</default>
+                <label>Candidate</label>
+            </value>
+            <value>
+                <fullName>Visitor</fullName>
+                <default>false</default>
+                <label>Visitor</label>
+            </value>
+            <value>
+                <fullName>Speaker</fullName>
+                <default>false</default>
+                <label>Speaker</label>
+            </value>
+            <value>
+                <fullName>Associate Member</fullName>
+                <default>false</default>
+                <label>Associate Member</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

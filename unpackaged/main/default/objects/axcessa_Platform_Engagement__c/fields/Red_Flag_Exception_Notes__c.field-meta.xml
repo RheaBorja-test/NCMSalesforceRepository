@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Flag_Exception_Notes__c</fullName>
+    <inlineHelpText>If the store is red flagged, but CES rep has a reason for NOT engaging directly with the client. Updating this notes field will update the Red Flag Exception Update with today&#39;s date.</inlineHelpText>
+    <label>Red Flag Exception Notes</label>
+    <length>100000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

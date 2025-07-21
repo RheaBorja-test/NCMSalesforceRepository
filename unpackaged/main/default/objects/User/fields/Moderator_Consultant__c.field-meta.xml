@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Moderator_Consultant__c</fullName>
+    <formula>IF(
+OR(CONTAINS( Title , &quot;Moderator&quot;), CONTAINS( Title , &quot;Growth&quot;), CONTAINS( Title , &quot;Consultant&quot;)),
+TRUE,NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Moderator/Consultant</label>
+    <type>Checkbox</type>
+</CustomField>

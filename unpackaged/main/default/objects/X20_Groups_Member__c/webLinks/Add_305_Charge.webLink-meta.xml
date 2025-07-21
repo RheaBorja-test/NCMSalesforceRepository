@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_305_Charge</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Add 305 Charge</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a5H/e?CF00N4A00000G0LOI={!X20_Groups_Member__c.Opportunity__c}&amp;CF00N4A00000G0LOI_lkid={!X20_Groups_Member__c.OpportunityId__c}&amp;00N4A00000G0LOA=Monthly&amp;00N4A00000G0LOB=Active&amp;CF00N4A00000G0LOJ=CIP+Monthly+Benchmark+Product&amp;CF00N4A00000G0LOJ_lkid=01t5B000001OFyx&amp;00N4A00000G0LOK=5&amp;retURL=%2F{!X20_Groups_Member__c.Id}</url>
+</WebLink>

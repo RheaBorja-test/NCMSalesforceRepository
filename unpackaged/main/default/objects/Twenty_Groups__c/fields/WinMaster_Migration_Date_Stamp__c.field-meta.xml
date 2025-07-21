@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WinMaster_Migration_Date_Stamp__c</fullName>
+    <inlineHelpText>Date and Time Data was Added or Updated by WinMaster Migration Project</inlineHelpText>
+    <label>WinMaster Migration Date Stamp</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Case</fullName>
+    <active>true</active>
+    <businessProcess>Original Support Process</businessProcess>
+    <label>Original Case</label>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCMi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Moderator_Consultant_Instructor__c</picklist>
+        <values>
+            <fullName>Bob Sloan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brain Faulkenberry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brent Carmichael</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Kahrs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don Rothrauff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dustin Kerr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>George Gowen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeff Lampton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jerry Powers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Basil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Gilbert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Runnells</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Cunningham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kirk Felix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lee Michaelson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leo Hart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lycia Jedlicki</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mark Shackelford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Ackman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rick Wegley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robert Neuman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robin Cunningham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ron Caruso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Emery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Hall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Kain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terry Wichmann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tony Albertson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wayne George</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Timeline__c</picklist>
+        <values>
+            <fullName>Immediate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long-term</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short-Term</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needed Business Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_to_Support__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM OnDemand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>axcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Advanced Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conga Composer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conga Conductor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customize Existing Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customize Existing Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docusign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Force Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Force Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GetFeedBack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Button</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Field</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Report Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New User Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pull a Marketing Prospect%2FClient List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Researching New Application%2FSolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Right On Interative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplemental Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Marketing List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

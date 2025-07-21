@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_End__c</fullName>
+    <formula>CASE(
+	MOD(Stage_Start__c - DATE(1900, 1, 7), 7),
+	0, (Stage_Start__c) + Duration_Days__c + FLOOR((Duration_Days__c -1)/5)*2,
+	1, (Stage_Start__c) + Duration_Days__c + FLOOR((Duration_Days__c)/5)*2,
+	2, (Stage_Start__c) + Duration_Days__c + FLOOR((Duration_Days__c +1)/5)*2,
+	3, (Stage_Start__c) + Duration_Days__c + FLOOR((Duration_Days__c +2)/5)*2,
+	4, (Stage_Start__c) + Duration_Days__c + FLOOR((Duration_Days__c +3)/5)*2,
+	5, (Stage_Start__c) + Duration_Days__c + CEILING((Duration_Days__c)/5)*2,
+	6, (Stage_Start__c) - IF(Duration_Days__c &gt; 0,1,0) + Duration_Days__c + CEILING((Duration_Days__c)/5)*2,
+	null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stage End</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

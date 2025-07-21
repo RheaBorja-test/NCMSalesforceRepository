@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activate_Ne_Flow_Trigger__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use this to setup new time based flo triggers in PRocess Builder/Workflow</description>
+    <label>Activate Ne Flow Trigger</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

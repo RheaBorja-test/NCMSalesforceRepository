@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+    AND(
+        ISBLANK( Contact__c ),
+        ISBLANK( First_Name__c ), 
+        ISBLANK( Last_Name__c )
+    ),
+    FALSE,
+    IF(
+        AND(
+            ISBLANK( Contact__c ),
+            ISBLANK( First_Name__c ),
+            NOT(ISBLANK( Last_Name__c ))
+        ),
+        TRUE,
+        FALSE
+    )
+)</errorConditionFormula>
+    <errorDisplayField>First_Name__c</errorDisplayField>
+    <errorMessage>You must provide a First Name to create a Contact</errorMessage>
+</ValidationRule>

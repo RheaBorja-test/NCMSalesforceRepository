@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_35_Days_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;id=&quot; + Id +
+&quot;&amp;QueryId=[CA1]a0S4A00000Tf2lA&quot; +
+&quot;&amp;EmailLetterheadId=0164A000000TULl&quot; +
+&quot;&amp;CongaEmailTemplateId=a0R4A00000wEDPw&quot; +
+&quot;&amp;ContactId=&quot; + Contact__c +
+&quot;&amp;EmailFromID=0D24A000000TQ3E&quot; +
+&quot;&amp;QMode=SendEmail&quot; +
+&quot;&amp;AC0=1&quot; +
+&quot;&amp;AC1=35+Day+Reminder+Email+Sent&quot; +
+&quot;&amp;UF0=1&quot; +
+&quot;&amp;MFTS0=Alert_1_Sent__c&quot; +
+&quot;&amp;MFTSValue0=&quot; + TEXT( TODAY() )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CA 35 Days URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

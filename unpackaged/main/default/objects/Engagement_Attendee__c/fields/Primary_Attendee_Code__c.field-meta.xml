@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Attendee_Code__c</fullName>
+    <description>Allows us to group guests with the member that brought them. For members, this will just be their Attendee_Code__c + &#39;-A&#39; (the &quot;A&quot; is just to ensure the main member is above his/her guests), and for guests/non-members we use their host&#39;s attendee number plus a &quot;G&quot; at the end to help with sorting so they appear below their host.
+
+Marvin Sample (member)  18099-01-A
+Sally Sample (guest)         18099-01-G
+Bobby Sample (guest)       18099-01-G</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK( Associated_Attendee__c ), Attendee_Code__c + &#39;-A&#39;,
+Associated_Attendee__r.Attendee_Code__c + &#39;-G&#39;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Allows us to group guests with the member that brought them.</inlineHelpText>
+    <label>Primary Attendee Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

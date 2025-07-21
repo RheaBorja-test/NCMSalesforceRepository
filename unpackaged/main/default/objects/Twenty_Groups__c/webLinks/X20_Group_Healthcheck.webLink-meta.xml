@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Healthcheck</fullName>
+    <availability>online</availability>
+    <description>Initiates a Lead/Entry and Opportunity for Healthcheck for 20 Groups and assigns it to Software Solutions</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>20 Group Healthcheck</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Retail_Solutions_Engine_Healthcheck_for_20_Groups?
+var20Group={!Twenty_Groups__c.x20GroupID_18__c}
+&amp;varModeratorID={!Twenty_Groups__c.NCM_ProprietorId__c}
+
+
+&amp;retURL={!Twenty_Groups__c.Id}</url>
+</WebLink>

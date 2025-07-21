@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>General Ledger Ids, etc</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Surcharge Journal Entry</label>
+    <visibility>Public</visibility>
+</CustomObject>

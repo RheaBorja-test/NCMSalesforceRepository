@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alternate Member</fullName>
+                <default>false</default>
+                <label>Alternate Member</label>
+            </value>
+            <value>
+                <fullName>Associate Member</fullName>
+                <default>false</default>
+                <label>Associate Member</label>
+            </value>
+            <value>
+                <fullName>Financial Data</fullName>
+                <default>false</default>
+                <label>Financial Data</label>
+            </value>
+            <value>
+                <fullName>Honorary Member</fullName>
+                <default>false</default>
+                <label>Honorary Member</label>
+            </value>
+            <value>
+                <fullName>Local Admin</fullName>
+                <default>false</default>
+                <label>Local Admin</label>
+            </value>
+            <value>
+                <fullName>Member</fullName>
+                <default>false</default>
+                <label>Member</label>
+            </value>
+            <value>
+                <fullName>Supplement</fullName>
+                <default>false</default>
+                <label>Supplement</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

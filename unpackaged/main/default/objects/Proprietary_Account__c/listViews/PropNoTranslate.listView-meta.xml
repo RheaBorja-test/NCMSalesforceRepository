@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PropNoTranslate</fullName>
+    <columns>Group_Member_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Composite_Heading__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>WinM_Member_Number__c</columns>
+    <columns>WinMaster_Member_Name__c</columns>
+    <columns>Member_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Active - Don&#39;t Bill,On Hold</value>
+    </filters>
+    <filters>
+        <field>Statement_Translation_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Group_Member_Number__c</field>
+        <operation>notContain</operation>
+        <value>-00</value>
+    </filters>
+    <label>PropNoTranslate</label>
+    <sharedTo>
+        <group>All_Users</group>
+    </sharedTo>
+</ListView>

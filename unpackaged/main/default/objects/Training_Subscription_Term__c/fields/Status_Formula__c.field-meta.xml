@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (
+    AND(
+        NOT( ISBLANK( Suspension_End__c ) ),
+        Suspension_Start__c &lt;= TODAY(),
+        Suspension_End__c &gt; TODAY()
+    ),
+    &quot;Suspended&quot;,
+    IF(
+        Start_Date__c &gt; TODAY(),
+        &quot;Not Started&quot;,
+        IF(
+            AND(
+                NOT( ISBLANK( Termination_Date__c ) ),
+                Termination_Date__c &lt; TODAY()
+            ),
+            &quot;Inactive&quot;,
+            IF(
+                AND(
+                    NOT( ISBLANK( End_Date_Code__c ) ),
+                    End_Date_Code__c &lt; TODAY()
+                ),
+                &quot;Inactive&quot;,
+                &quot;Active&quot;
+            )
+        )
+    )
+)</formula>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

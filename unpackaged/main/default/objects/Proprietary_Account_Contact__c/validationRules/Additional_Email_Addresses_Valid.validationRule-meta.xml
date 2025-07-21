@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Email_Addresses_Valid</fullName>
+    <active>true</active>
+    <description>Additional distribution list email addresses must be correctly formatted and separated by a semi-colon</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Additional_Dist_List_Email_Addresses__c)),
+NOT(
+REGEX(
+Additional_Dist_List_Email_Addresses__c ,
+&quot;^(([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}),)*([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,})$&quot;
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Make sure each email address is properly formatted and separated by a comma.</errorMessage>
+</ValidationRule>

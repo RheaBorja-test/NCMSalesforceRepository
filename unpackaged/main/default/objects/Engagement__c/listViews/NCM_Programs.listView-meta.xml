@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Programs</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4) and 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Location__c</columns>
+    <columns>Engagement_Start__c</columns>
+    <columns>Engagement_End__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Available_Seats__c</columns>
+    <columns>Campus_Room__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.Professional_Services_Business_Review</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.Professional_Services_Consulting</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.Professional_Services_Training</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.Professional_Services_20G</value>
+    </filters>
+    <filters>
+        <field>Engagement_Start_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>Professional Services</label>
+</ListView>

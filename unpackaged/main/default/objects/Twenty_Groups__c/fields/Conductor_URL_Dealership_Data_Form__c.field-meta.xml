@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conductor_URL_Dealership_Data_Form__c</fullName>
+    <description>&quot;&amp;EmailToId=&quot; + Moderator_Contact_Id__c +
+&quot;&amp;CETId=a0RG000000YxKuB&quot; +
+&quot;&amp;EmailRelatedToId=&quot; + Id +</description>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;id=&quot; + Id +
+&quot;&amp;ReportId=[Oppty]00OG00000079W78&quot; + 
+&quot;&amp;TemplateId=a0TG000000WPmRL&quot; +
+&quot;&amp;FP0=1&quot; +
+&quot;&amp;LG4=1&quot; +
+&quot;&amp;OFN=&quot; + SUBSTITUTE(  Name  , &quot;&amp;&quot;, &quot;{~~~}&quot;) + &quot; - &quot; + &quot;Dealership Data&quot; +
+&quot;&amp;QMODE=2&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Conductor URL Dealership Data Form</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

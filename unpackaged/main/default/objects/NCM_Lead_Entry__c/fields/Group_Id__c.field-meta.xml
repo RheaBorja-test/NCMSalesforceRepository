@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Id__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Select the 20 Group the lead is going into.
+If the lead does not have a designated group, select group # 0000.</inlineHelpText>
+    <label>NCM 20 Group #</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Twenty_Groups__c.Delete_Date__c</field>
+            <operation>equals</operation>
+            <value />
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Twenty_Groups__c</referenceTo>
+    <relationshipLabel>NCM Leads</relationshipLabel>
+    <relationshipName>NCM_Lead_Entries</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

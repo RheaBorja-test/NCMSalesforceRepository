@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dimension_1_and_2_Present</fullName>
+    <active>false</active>
+    <description>Dim1 and 2 both MUST be present on any Billing Product</description>
+    <errorConditionFormula>OR(
+isblank( Dimension_1__c )
+,
+isblank( Dimension_2__c )
+
+
+)</errorConditionFormula>
+    <errorMessage>Enter BOTH Dimension 1 and Dimension 2 - if you tried to create this manually or used the incorrect procedure.</errorMessage>
+</ValidationRule>

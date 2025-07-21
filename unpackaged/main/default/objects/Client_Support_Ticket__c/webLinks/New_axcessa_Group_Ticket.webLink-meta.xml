@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_axcessa_Group_Ticket</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New axcessa Group Ticket</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/setup/ui/recordtypeselect.jsp?ent=01I4A000001Lw2v&amp;retURL=%2F{!axcessa_Group__c.Id}&amp;save_new_url=%2FaAr%2Fe%3FCF00N4A00000Fy7ca%3D{!axcessa_Group__c.Account__c}%26CF00N4A00000Fy7ca_lkid%3D{!axcessa_Group__c.AccountId__c}%26CF00N4A00000Fy7cp%3D{!axcessa_Group__c.Name}%26CF00N4A00000Fy7cp_lkid%3D{!axcessa_Group__c.Id}%26CF00N4A00000Fy7ci%3D{!$User.FirstName}%2520{!$User.LastName}%26CF00N4A00000Fy7ci_lkid%3D{!$User.ContactId}%26CF00N4A00000Fy7ch%3Daxcessa%26CF00N4A00000Fy7ch_lkid%3DaAs4A00000000s9%26retURL%3D%252F{!axcessa_Group__c.Id}</url>
+</WebLink>

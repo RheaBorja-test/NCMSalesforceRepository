@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MailingZip</fullName>
+    <active>false</active>
+    <description>Validates that the contact Mailing Zip/Postal Code is in 99999 or 99999-9999 format if Mailing Country is USA or blank.</description>
+    <errorConditionFormula>AND(
+OR(MailingCountry = &quot;USA&quot;, LEN(MailingCountry) = 0),
+OR(
+AND(LEN(MailingPostalCode) &lt;&gt;5, LEN(MailingPostalCode) &lt;&gt;
+10),
+NOT(CONTAINS(&quot;0123456789&quot;, LEFT( MailingPostalCode, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 2, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 3, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 4, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 5, 1))),
+AND(
+LEN(MailingPostalCode) = 10,
+OR(
+MID( MailingPostalCode , 6, 1) &lt;&gt; &quot;-&quot;,
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 7, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 8, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 9, 1))),
+NOT(CONTAINS(&quot;0123456789&quot;, MID( MailingPostalCode , 10, 1)))
+)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>MailingPostalCode</errorDisplayField>
+    <errorMessage>Zip code must be in 99999 or 99999-9999 format</errorMessage>
+</ValidationRule>

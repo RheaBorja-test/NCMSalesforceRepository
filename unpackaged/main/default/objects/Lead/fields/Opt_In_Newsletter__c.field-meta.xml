@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_In_Newsletter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>NCM Perspectives - Quarterly newsletter that showcases successful dealer-operators</description>
+    <inlineHelpText>NCM Perspectives - Quarterly newsletter that showcases successful dealer-operators</inlineHelpText>
+    <label>Opt In - Newsletter</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

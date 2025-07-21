@@ -1,0 +1,291 @@
+<apex:page docType="html-5.0" applyHtmlTag="false" applyBodyTag="false" showHeader="false" sidebar="false" standardStylesheets="false"
+  title="Group Roster" standardController="Twenty_Groups__c" extensions="RosterGroupInfo" renderAs="pdf">
+
+  <!-- renderAs="pdf" -->
+
+  <html>
+
+  <head>
+    <title>Group Roster</title>
+    <style type="text/css">
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #memberTable {
+        display: table;
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-collapse: collapse;
+        font-size: 9px;
+      }
+
+      .memberRow {
+        display: table-row;
+        width: 100%;
+        page-break-inside: avoid;
+      }
+
+      .memberInfo {
+        display: table-cell;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+      }
+
+      .candidateHeader {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 16px;
+      }
+
+      #div-top-left {
+        position: running(div-top-left);
+      }
+
+      #div-top-middle {
+        position: running(div-top-middle);
+        font-weight: bolder;
+        font-size: 16px;
+      }
+
+      #div-top-right {
+        position: running(div-top-right);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        text-align: right;
+      }
+
+      #footer {
+        position: running(footer);
+        display: block;
+        font-size: 9px;
+      }
+
+      #div-groupinfo,
+      #div-engagementinfo {
+        width: 100%;
+        border: 1px black solid;
+        margin-top: 5px;
+      }
+
+      .groupInfo {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .groupRow {
+        display: table-row;
+      }
+
+      .groupCol {
+        display: table-cell;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      #pageInfo {
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      #pagenumber {
+        font-size: 9px;
+        text-align: center;
+      }
+
+      #pagenumber::after {
+        content: "Page " counter(page) " of " counter(pages);
+      }
+
+      .footsplit {
+        width: 33.33%;
+      }
+
+      .membernumber {
+        font-size: 10px;
+      }
+
+      #confidential {
+        font-size: 9px;
+        text-align: right;
+      }
+
+      .membername {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      @page {
+        size: letter;
+        margin-top: 1.25in;
+        margin-bottom: 1.5in;
+        margin-left: 0.5in;
+        margin-right: 0.5in;
+        @top-left {
+          content: element(div-top-left);
+          padding-top: .5in;
+          vertical-align: top;
+        }
+        @top-center {
+          content: element(div-top-middle);
+          vertical-align: top;
+          padding-top: .5in;
+        }
+        @top-right {
+          content: element(div-top-right);
+          vertical-align: top;
+          padding-top: .5in;
+        }
+        @bottom-center {
+          content: element(footer);
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div-top-left">
+      <img src="{!$Resource.NCM_Logo_PNG}" height="50px" width="auto" />
+    </div>
+      
+    <div id="div-top-middle">
+      <center>
+        {!groupName}
+        <br />
+        <br /> {!$CurrentPage.parameters.group}
+      </center>
+    </div>
+      
+    <apex:outputPanel rendered="{!errorMessages != ''}">
+    	<center>
+        	<h2>
+                {!errorMessages}
+            </h2>
+        </center>  
+    </apex:outputPanel>
+      
+    <div id="div-top-right">
+      {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}
+      <br /><apex:outputText value="Candidate's Roster" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',true,false)}" />
+    </div>
+      
+    <div id="footer">
+      <div id="div-engagementinfo">
+        <div class="groupInfo">
+          <apex:repeat var="engagement" value="{!engagements}">
+            <div class="groupRow">
+              <div class="groupCol">
+                <apex:outputText value="{0, date, MM/dd/yyyy}">
+                  <apex:param value="{!engagement.Engagement_Start_Date__c}" /></apex:outputText> -
+                <apex:outputText value="{0, date, MM/dd/yyyy}">
+                  <apex:param value="{!engagement.Engagement_End_Date__c}" /></apex:outputText>
+              </div>
+              <div class="groupCol">{!engagement.Status__c}</div>
+              <div class="groupCol">
+                <b>{!engagement.Confirmed_Hotel__r.Name}</b>
+              </div>
+              <div class="groupCol">{!engagement.City__c}, {!engagement.State_pl__c}</div>
+            </div>
+          </apex:repeat>
+        </div>
+      </div>
+        
+      <div id="div-groupinfo">
+        <div class="groupInfo">
+          <div class="groupCol">
+            {!memberCount}
+          </div>
+          <div class="groupCol">
+            {!moderatorName}
+            <br />{!moderatorEmail}
+            <br />Client Support: {!coordinatorName}
+            <br />{!coordinatorEmail}
+          </div>
+          <div class="groupCol">NCM Associates, Inc.
+            <br />4717 Grand Ave, Suite #500
+            <br />Kansas City, MO 64112</div>
+          <div class="groupCol">BUS: (800)756-2620
+            <br />FAX: (816)931-4651
+            <br /><apex:outputText value="CELL: {!moderatorMobile}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+          </div>
+          <div class="groupCol">
+            www.ncmassociates.com
+            <br /><apex:outputText value="{!listserv}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+            <br />Meeting Support: {!meetingSupportName}
+            <br />{!meetingSupportEmail}
+          </div>
+        </div>
+      </div>
+        
+      <div id="pageInfo">
+        <div class="groupInfo">
+          <div class="groupCol footsplit"></div>
+          <div class="groupCol footsplit" id="pagenumber"></div>
+          <div class="groupCol footsplit" id="confidential">Proprietary &amp; Confidential</div>
+        </div>
+      </div>
+    </div>
+      
+    <center>
+      <b>Current Members</b>
+    </center>
+    <div id="memberTable">
+      <apex:repeat var="member" value="{!members}">
+        <div class="memberRow">
+          <span class="memberInfo">
+            <span class="membernumber">{!member['number']}</span>
+          </span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['contactNames']}" escape="false" />
+          </span>
+          <span class="memberInfo">
+            <span class="membername">{!member['name']}</span>
+            <br/>{!member['street']}
+            <br/>{!member['city']}, {!member['state']} {!member['zip']}</span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['phone']}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+          </span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['contactEmails']}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+          </span>
+        </div>
+      </apex:repeat>
+      <div style="page-break-before:always;padding-bottom: 16px;display:{!if(candidates.size==0,'none','block')}">&nbsp;<div class="candidateHeader">Member Candidates</div></div>
+      <apex:repeat var="member" value="{!candidates}">
+        <div class="memberRow">
+          <span class="memberInfo">
+            <span class="membernumber">{!member['number']}<br />CIP</span>
+          </span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['contactNames']}" escape="false" />
+          </span>
+          <span class="memberInfo">
+            <span class="membername">{!member['name']}</span>
+            <br/>{!member['street']}
+            <br/>{!member['city']}, {!member['state']} {!member['zip']}</span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['phone']}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+          </span>
+          <span class="memberInfo">
+            <apex:outputText value="{!member['contactEmails']}" escape="false" rendered="{!if($CurrentPage.parameters.candidate=='true',false,true)}" />
+          </span>
+        </div>
+      </apex:repeat>
+    </div>
+  </body>
+
+  </html>
+
+</apex:page>

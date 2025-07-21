@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recently_Modified</fullName>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Alternate_Names__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>Sam Shryock</value>
+    </filters>
+    <label>Recently Modified</label>
+</ListView>

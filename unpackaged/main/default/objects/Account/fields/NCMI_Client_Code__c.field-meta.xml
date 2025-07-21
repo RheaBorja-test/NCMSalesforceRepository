@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMI_Client_Code__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Temporary field for WinMasters integration to evaulate if the account has NCMi services</description>
+    <label>NCMI Client (Code)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

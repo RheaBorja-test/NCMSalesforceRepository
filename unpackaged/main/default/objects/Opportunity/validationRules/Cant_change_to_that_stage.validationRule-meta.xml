@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_change_to_that_stage</fullName>
+    <active>true</active>
+    <description>Opportunity can only be changed to Invoice Paid stage by automation.</description>
+    <errorConditionFormula>AND( 
+   ISCHANGED(StageName),
+   OR(ISPICKVAL(StageName, &#39;Invoice Sent&#39;),
+      ISPICKVAL(StageName, &#39;Invoice Paid&#39;),
+      ISPICKVAL(StageName, &#39;Waitlist&#39;) 
+   ),
+   NOT(ByPassValidation__c),
+    $Profile.Name &lt;&gt; &#39;System Administrator&#39;
+)</errorConditionFormula>
+    <errorMessage>You can not manually move the Opportunity to that stage.</errorMessage>
+</ValidationRule>

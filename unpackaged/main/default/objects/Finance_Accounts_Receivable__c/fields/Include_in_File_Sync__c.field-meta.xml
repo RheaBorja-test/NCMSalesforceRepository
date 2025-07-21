@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_in_File_Sync__c</fullName>
+    <formula>AND(
+    Payment_Status__c &lt;&gt; &#39;Not Applicable&#39;,
+    Invoice_Status__c &lt;&gt; &#39;Discarded&#39;,
+    OR(
+        ISBLANK( Paid_Date__c ),
+        Paid_Date__c &gt; ( TODAY() - 7 )
+    )
+)</formula>
+    <label>Include in File Sync?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

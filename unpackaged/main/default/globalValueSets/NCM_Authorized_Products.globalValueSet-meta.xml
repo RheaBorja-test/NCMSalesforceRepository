@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>20 Groups</fullName>
+        <default>false</default>
+        <label>20 Groups</label>
+    </customValue>
+    <customValue>
+        <fullName>aXcessa</fullName>
+        <default>false</default>
+        <label>aXcessa</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck</fullName>
+        <default>false</default>
+        <label>Healthcheck</label>
+    </customValue>
+    <customValue>
+        <fullName>NCMi Cohort</fullName>
+        <default>false</default>
+        <label>NCMi Cohort</label>
+    </customValue>
+    <customValue>
+        <fullName>NCMi Paid Seats</fullName>
+        <default>false</default>
+        <label>NCMi Paid Seats</label>
+    </customValue>
+    <customValue>
+        <fullName>NCMi Subscription</fullName>
+        <default>false</default>
+        <label>NCMi Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>NCMi Training Credits</fullName>
+        <default>false</default>
+        <label>NCMi Training Credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Proprietary</fullName>
+        <default>false</default>
+        <label>Proprietary</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Member Products</fullName>
+        <default>false</default>
+        <label>Single Member Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Performance Solutions</fullName>
+        <default>false</default>
+        <label>Digital Performance Solutions</label>
+    </customValue>
+    <masterLabel>NCM Authorized Products</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

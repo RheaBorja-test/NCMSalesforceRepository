@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi_Course__c</fullName>
+    <label>NCMi Course</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NCMI - DESKING AND F&amp;I INTEGRATION</fullName>
+                <default>false</default>
+                <label>NCMI - DESKING AND F&amp;I INTEGRATION</label>
+            </value>
+            <value>
+                <fullName>NCMI - FINDING TOP TALENT</fullName>
+                <default>false</default>
+                <label>NCMI - FINDING TOP TALENT</label>
+            </value>
+            <value>
+                <fullName>NCMI - GENERAL MANAGEMENT EXEC PROGRAM</fullName>
+                <default>false</default>
+                <label>NCMI - GENERAL MANAGEMENT EXEC PROGRAM</label>
+            </value>
+            <value>
+                <fullName>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</fullName>
+                <default>false</default>
+                <label>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</label>
+            </value>
+            <value>
+                <fullName>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</fullName>
+                <default>false</default>
+                <label>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</label>
+            </value>
+            <value>
+                <fullName>NCMI - LEADING YOUR DEALERSHIP TEAM TO SUCCESS</fullName>
+                <default>false</default>
+                <label>NCMI - LEADING YOUR DEALERSHIP TEAM TO SUCCESS</label>
+            </value>
+            <value>
+                <fullName>NCMI - MASTERING INTERNET SALES</fullName>
+                <default>false</default>
+                <label>NCMI - MASTERING INTERNET SALES</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF COLLISION CENTER MANAGEMENT</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF COLLISION CENTER MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT II</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF GENERAL MANAGEMENT II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF GENERAL MANAGEMENT II</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</label>
+            </value>
+            <value>
+                <fullName>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</fullName>
+                <default>false</default>
+                <label>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</label>
+            </value>
+            <value>
+                <fullName>NCMI - SALES &amp; MANAGEMENT COMPENSATION</fullName>
+                <default>false</default>
+                <label>NCMI - SALES &amp; MANAGEMENT COMPENSATION</label>
+            </value>
+            <value>
+                <fullName>NCMI - SERVICE &amp; PARTS FOR SENIOR EXECUTIVES</fullName>
+                <default>false</default>
+                <label>NCMI - SERVICE &amp; PARTS FOR SENIOR EXECUTIVES</label>
+            </value>
+            <value>
+                <fullName>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</fullName>
+                <default>false</default>
+                <label>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</label>
+            </value>
+            <value>
+                <fullName>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</fullName>
+                <default>false</default>
+                <label>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</label>
+            </value>
+            <value>
+                <fullName>NCMI - ONSITE TRAINING</fullName>
+                <default>false</default>
+                <label>NCMI - ONSITE TRAINING</label>
+            </value>
+            <value>
+                <fullName>NCMI - WEBINARS</fullName>
+                <default>false</default>
+                <label>NCMI - WEBINARS</label>
+            </value>
+            <value>
+                <fullName>NCMI - ON DEMAND SETUP FEE</fullName>
+                <default>false</default>
+                <label>NCMI - ON DEMAND SETUP FEE</label>
+            </value>
+            <value>
+                <fullName>NCMI - ON DEMAND</fullName>
+                <default>false</default>
+                <label>NCMI - ON DEMAND</label>
+            </value>
+            <value>
+                <fullName>NCMI - SUBSCRIPTION</fullName>
+                <default>false</default>
+                <label>NCMI - SUBSCRIPTION</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

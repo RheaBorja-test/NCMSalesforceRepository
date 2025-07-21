@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Type__c</fullName>
+    <label>Special Client Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Engagement_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+                <label>Dealer</label>
+            </value>
+            <value>
+                <fullName>Dealer Group</fullName>
+                <default>false</default>
+                <label>Dealer Group</label>
+            </value>
+            <value>
+                <fullName>OEM Program</fullName>
+                <default>false</default>
+                <label>OEM Program</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

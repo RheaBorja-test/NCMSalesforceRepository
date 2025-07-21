@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mega_Book_Heading_Required</fullName>
+    <active>true</active>
+    <description>Mega Book Heading is required if Mega Group Feeder = True.</description>
+    <errorConditionFormula>AND(
+ OR(
+   ISNEW(),
+   ISCHANGED(Mega_Group_Feeder__c)
+ ), 
+ Mega_Group_Feeder__c  = True, 
+ Mega_Book_Heading__c = &quot;&quot;
+)</errorConditionFormula>
+    <errorMessage>Please fill out the Mega Book Heading field since the Mega Group Feeder is checked.</errorMessage>
+</ValidationRule>

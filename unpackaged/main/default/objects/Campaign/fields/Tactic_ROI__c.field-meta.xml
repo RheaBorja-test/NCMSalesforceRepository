@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tactic_ROI__c</fullName>
+    <formula>IF( AmountWonOpportunities  = 0, 
+
+0,
+
+IF( Total_Spend__c  = 0, 
+
+0,
+
+
+(AmountWonOpportunities - Total_Spend__c)/Total_Spend__c
+
+
+
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tactic ROI %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Percent</type>
+</CustomField>

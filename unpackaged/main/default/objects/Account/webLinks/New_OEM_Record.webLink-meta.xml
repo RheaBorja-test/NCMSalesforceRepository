@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_OEM_Record</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New OEM Record</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://na47.salesforce.com/a4o/e?
+&amp;CF00NG000000EcbOj={!Account.Name}
+&amp;retURL={!Account.Account_Id__c}</url>
+</WebLink>

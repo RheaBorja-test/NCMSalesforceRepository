@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_on_aXcessa__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(isblank( Disconnected_Program__c),Today() - Program_Start__c, Program_Start__c -Disconnected_Program__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the store is disconnected the value will be (-) days from Program Start to Program Disconnected</inlineHelpText>
+    <label>Days on aXcessa</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

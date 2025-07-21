@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tradeshow_Requests</fullName>
+    <columns>Requestor_Forms__c</columns>
+    <columns>Request_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Requested_Completion_Launch_Date__c</columns>
+    <columns>Total_Projects_in_Request__c</columns>
+    <columns>Total_Approved_Projects__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>startsWith</operation>
+        <value>MR-</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Request_Forms__c.Tradeshow_Request</value>
+    </filters>
+    <label>Tradeshow Requests</label>
+</ListView>

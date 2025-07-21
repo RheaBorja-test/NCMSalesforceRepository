@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Found_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The person who found or entered the lead while using someone else&#39;s login</description>
+    <inlineHelpText>The person who found or entered the lead while using someone else&#39;s login</inlineHelpText>
+    <label>Lead Entered on Behalf of</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>NCM Associates</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Employment_Status__c</field>
+            <operation>equals</operation>
+            <value>Employed, Contracted</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>NCM Leads (Lead Found By)</relationshipLabel>
+    <relationshipName>NCM_Leads</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

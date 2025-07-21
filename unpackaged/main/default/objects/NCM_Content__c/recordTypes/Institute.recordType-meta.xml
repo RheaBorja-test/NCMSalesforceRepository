@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Institute</fullName>
+    <active>true</active>
+    <description>Institute specific content</description>
+    <label>Institute</label>
+    <picklistValues>
+        <picklist>Course__c</picklist>
+        <values>
+            <fullName>A GM%27s Guide to Service %26 Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHPH Collections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collision Center Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer Executive Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desking %26 F%26I Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Effective Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Express Service I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Express Service II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Analysis for OEM Personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Statement for OEM Personnel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamentals of Parts Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamentals of Service Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamentals of Used Car Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management Executive Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Sales Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Sales Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Sales Management III</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiring Top Talent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet%2FBDC Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mastering the Digital Marketplace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Management IIII</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success-Driven Pay Plans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used Vehicle Management I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used Vehicle Management II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used Vehicle Management III</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Discipline__c</picklist>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject__c</picklist>
+        <values>
+            <fullName>Express Service Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Sales Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership Summit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used Vehicle Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proprietary_First_Month_of_Data_Reqd</fullName>
+    <active>true</active>
+    <description>Before moving to Closed Won, the First Month of Data field must be completed.</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+RecordType.Name = &#39;Proprietary&#39;,
+ISCHANGED( StageName ),
+ISPICKVAL(StageName,&#39;Closed Won&#39;),
+ISBLANK( First_Month_of_Data__c )
+)</errorConditionFormula>
+    <errorDisplayField>First_Month_of_Data__c</errorDisplayField>
+    <errorMessage>Before moving to Closed Won, the First Month of Data field must be completed.</errorMessage>
+</ValidationRule>

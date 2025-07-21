@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Client Transfer</fullName>
+        <default>false</default>
+        <label>Client Transfer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Email/Call</fullName>
+        <default>false</default>
+        <label>Inbound Email/Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OEM</fullName>
+        <default>false</default>
+        <label>OEM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound Email/Call</fullName>
+        <default>false</default>
+        <label>Outbound Email/Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradeshow</fullName>
+        <default>false</default>
+        <label>Tradeshow</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Quality</fullName>
+        <default>false</default>
+        <label>Data Quality</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey</fullName>
+        <default>false</default>
+        <label>Survey</label>
+    </standardValue>
+</StandardValueSet>

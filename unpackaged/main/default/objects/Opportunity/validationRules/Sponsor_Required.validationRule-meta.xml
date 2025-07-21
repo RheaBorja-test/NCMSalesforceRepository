@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsor_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    CASESAFEID( RecordTypeId ) = &#39;012A00000000M29IAE&#39;,
+    ISBLANK( Sponsor__c ),
+    ISPICKVAL( StageName, &#39;Provisioning&#39;)
+)</errorConditionFormula>
+    <errorDisplayField>Sponsor__c</errorDisplayField>
+    <errorMessage>Sponsor must be populated in order to move into Provisioning</errorMessage>
+</ValidationRule>

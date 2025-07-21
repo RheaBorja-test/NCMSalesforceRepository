@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalId__c</fullName>
+    <description>An external id for this record that can be referenced outside of Salesforce.</description>
+    <displayFormat>{0000000000}</displayFormat>
+    <externalId>true</externalId>
+    <label>ExternalId</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

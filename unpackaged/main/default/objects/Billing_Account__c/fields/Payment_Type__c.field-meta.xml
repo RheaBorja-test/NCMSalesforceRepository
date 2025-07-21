@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Type__c</fullName>
+    <inlineHelpText>Credit Card and ACH automatically send an Electronic Invoice where Electronic/Paper means no CC or ACH-Debit on file and SIN is sent for payment by client and Paper Only is where client wishes to receive only a Paper SIN</inlineHelpText>
+    <label>Payment Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>ACH-Debit</fullName>
+                <default>false</default>
+                <label>ACH-Debit</label>
+            </value>
+            <value>
+                <fullName>Invoice Only</fullName>
+                <default>false</default>
+                <label>Invoice Only</label>
+            </value>
+            <value>
+                <fullName>Check</fullName>
+                <default>false</default>
+                <label>Check</label>
+            </value>
+            <value>
+                <fullName>Electronic Billing Statement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Electronic Billing Statement</label>
+            </value>
+            <value>
+                <fullName>Paper Billing Statement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paper Billing Statement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

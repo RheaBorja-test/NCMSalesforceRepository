@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Project_Start__c</fullName>
+    <formula>Scheduled_Tactic_Start__c-(
+CASE(
+	MOD(Scheduled_Tactic_Start__c - DATE(1900, 1, 7), 7),
+	0, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + FLOOR((Estimated_Project_Duration__c-1)/5)*2,
+	1, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + FLOOR((Estimated_Project_Duration__c)/5)*2,
+	2, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + FLOOR((Estimated_Project_Duration__c+1)/5)*2,
+	3, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + FLOOR((Estimated_Project_Duration__c+2)/5)*2,
+	4, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + FLOOR((Estimated_Project_Duration__c+3)/5)*2,
+	5, (Scheduled_Tactic_Start__c) + Estimated_Project_Duration__c + CEILING((Estimated_Project_Duration__c)/5)*2,
+	6, (Scheduled_Tactic_Start__c) - IF(Estimated_Project_Duration__c&gt;0,1,0) + Estimated_Project_Duration__c + CEILING((Estimated_Project_Duration__c)/5)*2,
+	null
+) - Scheduled_Tactic_Start__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Latest Project Start</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

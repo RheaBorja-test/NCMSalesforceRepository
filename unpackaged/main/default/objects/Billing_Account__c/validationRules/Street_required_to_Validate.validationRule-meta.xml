@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Street_required_to_Validate</fullName>
+    <active>false</active>
+    <description>A street is required in order to validate account.</description>
+    <errorConditionFormula>AND(
+     ISBLANK(   Billing_Street__c  ),
+     ISPICKVAL( Status__c , &quot;Validated&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Street__c</errorDisplayField>
+    <errorMessage>This field can not be blank when validating a Finance Account.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Info_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+    AND(
+        ISBLANK(Contact__c),
+        ISBLANK(First_Name__c),
+        ISBLANK(Last_Name__c)
+    ),
+    AND(
+        ISBLANK(Contact__c),
+        OR(
+            ISBLANK(First_Name__c),
+            ISBLANK(Last_Name__c)
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>You must provide either a contact link, or a First &amp; Last Name in order to save the Lead Entry</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spoke_with_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to help identify when a task results in a voice conversation with the desired contact.</description>
+    <inlineHelpText>Used to help identify when a task results in a voice conversation with the desired contact</inlineHelpText>
+    <label>Spoke with Contact</label>
+    <type>Checkbox</type>
+</CustomField>

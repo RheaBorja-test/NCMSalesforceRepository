@@ -1,0 +1,36 @@
+<apex:page standardController="Engagement__c" extensions="EngagementAttendeeNotes" renderAs="pdf">
+    
+
+    <p> Attendance Notes for Meeting:&nbsp; 
+    <apex:outputText value="{!Engagement__c.Name}"/></p>
+    <p> Location:&nbsp;
+    <apex:outputText value="{!Engagement__c.Confirmed_Hotel__r.Name}"/></p>
+ <p> Group #:&nbsp;
+    <apex:outputText value="{!groupNumber}"/></p>
+    <p> Meeting Date:&nbsp;
+    <apex:outputText value="{!engagementStartEndDate}"/></p>
+ 
+
+    <p></p>  
+       
+   <apex:form >
+<apex:pageBlock >
+<apex:dataTable value="{!relatedAttendees}" var="attendee" border="1" cellpadding="5"  styleClass="table" width="15.92cm" style="text-align:center; line-height: 11pt; font-size:11pt; border-spacing: 0;" columns="3">     
+        <apex:column >
+        <apex:facet name="header">Member </apex:facet> 
+        <apex:outputText >{!attendee.Member_Number__c}</apex:outputText>
+      </apex:column>
+              <apex:column >
+        <apex:facet name="header">Attendee Name </apex:facet> 
+        <apex:outputText >{!attendee.Collateral_Name__c}</apex:outputText>
+      </apex:column>
+      <apex:column >
+        <apex:facet name="header">Note </apex:facet> 
+        <apex:outputText value="{!attendee.Attendee_Notes__c}" escape="false"/>
+      </apex:column>
+       </apex:dataTable> 
+       </apex:pageBlock>
+        </apex:form>
+    
+  
+</apex:page>

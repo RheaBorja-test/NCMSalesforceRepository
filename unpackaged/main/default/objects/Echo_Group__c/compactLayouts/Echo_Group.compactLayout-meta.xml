@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Echo_Group</fullName>
+    <fields>Name</fields>
+    <fields>Group_Status__c</fields>
+    <fields>Active_Store_Rollup__c</fields>
+    <fields>Inactive_Store_Rollup__c</fields>
+    <label>Echo Group</label>
+</CompactLayout>

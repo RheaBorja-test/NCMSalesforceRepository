@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collecting_Data_Text__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Collecting_Data__c,&quot;&quot;,&quot;The first thing we need in order to enroll you in this program is 14 months’ worth of financial data for your dealership. To assist with this request, our Financial Statement Submission Guide is attached. Once we have this information, we will produce an NCM Benchmark® composite. Please reach out to your coordinator with any questions you may have.&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Collecting Data Text (Code)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Date_Sent</fullName>
+    <active>false</active>
+    <description>in Axcessa Opportunity, verifies if there&#39;s data in Contract Date Sent field before advancing to next stage in sales process.</description>
+    <errorConditionFormula>AND(
+(ISBLANK( Contract_Date_Sent__c )),
+RecordType.DeveloperName = &quot;axcessa&quot;,
+OR(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+ISPICKVAL( StageName, &quot;Contract Received&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Date_Sent__c</errorDisplayField>
+    <errorMessage>Data missing. Check Contract Date Sent.</errorMessage>
+</ValidationRule>

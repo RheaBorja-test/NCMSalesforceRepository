@@ -1,0 +1,1308 @@
+<!-- User Note: TFBS111EE5NGNDA Reporting Template With Sub-Totalling Groups -->
+<!-- User Note: This Template Has Value Groups 01-05 Which Automtically Subtotal, Value Groups 10-20 Used For Display Pursposes -->
+<!-- User Note: The Template Is Generic. It Expects Labels 01-03 For Each Of The Totals. Template Only Uses A Single Data Range. -->
+<!-- User Note: Special Features: Balance Sheet with Specific Calculations. Normal Signs On All Values (Liabilities and Equity as Negative) -->
+<!-- REGION 01: GENERAL CONFIGURATION START-->
+<!-- User Note: I Want To Use The Reporting Engine To Generate Reports -->
+<apex:page standardController="ffr__ReportingDefinition__c" extensions="ffr.ReportingTemplateController" readOnly="true" showHeader="true" sidebar="false" standardStylesheets="false" renderas="{!RenderReportAs}" contenttype="{!SaveReportAS}">
+<!-- User Note: I Want To Have A Single Format For All Of My Reports So That I Can Style The Fonts And Colors -->
+<!-- User Note: A Standard Stylesheet Has Been Provided In The Static Resources -->
+<!-- User Note: You Can Create Your Own Stylsheet In The Static Resources And Apply It To Your Reports -->
+<!-- User Note: The Style Has Been Designed To Allow Variations Within Different Types Of Reports -->
+<!-- User Note: Change The Last Character From D To S On The Style Classes Applied To Each Line Will Produce A Summary Report -->
+<!-- User Note: A Summary Report Hides The Lowest Level Of Rows But Retains Calculations -->
+<apex:stylesheet value="{!URLFOR($Resource.ffr__ReportingDefaultStyles, 'ReportingDefaultStyles.css')}"/>
+<apex:stylesheet value="{!StyleSheetName}"/>
+<!-- Variable to represent boolean true/false when needing to set other variables to these states -->
+<apex:variable var="true" value="{!1=1}"/>
+<apex:variable var="false" value="{!1=0}"/>
+<!-- User Note: I Want To Format Values On A Report In Different Ways -->
+<!-- User Note: A Number Formatter Component Has Been Provided To Support Different Formats -->
+<!-- User Note: The Coding Structure For The Variable Is As Follows Value/Percent Numberofdecimals Normal/Reversed Brakets/Minus 3Charcterinternationalcurrencycode/None-->
+<!-- User Note: Good Practice Is To Reverse Values Using A Format Rather Than Create Calculations On The Visualforce Page So Running Totals Can Be Easily Maintained-->
+<!-- User Note: You Can Add Your Own Formats To The List Below Try To Keep A Good Coding Structure-->
+<apex:variable var="V2NCB" value="#,###,###,##0.00;(#,###,###,##0.00);0.00"/>
+<apex:variable var="P2NCB" value="#,###,###,##0.00%;(#,###,###,##0.00%);0.00%"/>
+<apex:variable var="V0NCB" value="#,###,###,##0;(#,###,###,##0);0"/>
+<apex:variable var="P0NCB" value="#,###,###,##0%;(#,###,###,##0%);0%"/>
+<apex:variable var="V2RCB" value="(#,###,###,##0.00);#,###,###,##0.00;0.00"/>
+<apex:variable var="P2RCB" value="(#,###,###,##0.00%);#,###,###,##0.00%;0.00%"/>
+<apex:variable var="V0RCB" value="(#,###,###,##0);#,###,###,##0;0"/>
+<apex:variable var="P0RCB" value="(#,###,###,##0%);#,###,###,##0%;0%"/>
+<apex:variable var="V2NCBUSD" value="$#,###,###,##0.00;$(#,###,###,##0.00);$0.00"/>
+<apex:variable var="V2RCBUSD" value="$(#,###,###,##0.00);$#,###,###,##0.00;$0.00"/>
+<!-- User Note: I Want To Change All Of The Value Formats Quickly Across The Whole Of The Report -->
+<!-- User Note: Having The Variables Above Assigned To A Second Variable Here Means That Just Changing This Field Will -->
+<!-- User Note: Apply The Results To All The Fields Where It Is Used -->
+<!-- User Note: It Is Possible To Use Individual Variables Against A Line This Method Allows You To Make A Single Change To All Related Formats -->
+<apex:variable var="VN" value="{!V2NCB}"/>
+<apex:variable var="PN" value="{!P2NCB}"/>
+<apex:variable var="VR" value="{!V2RCB}"/>
+<apex:variable var="PR" value="{!P2RCB}"/>
+
+<!-- REGION 01: GENERAL CONFIGURATION END -->
+<!-- REGION 02: REPORT HEADER START -->
+<!-- Demand The Report Definition Fields To Be Loaded Even If Data Is Not Found -->
+<apex:outputText value="{!ffr__ReportingDefinition__c.Name}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__Description__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__Title__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__DisplayPrompts__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__ReportingTemplate__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__StyleSheet__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__PrintStyleSheet__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__CompanyLogo__c}" rendered="false"/>
+<apex:outputText value="{!ffr__ReportingDefinition__c.ffr__PrintChatterFeed__c}" rendered="false"/>
+<!-- User Note: Show The Error Messages From The Reporting Engine -->
+
+<apex:pageBlock title="Messages" rendered="{!hasMessages}">
+<apex:messages />
+</apex:pageBlock>
+<div class="chatterPosition"></div>
+<!-- User Note: I Want A Consistent Header Format To All Of My Reports With Titles Descriptions And Runtime Prompts Etc -->
+<!-- User Note: When Creating New Templates This Well Formatted Header Should Be Copied And Used Across All The Reports -->
+<table class="ffrgridd">
+<tr>
+<td><apex:image url="{!URLFOR(StaticResourceImages, CompanyLogo)}" rendered="{!DisplayCompanyLogo}" styleClass="logoReport"/></td>
+</tr>
+<tr>
+<td><h1 class="ffrtitle">{!ffr__ReportingDefinition__c.ffr__Title__c}</h1></td>
+<td align="right">{!NOW()}</td>
+</tr>
+<tr><td class="ffrgridspacer2"></td></tr>
+<tr>
+<td><h1 class="ffrname">{!ffr__ReportingDefinition__c.Name}</h1></td>
+<td align="right"><h2 class="ffrwhiteonwhite">{!ffr__ReportingDefinition__c.ffr__ReportingTemplate__c}</h2></td>
+</tr>
+<tr><td class="ffrgridspacer2"></td></tr>
+<tr>
+<td align="left"><apex:outputField value="{!ffr__ReportingDefinition__c.ffr__Description__c}"/></td>
+<td align="right"><h2 class="ffrwhiteonwhite">{!ffr__ReportingDefinition__c.ffr__StyleSheet__c}</h2></td>
+</tr>
+</table>
+<!-- User Note: Create a new table to display the prompt information -->
+<table class="ffrgridnotfullpage">
+<tr><td class="ffrgridspacer2"></td></tr>
+<tr>
+<td align="left">
+<table class="ffrgrid">
+<apex:repeat value="{!promptList}" var="prompt" >
+<tr>
+<td align="left">{!prompt.label}</td>
+<td align="left" class="ffrgridspacer"></td>
+<td align="left"><strong>{!prompt.value}</strong></td>
+</tr>
+</apex:repeat>
+</table>
+</td>
+</tr>
+</table>
+<!-- User Note: Insert a space after the header -->
+<table class="ffrgrid">
+<tr><td class="ffrgridspacer"></td></tr>
+</table>
+<!-- REGION 02: REPORT HEADER END -->
+<!-- REGION 03: REPORT BODY START -->
+<apex:outputpanel rendered="{!!hasMessages}">
+    <!-- This template uses only one data range -->
+    <apex:variable var="dataRange" value="{!reportingData['DR01']}"/>
+    <!-- Configuration of columns and groups (elastic template responds dynamically to existence of groups and columns -->
+    <!-- Column setup -->
+    <!-- Set the default column rendering state variables to "false" -->
+    <apex:variable var="RenderColumnA" value="{!false}"/>
+    <apex:variable var="RenderColumnB" value="{!false}"/>
+    <apex:variable var="RenderColumnC" value="{!false}"/>
+    <apex:variable var="RenderColumnD" value="{!false}"/>
+    <apex:variable var="RenderColumnE" value="{!false}"/>
+    <apex:variable var="RenderColumnF" value="{!false}"/>
+    <apex:variable var="RenderColumnG" value="{!false}"/>
+    <apex:variable var="RenderColumnH" value="{!false}"/>
+    <apex:variable var="RenderColumnI" value="{!false}"/>
+    <apex:variable var="RenderColumnJ" value="{!false}"/>
+    <apex:variable var="RenderColumnK" value="{!false}"/>
+    <apex:variable var="RenderColumnL" value="{!false}"/>
+    <apex:variable var="RenderColumnM" value="{!false}"/>
+    <apex:variable var="RenderColumnN" value="{!false}"/>
+    <apex:variable var="RenderColumnO" value="{!false}"/>
+    <apex:variable var="RenderColumnP" value="{!false}"/>
+    <apex:variable var="RenderColumnQ" value="{!false}"/>
+    <apex:variable var="RenderColumnR" value="{!false}"/>
+    <apex:variable var="RenderColumnS" value="{!false}"/>
+    <apex:variable var="RenderColumnT" value="{!false}"/>
+    <apex:variable var="RenderColumnU" value="{!false}"/>
+    <apex:variable var="RenderColumnV" value="{!false}"/>
+    <apex:variable var="RenderColumnW" value="{!false}"/>
+    <apex:variable var="RenderColumnX" value="{!false}"/>
+    <apex:variable var="RenderColumnY" value="{!false}"/>
+    <apex:variable var="RenderColumnZ" value="{!false}"/>
+    <!-- Set the default column rendering state for calculated columns -->
+    <!-- Now set the column rendering state variables according to which columns have been used (via column filter mappings) -->
+    <apex:repeat var="columnKey" value="{!dataRange.columnKeyList}">
+        <apex:variable var="RenderColumnA" value="{!true}" rendered="{!columnKey=='A'}" />
+        <apex:variable var="RenderColumnB" value="{!true}" rendered="{!columnKey=='B'}" />
+        <apex:variable var="RenderColumnC" value="{!true}" rendered="{!columnKey=='C'}" />
+        <apex:variable var="RenderColumnD" value="{!true}" rendered="{!columnKey=='D'}" />
+        <apex:variable var="RenderColumnE" value="{!true}" rendered="{!columnKey=='E'}" />
+        <apex:variable var="RenderColumnF" value="{!true}" rendered="{!columnKey=='F'}" />
+        <apex:variable var="RenderColumnG" value="{!true}" rendered="{!columnKey=='G'}" />
+        <apex:variable var="RenderColumnH" value="{!true}" rendered="{!columnKey=='H'}" />
+        <apex:variable var="RenderColumnI" value="{!true}" rendered="{!columnKey=='I'}" />
+        <apex:variable var="RenderColumnJ" value="{!true}" rendered="{!columnKey=='J'}" />
+        <apex:variable var="RenderColumnK" value="{!true}" rendered="{!columnKey=='K'}" />
+        <apex:variable var="RenderColumnL" value="{!true}" rendered="{!columnKey=='L'}" />
+        <apex:variable var="RenderColumnM" value="{!true}" rendered="{!columnKey=='M'}" />
+        <apex:variable var="RenderColumnN" value="{!true}" rendered="{!columnKey=='N'}" />
+        <apex:variable var="RenderColumnO" value="{!true}" rendered="{!columnKey=='O'}" />
+        <apex:variable var="RenderColumnP" value="{!true}" rendered="{!columnKey=='P'}" />
+        <apex:variable var="RenderColumnQ" value="{!true}" rendered="{!columnKey=='Q'}" />
+        <apex:variable var="RenderColumnR" value="{!true}" rendered="{!columnKey=='R'}" />
+        <apex:variable var="RenderColumnS" value="{!true}" rendered="{!columnKey=='S'}" />
+        <apex:variable var="RenderColumnT" value="{!true}" rendered="{!columnKey=='T'}" />
+        <apex:variable var="RenderColumnU" value="{!true}" rendered="{!columnKey=='U'}" />
+        <apex:variable var="RenderColumnV" value="{!true}" rendered="{!columnKey=='V'}" />
+        <apex:variable var="RenderColumnW" value="{!true}" rendered="{!columnKey=='W'}" />
+        <apex:variable var="RenderColumnX" value="{!true}" rendered="{!columnKey=='X'}" />
+        <apex:variable var="RenderColumnY" value="{!true}" rendered="{!columnKey=='Y'}" />
+        <apex:variable var="RenderColumnZ" value="{!true}" rendered="{!columnKey=='Z'}" />
+    </apex:repeat>
+    <!-- Group setup-->
+    <!-- Set the default group value rendering state variables to "false" -->
+    <apex:variable var="RenderGroup01" value="{!false}"/>
+    <apex:variable var="RenderGroup02" value="{!false}"/>
+    <apex:variable var="RenderGroup03" value="{!false}"/>
+    <apex:variable var="RenderGroup04" value="{!false}"/>
+    <apex:variable var="RenderGroup05" value="{!false}"/>
+    <apex:variable var="RenderGroup10" value="{!false}"/>
+    <apex:variable var="RenderGroup11" value="{!false}"/>
+    <apex:variable var="RenderGroup12" value="{!false}"/>
+    <apex:variable var="RenderGroup13" value="{!false}"/>
+    <apex:variable var="RenderGroup14" value="{!false}"/>
+    <apex:variable var="RenderGroup15" value="{!false}"/>
+    <apex:variable var="RenderGroup16" value="{!false}"/>
+    <apex:variable var="RenderGroup17" value="{!false}"/>
+    <apex:variable var="RenderGroup18" value="{!false}"/>
+    <apex:variable var="RenderGroup19" value="{!false}"/>
+    <apex:variable var="RenderGroup20" value="{!false}"/>
+    <!-- In some places we want to span the groups with a single label, so to do this we need to know how many groups we will render -->
+    <apex:variable var="countRenderedGroups" value="{!0}"/>
+    <!-- We need to know whether to keep group subtotals. Default condition is false -->
+    <apex:variable var="RenderGroupSubtotals" value="{!false}"/>
+    <!-- Now set the group rendering state variables according to which group values have been used, and count them -->
+    <!-- Additionally, if we have any of groups 01-09 we need to maintain group subtotals -->
+    <apex:repeat var="groupKey" value="{!dataRange.groupKeyList}">
+    <!-- Group-groups -->
+    <apex:outputPanel layout="none" rendered="{!groupKey=='01'}">
+    <apex:variable var="RenderGroup01" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    <apex:variable var="RenderGroupSubtotals" value="{!true}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='02'}">
+    <apex:variable var="RenderGroup02" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    <apex:variable var="RenderGroupSubtotals" value="{!true}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='03'}">
+    <apex:variable var="RenderGroup03" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    <apex:variable var="RenderGroupSubtotals" value="{!true}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='04'}">
+    <apex:variable var="RenderGroup04" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    <apex:variable var="RenderGroupSubtotals" value="{!true}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='05'}">
+    <apex:variable var="RenderGroup05" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    <apex:variable var="RenderGroupSubtotals" value="{!true}"/>
+    </apex:outputPanel>
+    <!-- line-groups -->
+    <apex:outputPanel layout="none" rendered="{!groupKey=='10'}">
+    <apex:variable var="RenderGroup10" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='11'}">
+    <apex:variable var="RenderGroup11" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='12'}">
+    <apex:variable var="RenderGroup12" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='13'}">
+    <apex:variable var="RenderGroup13" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='14'}">
+    <apex:variable var="RenderGroup14" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='15'}">
+    <apex:variable var="RenderGroup15" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='16'}">
+    <apex:variable var="RenderGroup16" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='17'}">
+    <apex:variable var="RenderGroup17" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='18'}">
+    <apex:variable var="RenderGroup18" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='19'}">
+    <apex:variable var="RenderGroup19" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!groupKey=='20'}">
+    <apex:variable var="RenderGroup20" value="{!true}"/>
+    <apex:variable var="countRenderedGroups" value="{!countRenderedGroups+1}"/>
+    </apex:outputPanel>
+    </apex:repeat>
+
+    <table class="ffrgrid">
+    <tr>
+    <!-- Column headings -->
+    <!-- Note that these are contained within outputPanels which are rendered (displayed) depending on the appropriate column render state variable -->
+    <!-- Groups 1-9 are groups with sub-totals (groups), 10- are groups without sub-totals (lines) -->
+    <th class="{!if(RenderGroup01,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup01}">{!dataRange.groupLabels['01']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup02,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup02}">{!dataRange.groupLabels['02']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup03,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup03}">{!dataRange.groupLabels['03']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup04,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup04}">{!dataRange.groupLabels['04']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup05,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup05}">{!dataRange.groupLabels['05']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup10,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup10}">{!dataRange.groupLabels['10']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup11,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup11}">{!dataRange.groupLabels['11']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup12,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup12}">{!dataRange.groupLabels['12']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup13,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup13}">{!dataRange.groupLabels['13']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup14,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup14}">{!dataRange.groupLabels['14']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup15,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup15}">{!dataRange.groupLabels['15']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup16,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup16}">{!dataRange.groupLabels['16']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup17,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup17}">{!dataRange.groupLabels['17']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup18,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup18}">{!dataRange.groupLabels['18']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup19,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup19}">{!dataRange.groupLabels['19']}</apex:outputPanel></th>
+    <th class="{!if(RenderGroup20,'ffrgridtitleleftd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup20}">{!dataRange.groupLabels['20']}</apex:outputPanel></th>
+    <td class="ffrgridspacer"/>
+    <th class="{!if(RenderColumnA,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}">{!dataRange.columnLabels['A']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnB,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}">{!dataRange.columnLabels['B']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnC,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}">{!dataRange.columnLabels['C']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnD,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}">{!dataRange.columnLabels['D']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnE,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}">{!dataRange.columnLabels['E']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnF,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}">{!dataRange.columnLabels['F']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnG,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}">{!dataRange.columnLabels['G']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnH,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}">{!dataRange.columnLabels['H']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnI,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}">{!dataRange.columnLabels['I']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnJ,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}">{!dataRange.columnLabels['J']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnK,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}">{!dataRange.columnLabels['K']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnL,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}">{!dataRange.columnLabels['L']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnM,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}">{!dataRange.columnLabels['M']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnN,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}">{!dataRange.columnLabels['N']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnO,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}">{!dataRange.columnLabels['O']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnP,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}">{!dataRange.columnLabels['P']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnQ,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}">{!dataRange.columnLabels['Q']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnR,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}">{!dataRange.columnLabels['R']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnS,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}">{!dataRange.columnLabels['S']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnT,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}">{!dataRange.columnLabels['T']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnU,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}">{!dataRange.columnLabels['U']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnV,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}">{!dataRange.columnLabels['V']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnW,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}">{!dataRange.columnLabels['W']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnX,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}">{!dataRange.columnLabels['X']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnY,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}">{!dataRange.columnLabels['Y']}</apex:outputPanel></th>
+    <th class="{!if(RenderColumnZ,'ffrgridtitlerightd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}">{!dataRange.columnLabels['Z']}</apex:outputPanel></th>
+    </tr>
+    <!-- Set all column grand-totals to zero (if the column is in use - determined by column render state variables) -->
+        <tr><td class = "ffrhidden"><apex:variable value="{!0}" var="grandTotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!0}" var="grandTotalColumnZ" rendered="{!RenderColumnZ}"/>
+    <!-- We need to track fixed assets for calculation of Current Assets less Current Liabilities -->
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!0}" var="fixedAssetsTotalColumnZ" rendered="{!RenderColumnZ}"/></td></tr>
+    <!-- We need to track whether or not the asset/liability calculations have been displayed - this defaults to false -->
+    <apex:variable value="{!false}" var="assetLiabilityCalculationsDisplayed"/>
+    <!-- Iterate over the Rows -->
+    <apex:repeat value="{!dataRange.rowList}" var="row" >
+    <!-- Setup for start of row -->
+    <apex:variable var="rowKeyNum" value="{!0}"/>
+    <tr><td class = "ffrhidden"><ffr:ToNumber value="{!row.key}" convertedVarName="rowKeyNum"/></td></tr>
+    <!-- Display the asset/liability calculations if they have not been displayed and all the assets and current liabilities rows have been processed -->
+    <apex:outputPanel layout="none" rendered="{!!assetLiabilityCalculationsDisplayed && rowKeyNum>30}">
+    <!-- Display current assets less current liabilities -->
+    <tr>
+        <td class="ffrcalcsumlabeld" colspan="16">{!label['L10']}</td>
+    <td class="ffrgridspacerd"/>
+        <th class="{!if(RenderColumnA,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnA-fixedAssetsTotalColumnA}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnB,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnB-fixedAssetsTotalColumnB}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnC,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnC-fixedAssetsTotalColumnC}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnD,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnD-fixedAssetsTotalColumnD}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnE,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnE-fixedAssetsTotalColumnE}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnF,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnF-fixedAssetsTotalColumnF}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnG,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnG-fixedAssetsTotalColumnG}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnH,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnH-fixedAssetsTotalColumnH}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnI,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnI-fixedAssetsTotalColumnI}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnJ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnJ-fixedAssetsTotalColumnJ}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnK,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnK-fixedAssetsTotalColumnK}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnL,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnL-fixedAssetsTotalColumnL}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnM,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnM-fixedAssetsTotalColumnM}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnN,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnN-fixedAssetsTotalColumnN}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnO,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnO-fixedAssetsTotalColumnO}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnP,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnP-fixedAssetsTotalColumnP}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnQ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnQ-fixedAssetsTotalColumnQ}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnR,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnR-fixedAssetsTotalColumnR}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnS,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnS-fixedAssetsTotalColumnS}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnT,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnT-fixedAssetsTotalColumnT}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnU,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnU-fixedAssetsTotalColumnU}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnV,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnV-fixedAssetsTotalColumnV}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnW,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnW-fixedAssetsTotalColumnW}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnX,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnX-fixedAssetsTotalColumnX}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnY,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnY-fixedAssetsTotalColumnY}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnZ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnZ-fixedAssetsTotalColumnZ}"/></apex:outputPanel></th>
+    </tr>
+    <!-- Spacer -->
+    <tr><td class="ffrgridspacerd" colspan="16"></td></tr>
+    <!-- Display total assets less current liabilities -->
+    <tr>
+        <td class="ffrcalcsumlabeld" colspan="16">{!label['L11']}</td>
+    <td class="ffrgridspacerd"/>
+        <th class="{!if(RenderColumnA,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnA}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnB,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnB}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnC,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnC}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnD,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnD}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnE,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnE}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnF,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnF}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnG,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnG}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnH,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnH}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnI,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnI}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnJ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnJ}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnK,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnK}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnL,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnL}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnM,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnM}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnN,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnN}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnO,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnO}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnP,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnP}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnQ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnQ}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnR,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnR}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnS,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnS}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnT,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnT}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnU,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnU}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnV,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnV}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnW,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnW}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnX,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnX}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnY,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnY}"/></apex:outputPanel></th>
+        <th class="{!if(RenderColumnZ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}"><ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnZ}"/></apex:outputPanel></th>
+    </tr>
+    <!-- Spacer -->
+    <tr><td class="ffrgridspacerd" colspan="16"></td></tr>
+    <!-- Set the flag to indicate that we have displayed asset/liability calculations -->
+    <apex:variable value="{!true}" var="assetLiabilityCalculationsDisplayed"/>
+    </apex:outputPanel>
+    <!-- For each row, reset all column row-totals and subtotals to zero (if the column is in use - determined by column render state variables) -->
+    <tr><td class = "ffrhidden">
+    <apex:variable value="{!0}" var="rowTotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!0}" var="rowTotalColumnZ" rendered="{!RenderColumnZ}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnZ" rendered="{!RenderColumnZ}"/></td></tr>
+    <!-- These variables are used to determine when to print a subtotal -->
+    <apex:variable var="previousLineGroup01" value=""/>
+    <apex:variable var="previousLineGroup02" value=""/>
+    <apex:variable var="previousLineGroup03" value=""/>
+    <apex:variable var="previousLineGroup04" value=""/>
+    <apex:variable var="previousLineGroup05" value=""/>
+    <apex:variable var="currentLineGroup01" value=""/>
+    <apex:variable var="currentLineGroup02" value=""/>
+    <apex:variable var="currentLineGroup03" value=""/>
+    <apex:variable var="currentLineGroup04" value=""/>
+    <apex:variable var="currentLineGroup05" value=""/>
+    <!-- This variable is used to determine whether the line is the first line in the row - to prevent a subtotal being printed before the first line -->
+    <apex:variable var="firstLine" value="{!true}"/>
+    <!-- Iterate over the Lines -->
+    <apex:repeat value="{!row.lineList}" var="line" >
+    <!-- Display the line and process subtotals - for rows up to 90 -->
+    <apex:outputPanel layout="none" rendered="{!rowKeyNum<91}">
+    <!-- Set the variables representing the groups for the current line for comparison with the previous line -->
+    <tr><td class = "ffrhidden"><apex:variable value="{!line.groups['01']}" var="currentLineGroup01" rendered="{!RenderGroup01}"/>
+    <apex:variable value="{!line.groups['02']}" var="currentLineGroup02" rendered="{!RenderGroup02}"/>
+    <apex:variable value="{!line.groups['03']}" var="currentLineGroup03" rendered="{!RenderGroup03}"/>
+    <apex:variable value="{!line.groups['04']}" var="currentLineGroup04" rendered="{!RenderGroup04}"/>
+    <apex:variable value="{!line.groups['05']}" var="currentLineGroup05" rendered="{!RenderGroup05}"/></td></tr>
+    <!-- Mid-row subtotal line -->
+    <!-- Do we want to process a (mid-row) subtotal line? -->
+    <apex:variable var="doSubtotal" value="{!RenderGroupSubtotals && !firstLine && (currentLineGroup01!=previousLineGroup01 || currentLineGroup02!=previousLineGroup02 || currentLineGroup03!=previousLineGroup03|| currentLineGroup04!=previousLineGroup04|| currentLineGroup05!=previousLineGroup05)}"/>
+    <!-- Process a subtotal line -->
+    <tr>
+    <!-- Display the group-group values but not the group-line values -->
+    <td class="{!if(doSubtotal && RenderGroup01,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup01}">{!previousLineGroup01}</apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup02,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup02}">{!previousLineGroup02}</apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup03,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup03}">{!previousLineGroup03}</apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup04,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup04}">{!previousLineGroup04}</apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup05,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup05}">{!previousLineGroup05}</apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup10,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup10}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup11,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup11}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup12,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup12}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup13,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup13}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup14,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup14}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup15,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup15}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup16,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup16}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup17,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup17}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup18,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup18}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup19,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup19}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderGroup20,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderGroup20}"></apex:outputPanel></td>
+    <td class="{!if(doSubtotal,'ffrgridspacerd','ffrhidden')}"></td>
+    <td class="{!if(doSubtotal && RenderColumnA,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnA}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnA}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnB,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnB}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnB}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnC,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnC}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnC}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnD,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnD}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnD}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnE,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnE}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnE}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnF,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnF}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnF}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnG,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnG}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnG}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnH,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnH}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnH}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnI,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnI}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnI}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnJ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnJ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnJ}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnK,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnK}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnK}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnL,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnL}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnL}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnM,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnM}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnM}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnN,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnN}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnN}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnO,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnO}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnO}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnP,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnP}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnP}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnQ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnQ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnQ}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnR,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnR}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnR}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnS,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnS}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnS}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnT,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnT}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnT}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnU,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnU}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnU}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnV,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnV}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnV}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnW,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnW}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnW}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnX,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnX}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnX}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnY,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnY}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnY}"/></apex:outputPanel></td>
+    <td class="{!if(doSubtotal && RenderColumnZ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!doSubtotal && RenderColumnZ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnZ}"/></apex:outputPanel></td>
+    <!-- Columns Total -->
+    <!-- Running Total -->
+    </tr>
+    <!-- Reset the subtotals -->
+    <tr><td class="ffrhidden">
+    <apex:variable value="{!0}" var="rowSubtotalColumnA" rendered="{!doSubtotal && RenderColumnA}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnB" rendered="{!doSubtotal && RenderColumnB}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnC" rendered="{!doSubtotal && RenderColumnC}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnD" rendered="{!doSubtotal && RenderColumnD}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnE" rendered="{!doSubtotal && RenderColumnE}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnF" rendered="{!doSubtotal && RenderColumnF}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnG" rendered="{!doSubtotal && RenderColumnG}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnH" rendered="{!doSubtotal && RenderColumnH}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnI" rendered="{!doSubtotal && RenderColumnI}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnJ" rendered="{!doSubtotal && RenderColumnJ}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnK" rendered="{!doSubtotal && RenderColumnK}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnL" rendered="{!doSubtotal && RenderColumnL}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnM" rendered="{!doSubtotal && RenderColumnM}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnN" rendered="{!doSubtotal && RenderColumnN}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnO" rendered="{!doSubtotal && RenderColumnO}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnP" rendered="{!doSubtotal && RenderColumnP}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnQ" rendered="{!doSubtotal && RenderColumnQ}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnR" rendered="{!doSubtotal && RenderColumnR}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnS" rendered="{!doSubtotal && RenderColumnS}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnT" rendered="{!doSubtotal && RenderColumnT}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnU" rendered="{!doSubtotal && RenderColumnU}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnV" rendered="{!doSubtotal && RenderColumnV}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnW" rendered="{!doSubtotal && RenderColumnW}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnX" rendered="{!doSubtotal && RenderColumnX}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnY" rendered="{!doSubtotal && RenderColumnY}"/>
+    <apex:variable value="{!0}" var="rowSubtotalColumnZ" rendered="{!doSubtotal && RenderColumnZ}"/></td></tr>
+    <!-- Line setup -->
+    <!-- Each column is configured independently within an outputPanel the outputpanel rendered property determines whether the column is configured -->
+    <!-- This uses the column render state variable (e.g. "renderColumnA" determines whether the panel for column A is configured and rendered) -->
+    <apex:variable value="{!0}" var="lineTotal"/>
+    <!-- For each column, add the column value to the line total and sub-total - column-row totals are updated separately -->
+                <tr><td class="ffrhidden"><apex:outputPanel layout="none" rendered="{!RenderColumnA}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['A'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnA+VALUE(TEXT(line.columns['A'].values['A']))}" var="rowSubtotalColumnA"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnB}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['B'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnB+VALUE(TEXT(line.columns['B'].values['A']))}" var="rowSubtotalColumnB"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnC}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['C'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnC+VALUE(TEXT(line.columns['C'].values['A']))}" var="rowSubtotalColumnC"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnD}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['D'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnD+VALUE(TEXT(line.columns['D'].values['A']))}" var="rowSubtotalColumnD"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnE}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['E'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnE+VALUE(TEXT(line.columns['E'].values['A']))}" var="rowSubtotalColumnE"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnF}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['F'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnF+VALUE(TEXT(line.columns['F'].values['A']))}" var="rowSubtotalColumnF"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnG}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['G'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnG+VALUE(TEXT(line.columns['G'].values['A']))}" var="rowSubtotalColumnG"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnH}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['H'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnH+VALUE(TEXT(line.columns['H'].values['A']))}" var="rowSubtotalColumnH"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnI}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['I'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnI+VALUE(TEXT(line.columns['I'].values['A']))}" var="rowSubtotalColumnI"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnJ}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['J'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnJ+VALUE(TEXT(line.columns['J'].values['A']))}" var="rowSubtotalColumnJ"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnK}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['K'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnK+VALUE(TEXT(line.columns['K'].values['A']))}" var="rowSubtotalColumnK"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnL}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['L'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnL+VALUE(TEXT(line.columns['L'].values['A']))}" var="rowSubtotalColumnL"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnM}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['M'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnM+VALUE(TEXT(line.columns['M'].values['A']))}" var="rowSubtotalColumnM"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnN}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['N'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnN+VALUE(TEXT(line.columns['N'].values['A']))}" var="rowSubtotalColumnN"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnO}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['O'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnO+VALUE(TEXT(line.columns['O'].values['A']))}" var="rowSubtotalColumnO"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnP}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['P'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnP+VALUE(TEXT(line.columns['P'].values['A']))}" var="rowSubtotalColumnP"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnQ}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['Q'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnQ+VALUE(TEXT(line.columns['Q'].values['A']))}" var="rowSubtotalColumnQ"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnR}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['R'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnR+VALUE(TEXT(line.columns['R'].values['A']))}" var="rowSubtotalColumnR"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnS}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['S'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnS+VALUE(TEXT(line.columns['S'].values['A']))}" var="rowSubtotalColumnS"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnT}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['T'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnT+VALUE(TEXT(line.columns['T'].values['A']))}" var="rowSubtotalColumnT"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnU}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['U'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnU+VALUE(TEXT(line.columns['U'].values['A']))}" var="rowSubtotalColumnU"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnV}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['V'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnV+VALUE(TEXT(line.columns['V'].values['A']))}" var="rowSubtotalColumnV"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnW}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['W'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnW+VALUE(TEXT(line.columns['W'].values['A']))}" var="rowSubtotalColumnW"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnX}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['X'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnX+VALUE(TEXT(line.columns['X'].values['A']))}" var="rowSubtotalColumnX"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnY}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['Y'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnY+VALUE(TEXT(line.columns['Y'].values['A']))}" var="rowSubtotalColumnY"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnZ}">
+    <apex:variable value="{!lineTotal+VALUE(TEXT(line.columns['Z'].values['A']))}" var="lineTotal"/>
+    <apex:variable value="{!rowSubtotalColumnZ+VALUE(TEXT(line.columns['Z'].values['A']))}" var="rowSubtotalColumnZ"/>
+        </apex:outputPanel></td></tr>
+    <!-- Display the line -->
+    <tr>
+    <!-- Display the grouping values based on render settings -->
+    <td class="{!if(RenderGroup01,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup01}">{!currentLineGroup01}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup02,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup02}">{!currentLineGroup02}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup03,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup03}">{!currentLineGroup03}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup04,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup04}">{!currentLineGroup04}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup05,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup05}">{!currentLineGroup05}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup10,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup10}">{!line.groups['10']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup11,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup11}">{!line.groups['11']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup12,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup12}">{!line.groups['12']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup13,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup13}">{!line.groups['13']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup14,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup14}">{!line.groups['14']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup15,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup15}">{!line.groups['15']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup16,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup16}">{!line.groups['16']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup17,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup17}">{!line.groups['17']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup18,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup18}">{!line.groups['18']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup19,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup19}">{!line.groups['19']}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup20,'ffrgridrowlabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup20}">{!line.groups['20']}</apex:outputPanel></td>
+    <td class="ffrgridspacerd"/>
+    <!-- Each column is contained within an outputPanel which simply controls whether it is rendered: -->
+    <!-- Assign the value to a Visualforce variable so that it can be used in the NumberFormatter component -->
+    <!-- (Note that this is a workaround for a VF bug - we should not need set up a variable for this) -->
+    <!-- Display the line value, formatted using a NumberFormatter component with the pattern defined above -->
+    <!-- (Note that we are reusing a temporary variable "v") -->
+    <td class="{!if(RenderColumnA,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['A'].values['A'])), VALUE(TEXT(line.columns['A'].values['A'])),0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnB,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['B'].values['A'])), VALUE(TEXT(line.columns['B'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnC,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['C'].values['A'])), VALUE(TEXT(line.columns['C'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnD,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['D'].values['A'])), VALUE(TEXT(line.columns['D'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnE,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['E'].values['A'])), VALUE(TEXT(line.columns['E'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnF,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['F'].values['A'])), VALUE(TEXT(line.columns['F'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnG,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['G'].values['A'])), VALUE(TEXT(line.columns['G'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnH,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['H'].values['A'])), VALUE(TEXT(line.columns['H'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnI,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['I'].values['A'])), VALUE(TEXT(line.columns['I'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnJ,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['J'].values['A'])), VALUE(TEXT(line.columns['J'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnK,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['K'].values['A'])), VALUE(TEXT(line.columns['K'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnL,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['L'].values['A'])), VALUE(TEXT(line.columns['L'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnM,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['M'].values['A'])), VALUE(TEXT(line.columns['M'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnN,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['N'].values['A'])), VALUE(TEXT(line.columns['N'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnO,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['O'].values['A'])), VALUE(TEXT(line.columns['O'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnP,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['P'].values['A'])), VALUE(TEXT(line.columns['P'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnQ,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['Q'].values['A'])), VALUE(TEXT(line.columns['Q'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnR,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['R'].values['A'])), VALUE(TEXT(line.columns['R'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnS,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['S'].values['A'])), VALUE(TEXT(line.columns['S'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnT,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['T'].values['A'])), VALUE(TEXT(line.columns['T'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnU,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['U'].values['A'])), VALUE(TEXT(line.columns['U'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnV,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['V'].values['A'])), VALUE(TEXT(line.columns['V'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnW,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['W'].values['A'])), VALUE(TEXT(line.columns['W'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnX,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['X'].values['A'])), VALUE(TEXT(line.columns['X'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnY,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['Y'].values['A'])), VALUE(TEXT(line.columns['Y'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnZ,'ffrgridrowd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}">
+    <apex:variable value="{!IF(ISNUMBER(TEXT(line.columns['Z'].values['A'])), VALUE(TEXT(line.columns['Z'].values['A'])), 0)}" var="v"/>
+        <ffr:NumberFormatter pattern="{!VN}" value="{!v}"/>
+    </apex:outputPanel></td>
+    <!-- Columns Total -->
+    <!-- Running Total is blank at line level -->
+    </tr>
+    <!-- Setup for next line -->
+    <!-- Record the group values as "previous" for comparison on the next line -->
+    <tr><td class="ffrhidden"><apex:variable var="previousLineGroup01" value="{!currentLineGroup01}"/>
+    <apex:variable var="previousLineGroup02" value="{!currentLineGroup02}"/>
+    <apex:variable var="previousLineGroup03" value="{!currentLineGroup03}"/>
+    <apex:variable var="previousLineGroup04" value="{!currentLineGroup04}"/>
+    <apex:variable var="previousLineGroup05" value="{!currentLineGroup05}"/></td></tr>
+    <!-- If this was the first line, it was complteted, so set first line to false -->
+    <tr><td class = "ffrhidden"><apex:variable var="firstLine" value="{!false}" rendered="{!firstLine}" /></td></tr>
+    </apex:outputPanel>
+    <!-- Add the values to the row-column totals (for all rows, including those above 90) -->
+    <apex:outputPanel layout="none" rendered="{!RenderColumnA}">
+    <apex:variable value="{!rowTotalColumnA+VALUE(TEXT(line.columns['A'].values['A']))}" var="rowTotalColumnA"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnB}">
+    <apex:variable value="{!rowTotalColumnB+VALUE(TEXT(line.columns['B'].values['A']))}" var="rowTotalColumnB"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnC}">
+    <apex:variable value="{!rowTotalColumnC+VALUE(TEXT(line.columns['C'].values['A']))}" var="rowTotalColumnC"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnD}">
+    <apex:variable value="{!rowTotalColumnD+VALUE(TEXT(line.columns['D'].values['A']))}" var="rowTotalColumnD"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnE}">
+    <apex:variable value="{!rowTotalColumnE+VALUE(TEXT(line.columns['E'].values['A']))}" var="rowTotalColumnE"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnF}">
+    <apex:variable value="{!rowTotalColumnF+VALUE(TEXT(line.columns['F'].values['A']))}" var="rowTotalColumnF"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnG}">
+    <apex:variable value="{!rowTotalColumnG+VALUE(TEXT(line.columns['G'].values['A']))}" var="rowTotalColumnG"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnH}">
+    <apex:variable value="{!rowTotalColumnH+VALUE(TEXT(line.columns['H'].values['A']))}" var="rowTotalColumnH"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnI}">
+    <apex:variable value="{!rowTotalColumnI+VALUE(TEXT(line.columns['I'].values['A']))}" var="rowTotalColumnI"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnJ}">
+    <apex:variable value="{!rowTotalColumnJ+VALUE(TEXT(line.columns['J'].values['A']))}" var="rowTotalColumnJ"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnK}">
+    <apex:variable value="{!rowTotalColumnK+VALUE(TEXT(line.columns['K'].values['A']))}" var="rowTotalColumnK"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnL}">
+    <apex:variable value="{!rowTotalColumnL+VALUE(TEXT(line.columns['L'].values['A']))}" var="rowTotalColumnL"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnM}">
+    <apex:variable value="{!rowTotalColumnM+VALUE(TEXT(line.columns['M'].values['A']))}" var="rowTotalColumnM"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnN}">
+    <apex:variable value="{!rowTotalColumnN+VALUE(TEXT(line.columns['N'].values['A']))}" var="rowTotalColumnN"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnO}">
+            <apex:variable value="{!rowTotalColumnO+VALUE(TEXT(line.columns['O'].values['A']))}" var="rowTotalColumnO"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnP}">
+            <apex:variable value="{!rowTotalColumnP+VALUE(TEXT(line.columns['P'].values['A']))}" var="rowTotalColumnP"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnQ}">
+            <apex:variable value="{!rowTotalColumnQ+VALUE(TEXT(line.columns['Q'].values['A']))}" var="rowTotalColumnQ"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnR}">
+            <apex:variable value="{!rowTotalColumnR+VALUE(TEXT(line.columns['R'].values['A']))}" var="rowTotalColumnR"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnS}">
+            <apex:variable value="{!rowTotalColumnS+VALUE(TEXT(line.columns['S'].values['A']))}" var="rowTotalColumnS"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnT}">
+            <apex:variable value="{!rowTotalColumnT+VALUE(TEXT(line.columns['T'].values['A']))}" var="rowTotalColumnT"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnU}">
+            <apex:variable value="{!rowTotalColumnU+VALUE(TEXT(line.columns['U'].values['A']))}" var="rowTotalColumnU"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnV}">
+            <apex:variable value="{!rowTotalColumnV+VALUE(TEXT(line.columns['V'].values['A']))}" var="rowTotalColumnV"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnW}">
+            <apex:variable value="{!rowTotalColumnW+VALUE(TEXT(line.columns['W'].values['A']))}" var="rowTotalColumnW"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnX}">
+            <apex:variable value="{!rowTotalColumnX+VALUE(TEXT(line.columns['X'].values['A']))}" var="rowTotalColumnX"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnY}">
+            <apex:variable value="{!rowTotalColumnY+VALUE(TEXT(line.columns['Y'].values['A']))}" var="rowTotalColumnY"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!RenderColumnZ}">
+            <apex:variable value="{!rowTotalColumnZ+VALUE(TEXT(line.columns['Z'].values['A']))}" var="rowTotalColumnZ"/>
+    </apex:outputPanel>
+    </apex:repeat> <!-- go to next line -->
+    <!-- Do we want to process an end-of-row subtotal line? (only required for rows 1-90) -->
+    <apex:outputPanel layout="none" rendered="{!rowKeyNum<91 && RenderGroupSubtotals}">
+    <tr>
+    <!-- Display the group-group values but not the group-line values -->
+    <td class="{!if(RenderGroup01,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup01}">{!previousLineGroup01}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup02,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup02}">{!previousLineGroup02}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup03,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup03}">{!previousLineGroup03}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup04,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup04}">{!previousLineGroup04}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup05,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup05}">{!previousLineGroup05}</apex:outputPanel></td>
+    <td class="{!if(RenderGroup10,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup10}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup11,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup11}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup12,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup12}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup13,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup13}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup14,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup14}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup15,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup15}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup16,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup16}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup17,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup17}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup18,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup18}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup19,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup19}"></apex:outputPanel></td>
+    <td class="{!if(RenderGroup20,'ffrsubtotallabeld','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderGroup20}"></apex:outputPanel></td>
+    <td class="ffrgridspacerd"/>
+    <td class="{!if(RenderColumnA,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnA}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnB,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnB}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnC,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnC}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnD,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnD}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnE,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnE}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnF,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnF}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnG,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnG}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnH,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnH}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnI,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnI}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnJ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnJ}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnK,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnK}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnL,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnL}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnM,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnM}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnN,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnN}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnO,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnO}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnP,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnP}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnQ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnQ}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnR,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnR}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnS,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnS}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnT,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnT}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnU,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnU}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnV,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnV}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnW,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnW}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnX,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnX}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnY,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnY}"/></apex:outputPanel></td>
+    <td class="{!if(RenderColumnZ,'ffrsubtotald','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}"><ffr:NumberFormatter pattern="{!VN}" value="{!rowSubtotalColumnZ}"/></apex:outputPanel></td>
+    <!-- Columns Total -->
+    <!-- Running Total -->
+    </tr>
+    </apex:outputPanel>
+    <!-- Setup for end of row -->
+    <!-- Add the row-total to the grand-total so that the grand-total accumulates across all the rows -->
+    <!-- Add up the values for the row total columns -->
+    <!-- Note that the row-totals are reset for each successive row -->
+    <tr><td class = "ffrhidden"><apex:variable value="{!0}" var="rowTotal" />
+    <apex:variable value="{!0}" var="runningTotal" />
+    <apex:variable value="{!grandTotalColumnA+rowTotalColumnA}" var="grandTotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnA}" var="rowTotal" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnA}" var="runningTotal" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!grandTotalColumnB+rowTotalColumnB}" var="grandTotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnB}" var="rowTotal" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnB}" var="runningTotal" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!grandTotalColumnC+rowTotalColumnC}" var="grandTotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnC}" var="rowTotal" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnC}" var="runningTotal" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!grandTotalColumnD+rowTotalColumnD}" var="grandTotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnD}" var="rowTotal" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnD}" var="runningTotal" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!grandTotalColumnE+rowTotalColumnE}" var="grandTotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnE}" var="rowTotal" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnE}" var="runningTotal" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!grandTotalColumnF+rowTotalColumnF}" var="grandTotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnF}" var="rowTotal" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnF}" var="runningTotal" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!grandTotalColumnG+rowTotalColumnG}" var="grandTotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnG}" var="rowTotal" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnG}" var="runningTotal" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!grandTotalColumnH+rowTotalColumnH}" var="grandTotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnH}" var="rowTotal" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnH}" var="runningTotal" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!grandTotalColumnI+rowTotalColumnI}" var="grandTotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnI}" var="rowTotal" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnI}" var="runningTotal" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!grandTotalColumnJ+rowTotalColumnJ}" var="grandTotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnJ}" var="rowTotal" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnJ}" var="runningTotal" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!grandTotalColumnK+rowTotalColumnK}" var="grandTotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnK}" var="rowTotal" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnK}" var="runningTotal" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!grandTotalColumnL+rowTotalColumnL}" var="grandTotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnL}" var="rowTotal" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnL}" var="runningTotal" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!grandTotalColumnM+rowTotalColumnM}" var="grandTotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnM}" var="rowTotal" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnM}" var="runningTotal" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!grandTotalColumnN+rowTotalColumnN}" var="grandTotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnN}" var="rowTotal" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnN}" var="runningTotal" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!grandTotalColumnO+rowTotalColumnO}" var="grandTotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnO}" var="rowTotal" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnO}" var="runningTotal" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!grandTotalColumnP+rowTotalColumnP}" var="grandTotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnP}" var="rowTotal" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnP}" var="runningTotal" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!grandTotalColumnQ+rowTotalColumnQ}" var="grandTotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnQ}" var="rowTotal" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnQ}" var="runningTotal" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!grandTotalColumnR+rowTotalColumnR}" var="grandTotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnR}" var="rowTotal" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnR}" var="runningTotal" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!grandTotalColumnS+rowTotalColumnS}" var="grandTotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnS}" var="rowTotal" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnS}" var="runningTotal" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!grandTotalColumnT+rowTotalColumnT}" var="grandTotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnT}" var="rowTotal" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnT}" var="runningTotal" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!grandTotalColumnU+rowTotalColumnU}" var="grandTotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnU}" var="rowTotal" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnU}" var="runningTotal" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!grandTotalColumnV+rowTotalColumnV}" var="grandTotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnV}" var="rowTotal" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnV}" var="runningTotal" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!grandTotalColumnW+rowTotalColumnW}" var="grandTotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnW}" var="rowTotal" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnW}" var="runningTotal" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!grandTotalColumnX+rowTotalColumnX}" var="grandTotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnX}" var="rowTotal" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnX}" var="runningTotal" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!grandTotalColumnY+rowTotalColumnY}" var="grandTotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnY}" var="rowTotal" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnY}" var="runningTotal" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!grandTotalColumnZ+rowTotalColumnZ}" var="grandTotalColumnZ" rendered="{!RenderColumnZ}"/>
+    <apex:variable value="{!rowTotal+rowTotalColumnZ}" var="rowTotal" rendered="{!RenderColumnZ}"/>
+    <apex:variable value="{!runningTotal+grandTotalColumnZ}" var="runningTotal" rendered="{!RenderColumnZ}"/>
+    <!-- Accumulate Fixed Assets if the row is in the range 1-10 -->
+    <apex:outputPanel layout="none" rendered="{!rowKeyNum<11}">
+    <apex:variable value="{!fixedAssetsTotalColumnA+rowTotalColumnA}" var="fixedAssetsTotalColumnA" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnB+rowTotalColumnB}" var="fixedAssetsTotalColumnB" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnC+rowTotalColumnC}" var="fixedAssetsTotalColumnC" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnD+rowTotalColumnD}" var="fixedAssetsTotalColumnD" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnE+rowTotalColumnE}" var="fixedAssetsTotalColumnE" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnF+rowTotalColumnF}" var="fixedAssetsTotalColumnF" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnG+rowTotalColumnG}" var="fixedAssetsTotalColumnG" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnH+rowTotalColumnH}" var="fixedAssetsTotalColumnH" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnI+rowTotalColumnI}" var="fixedAssetsTotalColumnI" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnJ+rowTotalColumnJ}" var="fixedAssetsTotalColumnJ" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnK+rowTotalColumnK}" var="fixedAssetsTotalColumnK" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnL+rowTotalColumnL}" var="fixedAssetsTotalColumnL" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnM+rowTotalColumnM}" var="fixedAssetsTotalColumnM" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnN+rowTotalColumnN}" var="fixedAssetsTotalColumnN" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnO+rowTotalColumnO}" var="fixedAssetsTotalColumnO" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnP+rowTotalColumnP}" var="fixedAssetsTotalColumnP" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnQ+rowTotalColumnQ}" var="fixedAssetsTotalColumnQ" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnR+rowTotalColumnR}" var="fixedAssetsTotalColumnR" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnS+rowTotalColumnS}" var="fixedAssetsTotalColumnS" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnT+rowTotalColumnT}" var="fixedAssetsTotalColumnT" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnU+rowTotalColumnU}" var="fixedAssetsTotalColumnU" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnV+rowTotalColumnV}" var="fixedAssetsTotalColumnV" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnW+rowTotalColumnW}" var="fixedAssetsTotalColumnW" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnX+rowTotalColumnX}" var="fixedAssetsTotalColumnX" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnY+rowTotalColumnY}" var="fixedAssetsTotalColumnY" rendered="{!RenderColumnY}"/>
+    <apex:variable value="{!fixedAssetsTotalColumnZ+rowTotalColumnZ}" var="fixedAssetsTotalColumnZ" rendered="{!RenderColumnZ}"/>
+        </apex:outputPanel></td></tr>
+    <!-- Display the row totals -->
+    <tr>
+    <!--Display the title for the row-total - which is the row label -->
+    <!-- The td tag needs to span the number of groups being rendered -->
+        <td class="ffrcalcsumlabeld" colspan="16">{!row.label}</td>
+    <td class="ffrgridspacerd"/>
+        <td class="{!if(RenderColumnA,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnA}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnB,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnB}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnC,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnC}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnD,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnD}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnE,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnE}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnF,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnF}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnG,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnG}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnH,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnH}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnI,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnI}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnJ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnJ}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnK,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnK}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnL,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnL}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnM,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnM}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnN,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnN}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnO,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnO}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnP,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnP}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnQ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnQ}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnR,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnR}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnS,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnS}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnT,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnT}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnU,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnU}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnV,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnV}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnW,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnW}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnX,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnX}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnY,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnY}"/>
+        </apex:outputPanel></td>
+        <td class="{!if(RenderColumnZ,'ffrcalcsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!rowTotalColumnZ}"/>
+        </apex:outputPanel></td>
+    <!-- Columns Total -->
+    <!-- Running Total -->
+    </tr>
+    <!-- Make some vertical space before the next row -->
+    <tr><td class="ffrgridspacerd" colspan="16"></td></tr>
+    </apex:repeat><!-- Go to the next row -->
+    <!-- Setup for grand-total row -->
+    <!-- Initialise variable for the total for this row -->
+    <apex:variable value="{!0}" var="rowTotal"/>
+    <tr><td class = "ffrhidden">
+    <apex:variable value="{!rowTotal+grandTotalColumnA}" var="rowTotal" rendered="{!RenderColumnA}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnB}" var="rowTotal" rendered="{!RenderColumnB}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnC}" var="rowTotal" rendered="{!RenderColumnC}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnD}" var="rowTotal" rendered="{!RenderColumnD}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnE}" var="rowTotal" rendered="{!RenderColumnE}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnF}" var="rowTotal" rendered="{!RenderColumnF}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnG}" var="rowTotal" rendered="{!RenderColumnG}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnH}" var="rowTotal" rendered="{!RenderColumnH}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnI}" var="rowTotal" rendered="{!RenderColumnI}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnJ}" var="rowTotal" rendered="{!RenderColumnJ}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnK}" var="rowTotal" rendered="{!RenderColumnK}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnL}" var="rowTotal" rendered="{!RenderColumnL}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnM}" var="rowTotal" rendered="{!RenderColumnM}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnN}" var="rowTotal" rendered="{!RenderColumnN}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnO}" var="rowTotal" rendered="{!RenderColumnO}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnP}" var="rowTotal" rendered="{!RenderColumnP}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnQ}" var="rowTotal" rendered="{!RenderColumnQ}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnR}" var="rowTotal" rendered="{!RenderColumnR}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnS}" var="rowTotal" rendered="{!RenderColumnS}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnT}" var="rowTotal" rendered="{!RenderColumnT}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnU}" var="rowTotal" rendered="{!RenderColumnU}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnV}" var="rowTotal" rendered="{!RenderColumnV}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnW}" var="rowTotal" rendered="{!RenderColumnW}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnX}" var="rowTotal" rendered="{!RenderColumnX}"/>
+    <apex:variable value="{!rowTotal+grandTotalColumnY}" var="rowTotal" rendered="{!RenderColumnY}"/>
+        <apex:variable value="{!rowTotal+grandTotalColumnZ}" var="rowTotal" rendered="{!RenderColumnZ}"/></td></tr>
+    <!-- Display grand-total row -->
+    <tr>
+    <!-- The td tag needs to span the number of groups being rendered -->
+    <td class="ffrgridsumlabeld" colspan="16">{!Label['L01']}</td>
+    <td class="ffrgridspacerd"/>
+    <td class="{!if(RenderColumnA,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnA}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnA}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnB,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnB}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnB}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnC,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnC}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnC}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnD,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnD}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnD}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnE,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnE}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnE}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnF,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnF}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnF}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnG,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnG}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnG}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnH,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnH}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnH}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnI,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnI}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnI}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnJ,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnJ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnJ}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnK,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnK}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnK}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnL,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnL}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnL}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnM,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnM}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnM}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnN,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnN}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnN}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnO,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnO}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnO}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnP,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnP}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnP}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnQ,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnQ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnQ}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnR,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnR}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnR}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnS,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnS}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnS}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnT,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnT}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnT}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnU,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnU}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnU}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnV,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnV}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnV}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnW,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnW}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnW}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnX,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnX}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnX}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnY,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnY}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnY}"/>
+    </apex:outputPanel></td>
+    <td class="{!if(RenderColumnZ,'ffrgridsumd','ffrhidden')}"><apex:outputPanel layout="none" rendered="{!RenderColumnZ}">
+    <ffr:NumberFormatter pattern="{!VN}" value="{!grandTotalColumnZ}"/>
+    </apex:outputPanel></td>
+    <!-- Running Total is blank at grand-total level -->
+    </tr>
+    </table>
+</apex:outputpanel>
+<!-- REGION 06: REPORT CHATTER START -->
+<ffr:ShowChatter value="{!ReportingLog}" rendered="{!PrintChatterFeed}"/>
+<!-- REGION 06: REPORT CHATTER END -->
+</apex:page>

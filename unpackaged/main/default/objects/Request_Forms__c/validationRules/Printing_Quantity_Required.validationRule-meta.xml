@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Printing_Quantity_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Type_of_Request__c, &quot;Printing Request&quot;),
+ISBLANK(TEXT(Printing_Request_Quantity__c)
+))</errorConditionFormula>
+    <errorDisplayField>Printing_Request_Quantity__c</errorDisplayField>
+    <errorMessage>Please enter a printing quantity. Thank you.</errorMessage>
+</ValidationRule>

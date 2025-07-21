@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternate_Names__c</fullName>
+    <description>Please list any alternate names, to include DBA names, that this account may be using.</description>
+    <inlineHelpText>Please list any alternate names, to include DBA names, that this account may be using.</inlineHelpText>
+    <label>Alternate Names</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

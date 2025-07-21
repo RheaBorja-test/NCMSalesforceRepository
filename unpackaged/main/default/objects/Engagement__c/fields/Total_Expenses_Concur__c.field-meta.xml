@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Expenses_Concur__c</fullName>
+    <description>Roll up for Concur expenses on Engagement</description>
+    <label>Total Expenses (Concur)</label>
+    <summarizedField>Engagement_Expense__c.Amount__c</summarizedField>
+    <summaryForeignKey>Engagement_Expense__c.Engagement__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

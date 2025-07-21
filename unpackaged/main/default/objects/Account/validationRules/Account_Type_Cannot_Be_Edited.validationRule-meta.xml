@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type_Cannot_Be_Edited</fullName>
+    <active>true</active>
+    <description>The Type can only be changed on Parent Accounts by a System Administrator.</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(ParentId)), 
+ ISCHANGED(Type),
+ TEXT(Type) &lt;&gt; TEXT(Parent.Type),
+ OR(
+   $Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+   NOT($Permission.Account_Edit_Type_Field)
+ )
+)</errorConditionFormula>
+    <errorMessage>The Type can only be changed on Parent Accounts by a System Administrator.</errorMessage>
+</ValidationRule>

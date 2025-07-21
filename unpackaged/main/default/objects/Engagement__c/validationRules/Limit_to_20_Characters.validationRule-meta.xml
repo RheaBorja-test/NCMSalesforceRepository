@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_to_20_Characters</fullName>
+    <active>true</active>
+    <description>Limits all non Professional and Business Development engagements to 20 Characters to support Naming conventions for those other record types</description>
+    <errorConditionFormula>AND(
+
+NOT(OR
+(RecordType.Name = &quot;Business Development&quot;, RecordType.Name = &quot;Professional Development&quot;)
+), 
+
+LEN(Descriptor__c)&gt;20   )</errorConditionFormula>
+    <errorDisplayField>Descriptor__c</errorDisplayField>
+    <errorMessage>Descriptor cannot be more than 20 characters for this type of Engagement</errorMessage>
+</ValidationRule>

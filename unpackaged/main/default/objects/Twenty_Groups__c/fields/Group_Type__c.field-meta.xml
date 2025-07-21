@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Type__c</fullName>
+    <label>Group Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dealer Group Management</fullName>
+                <default>false</default>
+                <label>Dealer Group Management</label>
+            </value>
+            <value>
+                <fullName>Dealer Group Manager</fullName>
+                <default>false</default>
+                <label>Dealer Group Manager</label>
+            </value>
+            <value>
+                <fullName>Dealer Group Owner/Executive</fullName>
+                <default>false</default>
+                <label>Dealer Group Owner/Executive</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>Manager/Director</fullName>
+                <default>false</default>
+                <label>Manager/Director</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Owner/General Manager</fullName>
+                <default>false</default>
+                <label>Owner/General Manager</label>
+            </value>
+            <value>
+                <fullName>Management Link</fullName>
+                <default>false</default>
+                <label>Management Link</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

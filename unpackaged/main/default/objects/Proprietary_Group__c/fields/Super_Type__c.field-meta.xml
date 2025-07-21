@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Super_Type__c</fullName>
+    <description>This field should be synced with WinMaster.</description>
+    <label>WinMaster Super Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dealer 20 Groups</fullName>
+                <default>false</default>
+                <label>Dealer 20 Groups</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Industry 20 Group</fullName>
+                <default>false</default>
+                <label>Industry 20 Group</label>
+            </value>
+            <value>
+                <fullName>Manager 20 Groups</fullName>
+                <default>false</default>
+                <label>Manager 20 Groups</label>
+            </value>
+            <value>
+                <fullName>Manufacturers Groups</fullName>
+                <default>false</default>
+                <label>Manufacturers Groups</label>
+            </value>
+            <value>
+                <fullName>NCMi</fullName>
+                <default>false</default>
+                <label>NCMi</label>
+            </value>
+            <value>
+                <fullName>PPP</fullName>
+                <default>false</default>
+                <label>PPP</label>
+            </value>
+            <value>
+                <fullName>Proprietary Groups</fullName>
+                <default>false</default>
+                <label>Proprietary Groups</label>
+            </value>
+            <value>
+                <fullName>Public Groups</fullName>
+                <default>false</default>
+                <label>Public Groups</label>
+            </value>
+            <value>
+                <fullName>Retail Ops</fullName>
+                <default>false</default>
+                <label>Retail Ops</label>
+            </value>
+            <value>
+                <fullName>Samples</fullName>
+                <default>false</default>
+                <label>Samples</label>
+            </value>
+            <value>
+                <fullName>State Auto Associations</fullName>
+                <default>false</default>
+                <label>State Auto Associations</label>
+            </value>
+            <value>
+                <fullName>Subscription</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>HealthCheck</fullName>
+                <default>false</default>
+                <label>HealthCheck</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

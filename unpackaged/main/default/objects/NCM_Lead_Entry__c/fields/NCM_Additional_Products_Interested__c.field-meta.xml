@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Additional_Products_Interested__c</fullName>
+    <label>NCM Additional Products Interested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>NCM_Product_Interest__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>NCM_Business_Unit</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>20 Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>aXcessa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>Consulting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>Healthcheck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>NCM Institute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Member Product</controllingFieldValue>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <valueName>Proprietary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCM Institute</controllingFieldValue>
+            <controllingFieldValue>Consulting</controllingFieldValue>
+            <controllingFieldValue>20 Group</controllingFieldValue>
+            <controllingFieldValue>Healthcheck</controllingFieldValue>
+            <controllingFieldValue>Proprietary</controllingFieldValue>
+            <valueName>Single Member Product</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

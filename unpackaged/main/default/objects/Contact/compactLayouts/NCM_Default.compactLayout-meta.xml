@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Default</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>NCM_Title__c</fields>
+    <fields>NCM_Department__c</fields>
+    <fields>Email</fields>
+    <fields>Phone</fields>
+    <fields>MobilePhone</fields>
+    <label>NCM Default</label>
+</CompactLayout>

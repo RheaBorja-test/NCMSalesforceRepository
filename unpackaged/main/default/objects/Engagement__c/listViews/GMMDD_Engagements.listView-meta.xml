@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GMMDD_Engagements</fullName>
+    <columns>Confirmed_Hotel__c</columns>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Engagement_Type__c</columns>
+    <columns>Engagement_Start__c</columns>
+    <columns>Engagement_End__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Program__c</field>
+        <operation>contains</operation>
+        <value>GMMDD: 20Groups</value>
+    </filters>
+    <filters>
+        <field>Engagement_Type__c</field>
+        <operation>equals</operation>
+        <value>Special Meeting (20 Group),Special Meeting (Dealer),Special Meeting (Dealer Group),Special Meeting (Dealer – OEM Program)</value>
+    </filters>
+    <label>GMMDD Engagements</label>
+</ListView>

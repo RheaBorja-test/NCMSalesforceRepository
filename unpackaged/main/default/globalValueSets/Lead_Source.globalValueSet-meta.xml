@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Email/Call</fullName>
+        <default>false</default>
+        <label>Outbound Email/Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Email/Call</fullName>
+        <default>false</default>
+        <label>Inbound Email/Call</label>
+    </customValue>
+    <customValue>
+        <fullName>TAG/DHG</fullName>
+        <default>false</default>
+        <label>TAG/DHG</label>
+    </customValue>
+    <customValue>
+        <fullName>Tradeshow</fullName>
+        <default>false</default>
+        <label>Tradeshow</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM</fullName>
+        <default>false</default>
+        <label>OEM</label>
+    </customValue>
+    <customValue>
+        <fullName>Survey</fullName>
+        <default>false</default>
+        <label>Survey</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketing Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing List</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketing List</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA 2014</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NADA 2014</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA 2015</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NADA 2015</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM OnDemand - Test Drive</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NCM OnDemand - Test Drive</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner Referral</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Partner Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Consept Integration</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consept Integration</label>
+    </customValue>
+    <customValue>
+        <fullName>Satisfied Client</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Satisfied Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Social Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Telemarketing Firm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Telemarketing Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade Show</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trade Show</label>
+    </customValue>
+    <customValue>
+        <fullName>Training Credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Training Credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>Previous Institute Attendee</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Previous Institute Attendee</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketo Lead</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketo Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Chargify Notification - OnDemand</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chargify Notification - OnDemand</label>
+    </customValue>
+    <customValue>
+        <fullName>Click Through</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Click Through</label>
+    </customValue>
+    <customValue>
+        <fullName>Cold Call Out</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cold Call Out</label>
+    </customValue>
+    <customValue>
+        <fullName>Composite Cover</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Composite Cover</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Referral</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Customer Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Generic Web Lead</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Generic Web Lead</label>
+    </customValue>
+    <masterLabel>Lead Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

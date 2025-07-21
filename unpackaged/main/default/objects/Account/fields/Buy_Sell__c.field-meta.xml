@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buy_Sell__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Account was a part of a Buy or Sell</description>
+    <inlineHelpText>Account was a part of a Buy or Sell</inlineHelpText>
+    <label>Buy/Sell</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

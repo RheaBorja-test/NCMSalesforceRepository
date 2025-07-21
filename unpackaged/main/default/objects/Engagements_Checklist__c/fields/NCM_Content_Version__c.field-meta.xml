@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Content_Version__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>NCM Content Version</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>NCM Content Version is not valid for selected NCM Content</errorMessage>
+        <filterItems>
+            <field>NCM_Content_Version__c.NCM_Content__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.NCM_Content__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>NCM_Content_Version__c</referenceTo>
+    <relationshipLabel>Engagements Checklist</relationshipLabel>
+    <relationshipName>Engagements_Checklist</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

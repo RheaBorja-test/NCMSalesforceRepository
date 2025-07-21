@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20G_GroupId_Reqd_ClosedWon</fullName>
+    <active>true</active>
+    <description>When a 20Group opp is moved to Closed/Won, the Group Id must be populated.</description>
+    <errorConditionFormula>AND(
+ $Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+ RecordType.Name = &#39;20 Groups&#39;,
+ ISCHANGED( StageName ),
+ ISPICKVAL(StageName,&#39;Closed Won&#39;),
+ ISBLANK( Group_Id__c )
+)</errorConditionFormula>
+    <errorDisplayField>Group_Id__c</errorDisplayField>
+    <errorMessage>Please fill in the Group ID before moving this opportunity to Closed Won.</errorMessage>
+</ValidationRule>

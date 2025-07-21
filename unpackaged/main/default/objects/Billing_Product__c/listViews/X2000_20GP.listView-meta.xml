@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2000_20GP</fullName>
+    <columns>NAME</columns>
+    <columns>X20_Group_Account_Member__c</columns>
+    <columns>Billing_Product_Status__c</columns>
+    <columns>Next_Billing_Date__c</columns>
+    <columns>First_Billed__c</columns>
+    <columns>Final_Bill_Date__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>Total_Value__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Dimension_1__c</field>
+        <operation>contains</operation>
+        <value>2000</value>
+    </filters>
+    <label>2000-20GP</label>
+</ListView>

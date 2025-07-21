@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Approval_Decision_Reqd</fullName>
+    <active>true</active>
+    <description>Before this type of Task can be marked Completed, the Candidate Approval must be specified (either approved or rejected).</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Candidate_Approval&quot;,
+ ISBLANK( TEXT(Approval_Decision__c) ),
+ ISCHANGED( Status ),
+ ISPICKVAL( Status , &quot;Completed&quot;)
+)</errorConditionFormula>
+    <errorMessage>The Approval Decision field must be filled out before marking this task Completed.</errorMessage>
+</ValidationRule>

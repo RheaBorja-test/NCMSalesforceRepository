@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EXEC_Committee_Eligible</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ ISCHANGED(EXEC_Committee__c),
+ EXEC_Committee__c = True,
+ OR(
+   NOT(ISPICKVAL(Contact_Type__c, &#39;Member&#39;)),
+   NOT(ISPICKVAL(Contact_Status__c, &#39;Active&#39;))
+ )
+)</errorConditionFormula>
+    <errorMessage>Must be a &#39;Member&#39; with &#39;Active&#39; Status to be on EXEC Committee. Please correct the record and save again.</errorMessage>
+</ValidationRule>

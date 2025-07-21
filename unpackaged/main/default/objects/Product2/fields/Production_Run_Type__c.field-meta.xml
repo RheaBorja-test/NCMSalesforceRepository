@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Run_Type__c</fullName>
+    <label>Production Run Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>true</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+                <label>Seminar</label>
+            </value>
+            <value>
+                <fullName>New Member</fullName>
+                <default>false</default>
+                <label>New Member</label>
+            </value>
+            <value>
+                <fullName>New Proprietary Member</fullName>
+                <default>false</default>
+                <label>New Proprietary Member</label>
+            </value>
+            <value>
+                <fullName>Special Composite</fullName>
+                <default>false</default>
+                <label>Special Composite</label>
+            </value>
+            <value>
+                <fullName>Retail Ops</fullName>
+                <default>false</default>
+                <label>Retail Ops</label>
+            </value>
+            <value>
+                <fullName>CIP</fullName>
+                <default>false</default>
+                <label>CIP</label>
+            </value>
+            <value>
+                <fullName>PTA</fullName>
+                <default>false</default>
+                <label>PTA</label>
+            </value>
+            <value>
+                <fullName>Trend</fullName>
+                <default>false</default>
+                <label>Trend</label>
+            </value>
+            <value>
+                <fullName>FIDO</fullName>
+                <default>false</default>
+                <label>FIDO</label>
+            </value>
+            <value>
+                <fullName>PPP</fullName>
+                <default>false</default>
+                <label>PPP</label>
+            </value>
+            <value>
+                <fullName>PAR</fullName>
+                <default>false</default>
+                <label>PAR</label>
+            </value>
+            <value>
+                <fullName>Three-Year Comp</fullName>
+                <default>false</default>
+                <label>Three-Year Comp</label>
+            </value>
+            <value>
+                <fullName>CIP - Org Meeting</fullName>
+                <default>false</default>
+                <label>CIP - Org Meeting</label>
+            </value>
+            <value>
+                <fullName>Retail Ops Proprietary</fullName>
+                <default>false</default>
+                <label>Retail Ops Proprietary</label>
+            </value>
+            <value>
+                <fullName>HealthCheck</fullName>
+                <default>false</default>
+                <label>HealthCheck</label>
+            </value>
+            <value>
+                <fullName>ConSept New Member</fullName>
+                <default>false</default>
+                <label>ConSept New Member</label>
+            </value>
+            <value>
+                <fullName>ConSept New Proprietary Member</fullName>
+                <default>false</default>
+                <label>ConSept New Proprietary Member</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

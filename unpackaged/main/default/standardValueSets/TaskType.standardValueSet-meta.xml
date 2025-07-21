@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demo</fullName>
+        <default>false</default>
+        <label>Demo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled Demo</fullName>
+        <default>false</default>
+        <label>Scheduled Demo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled Training</fullName>
+        <default>false</default>
+        <label>Scheduled Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training Recap</fullName>
+        <default>false</default>
+        <label>Training Recap</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Work.com</fullName>
+        <default>false</default>
+        <label>Work.com</label>
+    </standardValue>
+</StandardValueSet>

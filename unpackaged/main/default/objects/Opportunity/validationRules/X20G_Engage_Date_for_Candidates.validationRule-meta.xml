@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20G_Engage_Date_for_Candidates</fullName>
+    <active>true</active>
+    <description>When a 20Group opp is moved to another stage, if the Membership Type is Candidate, the Engagement Date must be populated.</description>
+    <errorConditionFormula>AND(
+ $Profile.Name &lt;&gt; &#39;System Administrator&#39;,
+ RecordType.Name = &#39;20 Groups&#39;,
+ ISCHANGED( StageName ),
+ ISPICKVAL(Membership_Type__c,&#39;Candidate&#39;),
+ ISBLANK(Engagement_Date__c),
+ TEXT(PRIORVALUE(StageName)) = &#39;Submitted to Exec Committee&#39;, 
+ OR(
+  ISPICKVAL(StageName,&#39;Proposal Sent&#39;),
+  ISPICKVAL(StageName,&#39;Closed Lost&#39;),
+  ISPICKVAL(StageName,&#39;Closed Won&#39;)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Engagement_Date__c</errorDisplayField>
+    <errorMessage>Please fill in the Engagement Date field before moving to another stage.</errorMessage>
+</ValidationRule>

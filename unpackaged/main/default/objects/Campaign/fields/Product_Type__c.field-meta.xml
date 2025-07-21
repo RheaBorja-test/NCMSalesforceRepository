@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <description>Specifies the product</description>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Groups</fullName>
+                <default>false</default>
+                <label>20 Groups</label>
+            </value>
+            <value>
+                <fullName>Axcessa</fullName>
+                <default>false</default>
+                <label>Axcessa</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>NCMi</fullName>
+                <default>false</default>
+                <label>NCMi</label>
+            </value>
+            <value>
+                <fullName>Travel Solutions</fullName>
+                <default>false</default>
+                <label>Travel Solutions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

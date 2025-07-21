@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Survey_Mod_Preparedness_Txt__c</fullName>
+    <label>20 Group Survey Mod Preparedness Txt</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Strongly agree</fullName>
+                <default>false</default>
+                <label>Strongly agree</label>
+            </value>
+            <value>
+                <fullName>Agree</fullName>
+                <default>false</default>
+                <label>Agree</label>
+            </value>
+            <value>
+                <fullName>Neither agree nor disagree</fullName>
+                <default>false</default>
+                <label>Neither agree nor disagree</label>
+            </value>
+            <value>
+                <fullName>Disagree</fullName>
+                <default>false</default>
+                <label>Disagree</label>
+            </value>
+            <value>
+                <fullName>Strongly disagree</fullName>
+                <default>false</default>
+                <label>Strongly disagree</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

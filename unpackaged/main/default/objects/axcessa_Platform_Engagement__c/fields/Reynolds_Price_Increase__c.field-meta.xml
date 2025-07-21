@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reynolds_Price_Increase__c</fullName>
+    <inlineHelpText>Date Reynolds plans to increase the price to the client</inlineHelpText>
+    <label>Reynolds Price Increase</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

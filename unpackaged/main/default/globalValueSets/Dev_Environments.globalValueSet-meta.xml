@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1 - Production</fullName>
+        <default>false</default>
+        <label>1 - Production</label>
+    </customValue>
+    <customValue>
+        <fullName>2 - NCM UAT</fullName>
+        <default>false</default>
+        <label>2 - NCM UAT</label>
+    </customValue>
+    <customValue>
+        <fullName>3 - NCM SIT</fullName>
+        <default>false</default>
+        <label>3 - NCM SIT</label>
+    </customValue>
+    <customValue>
+        <fullName>4 - Developer</fullName>
+        <default>false</default>
+        <label>4 - Developer</label>
+    </customValue>
+    <masterLabel>Dev Environments</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

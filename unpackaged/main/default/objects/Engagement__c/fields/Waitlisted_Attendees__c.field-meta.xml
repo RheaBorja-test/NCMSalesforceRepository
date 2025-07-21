@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waitlisted_Attendees__c</fullName>
+    <label>Waitlisted Attendees</label>
+    <summaryFilterItems>
+        <field>Engagement_Waitlist__c.Waitlist_Status__c</field>
+        <operation>equals</operation>
+        <value>Pending Confirmation, Pending Sale</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Engagement_Waitlist__c.Engagement__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

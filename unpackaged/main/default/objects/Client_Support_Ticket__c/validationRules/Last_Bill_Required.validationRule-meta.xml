@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Bill_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+    CONTAINS(RecordType.DeveloperName, &quot;Cancellation&quot;),
+    ISPICKVAL(Status__c, &quot;Complete&quot;),
+    ISBLANK(Last_Bill_Date__c),
+    NOT(ISBLANK(Cancellation_Date__c)),
+    NOT(
+        OR(
+            CONTAINS(RecordType.Name, &quot;Healthcheck&quot;)
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>You must provide a Last Bill Date in order to close a Cancellation Case</errorMessage>
+</ValidationRule>

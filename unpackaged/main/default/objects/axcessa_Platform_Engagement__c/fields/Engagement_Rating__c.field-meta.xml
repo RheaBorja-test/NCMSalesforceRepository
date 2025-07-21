@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Rating__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( (Engagement_Timer__c &gt; 89),( Tenure__c = &quot;Power User&quot;)),&quot;Red Flag&quot;,
+
+
+IF(AND( (Engagement_Timer__c &gt; 59),( Tenure__c = &quot;Average&quot;)),&quot;Red Flag&quot;,
+
+IF(Engagement_Timer__c &gt; 29, &quot;Red Flag&quot;,&quot;Normal&quot;
+
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Engagement Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

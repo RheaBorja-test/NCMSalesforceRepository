@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consultant__c</fullName>
+    <label>Consultant - deprecated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dennis Gregg</fullName>
+                <default>false</default>
+                <label>Dennis Gregg</label>
+            </value>
+            <value>
+                <fullName>Don Rothrauff</fullName>
+                <default>false</default>
+                <label>Don Rothrauff</label>
+            </value>
+            <value>
+                <fullName>Garry House</fullName>
+                <default>false</default>
+                <label>Garry House</label>
+            </value>
+            <value>
+                <fullName>John Gilbert</fullName>
+                <default>false</default>
+                <label>John Gilbert</label>
+            </value>
+            <value>
+                <fullName>Kevin Cunningham</fullName>
+                <default>false</default>
+                <label>Kevin Cunningham</label>
+            </value>
+            <value>
+                <fullName>Kevin Herndon</fullName>
+                <default>false</default>
+                <label>Kevin Herndon</label>
+            </value>
+            <value>
+                <fullName>Lee Michaelson</fullName>
+                <default>false</default>
+                <label>Lee Michaelson</label>
+            </value>
+            <value>
+                <fullName>Mark Shackelford</fullName>
+                <default>false</default>
+                <label>Mark Shackelford</label>
+            </value>
+            <value>
+                <fullName>Paul Stowe</fullName>
+                <default>false</default>
+                <label>Paul Stowe</label>
+            </value>
+            <value>
+                <fullName>Retail Operations</fullName>
+                <default>false</default>
+                <label>Retail Operations</label>
+            </value>
+            <value>
+                <fullName>Rich Ackman</fullName>
+                <default>false</default>
+                <label>Rich Ackman</label>
+            </value>
+            <value>
+                <fullName>Ron Caruso</fullName>
+                <default>false</default>
+                <label>Ron Caruso</label>
+            </value>
+            <value>
+                <fullName>Terry Wichmann</fullName>
+                <default>false</default>
+                <label>Terry Wichmann</label>
+            </value>
+            <value>
+                <fullName>Tony Albertson</fullName>
+                <default>false</default>
+                <label>Tony Albertson</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

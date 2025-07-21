@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Proprietary_Group_Name__c</fullName>
+    <description>If a new proprietary group is to be created, specify the new group name here.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If a new proprietary group is to be created, specify the new group name here.</inlineHelpText>
+    <label>New Proprietary Group Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

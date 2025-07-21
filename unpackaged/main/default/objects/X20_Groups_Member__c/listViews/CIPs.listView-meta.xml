@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIPs</fullName>
+    <columns>Group_Member_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>Also_No__c</columns>
+    <columns>Manufacturer_Code__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Production_Record_Created__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>CIPs</label>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Groups_GCP</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Start_Date__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <columns>Meeting_Support_Contact__c</columns>
+    <columns>Support_Staff_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>deleted</value>
+    </filters>
+    <filters>
+        <field>NCM_Proprietor__c</field>
+        <operation>equals</operation>
+        <value>Jerry Powers</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.NCM_Group</value>
+    </filters>
+    <label>20 Groups - GCP</label>
+</ListView>

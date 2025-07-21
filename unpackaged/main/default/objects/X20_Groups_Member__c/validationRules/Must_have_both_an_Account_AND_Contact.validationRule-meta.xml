@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_have_both_an_Account_AND_Contact</fullName>
+    <active>false</active>
+    <description>All Member records must have both Member Name (Contact) and Account links</description>
+    <errorConditionFormula>or(
+
+isblank( Member_Name__c ),isblank( Account__c )
+
+
+
+
+)</errorConditionFormula>
+    <errorDisplayField>Member_Name__c</errorDisplayField>
+    <errorMessage>Member records must have both an Account and Member Name (Contact) record linked.</errorMessage>
+</ValidationRule>

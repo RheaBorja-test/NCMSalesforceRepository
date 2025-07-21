@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Index xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Store_Metric_Index</fullName>
+    <fields>
+        <name>aXcessa_Store__c</name>
+        <sortDirection>ASC</sortDirection>
+    </fields>
+    <fields>
+        <name>Data_Date__c</name>
+        <sortDirection>DESC</sortDirection>
+    </fields>
+    <label>aXcessa Store Metric Index</label>
+</Index>

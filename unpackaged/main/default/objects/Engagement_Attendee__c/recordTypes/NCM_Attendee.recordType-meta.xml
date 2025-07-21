@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Attendee</fullName>
+    <active>true</active>
+    <label>NCM Attendee</label>
+    <picklistValues>
+        <picklist>Age_Group__c</picklist>
+        <values>
+            <fullName>Adult</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Attendance_Status__c</picklist>
+        <values>
+            <fullName>Attended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Attending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tentative</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Attendee_Type__c</picklist>
+        <values>
+            <fullName>Active Participant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Presenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moderator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Observer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Detail__c</picklist>
+        <values>
+            <fullName>Changed Positions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Purchased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decreasing Company Expenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual Cancelled - Illness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual Cancelled - Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personnel Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Constraint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Expensive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Reason__c</picklist>
+        <values>
+            <fullName>Buy%2FSell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incompatible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hotel_Booking_Method__c</picklist>
+        <values>
+            <fullName>Alt hotel for other preference%2Freasons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alt hotel with points or discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM preferred hotel on own</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stay with family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRBO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_Resbul_Received__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

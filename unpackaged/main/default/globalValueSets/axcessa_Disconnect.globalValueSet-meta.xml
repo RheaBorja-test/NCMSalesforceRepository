@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Buy/Sell</fullName>
+        <default>false</default>
+        <label>Buy/Sell</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleaning Up Old Records</fullName>
+        <default>false</default>
+        <label>Cleaning Up Old Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost Customer</fullName>
+        <default>false</default>
+        <label>Lost Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost Prospect</fullName>
+        <default>false</default>
+        <label>Lost Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>Low Usage</fullName>
+        <default>false</default>
+        <label>Low Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>Price Increase / DRF</fullName>
+        <default>false</default>
+        <label>Price Increase / DRF</label>
+    </customValue>
+    <customValue>
+        <fullName>Reynolds Ownership</fullName>
+        <default>false</default>
+        <label>Reynolds Ownership</label>
+    </customValue>
+    <customValue>
+        <fullName>Unable to Install</fullName>
+        <default>false</default>
+        <label>Unable to Install</label>
+    </customValue>
+    <customValue>
+        <fullName>Incompatible</fullName>
+        <default>false</default>
+        <label>Incompatible</label>
+    </customValue>
+    <masterLabel>axcessa Disconnect</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

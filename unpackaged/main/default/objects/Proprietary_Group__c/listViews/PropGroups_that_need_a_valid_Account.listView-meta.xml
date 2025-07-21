@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PropGroups_that_need_a_valid_Account</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Support_Staff__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Group_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Account__c</field>
+        <operation>contains</operation>
+        <value>Winmaster</value>
+    </filters>
+    <label>PropGroups that need a valid Account</label>
+    <sharedTo>
+        <role>Client_Success_Manager</role>
+    </sharedTo>
+</ListView>

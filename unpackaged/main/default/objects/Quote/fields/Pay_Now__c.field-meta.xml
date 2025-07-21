@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_Now__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://secure.ncm20.com/PayHere/ConfirmQuote?QuoteId=&quot; &amp;     QuoteNumber    &amp; &quot;&amp;Description=NCM%20Institute%20Training&amp;Amount=&quot; &amp;   TEXT(TotalPrice),IMAGE(&quot;servlet/servlet.ImageServer?id=015G0000001L1Hf&amp;oid=00D760000004cfb&amp;lastMod=1349791301000&quot;,&quot;Click here to pay securely online&quot;,80,100))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pay Now</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

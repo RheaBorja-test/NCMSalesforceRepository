@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bug Fix</fullName>
+        <default>false</default>
+        <label>Bug Fix</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Cleanup</fullName>
+        <default>false</default>
+        <label>Data Cleanup</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Corruption</fullName>
+        <default>false</default>
+        <label>Data Corruption</label>
+    </customValue>
+    <customValue>
+        <fullName>Data De-duplication</fullName>
+        <default>false</default>
+        <label>Data De-duplication</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Migration</fullName>
+        <default>false</default>
+        <label>Data Migration</label>
+    </customValue>
+    <customValue>
+        <fullName>Development</fullName>
+        <default>false</default>
+        <label>Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Profile / Security</fullName>
+        <default>false</default>
+        <label>Profile / Security</label>
+    </customValue>
+    <customValue>
+        <fullName>QA - Business</fullName>
+        <default>false</default>
+        <label>QA - Business</label>
+    </customValue>
+    <customValue>
+        <fullName>QA - Technical</fullName>
+        <default>false</default>
+        <label>QA - Technical</label>
+    </customValue>
+    <customValue>
+        <fullName>Training - Process Review</fullName>
+        <default>false</default>
+        <label>Training - Process Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Training - New Process</fullName>
+        <default>false</default>
+        <label>Training - New Process</label>
+    </customValue>
+    <customValue>
+        <fullName>Vendor Support</fullName>
+        <default>false</default>
+        <label>Vendor Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Working as Intended</fullName>
+        <default>false</default>
+        <label>Working as Intended</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate Support Request</fullName>
+        <default>false</default>
+        <label>Duplicate Support Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Never</fullName>
+        <default>false</default>
+        <label>Never</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Needed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Project Needed</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Quality Issue</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data Quality Issue</label>
+    </customValue>
+    <masterLabel>SFDC Resolution</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

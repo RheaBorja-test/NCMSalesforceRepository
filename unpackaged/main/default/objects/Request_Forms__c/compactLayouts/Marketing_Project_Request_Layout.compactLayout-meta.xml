@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Project_Request_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Requestor_Forms__c</fields>
+    <fields>Requested_Completion_Launch_Date__c</fields>
+    <fields>Request_Status__c</fields>
+    <label>Marketing Project Request Layout</label>
+</CompactLayout>

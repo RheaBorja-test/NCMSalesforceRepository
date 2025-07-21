@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contracted_by_NCM__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>NCM has contracted the location internally and has not used Maritz.</inlineHelpText>
+    <label>Contracted by NCM</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

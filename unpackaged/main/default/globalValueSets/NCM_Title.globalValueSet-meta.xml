@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accounting Manager</fullName>
+        <default>false</default>
+        <label>Accounting Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounts Payable</fullName>
+        <default>false</default>
+        <label>Accounts Payable</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounts Receivable</fullName>
+        <default>false</default>
+        <label>Accounts Receivable</label>
+    </customValue>
+    <customValue>
+        <fullName>Administration Assistant</fullName>
+        <default>false</default>
+        <label>Administration Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrative Director</fullName>
+        <default>false</default>
+        <label>Administrative Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrator</fullName>
+        <default>false</default>
+        <label>Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Advisor</fullName>
+        <default>false</default>
+        <label>Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Advisor/Consultant/Writer</fullName>
+        <default>false</default>
+        <label>Advisor/Consultant/Writer</label>
+    </customValue>
+    <customValue>
+        <fullName>Advocate</fullName>
+        <default>false</default>
+        <label>Advocate</label>
+    </customValue>
+    <customValue>
+        <fullName>Area Manager</fullName>
+        <default>false</default>
+        <label>Area Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant</fullName>
+        <default>false</default>
+        <label>Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Manager</fullName>
+        <default>false</default>
+        <label>Assistant Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Office Manager</fullName>
+        <default>false</default>
+        <label>Assistant Office Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Sales Manager</fullName>
+        <default>false</default>
+        <label>Assistant Sales Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Service Manager</fullName>
+        <default>false</default>
+        <label>Assistant Service Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Director</fullName>
+        <default>false</default>
+        <label>BDC Director</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Manager</fullName>
+        <default>false</default>
+        <label>BDC Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Rep</fullName>
+        <default>false</default>
+        <label>BDC Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing/Clerk</fullName>
+        <default>false</default>
+        <label>Billing/Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>Board Member</fullName>
+        <default>false</default>
+        <label>Board Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Branch Manager</fullName>
+        <default>false</default>
+        <label>Branch Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Manager</fullName>
+        <default>false</default>
+        <label>Business Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Call Center</fullName>
+        <default>false</default>
+        <label>Call Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Cashier</fullName>
+        <default>false</default>
+        <label>Cashier</label>
+    </customValue>
+    <customValue>
+        <fullName>CEO/ Chief Executive Officer</fullName>
+        <default>false</default>
+        <label>CEO/ Chief Executive Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>CFO/ Chief Financial Officer</fullName>
+        <default>false</default>
+        <label>CFO/ Chief Financial Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chairman</fullName>
+        <default>false</default>
+        <label>Chairman</label>
+    </customValue>
+    <customValue>
+        <fullName>CIO</fullName>
+        <default>false</default>
+        <label>CIO</label>
+    </customValue>
+    <customValue>
+        <fullName>Clerk/Administrator</fullName>
+        <default>false</default>
+        <label>Clerk/Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Collections Manager</fullName>
+        <default>false</default>
+        <label>Collections Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Collector</fullName>
+        <default>false</default>
+        <label>Collector</label>
+    </customValue>
+    <customValue>
+        <fullName>Compliance Manager</fullName>
+        <default>false</default>
+        <label>Compliance Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Controller</fullName>
+        <default>false</default>
+        <label>Controller</label>
+    </customValue>
+    <customValue>
+        <fullName>COO/ Chief Operating Officer</fullName>
+        <default>false</default>
+        <label>COO/ Chief Operating Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Coordinator</fullName>
+        <default>false</default>
+        <label>Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Co-Owner</fullName>
+        <default>false</default>
+        <label>Co-Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Counterperson</fullName>
+        <default>false</default>
+        <label>Counterperson</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer Principal</fullName>
+        <default>false</default>
+        <label>Dealer Principal</label>
+    </customValue>
+    <customValue>
+        <fullName>Desk Manager</fullName>
+        <default>false</default>
+        <label>Desk Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Detailer</fullName>
+        <default>false</default>
+        <label>Detailer</label>
+    </customValue>
+    <customValue>
+        <fullName>Detail Manager</fullName>
+        <default>false</default>
+        <label>Detail Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Director</fullName>
+        <default>false</default>
+        <label>Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Estimator</fullName>
+        <default>false</default>
+        <label>Estimator</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive</fullName>
+        <default>false</default>
+        <label>Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Assistant</fullName>
+        <default>false</default>
+        <label>Executive Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Express/Quicklane Manager</fullName>
+        <default>false</default>
+        <label>Express/Quicklane Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance Manager</fullName>
+        <default>false</default>
+        <label>Finance Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Ops Director</fullName>
+        <default>false</default>
+        <label>Fixed Ops Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Ops Manager</fullName>
+        <default>false</default>
+        <label>Fixed Ops Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Floor Manager</fullName>
+        <default>false</default>
+        <label>Floor Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreman</fullName>
+        <default>false</default>
+        <label>Foreman</label>
+    </customValue>
+    <customValue>
+        <fullName>General Manager</fullName>
+        <default>false</default>
+        <label>General Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>General Sales Manager</fullName>
+        <default>false</default>
+        <label>General Sales Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Director</fullName>
+        <default>false</default>
+        <label>Internet Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Manager</fullName>
+        <default>false</default>
+        <label>Internet Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Sales</fullName>
+        <default>false</default>
+        <label>Internet Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Inventory Manager</fullName>
+        <default>false</default>
+        <label>Inventory Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Manager</fullName>
+        <default>false</default>
+        <label>Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Manager</fullName>
+        <default>false</default>
+        <label>Office Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Staff</fullName>
+        <default>false</default>
+        <label>Other Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Parts Manager</fullName>
+        <default>false</default>
+        <label>Parts Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Payroll Clerk</fullName>
+        <default>false</default>
+        <label>Payroll Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>Porter</fullName>
+        <default>false</default>
+        <label>Porter</label>
+    </customValue>
+    <customValue>
+        <fullName>President</fullName>
+        <default>false</default>
+        <label>President</label>
+    </customValue>
+    <customValue>
+        <fullName>Program Manager</fullName>
+        <default>false</default>
+        <label>Program Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Programmer</fullName>
+        <default>false</default>
+        <label>Programmer</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Manager</fullName>
+        <default>false</default>
+        <label>Project Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Receptionist</fullName>
+        <default>false</default>
+        <label>Receptionist</label>
+    </customValue>
+    <customValue>
+        <fullName>Rental Car Manager</fullName>
+        <default>false</default>
+        <label>Rental Car Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Representative</fullName>
+        <default>false</default>
+        <label>Representative</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Consultant</fullName>
+        <default>false</default>
+        <label>Sales Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Director</fullName>
+        <default>false</default>
+        <label>Sales Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Manager</fullName>
+        <default>false</default>
+        <label>Sales Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Secretary/Treasurer</fullName>
+        <default>false</default>
+        <label>Secretary/Treasurer</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Director</fullName>
+        <default>false</default>
+        <label>Service Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Manager</fullName>
+        <default>false</default>
+        <label>Service Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Speaker</fullName>
+        <default>false</default>
+        <label>Speaker</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialist</fullName>
+        <default>false</default>
+        <label>Specialist</label>
+    </customValue>
+    <customValue>
+        <fullName>Staff</fullName>
+        <default>false</default>
+        <label>Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Manager</fullName>
+        <default>false</default>
+        <label>Store Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Supervisor</fullName>
+        <default>false</default>
+        <label>Supervisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Technician</fullName>
+        <default>false</default>
+        <label>Technician</label>
+    </customValue>
+    <customValue>
+        <fullName>Title Clerk</fullName>
+        <default>false</default>
+        <label>Title Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>Training Coordinator</fullName>
+        <default>false</default>
+        <label>Training Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Training Manager</fullName>
+        <default>false</default>
+        <label>Training Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>Variable Ops Director</fullName>
+        <default>false</default>
+        <label>Variable Ops Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Variable Ops Manager</fullName>
+        <default>false</default>
+        <label>Variable Ops Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Variable Ops Staff</fullName>
+        <default>false</default>
+        <label>Variable Ops Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President</fullName>
+        <default>false</default>
+        <label>Vice President</label>
+    </customValue>
+    <customValue>
+        <fullName>Warranty Administrator</fullName>
+        <default>false</default>
+        <label>Warranty Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Webmaster</fullName>
+        <default>false</default>
+        <label>Webmaster</label>
+    </customValue>
+    <description>Values for all NCM Classification Titles</description>
+    <masterLabel>NCM Title</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

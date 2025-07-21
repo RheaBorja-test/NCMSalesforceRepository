@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AVG_Reports_Last_12_Months__c</fullName>
+    <externalId>false</externalId>
+    <formula>( Report_Count_1__c + Report_Count_2__c +  Report_Count_3__c +  Report_Count_4__c +  Report_Count_5__c +  Report_Count_6__c +  Report_Count_7__c +  Report_Count_8__c +  Report_Count_9__c +  Report_Count_10__c +  Report_Count_11__c +  Report_Count_12__c)/12</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AVG Reports Last 12 Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

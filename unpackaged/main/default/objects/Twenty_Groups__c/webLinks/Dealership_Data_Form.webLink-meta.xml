@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealership_Data_Form</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Dealership Data Form</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&#39;/soap/ajax/29.0/connection.js&#39;)}
+
+try{
+    var recToUpdate = new sforce.SObject(&quot;Twenty_Groups__c&quot;);
+    recToUpdate.Id = &quot;{!Twenty_Groups__c.Id}&quot;;
+    recToUpdate.Print_Count_Dealership_Form__c =
+       {!Twenty_Groups__c.Print_Count_Dealership_Form__c} + 1;
+
+    var result = sforce.connection.update([recToUpdate]);
+
+if(result[0].success == &#39;true&#39;){
+        alert(&#39;The Dealership Data Form has been attached to this record successfully.&#39;);
+    }
+    else{
+        alert(&#39;An Error has Occurred. Error:&#39; + result[0].errors.message);
+    }
+}
+catch(e){
+    alert(&#39;An Error has Occurred. Error: &#39; + e);
+}</url>
+</WebLink>

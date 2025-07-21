@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x20_Group_ID_Cannot_Be_Blank</fullName>
+    <active>true</active>
+    <description>Category of Service Provided to Prospect</description>
+    <errorConditionFormula>AND(    ISBLANK( Group_Id__c ) , ISPICKVAL(StageName, &quot;Executive Committee Approved&quot;))</errorConditionFormula>
+    <errorDisplayField>Group_Id__c</errorDisplayField>
+    <errorMessage>Please enter the 20 Group this Opportunity Prospect is for</errorMessage>
+</ValidationRule>

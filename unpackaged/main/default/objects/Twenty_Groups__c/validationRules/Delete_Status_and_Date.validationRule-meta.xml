@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delete_Status_and_Date</fullName>
+    <active>false</active>
+    <description>Ensures that if Status is Deleted or a Delete Date is entered the user is prompted to fill both fields</description>
+    <errorConditionFormula>OR(
+
+AND(ISPICKVAL(Status__c, &quot;Deleted&quot;), ISNULL(Delete_Date__c))
+,
+AND(NOT(ISPICKVAL(Status__c, &quot;Deleted&quot;)), NOT(ISNULL(Delete_Date__c)))
+
+)</errorConditionFormula>
+    <errorMessage>Requires BOTH Delete Date and Status: Deleted</errorMessage>
+</ValidationRule>

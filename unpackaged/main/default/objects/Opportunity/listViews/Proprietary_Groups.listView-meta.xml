@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proprietary_Groups</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Group_Id__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Record_Type_Id__c</field>
+        <operation>equals</operation>
+        <value>Opportunity.Proprietary</value>
+    </filters>
+    <label>Proprietary Groups</label>
+</ListView>

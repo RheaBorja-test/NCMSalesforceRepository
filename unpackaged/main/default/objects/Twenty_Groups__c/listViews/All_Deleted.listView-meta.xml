@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Deleted</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Group_Membership_Count__c</columns>
+    <columns>Current_Candidates__c</columns>
+    <columns>Disconnected_Members__c</columns>
+    <columns>Rejected_Candidates__c</columns>
+    <columns>Franchise__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Delete_Date__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Delete_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All - Deleted</label>
+</ListView>

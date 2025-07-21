@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Full_Membership__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is required when the Type field equals &quot;Additional Store&quot; or &quot;Special Composite&quot;.</description>
+    <inlineHelpText>This field is required when the Type field equals &quot;Additional Store&quot; or &quot;Special Composite&quot;.</inlineHelpText>
+    <label>Related Full Membership</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The Related 20 Group Member Account must have Type of &quot;Full Member&quot; , and Status of &quot;Active&quot;.</errorMessage>
+        <filterItems>
+            <field>X20_Groups_Member__c.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>X20_Groups_Member__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Full Member</value>
+        </filterItems>
+        <filterItems>
+            <field>X20_Groups_Member__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>X20_Groups_Member__c</referenceTo>
+    <relationshipLabel>20 Groups Member Accounts (Related 20 Group Member Account)</relationshipLabel>
+    <relationshipName>X20_Groups_Member_Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

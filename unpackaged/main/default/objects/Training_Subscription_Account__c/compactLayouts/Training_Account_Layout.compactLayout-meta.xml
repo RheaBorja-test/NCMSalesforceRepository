@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Account_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Account__c</fields>
+    <fields>Training_Subscription__c</fields>
+    <fields>Status_Formula__c</fields>
+    <fields>Attended_Classes__c</fields>
+    <fields>Upcoming_Classes__c</fields>
+    <fields>Cancelled_Classes__c</fields>
+    <label>Training Account Layout</label>
+</CompactLayout>

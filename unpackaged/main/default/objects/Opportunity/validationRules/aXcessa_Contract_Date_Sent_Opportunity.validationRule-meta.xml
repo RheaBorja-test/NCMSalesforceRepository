@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Contract_Date_Sent_Opportunity</fullName>
+    <active>true</active>
+    <description>this is for pipeline validation, and will check if the aXcessa opportunity has data entered in the Opportunity Products field.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Contract_Date_Sent__c )),
+RecordType.DeveloperName = &quot;axcessa&quot;,
+OR(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+ISPICKVAL( StageName, &quot;Contract Received&quot;)
+),
+OR(
+ISBLANK( Opportunity_Products__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Data missing in Opportunity Products. Check again.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Marketing_Year</fullName>
+    <active>true</active>
+    <description>Internal request to create a new marketing year</description>
+    <label>New Marketing Year</label>
+    <picklistValues>
+        <picklist>Campaign_Tactic__c</picklist>
+        <values>
+            <fullName>Banner Ad Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beep DVM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Simple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Blog</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feature_added_to_Object__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Approved__c</picklist>
+        <values>
+            <fullName>Need HR to register me</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will register on my own</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marketing_Type_of_List__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %2F Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NCM_Services_Supported__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Talent Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM %2F Group Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>aXcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Feature_Requested__c</picklist>
+        <values>
+            <fullName>Button</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Link</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text Box</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_to_Support__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event %2F Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LiveAudit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM On-Demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>axcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reports_Dashboard_Request__c</picklist>
+        <values>
+            <fullName>Adding a new component to Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building a new Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creating a new Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creating a new Report Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finding an existing Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pull a Marketing Prospect%2FClient List</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_to_Support__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM On-Demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>axcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salesforce_Level_of_Access__c</picklist>
+        <values>
+            <fullName>Free License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full License</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salesforce_Project_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salesforce_Training_Request__c</picklist>
+        <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New User Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplemental</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Specific_Return_Time__c</picklist>
+        <values>
+            <fullName>1%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Specific_Start_Time__c</picklist>
+        <values>
+            <fullName>1%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tactics_Assistance_Requested__c</picklist>
+        <values>
+            <fullName>BEEP Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blog Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booklets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Out %2F Prospecting List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flyer %2F Brochure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Pack Print Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Banner Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photography %26 Editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PowerPoint Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Item%2FGiveaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show Exhibit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video %26 Editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Writing Assistance for Letter%2FEmail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Off_Request_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Request__c</picklist>
+        <values>
+            <fullName>Event %2F Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printing Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Time_Off_Request__c</picklist>
+        <values>
+            <fullName>Bereavement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business %28please specify below%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jury Duty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Personal Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpaid Personal Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X20_Group_New_or_Backfill__c</picklist>
+        <values>
+            <fullName>Backfill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

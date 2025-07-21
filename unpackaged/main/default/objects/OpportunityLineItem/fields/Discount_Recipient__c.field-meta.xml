@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount_Recipient__c</fullName>
+    <description>Used by override flows and sales processes to identify who received a discount</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by override flows and sales processes to identify who received a discount</inlineHelpText>
+    <label>Discount Recipient</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

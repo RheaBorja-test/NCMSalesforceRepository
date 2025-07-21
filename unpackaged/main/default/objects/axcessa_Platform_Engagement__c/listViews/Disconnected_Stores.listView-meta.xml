@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnected_Stores</fullName>
+    <columns>Store_Status__c</columns>
+    <columns>axcessa_Group__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Billing_Account__c</columns>
+    <columns>Disconnected_Program__c</columns>
+    <columns>Disconnect_Reason__c</columns>
+    <columns>Disconnect_Program_Detail__c</columns>
+    <columns>Owner__c</columns>
+    <columns>axcessa_Engagement_Specialist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Disconnected_Program__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Disconnected Stores</label>
+</ListView>

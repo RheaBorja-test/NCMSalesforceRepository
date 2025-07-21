@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_to_Support__c</fullName>
+    <label>Request to Support</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Groups</fullName>
+                <default>false</default>
+                <label>20 Groups</label>
+            </value>
+            <value>
+                <fullName>axcessa</fullName>
+                <default>false</default>
+                <label>axcessa</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>NCM Institute</fullName>
+                <default>false</default>
+                <label>NCM Institute</label>
+            </value>
+            <value>
+                <fullName>NCM On-Demand</fullName>
+                <default>false</default>
+                <label>NCM On-Demand</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Travel Solutions</fullName>
+                <default>false</default>
+                <label>Travel Solutions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

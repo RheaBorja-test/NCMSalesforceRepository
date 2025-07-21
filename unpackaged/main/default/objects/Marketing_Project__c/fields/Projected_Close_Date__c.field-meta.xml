@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Projected_Close_Date__c</fullName>
+    <formula>if( ISBLANK( Scheduled_Tactic_Start__c ),Start_Date__c   +  Tactic_Run_Time_Days__c, Scheduled_Tactic_Start__c  +  Tactic_Run_Time_Days__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Estimated Project End Date prior to tactic launch/completion</inlineHelpText>
+    <label>Project Close</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

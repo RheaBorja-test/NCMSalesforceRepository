@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_Name_Code__c</fullName>
+    <description>Used for Workflow Rule to store original record name - will deprecate this to Process Builder Functionality that exists already for this object (20 Group Record Type)</description>
+    <externalId>false</externalId>
+    <label>Session Name (Code)</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

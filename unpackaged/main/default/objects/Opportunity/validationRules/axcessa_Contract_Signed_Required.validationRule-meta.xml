@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>axcessa_Contract_Signed_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    ISBLANK( Contract_Date_Sent__c ),    
+    ISNULL(Contract_Months__c),
+    Contract_Months__c &lt;= 0
+  ),
+  RecordType.DeveloperName = &quot;axcessa&quot;,
+  OR(
+     ISPICKVAL( StageName, &quot;Closed Won&quot;),
+     ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+     ISPICKVAL( StageName, &quot;Contract Received&quot;)
+   )
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Date_Sent__c</errorDisplayField>
+    <errorMessage>You must enter both Contract Date Sent and Contract Months before changing to this stage</errorMessage>
+</ValidationRule>

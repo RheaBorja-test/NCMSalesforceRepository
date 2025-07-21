@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_Disconnect_Detail__c</fullName>
+    <label>Mobile Disconnect Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Mobile_Disconnect_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Doesn&#39;t See Value</fullName>
+                <default>false</default>
+                <label>Doesn&#39;t See Value</label>
+            </value>
+            <value>
+                <fullName>Insufficient Reports</fullName>
+                <default>false</default>
+                <label>Insufficient Reports</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Low Usage</controllingFieldValue>
+            <valueName>Doesn&#39;t See Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Low Usage</controllingFieldValue>
+            <valueName>Insufficient Reports</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Content_Request</fullName>
+    <availability>online</availability>
+    <description>Creates a NCM Content Request</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Submit Content Request</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Opportunity_Engine_Create_Engagement_Content_Request?
+varUserName={!User.Name}
+&amp;varUserID={!User.Id}
+&amp;varDivision={!User.Division}
+&amp;varNCMContent={!Engagements_Checklist__c.NCM_Content__c}
+&amp;varEngagementChecklistName={!Engagements_Checklist__c.Name}
+&amp;varDurationDays={!Engagements_Checklist__c.Duration_Days__c}
+&amp;varEngagementChecklistID={!Engagements_Checklist__c.Id}
+&amp;retURL=%2F{!Engagements_Checklist__c.Id}</url>
+</WebLink>

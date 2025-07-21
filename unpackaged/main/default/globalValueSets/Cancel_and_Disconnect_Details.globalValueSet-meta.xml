@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ally Academy</fullName>
+        <default>false</default>
+        <label>Ally Academy</label>
+    </customValue>
+    <customValue>
+        <fullName>AMI</fullName>
+        <default>false</default>
+        <label>AMI</label>
+    </customValue>
+    <customValue>
+        <fullName>ATI</fullName>
+        <default>false</default>
+        <label>ATI</label>
+    </customValue>
+    <customValue>
+        <fullName>AutoSoft</fullName>
+        <default>false</default>
+        <label>AutoSoft</label>
+    </customValue>
+    <customValue>
+        <fullName>Budget Constraint</fullName>
+        <default>false</default>
+        <label>Budget Constraint</label>
+    </customValue>
+    <customValue>
+        <fullName>CADA</fullName>
+        <default>false</default>
+        <label>CADA</label>
+    </customValue>
+    <customValue>
+        <fullName>CDK</fullName>
+        <default>false</default>
+        <label>CDK</label>
+    </customValue>
+    <customValue>
+        <fullName>Changed Groups</fullName>
+        <default>false</default>
+        <label>Changed Groups</label>
+    </customValue>
+    <customValue>
+        <fullName>Changed Positions</fullName>
+        <default>false</default>
+        <label>Changed Positions</label>
+    </customValue>
+    <customValue>
+        <fullName>Class Cancelled</fullName>
+        <default>false</default>
+        <label>Class Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>College of Automotive</fullName>
+        <default>false</default>
+        <label>College of Automotive</label>
+    </customValue>
+    <customValue>
+        <fullName>Company Purchased</fullName>
+        <default>false</default>
+        <label>Company Purchased</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Cox</fullName>
+        <default>false</default>
+        <label>Cox</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer Bible</fullName>
+        <default>false</default>
+        <label>Dealer Bible</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer Ops</fullName>
+        <default>false</default>
+        <label>Dealer Ops</label>
+    </customValue>
+    <customValue>
+        <fullName>Dealer Phoenix</fullName>
+        <default>false</default>
+        <label>Dealer Phoenix</label>
+    </customValue>
+    <customValue>
+        <fullName>Deceased</fullName>
+        <default>false</default>
+        <label>Deceased</label>
+    </customValue>
+    <customValue>
+        <fullName>Decreasing Company Expenses</fullName>
+        <default>false</default>
+        <label>Decreasing Company Expenses</label>
+    </customValue>
+    <customValue>
+        <fullName>DSP 20 Group</fullName>
+        <default>false</default>
+        <label>DSP 20 Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Eye/Dealer Dashboard</fullName>
+        <default>false</default>
+        <label>Executive Eye/Dealer Dashboard</label>
+    </customValue>
+    <customValue>
+        <fullName>Frog Data</fullName>
+        <default>false</default>
+        <label>Frog Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Georgian</fullName>
+        <default>false</default>
+        <label>Georgian</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Dissolved</fullName>
+        <default>false</default>
+        <label>Group Dissolved</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Excellence</fullName>
+        <default>false</default>
+        <label>Group Excellence</label>
+    </customValue>
+    <customValue>
+        <fullName>Individual Cancelled - Illness</fullName>
+        <default>false</default>
+        <label>Individual Cancelled - Illness</label>
+    </customValue>
+    <customValue>
+        <fullName>Individual Cancelled - Unknown</fullName>
+        <default>false</default>
+        <label>Individual Cancelled - Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>Individual - No Show</fullName>
+        <default>false</default>
+        <label>Individual - No Show</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal Provider</fullName>
+        <default>false</default>
+        <label>Internal Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Kintz Group</fullName>
+        <default>false</default>
+        <label>Kintz Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost Job</fullName>
+        <default>false</default>
+        <label>Lost Job</label>
+    </customValue>
+    <customValue>
+        <fullName>Maritz</fullName>
+        <default>false</default>
+        <label>Maritz</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting Format</fullName>
+        <default>false</default>
+        <label>Meeting Format</label>
+    </customValue>
+    <customValue>
+        <fullName>Moderator</fullName>
+        <default>false</default>
+        <label>Moderator</label>
+    </customValue>
+    <customValue>
+        <fullName>MSX</fullName>
+        <default>false</default>
+        <label>MSX</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA</fullName>
+        <default>false</default>
+        <label>NADA</label>
+    </customValue>
+    <customValue>
+        <fullName>NIADA</fullName>
+        <default>false</default>
+        <label>NIADA</label>
+    </customValue>
+    <customValue>
+        <fullName>Northwood</fullName>
+        <default>false</default>
+        <label>Northwood</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Dealer Academy</fullName>
+        <default>false</default>
+        <label>Online Dealer Academy</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Out of Business</fullName>
+        <default>false</default>
+        <label>Out of Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Declined</fullName>
+        <default>false</default>
+        <label>Payment Declined</label>
+    </customValue>
+    <customValue>
+        <fullName>PBS</fullName>
+        <default>false</default>
+        <label>PBS</label>
+    </customValue>
+    <customValue>
+        <fullName>PDI</fullName>
+        <default>false</default>
+        <label>PDI</label>
+    </customValue>
+    <customValue>
+        <fullName>Personnel Changes</fullName>
+        <default>false</default>
+        <label>Personnel Changes</label>
+    </customValue>
+    <customValue>
+        <fullName>Price Increase</fullName>
+        <default>false</default>
+        <label>Price Increase</label>
+    </customValue>
+    <customValue>
+        <fullName>Price Increase/DRF</fullName>
+        <default>false</default>
+        <label>Price Increase/DRF</label>
+    </customValue>
+    <customValue>
+        <fullName>Price Reduction/too expensive</fullName>
+        <default>false</default>
+        <label>Price Reduction/too expensive</label>
+    </customValue>
+    <customValue>
+        <fullName>Quorumn</fullName>
+        <default>false</default>
+        <label>Quorumn</label>
+    </customValue>
+    <customValue>
+        <fullName>Reynolds Ownership</fullName>
+        <default>false</default>
+        <label>Reynolds Ownership</label>
+    </customValue>
+    <customValue>
+        <fullName>Serti</fullName>
+        <default>false</default>
+        <label>Serti</label>
+    </customValue>
+    <customValue>
+        <fullName>Spader</fullName>
+        <default>false</default>
+        <label>Spader</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategic Alliance Group</fullName>
+        <default>false</default>
+        <label>Strategic Alliance Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Tekion</fullName>
+        <default>false</default>
+        <label>Tekion</label>
+    </customValue>
+    <customValue>
+        <fullName>Terminated by Group</fullName>
+        <default>false</default>
+        <label>Terminated by Group</label>
+    </customValue>
+    <customValue>
+        <fullName>The Academy</fullName>
+        <default>false</default>
+        <label>The Academy</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Constraint</fullName>
+        <default>false</default>
+        <label>Time Constraint</label>
+    </customValue>
+    <customValue>
+        <fullName>Too Expensive</fullName>
+        <default>false</default>
+        <label>Too Expensive</label>
+    </customValue>
+    <customValue>
+        <fullName>Transferring to Subscription</fullName>
+        <default>false</default>
+        <label>Transferring to Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Unable to Reach Student</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unable to Reach Student</label>
+    </customValue>
+    <customValue>
+        <fullName>Did Not Want The Seat</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Did Not Want The Seat</label>
+    </customValue>
+    <customValue>
+        <fullName>Low Usage</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Low Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Show</label>
+    </customValue>
+    <customValue>
+        <fullName>Wanted 1 Year Term Only</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Wanted 1 Year Term Only</label>
+    </customValue>
+    <customValue>
+        <fullName>No Waitlist Seat Available</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Waitlist Seat Available</label>
+    </customValue>
+    <customValue>
+        <fullName>No_More_Training_Needed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No More Training Needed</label>
+    </customValue>
+    <masterLabel>Cancel and Disconnect Details</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

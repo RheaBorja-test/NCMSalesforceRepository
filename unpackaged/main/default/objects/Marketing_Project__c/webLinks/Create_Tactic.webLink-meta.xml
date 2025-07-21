@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Tactic</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Tactic</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/701/e?
+&amp;cpn1={!Marketing_Project__c.Name}+{!Marketing_Project__c.Campaign_Tactic__c}
+&amp;cpn5={!Marketing_Project__c.Start_Date__c}
+&amp;cpn6={!Marketing_Project__c.Scheduled_End_Date__c} 
+&amp;cpn3=Planning Stage
+&amp;00N55000000qLdD={!Marketing_Project__c.Campaign_Tactic__c}
+&amp;CF00N55000000qlOJ={!Marketing_Project__c.Core_Service__c}
+&amp;Parent={!Marketing_Project__c.Core_Service__c}
+&amp;CF00N55000000qm7s={!Marketing_Project__c.Name}
+&amp;CF00N55000000qmI7={!Marketing_Project__c.Marketing_Request__c}}
+&amp;CF00N55000000t8eO={!Marketing_Project__c.Marketing_Year__c}
+&amp;00N55000000t8ik={!Marketing_Project__c.Project_ID__c}</url>
+</WebLink>

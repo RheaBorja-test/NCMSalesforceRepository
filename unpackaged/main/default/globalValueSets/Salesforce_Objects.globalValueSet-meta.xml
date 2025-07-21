@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>20 Group</fullName>
+        <default>false</default>
+        <label>20 Group</label>
+    </customValue>
+    <customValue>
+        <fullName>20 Group Member Contact</fullName>
+        <default>false</default>
+        <label>20 Group Member Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>20 Groups Member</fullName>
+        <default>false</default>
+        <label>20 Group Member Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Account</fullName>
+        <default>false</default>
+        <label>Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Accounts Receivable</fullName>
+        <default>false</default>
+        <label>Accounts Receivable</label>
+    </customValue>
+    <customValue>
+        <fullName>Activity Participant</fullName>
+        <default>false</default>
+        <label>Activity Participant</label>
+    </customValue>
+    <customValue>
+        <fullName>Agile Package</fullName>
+        <default>false</default>
+        <label>Agile Package</label>
+    </customValue>
+    <customValue>
+        <fullName>Applicant</fullName>
+        <default>false</default>
+        <label>Applicant</label>
+    </customValue>
+    <customValue>
+        <fullName>Area of Focus</fullName>
+        <default>false</default>
+        <label>Area of Focus</label>
+    </customValue>
+    <customValue>
+        <fullName>Attendee</fullName>
+        <default>false</default>
+        <label>Attendee</label>
+    </customValue>
+    <customValue>
+        <fullName>axcessa Group</fullName>
+        <default>false</default>
+        <label>axcessa Group</label>
+    </customValue>
+    <customValue>
+        <fullName>axcessa Store</fullName>
+        <default>false</default>
+        <label>axcessa Store</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing Configuration</fullName>
+        <default>false</default>
+        <label>Billing Configuration</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing Configuration Detail</fullName>
+        <default>false</default>
+        <label>Billing Configuration Detail</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing Product</fullName>
+        <default>false</default>
+        <label>Billing Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Campaign</fullName>
+        <default>false</default>
+        <label>Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidate</fullName>
+        <default>false</default>
+        <label>Candidate</label>
+    </customValue>
+    <customValue>
+        <fullName>Candidate Update</fullName>
+        <default>false</default>
+        <label>Candidate Update</label>
+    </customValue>
+    <customValue>
+        <fullName>Case</fullName>
+        <default>false</default>
+        <label>Case</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Entry</fullName>
+        <default>false</default>
+        <label>Cash Entry</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Entry Line Item</fullName>
+        <default>false</default>
+        <label>Cash Entry Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Matching History</fullName>
+        <default>false</default>
+        <label>Cash Matching History</label>
+    </customValue>
+    <customValue>
+        <fullName>Class</fullName>
+        <default>false</default>
+        <label>Class</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Case</fullName>
+        <default>false</default>
+        <label>Client Case</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Case Relation</fullName>
+        <default>false</default>
+        <label>Client Case Relation</label>
+    </customValue>
+    <customValue>
+        <fullName>Collections Activity</fullName>
+        <default>false</default>
+        <label>Collections Activity</label>
+    </customValue>
+    <customValue>
+        <fullName>Concur Import</fullName>
+        <default>false</default>
+        <label>Concur Import</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact</fullName>
+        <default>false</default>
+        <label>Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Content Version Review</fullName>
+        <default>false</default>
+        <label>Content Version Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Course</fullName>
+        <default>false</default>
+        <label>Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Dashboards</fullName>
+        <default>false</default>
+        <label>Dashboards</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Processing Request</fullName>
+        <default>false</default>
+        <label>Data Processing Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Dimension 1</fullName>
+        <default>false</default>
+        <label>Dimension 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Dimension 2</fullName>
+        <default>false</default>
+        <label>Dimension 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Dimension 3</fullName>
+        <default>false</default>
+        <label>Dimension 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Dimension 4</fullName>
+        <default>false</default>
+        <label>Dimension 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Discipline</fullName>
+        <default>false</default>
+        <label>Discipline</label>
+    </customValue>
+    <customValue>
+        <fullName>DocuSign Status</fullName>
+        <default>false</default>
+        <label>DocuSign Status</label>
+    </customValue>
+    <customValue>
+        <fullName>Educational Program</fullName>
+        <default>false</default>
+        <label>Educational Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Employee</fullName>
+        <default>false</default>
+        <label>Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement</fullName>
+        <default>false</default>
+        <label>Engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement Activity</fullName>
+        <default>false</default>
+        <label>Engagement Activity</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement Attendee</fullName>
+        <default>false</default>
+        <label>Engagement Attendee</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement Checklist</fullName>
+        <default>false</default>
+        <label>Engagement Checklist</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement Expense</fullName>
+        <default>false</default>
+        <label>Engagement Expense</label>
+    </customValue>
+    <customValue>
+        <fullName>Engagement Waitlist</fullName>
+        <default>false</default>
+        <label>Engagement Waitlist</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance Account</fullName>
+        <default>false</default>
+        <label>Finance Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Function Space</fullName>
+        <default>false</default>
+        <label>Function Space</label>
+    </customValue>
+    <customValue>
+        <fullName>GetFeedBack Results</fullName>
+        <default>false</default>
+        <label>GetFeedBack Results</label>
+    </customValue>
+    <customValue>
+        <fullName>Global</fullName>
+        <default>false</default>
+        <label>Global</label>
+    </customValue>
+    <customValue>
+        <fullName>Guest</fullName>
+        <default>false</default>
+        <label>Guest</label>
+    </customValue>
+    <customValue>
+        <fullName>Guest Attendee</fullName>
+        <default>false</default>
+        <label>Guest Attendee</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck Instance</fullName>
+        <default>false</default>
+        <label>Healthcheck Instance</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck Store</fullName>
+        <default>false</default>
+        <label>Healthcheck Store</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotel Contract</fullName>
+        <default>false</default>
+        <label>Hotel Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotel Function Space</fullName>
+        <default>false</default>
+        <label>Hotel Function Space</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotel Region</fullName>
+        <default>false</default>
+        <label>Hotel Region</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Job</fullName>
+        <default>false</default>
+        <label>HR Job</label>
+    </customValue>
+    <customValue>
+        <fullName>Journal</fullName>
+        <default>false</default>
+        <label>Journal</label>
+    </customValue>
+    <customValue>
+        <fullName>Journal Line Item</fullName>
+        <default>false</default>
+        <label>Journal Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead</fullName>
+        <default>false</default>
+        <label>Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Project</fullName>
+        <default>false</default>
+        <label>Marketing Project</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Project Expense</fullName>
+        <default>false</default>
+        <label>Marketing Project Expense</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Project Request</fullName>
+        <default>false</default>
+        <label>Marketing Project Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Project Stage</fullName>
+        <default>false</default>
+        <label>Marketing Project Stage</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Tactic</fullName>
+        <default>false</default>
+        <label>Marketing Tactic</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Task Template</fullName>
+        <default>false</default>
+        <label>Marketing Task Template</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting Agenda</fullName>
+        <default>false</default>
+        <label>Meeting Agenda</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting Schedule</fullName>
+        <default>false</default>
+        <label>Meeting Schedule</label>
+    </customValue>
+    <customValue>
+        <fullName>Misc or Defunct Objects</fullName>
+        <default>false</default>
+        <label>Misc or Defunct Objects</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Content</fullName>
+        <default>false</default>
+        <label>NCM Content</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Content Adaptation</fullName>
+        <default>false</default>
+        <label>NCM Content Adaptation</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Content Request</fullName>
+        <default>false</default>
+        <label>NCM Content Request</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Content Version</fullName>
+        <default>false</default>
+        <label>NCM Content Version</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Lead</fullName>
+        <default>false</default>
+        <label>NCM Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Products and Services</fullName>
+        <default>false</default>
+        <label>NCM Products and Services</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM Record</fullName>
+        <default>false</default>
+        <label>OEM Record</label>
+    </customValue>
+    <customValue>
+        <fullName>Opportunity</fullName>
+        <default>false</default>
+        <label>Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Opportunity Line Item</fullName>
+        <default>false</default>
+        <label>Opportunity Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Payable Invoice</fullName>
+        <default>false</default>
+        <label>Payable Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Payable Invoice Expense Line Item</fullName>
+        <default>false</default>
+        <label>Payable Invoice Expense Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Payable Invoice Line Item</fullName>
+        <default>false</default>
+        <label>Payable Invoice Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Position</fullName>
+        <default>false</default>
+        <label>Position</label>
+    </customValue>
+    <customValue>
+        <fullName>Product</fullName>
+        <default>false</default>
+        <label>Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Program</fullName>
+        <default>false</default>
+        <label>Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Program (OEM)</fullName>
+        <default>false</default>
+        <label>Program (OEM)</label>
+    </customValue>
+    <customValue>
+        <fullName>Program Record</fullName>
+        <default>false</default>
+        <label>Program Record</label>
+    </customValue>
+    <customValue>
+        <fullName>Proprietary Group</fullName>
+        <default>false</default>
+        <label>Proprietary Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Proprietary Store</fullName>
+        <default>false</default>
+        <label>Proprietary Store</label>
+    </customValue>
+    <customValue>
+        <fullName>Prorate</fullName>
+        <default>false</default>
+        <label>Prorate</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospects</fullName>
+        <default>false</default>
+        <label>Prospects</label>
+    </customValue>
+    <customValue>
+        <fullName>Referring Employee</fullName>
+        <default>false</default>
+        <label>Referring Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Reports</fullName>
+        <default>false</default>
+        <label>Reports</label>
+    </customValue>
+    <customValue>
+        <fullName>Room Contract Rate</fullName>
+        <default>false</default>
+        <label>Room Contract Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>Rooms</fullName>
+        <default>false</default>
+        <label>Rooms</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce News</fullName>
+        <default>false</default>
+        <label>Salesforce News</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Invoice</fullName>
+        <default>false</default>
+        <label>Sales Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Invoice Line Item</fullName>
+        <default>false</default>
+        <label>Sales Invoice Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>Seat</fullName>
+        <default>false</default>
+        <label>Seat</label>
+    </customValue>
+    <customValue>
+        <fullName>Session</fullName>
+        <default>false</default>
+        <label>Session</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription</fullName>
+        <default>false</default>
+        <label>Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription Sub-Acct</fullName>
+        <default>false</default>
+        <label>Subscription Sub-Acct</label>
+    </customValue>
+    <customValue>
+        <fullName>Support Ticket</fullName>
+        <default>false</default>
+        <label>Support Ticket</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction</fullName>
+        <default>false</default>
+        <label>Transaction</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction Line Item</fullName>
+        <default>false</default>
+        <label>Transaction Line Item</label>
+    </customValue>
+    <customValue>
+        <fullName>User</fullName>
+        <default>false</default>
+        <label>User</label>
+    </customValue>
+    <customValue>
+        <fullName>Vision-e Scanning</fullName>
+        <default>false</default>
+        <label>Vision-e Scanning</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Tactics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketing Tactics</label>
+    </customValue>
+    <description>a list of all Custom Salesforce Objects in our Environment and installed packages</description>
+    <masterLabel>Salesforce Objects</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

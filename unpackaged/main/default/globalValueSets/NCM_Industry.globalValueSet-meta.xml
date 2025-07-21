@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Associations</fullName>
+        <default>false</default>
+        <label>Associations</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Auction</fullName>
+        <default>false</default>
+        <label>Auto Auction</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Body Shop</fullName>
+        <default>false</default>
+        <label>Auto Body Shop</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Distributors</fullName>
+        <default>false</default>
+        <label>Auto Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Parts</fullName>
+        <default>false</default>
+        <label>Auto Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Retail New</fullName>
+        <default>false</default>
+        <label>Auto Retail New</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Retail Used</fullName>
+        <default>false</default>
+        <label>Auto Retail Used</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Service</fullName>
+        <default>false</default>
+        <label>Auto Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Vendor</fullName>
+        <default>false</default>
+        <label>Auto Vendor</label>
+    </customValue>
+    <customValue>
+        <fullName>Beer Distributors</fullName>
+        <default>false</default>
+        <label>Beer Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>Better Business Bureau</fullName>
+        <default>false</default>
+        <label>Better Business Bureau</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverage</fullName>
+        <default>false</default>
+        <label>Beverage</label>
+    </customValue>
+    <customValue>
+        <fullName>Bobcat</fullName>
+        <default>false</default>
+        <label>Bobcat</label>
+    </customValue>
+    <customValue>
+        <fullName>Charter/Tour Bus</fullName>
+        <default>false</default>
+        <label>Charter/Tour Bus</label>
+    </customValue>
+    <customValue>
+        <fullName>Farm Equipment</fullName>
+        <default>false</default>
+        <label>Farm Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Heavy Trucks</fullName>
+        <default>false</default>
+        <label>Heavy Trucks</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotel</fullName>
+        <default>false</default>
+        <label>Hotel</label>
+    </customValue>
+    <customValue>
+        <fullName>Limousine Services</fullName>
+        <default>false</default>
+        <label>Limousine Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Marina</fullName>
+        <default>false</default>
+        <label>Marina</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Vendor</fullName>
+        <default>false</default>
+        <label>Marketing Vendor</label>
+    </customValue>
+    <customValue>
+        <fullName>Motorcycle</fullName>
+        <default>false</default>
+        <label>Motorcycle</label>
+    </customValue>
+    <customValue>
+        <fullName>Motor Sport</fullName>
+        <default>false</default>
+        <label>Motor Sport</label>
+    </customValue>
+    <customValue>
+        <fullName>National Water Distributors</fullName>
+        <default>false</default>
+        <label>National Water Distributors</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM</fullName>
+        <default>false</default>
+        <label>OEM</label>
+    </customValue>
+    <customValue>
+        <fullName>Office &amp; Business Technology</fullName>
+        <default>false</default>
+        <label>Office &amp; Business Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Quick Lube</fullName>
+        <default>false</default>
+        <label>Quick Lube</label>
+    </customValue>
+    <customValue>
+        <fullName>Quick Print</fullName>
+        <default>false</default>
+        <label>Quick Print</label>
+    </customValue>
+    <customValue>
+        <fullName>Recreational Vehicle</fullName>
+        <default>false</default>
+        <label>Recreational Vehicle</label>
+    </customValue>
+    <customValue>
+        <fullName>Rental Cars</fullName>
+        <default>false</default>
+        <label>Rental Cars</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Automotive</fullName>
+        <default>false</default>
+        <label>Retail Automotive</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Furniture</fullName>
+        <default>false</default>
+        <label>Retail Furniture</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Mobility</fullName>
+        <default>false</default>
+        <label>Retail Mobility</label>
+    </customValue>
+    <customValue>
+        <fullName>Utility Trailers</fullName>
+        <default>false</default>
+        <label>Utility Trailers</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consumer Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automotive</label>
+    </customValue>
+    <description>Available industries NCM Supports</description>
+    <masterLabel>NCM Industry</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

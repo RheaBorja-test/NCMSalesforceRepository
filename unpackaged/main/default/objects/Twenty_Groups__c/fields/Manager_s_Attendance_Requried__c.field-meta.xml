@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_s_Attendance_Requried__c</fullName>
+    <label>Manager&#39;s Attendance Requried?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Every meeting</fullName>
+                <default>false</default>
+                <label>Every meeting</label>
+            </value>
+            <value>
+                <fullName>Twice per year</fullName>
+                <default>false</default>
+                <label>Twice per year</label>
+            </value>
+            <value>
+                <fullName>Once per year</fullName>
+                <default>false</default>
+                <label>Once per year</label>
+            </value>
+            <value>
+                <fullName>Never</fullName>
+                <default>false</default>
+                <label>Never</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Price</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Incompatible</fullName>
+        <default>false</default>
+        <label>Incompatible</label>
+    </customValue>
+    <customValue>
+        <fullName>Employment Status</fullName>
+        <default>false</default>
+        <label>Employment Status</label>
+    </customValue>
+    <customValue>
+        <fullName>Buy/Sell</fullName>
+        <default>false</default>
+        <label>Buy/Sell</label>
+    </customValue>
+    <customValue>
+        <fullName>Timing</fullName>
+        <default>false</default>
+        <label>Timing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Transferring to Subscription</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Transferring to Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Conflict</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business Conflict</label>
+    </customValue>
+    <customValue>
+        <fullName>Illness</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Illness</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Matter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Matter</label>
+    </customValue>
+    <customValue>
+        <fullName>Covid-19</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Covid-19</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancellation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cancellation</label>
+    </customValue>
+    <masterLabel>Cancel and Disconnect Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

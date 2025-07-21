@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Expenses</fullName>
+    <columns>Department__c</columns>
+    <columns>Expense_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Marketing_Tactic__c</columns>
+    <columns>Marketing_Campaign__c</columns>
+    <columns>Marketing_Project__c</columns>
+    <columns>Total_Cost__c</columns>
+    <columns>Vendor_Account__c</columns>
+    <columns>Processed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Marketing_Campaign__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Processed__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>Marketing Expenses</label>
+</ListView>

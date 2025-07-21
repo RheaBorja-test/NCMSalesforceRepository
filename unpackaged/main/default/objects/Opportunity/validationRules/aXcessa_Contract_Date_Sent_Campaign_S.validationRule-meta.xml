@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Contract_Date_Sent_Campaign_S</fullName>
+    <active>true</active>
+    <description>in data pipeline validation tool, checks if there&#39;s data entered in Primary Campaign Source.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Contract_Date_Sent__c )),
+RecordType.DeveloperName = &quot;axcessa&quot;,
+OR(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+ISPICKVAL( StageName, &quot;Contract Received&quot;)
+),
+OR(
+ISBLANK( Primary_Campaign_Source__c )
+)
+)</errorConditionFormula>
+    <errorDisplayField>CampaignId</errorDisplayField>
+    <errorMessage>Data missing in Primary Campaign Source. Check again.</errorMessage>
+</ValidationRule>

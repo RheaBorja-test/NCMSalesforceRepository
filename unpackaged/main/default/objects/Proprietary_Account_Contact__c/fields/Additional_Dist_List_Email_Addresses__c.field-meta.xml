@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Dist_List_Email_Addresses__c</fullName>
+    <description>Additional email addresses to cc when corresponding with this contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional people that should receive email communication, when specifying more than one email, separate each valid email address with a comma.</inlineHelpText>
+    <label>Additional Dist List Email Addresses</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

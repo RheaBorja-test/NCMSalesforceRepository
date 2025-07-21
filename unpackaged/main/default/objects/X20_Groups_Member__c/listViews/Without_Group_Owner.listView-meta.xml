@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Without_Group_Owner</fullName>
+    <columns>NAME</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Owner_Code__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NCM_Proprietor__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Without Group Owner</label>
+</ListView>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Action</fullName>
+        <default>false</default>
+        <label>Action</label>
+    </customValue>
+    <customValue>
+        <fullName>Apex Class</fullName>
+        <default>false</default>
+        <label>Apex Class</label>
+    </customValue>
+    <customValue>
+        <fullName>Apex Trigger</fullName>
+        <default>false</default>
+        <label>Apex Trigger</label>
+    </customValue>
+    <customValue>
+        <fullName>App</fullName>
+        <default>false</default>
+        <label>App</label>
+    </customValue>
+    <customValue>
+        <fullName>App Exchange and Add-Ons</fullName>
+        <default>false</default>
+        <label>App Exchange and Add-Ons</label>
+    </customValue>
+    <customValue>
+        <fullName>Aura Component Bundle</fullName>
+        <default>false</default>
+        <label>Aura Component Bundle</label>
+    </customValue>
+    <customValue>
+        <fullName>Button or Link</fullName>
+        <default>false</default>
+        <label>Button or Link</label>
+    </customValue>
+    <customValue>
+        <fullName>Compact Layout</fullName>
+        <default>false</default>
+        <label>Compact Layout</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Fields</fullName>
+        <default>false</default>
+        <label>Custom Fields</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Object</fullName>
+        <default>false</default>
+        <label>Custom Object</label>
+    </customValue>
+    <customValue>
+        <fullName>Email Templates</fullName>
+        <default>false</default>
+        <label>Email Templates</label>
+    </customValue>
+    <customValue>
+        <fullName>Field Sets</fullName>
+        <default>false</default>
+        <label>Field Sets</label>
+    </customValue>
+    <customValue>
+        <fullName>Flow Definition</fullName>
+        <default>false</default>
+        <label>Flow Definition</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Value Set</fullName>
+        <default>false</default>
+        <label>Global Value Set</label>
+    </customValue>
+    <customValue>
+        <fullName>Lightning Page</fullName>
+        <default>false</default>
+        <label>Lightning Page</label>
+    </customValue>
+    <customValue>
+        <fullName>Lightning Web Component Bundle</fullName>
+        <default>false</default>
+        <label>Lightning Web Component Bundle</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <label>Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Page Layouts</fullName>
+        <default>false</default>
+        <label>Page Layouts</label>
+    </customValue>
+    <customValue>
+        <fullName>Path Assistant</fullName>
+        <default>false</default>
+        <label>Path Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Permission Set</fullName>
+        <default>false</default>
+        <label>Permission Set</label>
+    </customValue>
+    <customValue>
+        <fullName>Permission Set Group</fullName>
+        <default>false</default>
+        <label>Permission Set Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Profiles and Security</fullName>
+        <default>false</default>
+        <label>Profiles and Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Queue</fullName>
+        <default>false</default>
+        <label>Queue</label>
+    </customValue>
+    <customValue>
+        <fullName>Record Types</fullName>
+        <default>false</default>
+        <label>Record Types</label>
+    </customValue>
+    <customValue>
+        <fullName>Tab</fullName>
+        <default>false</default>
+        <label>Tab</label>
+    </customValue>
+    <customValue>
+        <fullName>Validation Rule</fullName>
+        <default>false</default>
+        <label>Validation Rule</label>
+    </customValue>
+    <customValue>
+        <fullName>Visual Force</fullName>
+        <default>false</default>
+        <label>Visual Force</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Email Alert</fullName>
+        <default>false</default>
+        <label>Workflow Email Alert</label>
+    </customValue>
+    <customValue>
+        <fullName>Process &amp; Development Documentation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Process &amp; Development Documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Investigation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Investigation</label>
+    </customValue>
+    <masterLabel>Development Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

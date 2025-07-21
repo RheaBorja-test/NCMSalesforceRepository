@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Type__c</fullName>
+    <label>Engagement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Group</fullName>
+                <default>false</default>
+                <label>20 Group</label>
+            </value>
+            <value>
+                <fullName>Executive Coaching</fullName>
+                <default>false</default>
+                <label>Executive Coaching</label>
+            </value>
+            <value>
+                <fullName>Group Review</fullName>
+                <default>false</default>
+                <label>Group Review</label>
+            </value>
+            <value>
+                <fullName>Managerial Coaching</fullName>
+                <default>false</default>
+                <label>Managerial Coaching</label>
+            </value>
+            <value>
+                <fullName>Special Meeting (20 Group)</fullName>
+                <default>false</default>
+                <label>Special Meeting (20 Group)</label>
+            </value>
+            <value>
+                <fullName>Special Meeting (Dealer)</fullName>
+                <default>false</default>
+                <label>Special Meeting (Dealer)</label>
+            </value>
+            <value>
+                <fullName>Special Meeting (Dealer Group)</fullName>
+                <default>false</default>
+                <label>Special Meeting (Dealer Group)</label>
+            </value>
+            <value>
+                <fullName>Special Meeting (Dealer – OEM Program)</fullName>
+                <default>false</default>
+                <label>Special Meeting (Dealer - OEM Program)</label>
+            </value>
+            <value>
+                <fullName>Special Meeting (Virtual SubGroup)</fullName>
+                <default>false</default>
+                <label>Special Meeting (Virtual SubGroup)</label>
+            </value>
+            <value>
+                <fullName>Star Consulting</fullName>
+                <default>false</default>
+                <label>Star Consulting</label>
+            </value>
+            <value>
+                <fullName>Candidate Call</fullName>
+                <default>false</default>
+                <label>Candidate Call</label>
+            </value>
+            <value>
+                <fullName>NCMi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NCMi</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Professional Services - 20 Group Training</label>
+            </value>
+            <value>
+                <fullName>Special</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Special</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Standard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

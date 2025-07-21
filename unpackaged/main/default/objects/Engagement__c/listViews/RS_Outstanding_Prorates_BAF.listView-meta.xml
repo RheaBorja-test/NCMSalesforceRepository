@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Outstanding_Prorates_BAF</fullName>
+    <columns>Engagement_Start_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Group_No__c</columns>
+    <columns>Engagement_Owner__c</columns>
+    <columns>Engagement_Coordinator__c</columns>
+    <columns>Engagement_Type__c</columns>
+    <columns>No_Prorate_Required__c</columns>
+    <columns>Status__c</columns>
+    <columns>Confirmed_Hotel__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Engagement_Type__c</field>
+        <operation>equals</operation>
+        <value>20 Group,Special Meeting (Dealer Group),Special Meeting (Dealer),Special Meeting (Dealer – OEM Program),Special Meeting (Dealer - OEM Program),Special Meeting (20 Group)</value>
+    </filters>
+    <filters>
+        <field>Engagement_Start_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.X20_Group</value>
+    </filters>
+    <filters>
+        <field>No_Prorate_Required__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Cancelled,Cancelled – Rebooked,Engagement Complete</value>
+    </filters>
+    <filters>
+        <field>Group_No__c</field>
+        <operation>notEqual</operation>
+        <value>20ZZ</value>
+    </filters>
+    <filters>
+        <field>Prorate_Submitted_to_Accounting__c</field>
+        <operation>notEqual</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>Engagement_Owner__c</field>
+        <operation>equals</operation>
+        <value>Brian Faulkenberry</value>
+    </filters>
+    <label>RS - Outstanding Prorates - BAF</label>
+    <sharedTo>
+        <role>Client_Success_Coordinator</role>
+    </sharedTo>
+</ListView>

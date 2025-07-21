@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue__c</fullName>
+    <defaultValue>&#39;General Engagement&#39;</defaultValue>
+    <inlineHelpText>The issue Category that this should be grouped in</inlineHelpText>
+    <label>Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Issue</fullName>
+                <default>false</default>
+                <label>Billing Issue</label>
+            </value>
+            <value>
+                <fullName>General Engagement</fullName>
+                <default>false</default>
+                <label>General Engagement</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Member on hold</fullName>
+                <default>false</default>
+                <label>Member on hold</label>
+            </value>
+            <value>
+                <fullName>Member removed from On Hold</fullName>
+                <default>false</default>
+                <label>Member removed from On Hold</label>
+            </value>
+            <value>
+                <fullName>Member Disconnect</fullName>
+                <default>false</default>
+                <label>Member Disconnect</label>
+            </value>
+            <value>
+                <fullName>Reverse Risk</fullName>
+                <default>false</default>
+                <label>Reverse Risk</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Welcome Email</fullName>
+                <default>false</default>
+                <label>Welcome Email</label>
+            </value>
+            <value>
+                <fullName>Mobile App Inquiry</fullName>
+                <default>false</default>
+                <label>Mobile App Inquiry</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>MFA</fullName>
+                <default>false</default>
+                <label>MFA</label>
+            </value>
+            <value>
+                <fullName>Commendation</fullName>
+                <default>false</default>
+                <label>Commendation</label>
+            </value>
+            <value>
+                <fullName>Account Mapping</fullName>
+                <default>false</default>
+                <label>Account Mapping</label>
+            </value>
+            <value>
+                <fullName>Client Engagement</fullName>
+                <default>false</default>
+                <label>Client Engagement</label>
+            </value>
+            <value>
+                <fullName>Dev Modification Request</fullName>
+                <default>false</default>
+                <label>Dev Modification Request</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Candidate Rejection</fullName>
+                <default>false</default>
+                <label>Candidate Rejection</label>
+            </value>
+            <value>
+                <fullName>DMS Issue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DMS Issue</label>
+            </value>
+            <value>
+                <fullName>Data Incorrect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Incorrect</label>
+            </value>
+            <value>
+                <fullName>Data Installation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Data Installation</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>System Down</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>System Down</label>
+            </value>
+            <value>
+                <fullName>Utilization</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Utilization</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

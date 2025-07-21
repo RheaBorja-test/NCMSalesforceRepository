@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Workday_Duration__c</fullName>
+    <label>Estimated Workday Duration</label>
+    <summarizedField>Marketing_Task_Template__c.Estimated_Duration__c</summarizedField>
+    <summaryForeignKey>Marketing_Task_Template__c.Marketing_Tactic__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

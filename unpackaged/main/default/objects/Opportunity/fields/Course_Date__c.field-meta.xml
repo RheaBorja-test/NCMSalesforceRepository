@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Date__c</fullName>
+    <label>Course Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>NCMi_Course__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>March 2, 2015</fullName>
+                <default>false</default>
+                <label>March 2, 2015</label>
+            </value>
+            <value>
+                <fullName>August 3, 2015</fullName>
+                <default>false</default>
+                <label>August 3, 2015</label>
+            </value>
+            <value>
+                <fullName>April 1-3, 2015</fullName>
+                <default>false</default>
+                <label>April 1-3, 2015</label>
+            </value>
+            <value>
+                <fullName>April 13-15, 2015</fullName>
+                <default>false</default>
+                <label>April 13-15, 2015</label>
+            </value>
+            <value>
+                <fullName>April 15-17, 2015</fullName>
+                <default>false</default>
+                <label>April 15-17, 2015</label>
+            </value>
+            <value>
+                <fullName>April 20-22, 2015</fullName>
+                <default>false</default>
+                <label>April 20-22, 2015</label>
+            </value>
+            <value>
+                <fullName>April 22-24, 2015</fullName>
+                <default>false</default>
+                <label>April 22-24, 2015</label>
+            </value>
+            <value>
+                <fullName>April 27-28, 2015</fullName>
+                <default>false</default>
+                <label>April 27-28, 2015</label>
+            </value>
+            <value>
+                <fullName>April 29-30, 2015</fullName>
+                <default>false</default>
+                <label>April 29-30, 2015</label>
+            </value>
+            <value>
+                <fullName>August 10-12, 2015</fullName>
+                <default>false</default>
+                <label>August 10-12, 2015</label>
+            </value>
+            <value>
+                <fullName>August 11-12, 2015</fullName>
+                <default>false</default>
+                <label>August 11-12, 2015</label>
+            </value>
+            <value>
+                <fullName>August 12-14, 2015</fullName>
+                <default>false</default>
+                <label>August 12-14, 2015</label>
+            </value>
+            <value>
+                <fullName>August 17-19, 2015</fullName>
+                <default>false</default>
+                <label>August 17-19, 2015</label>
+            </value>
+            <value>
+                <fullName>August 18-19, 2015</fullName>
+                <default>false</default>
+                <label>August 18-19, 2015</label>
+            </value>
+            <value>
+                <fullName>August 19-21, 2015</fullName>
+                <default>false</default>
+                <label>August 19-21, 2015</label>
+            </value>
+            <value>
+                <fullName>August 24-26, 2015</fullName>
+                <default>false</default>
+                <label>August 24-26, 2015</label>
+            </value>
+            <value>
+                <fullName>August 26-28, 2015</fullName>
+                <default>false</default>
+                <label>August 26-28, 2015</label>
+            </value>
+            <value>
+                <fullName>August 4-7, 2015</fullName>
+                <default>false</default>
+                <label>August 4-7, 2015</label>
+            </value>
+            <value>
+                <fullName>December 10-11, 2015</fullName>
+                <default>false</default>
+                <label>December 10-11, 2015</label>
+            </value>
+            <value>
+                <fullName>December 14-16, 2015</fullName>
+                <default>false</default>
+                <label>December 14-16, 2015</label>
+            </value>
+            <value>
+                <fullName>December 16-18, 2015</fullName>
+                <default>false</default>
+                <label>December 16-18, 2015</label>
+            </value>
+            <value>
+                <fullName>December 8-9, 2015</fullName>
+                <default>false</default>
+                <label>December 8-9, 2015</label>
+            </value>
+            <value>
+                <fullName>February 16-17, 2015</fullName>
+                <default>false</default>
+                <label>February 16-17, 2015</label>
+            </value>
+            <value>
+                <fullName>February 17-18, 2015</fullName>
+                <default>false</default>
+                <label>February 17-18, 2015</label>
+            </value>
+            <value>
+                <fullName>February 17-20, 2015</fullName>
+                <default>false</default>
+                <label>February 17-20, 2015</label>
+            </value>
+            <value>
+                <fullName>February 19-20, 2015</fullName>
+                <default>false</default>
+                <label>February 19-20, 2015</label>
+            </value>
+            <value>
+                <fullName>February 23-25, 2015</fullName>
+                <default>false</default>
+                <label>February 23-25, 2015</label>
+            </value>
+            <value>
+                <fullName>February 25-27, 2015</fullName>
+                <default>false</default>
+                <label>February 25-27, 2015</label>
+            </value>
+            <value>
+                <fullName>February 9-11, 2015</fullName>
+                <default>false</default>
+                <label>February 9-11, 2015</label>
+            </value>
+            <value>
+                <fullName>February 9-13, 2015</fullName>
+                <default>false</default>
+                <label>February 9-13, 2015</label>
+            </value>
+            <value>
+                <fullName>January 12-14, 2015</fullName>
+                <default>false</default>
+                <label>January 12-14, 2015</label>
+            </value>
+            <value>
+                <fullName>January 13-14, 2015</fullName>
+                <default>false</default>
+                <label>January 13-14, 2015</label>
+            </value>
+            <value>
+                <fullName>January 14-16, 2015</fullName>
+                <default>false</default>
+                <label>January 14-16, 2015</label>
+            </value>
+            <value>
+                <fullName>January 19-21, 2015</fullName>
+                <default>false</default>
+                <label>January 19-21, 2015</label>
+            </value>
+            <value>
+                <fullName>January 21-23, 2015</fullName>
+                <default>false</default>
+                <label>January 21-23, 2015</label>
+            </value>
+            <value>
+                <fullName>January 27-28, 2015</fullName>
+                <default>false</default>
+                <label>January 27-28, 2015</label>
+            </value>
+            <value>
+                <fullName>July 1-2, 2015</fullName>
+                <default>false</default>
+                <label>July 1-2, 2015</label>
+            </value>
+            <value>
+                <fullName>July 13-15, 2015</fullName>
+                <default>false</default>
+                <label>July 13-15, 2015</label>
+            </value>
+            <value>
+                <fullName>July 15-17, 2015</fullName>
+                <default>false</default>
+                <label>July 15-17, 2015</label>
+            </value>
+            <value>
+                <fullName>July 20-22, 2015</fullName>
+                <default>false</default>
+                <label>July 20-22, 2015</label>
+            </value>
+            <value>
+                <fullName>July 22-24, 2015</fullName>
+                <default>false</default>
+                <label>July 22-24, 2015</label>
+            </value>
+            <value>
+                <fullName>July 7-8, 2015</fullName>
+                <default>false</default>
+                <label>July 7-8, 2015</label>
+            </value>
+            <value>
+                <fullName>June 10-12, 2015</fullName>
+                <default>false</default>
+                <label>June 10-12, 2015</label>
+            </value>
+            <value>
+                <fullName>June 1-3, 2015</fullName>
+                <default>false</default>
+                <label>June 1-3, 2015</label>
+            </value>
+            <value>
+                <fullName>June 15-17, 2015</fullName>
+                <default>false</default>
+                <label>June 15-17, 2015</label>
+            </value>
+            <value>
+                <fullName>June 16-19, 2015</fullName>
+                <default>false</default>
+                <label>June 16-19, 2015</label>
+            </value>
+            <value>
+                <fullName>June 17-19, 2015</fullName>
+                <default>false</default>
+                <label>June 17-19, 2015</label>
+            </value>
+            <value>
+                <fullName>June 23-24, 2015</fullName>
+                <default>false</default>
+                <label>June 23-24, 2015</label>
+            </value>
+            <value>
+                <fullName>June 25-26, 2015</fullName>
+                <default>false</default>
+                <label>June 25-26, 2015</label>
+            </value>
+            <value>
+                <fullName>June 3-5, 2015</fullName>
+                <default>false</default>
+                <label>June 3-5, 2015</label>
+            </value>
+            <value>
+                <fullName>June 8-10, 2015</fullName>
+                <default>false</default>
+                <label>June 8-10, 2015</label>
+            </value>
+            <value>
+                <fullName>June 8-9, 2015</fullName>
+                <default>false</default>
+                <label>June 8-9, 2015</label>
+            </value>
+            <value>
+                <fullName>March 11-13, 2015</fullName>
+                <default>false</default>
+                <label>March 11-13, 2015</label>
+            </value>
+            <value>
+                <fullName>March 16-18, 2015</fullName>
+                <default>false</default>
+                <label>March 16-18, 2015</label>
+            </value>
+            <value>
+                <fullName>March 17-18, 2015</fullName>
+                <default>false</default>
+                <label>March 17-18, 2015</label>
+            </value>
+            <value>
+                <fullName>March 18-20, 2015</fullName>
+                <default>false</default>
+                <label>March 18-20, 2015</label>
+            </value>
+            <value>
+                <fullName>March 23-25, 2015</fullName>
+                <default>false</default>
+                <label>March 23-25, 2015</label>
+            </value>
+            <value>
+                <fullName>March 25-27, 2015</fullName>
+                <default>false</default>
+                <label>March 25-27, 2015</label>
+            </value>
+            <value>
+                <fullName>March 3-4, 2015</fullName>
+                <default>false</default>
+                <label>March 3-4, 2015</label>
+            </value>
+            <value>
+                <fullName>March 9-11, 2015</fullName>
+                <default>false</default>
+                <label>March 9-11, 2015</label>
+            </value>
+            <value>
+                <fullName>May 11-13, 2015</fullName>
+                <default>false</default>
+                <label>May 11-13, 2015</label>
+            </value>
+            <value>
+                <fullName>May 12-15, 2015</fullName>
+                <default>false</default>
+                <label>May 12-15, 2015</label>
+            </value>
+            <value>
+                <fullName>May 13-15, 2015</fullName>
+                <default>false</default>
+                <label>May 13-15, 2015</label>
+            </value>
+            <value>
+                <fullName>May 18-20, 2015</fullName>
+                <default>false</default>
+                <label>May 18-20, 2015</label>
+            </value>
+            <value>
+                <fullName>May 19-20, 2015</fullName>
+                <default>false</default>
+                <label>May 19-20, 2015</label>
+            </value>
+            <value>
+                <fullName>May 20-21, 2015</fullName>
+                <default>false</default>
+                <label>May 20-21, 2015</label>
+            </value>
+            <value>
+                <fullName>May 20-22, 2015</fullName>
+                <default>false</default>
+                <label>May 20-22, 2015</label>
+            </value>
+            <value>
+                <fullName>May 21-22, 2015</fullName>
+                <default>false</default>
+                <label>May 21-22, 2015</label>
+            </value>
+            <value>
+                <fullName>May 5-6, 2015</fullName>
+                <default>false</default>
+                <label>May 5-6, 2015</label>
+            </value>
+            <value>
+                <fullName>May 7-8, 2015</fullName>
+                <default>false</default>
+                <label>May 7-8, 2015</label>
+            </value>
+            <value>
+                <fullName>November 11-13, 2015</fullName>
+                <default>false</default>
+                <label>November 11-13, 2015</label>
+            </value>
+            <value>
+                <fullName>November 16-18, 2015</fullName>
+                <default>false</default>
+                <label>November 16-18, 2015</label>
+            </value>
+            <value>
+                <fullName>November 17-18, 2015</fullName>
+                <default>false</default>
+                <label>November 17-18, 2015</label>
+            </value>
+            <value>
+                <fullName>November 17-19, 2015</fullName>
+                <default>false</default>
+                <label>November 17-19, 2015</label>
+            </value>
+            <value>
+                <fullName>November 18-20, 2015</fullName>
+                <default>false</default>
+                <label>November 18-20, 2015</label>
+            </value>
+            <value>
+                <fullName>November 19-20, 2015</fullName>
+                <default>false</default>
+                <label>November 19-20, 2015</label>
+            </value>
+            <value>
+                <fullName>November 2-3, 2015</fullName>
+                <default>false</default>
+                <label>November 2-3, 2015</label>
+            </value>
+            <value>
+                <fullName>November 4-5, 2015</fullName>
+                <default>false</default>
+                <label>November 4-5, 2015</label>
+            </value>
+            <value>
+                <fullName>November 9-11, 2015</fullName>
+                <default>false</default>
+                <label>November 9-11, 2015</label>
+            </value>
+            <value>
+                <fullName>October 12-14, 2015</fullName>
+                <default>false</default>
+                <label>October 12-14, 2015</label>
+            </value>
+            <value>
+                <fullName>October 13-16, 2015</fullName>
+                <default>false</default>
+                <label>October 13-16, 2015</label>
+            </value>
+            <value>
+                <fullName>October 14-16, 2015</fullName>
+                <default>false</default>
+                <label>October 14-16, 2015</label>
+            </value>
+            <value>
+                <fullName>October 19-21, 2015</fullName>
+                <default>false</default>
+                <label>October 19-21, 2015</label>
+            </value>
+            <value>
+                <fullName>October 21-22, 2015</fullName>
+                <default>false</default>
+                <label>October 21-22, 2015</label>
+            </value>
+            <value>
+                <fullName>October 21-23, 2015</fullName>
+                <default>false</default>
+                <label>October 21-23, 2015</label>
+            </value>
+            <value>
+                <fullName>October 26-27, 2015</fullName>
+                <default>false</default>
+                <label>October 26-27, 2015</label>
+            </value>
+            <value>
+                <fullName>October 6-9, 2015</fullName>
+                <default>false</default>
+                <label>October 6-9, 2015</label>
+            </value>
+            <value>
+                <fullName>September 14-16, 2015</fullName>
+                <default>false</default>
+                <label>September 14-16, 2015</label>
+            </value>
+            <value>
+                <fullName>September 16-18, 2015</fullName>
+                <default>false</default>
+                <label>September 16-18, 2015</label>
+            </value>
+            <value>
+                <fullName>September 21-22, 2015</fullName>
+                <default>false</default>
+                <label>September 21-22, 2015</label>
+            </value>
+            <value>
+                <fullName>September 22-23, 2015</fullName>
+                <default>false</default>
+                <label>September 22-23, 2015</label>
+            </value>
+            <value>
+                <fullName>September 23-24, 2015</fullName>
+                <default>false</default>
+                <label>September 23-24, 2015</label>
+            </value>
+            <value>
+                <fullName>September 24-25, 2015</fullName>
+                <default>false</default>
+                <label>September 24-25, 2015</label>
+            </value>
+            <value>
+                <fullName>September 9-10, 2015</fullName>
+                <default>false</default>
+                <label>September 9-10, 2015</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <valueName>April 22-24, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <valueName>August 26-28, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <valueName>January 21-23, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>July 22-24, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <valueName>June 10-12, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <valueName>March 25-27, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</controllingFieldValue>
+            <valueName>November 11-13, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT II</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</controllingFieldValue>
+            <valueName>September 16-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SALES &amp; MANAGEMENT COMPENSATION</controllingFieldValue>
+            <valueName>December 10-11, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SALES &amp; MANAGEMENT COMPENSATION</controllingFieldValue>
+            <valueName>May 7-8, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE &amp; PARTS FOR SENIOR EXECUTIVES</controllingFieldValue>
+            <valueName>April 29-30, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE &amp; PARTS FOR SENIOR EXECUTIVES</controllingFieldValue>
+            <valueName>September 23-24, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</controllingFieldValue>
+            <valueName>January 13-14, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</controllingFieldValue>
+            <valueName>July 1-2, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</controllingFieldValue>
+            <valueName>March 3-4, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - SERVICE MANAGEMENT –MASTERY LEVEL</controllingFieldValue>
+            <valueName>October 26-27, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>January 27-28, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>July 7-8, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>November 2-3, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - USED VEHICLE MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>September 21-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>June 23-24, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF EXPRESS SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>June 25-26, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>April 13-15, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</controllingFieldValue>
+            <valueName>August 10-12, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>December 14-16, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF FINANCIAL ANALYSIS</controllingFieldValue>
+            <valueName>May 18-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</controllingFieldValue>
+            <valueName>August 4-7, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</controllingFieldValue>
+            <valueName>February 9-13, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</controllingFieldValue>
+            <valueName>May 12-15, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT I</controllingFieldValue>
+            <valueName>October 13-16, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT II</controllingFieldValue>
+            <valueName>February 17-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT II</controllingFieldValue>
+            <valueName>June 16-19, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL MANAGEMENT II</controllingFieldValue>
+            <valueName>October 6-9, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <valueName>January 12-14, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>July 20-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <valueName>March 16-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <valueName>May 11-13, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <valueName>November 16-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT I</controllingFieldValue>
+            <valueName>October 12-14, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>January 14-16, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>March 18-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>May 13-15, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>November 18-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF GENERAL SALES MANAGEMENT II</controllingFieldValue>
+            <valueName>October 14-16, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</controllingFieldValue>
+            <valueName>June 15-17, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>March 9-11, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>November 9-11, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES I</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>September 14-16, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</controllingFieldValue>
+            <valueName>June 17-19, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF PARTS AND ACCESSORIES II</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>March 11-13, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>August 17-19, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>February 23-25, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>July 13-15, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>June 1-3, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT I</controllingFieldValue>
+            <valueName>October 19-21, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - DESKING AND F&amp;I INTEGRATION</controllingFieldValue>
+            <valueName>August 18-19, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - DESKING AND F&amp;I INTEGRATION</controllingFieldValue>
+            <valueName>June 8-9, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - DESKING AND F&amp;I INTEGRATION</controllingFieldValue>
+            <valueName>March 17-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - DESKING AND F&amp;I INTEGRATION</controllingFieldValue>
+            <valueName>October 21-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - FINDING TOP TALENT</controllingFieldValue>
+            <valueName>December 8-9, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - FINDING TOP TALENT</controllingFieldValue>
+            <valueName>May 5-6, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL MANAGEMENT EXEC PROGRAM</controllingFieldValue>
+            <valueName>March 2, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL MANAGEMENT EXEC PROGRAM</controllingFieldValue>
+            <valueName>August 3, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>August 11-12, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>February 16-17, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>May 20-21, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - GENERAL SALES MANAGEMENT – MASTERY LEVEL</controllingFieldValue>
+            <valueName>November 4-5, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</controllingFieldValue>
+            <valueName>February 19-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</controllingFieldValue>
+            <valueName>May 21-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</controllingFieldValue>
+            <valueName>November 19-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - HOW TO LEAD IN THE DIGITAL MARKETPLACE</controllingFieldValue>
+            <valueName>September 24-25, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - LEADING YOUR DEALERSHIP TEAM TO SUCCESS</controllingFieldValue>
+            <valueName>April 27-28, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - LEADING YOUR DEALERSHIP TEAM TO SUCCESS</controllingFieldValue>
+            <valueName>September 9-10, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - MASTERING INTERNET SALES</controllingFieldValue>
+            <valueName>February 17-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - MASTERING INTERNET SALES</controllingFieldValue>
+            <valueName>May 19-20, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - MASTERING INTERNET SALES</controllingFieldValue>
+            <valueName>November 17-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - MASTERING INTERNET SALES</controllingFieldValue>
+            <valueName>September 22-23, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>April 15-17, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</controllingFieldValue>
+            <valueName>August 12-14, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</controllingFieldValue>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>December 16-18, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF ADVANCED FINANCIAL MANAGEMENT</controllingFieldValue>
+            <valueName>May 20-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF COLLISION CENTER MANAGEMENT</controllingFieldValue>
+            <valueName>April 1-3, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF COLLISION CENTER MANAGEMENT</controllingFieldValue>
+            <valueName>November 17-19, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>August 19-21, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>February 25-27, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>July 15-17, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>June 3-5, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF SERVICE MANAGEMENT II</controllingFieldValue>
+            <valueName>October 21-23, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>April 20-22, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>August 24-26, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>January 19-21, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>June 8-10, 2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCMI - PRINCIPLES OF USED VEHICLE MANAGEMENT I</controllingFieldValue>
+            <valueName>March 23-25, 2015</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

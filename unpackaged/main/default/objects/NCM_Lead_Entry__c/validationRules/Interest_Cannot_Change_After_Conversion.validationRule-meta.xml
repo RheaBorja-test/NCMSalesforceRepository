@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interest_Cannot_Change_After_Conversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED( NCM_Product_Interest__c ),
+    NOT( ISBLANK(  Opportunity__c  ) )
+)</errorConditionFormula>
+    <errorMessage>You cannot change the Primary Interest after the Opportunity has been created</errorMessage>
+</ValidationRule>

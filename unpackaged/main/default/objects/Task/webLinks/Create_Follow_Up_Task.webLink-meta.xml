@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Follow_Up_Task</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Follow Up Task</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/00T/e?who_id={!Contact.Id}&amp;retURL=%2F{!Contact.Id}&amp;what_id={!Task.What} &amp; &amp;RecordType=012G00000010t0S &amp;tsk5={!Task.Subject}&amp;tsk6={!Task.Description}</url>
+</WebLink>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( not(ISBLANK(Training_Subscription_Account__c)),&quot;Subscription&quot;,
+
+if(Not(ISBLANK( Training_Credit__c )), &quot;Training Credit&quot;,
+
+if( 
+
+OR(
+Engagement__r.RecordType.Name=&quot;NCM Institute Class - Onsite&quot;, 
+Engagement__r.RecordType.Name = &quot;NCM Institute Class - Offsite&quot;, 
+Engagement__r.RecordType.Name = &quot;NCM Institute Class - Self Study Virtual Training&quot;, 
+Engagement__r.RecordType.Name = &quot;NCM Institute Class - Live Session Virtual Training&quot;
+)
+
+, &quot;Paid Seat&quot;,
+
+&quot;Other&quot;
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reporting Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

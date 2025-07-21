@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Group_Contact</fullName>
+    <fields>Name</fields>
+    <fields>X20_Group__c</fields>
+    <fields>Title_NCM_Classification__c</fields>
+    <fields>Department_NCM_Classification__c</fields>
+    <label>20 Group Contact</label>
+</CompactLayout>

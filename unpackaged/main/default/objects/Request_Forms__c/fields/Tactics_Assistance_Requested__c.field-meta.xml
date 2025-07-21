@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tactics_Assistance_Requested__c</fullName>
+    <inlineHelpText>Please choose all of the tactics / assistance for this project. Thank You.</inlineHelpText>
+    <label>Tactics / Assistance Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BEEP Campaign</fullName>
+                <default>false</default>
+                <label>BEEP Campaign</label>
+            </value>
+            <value>
+                <fullName>Blog Post</fullName>
+                <default>false</default>
+                <label>Blog Post</label>
+            </value>
+            <value>
+                <fullName>Booklets</fullName>
+                <default>false</default>
+                <label>Booklets</label>
+            </value>
+            <value>
+                <fullName>Call Out / Prospecting List</fullName>
+                <default>false</default>
+                <label>Call Out / Prospecting List</label>
+            </value>
+            <value>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <label>Direct Mail</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Flyer / Brochure</fullName>
+                <default>false</default>
+                <label>Flyer / Brochure</label>
+            </value>
+            <value>
+                <fullName>Invitation</fullName>
+                <default>false</default>
+                <label>Invitation</label>
+            </value>
+            <value>
+                <fullName>Landing Page</fullName>
+                <default>false</default>
+                <label>Landing Page</label>
+            </value>
+            <value>
+                <fullName>Logo</fullName>
+                <default>false</default>
+                <label>Logo</label>
+            </value>
+            <value>
+                <fullName>Meeting Pack Print Materials</fullName>
+                <default>false</default>
+                <label>Meeting Pack Print Materials</label>
+            </value>
+            <value>
+                <fullName>Online Banner Ad</fullName>
+                <default>false</default>
+                <label>Online Banner Ad</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Photography &amp; Editing</fullName>
+                <default>false</default>
+                <label>Photography &amp; Editing</label>
+            </value>
+            <value>
+                <fullName>Poster</fullName>
+                <default>false</default>
+                <label>Poster</label>
+            </value>
+            <value>
+                <fullName>PowerPoint Presentation</fullName>
+                <default>false</default>
+                <label>PowerPoint Presentation</label>
+            </value>
+            <value>
+                <fullName>Press Release</fullName>
+                <default>false</default>
+                <label>Press Release</label>
+            </value>
+            <value>
+                <fullName>Print Ad</fullName>
+                <default>false</default>
+                <label>Print Ad</label>
+            </value>
+            <value>
+                <fullName>Promotional Item/Giveaway</fullName>
+                <default>false</default>
+                <label>Promotional Item/Giveaway</label>
+            </value>
+            <value>
+                <fullName>Social Media Post</fullName>
+                <default>false</default>
+                <label>Social Media Post</label>
+            </value>
+            <value>
+                <fullName>Trade Show Exhibit</fullName>
+                <default>false</default>
+                <label>Trade Show Exhibit</label>
+            </value>
+            <value>
+                <fullName>Video &amp; Editing</fullName>
+                <default>false</default>
+                <label>Video &amp; Editing</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>Web Updates</fullName>
+                <default>false</default>
+                <label>Web Updates</label>
+            </value>
+            <value>
+                <fullName>Writing Assistance for Letter/Email</fullName>
+                <default>false</default>
+                <label>Writing Assistance for Letter/Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

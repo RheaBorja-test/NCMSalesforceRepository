@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Stamp_on_WhatId_Format__c</fullName>
+    <label>Date Stamp on WhatId Format</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Date</fullName>
+                <default>false</default>
+                <label>Date</label>
+            </value>
+            <value>
+                <fullName>DateTime</fullName>
+                <default>false</default>
+                <label>DateTime</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

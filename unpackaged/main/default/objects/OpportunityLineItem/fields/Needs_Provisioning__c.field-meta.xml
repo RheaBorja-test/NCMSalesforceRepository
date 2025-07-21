@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Provisioning__c</fullName>
+    <formula>Records_Provisioned__c &lt; Quantity</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Needs Provisioning</label>
+    <type>Checkbox</type>
+</CustomField>

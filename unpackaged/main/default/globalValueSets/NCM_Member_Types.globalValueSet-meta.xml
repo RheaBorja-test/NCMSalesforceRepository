@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Candidate</fullName>
+        <default>false</default>
+        <label>Candidate</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Member</fullName>
+        <default>false</default>
+        <label>Full Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Special_Composite</fullName>
+        <default>false</default>
+        <label>Special Composite</label>
+    </customValue>
+    <customValue>
+        <fullName>Additional_Store</fullName>
+        <default>false</default>
+        <label>Additional Store</label>
+    </customValue>
+    <customValue>
+        <fullName>1/2 Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1/2 Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Associate Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Associate Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Composite Only Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Composite Only Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Co-Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Co-Member</label>
+    </customValue>
+    <masterLabel>NCM Member Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

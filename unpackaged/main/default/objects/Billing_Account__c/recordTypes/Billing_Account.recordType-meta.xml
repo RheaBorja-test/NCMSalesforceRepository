@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Account</fullName>
+    <active>true</active>
+    <label>Billing Account</label>
+    <picklistValues>
+        <picklist>Authorized_Payment_Use__c</picklist>
+        <values>
+            <fullName>On Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recurring Billing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery_Preference__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Print</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NCM_Authorized_Products__c</picklist>
+        <values>
+            <fullName>20 Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ChargeZoom BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Echo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcheck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCMi Paid Seats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCMi Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCMi Training Credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Member Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>aXcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Type__c</picklist>
+        <values>
+            <fullName>ACH-Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Credit Card Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needing Validation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Validated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

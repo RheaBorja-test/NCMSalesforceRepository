@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Id__c</fullName>
+    <description>Engagement Room Blocks related to the Engagement.</description>
+    <inlineHelpText>Engagement Room Blocks related to the Engagement.</inlineHelpText>
+    <label>Engagement</label>
+    <referenceTo>Engagement__c</referenceTo>
+    <relationshipLabel>Engagement Room Blocks</relationshipLabel>
+    <relationshipName>EngRoomBlocks</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

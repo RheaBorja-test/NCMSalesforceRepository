@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Handoff_Complete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check this box when the customer handoff is complete. The Handoff Complete Date field will then populate with the date this box was checked.</inlineHelpText>
+    <label>Sales Hand-off Complete</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

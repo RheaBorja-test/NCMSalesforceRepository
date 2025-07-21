@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_In_Up2Speed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Up To Speed Blog - Twice-weekly educational articles on dealership management best practices from the NCM Institute</description>
+    <inlineHelpText>Up To Speed Blog - Twice-weekly educational articles on dealership management best practices from the NCM Institute</inlineHelpText>
+    <label>Opt In - Up2Speed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

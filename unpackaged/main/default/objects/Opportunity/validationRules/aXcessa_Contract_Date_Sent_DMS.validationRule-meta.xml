@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Contract_Date_Sent_DMS</fullName>
+    <active>true</active>
+    <description>in aXcessa data pipeline creation tool-- checks if there&#39;s data missing in DMS field.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Contract_Date_Sent__c )),
+RecordType.DeveloperName = &quot;axcessa&quot;,
+OR(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+ISPICKVAL( StageName, &quot;Contract Received&quot;)
+),
+OR(
+ISBLANK( DMS__c )
+)
+)</errorConditionFormula>
+    <errorDisplayField>DMS__c</errorDisplayField>
+    <errorMessage>Data missing in DMS field. Check again.</errorMessage>
+</ValidationRule>

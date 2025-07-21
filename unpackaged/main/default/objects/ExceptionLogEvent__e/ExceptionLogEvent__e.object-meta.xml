@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is used to create new  Exception logs to the Error Logger custom object. ExceptionPlatformEventTrigger is the trigger that creates the log(s).</description>
+    <eventType>HighVolume</eventType>
+    <label>Exception Log Event</label>
+    <pluralLabel>Exception Log Events</pluralLabel>
+    <publishBehavior>PublishImmediately</publishBehavior>
+</CustomObject>

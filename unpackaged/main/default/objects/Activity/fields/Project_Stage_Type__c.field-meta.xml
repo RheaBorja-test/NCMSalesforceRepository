@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Stage_Type__c</fullName>
+    <description>Used for Marketing FLOWS  
+
+DO NOT USE IN LAYOUTS</description>
+    <externalId>false</externalId>
+    <label>Project Stage Type</label>
+    <length>20</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

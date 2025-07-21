@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_to_Support__c</fullName>
+    <label>Request to Support</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Groups</fullName>
+                <default>false</default>
+                <label>20 Groups</label>
+            </value>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>axcessa</fullName>
+                <default>false</default>
+                <label>axcessa</label>
+            </value>
+            <value>
+                <fullName>Data Processing</fullName>
+                <default>false</default>
+                <label>Data Processing</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Executive Team</fullName>
+                <default>false</default>
+                <label>Executive Team</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>NCM Institute</fullName>
+                <default>false</default>
+                <label>NCM Institute</label>
+            </value>
+            <value>
+                <fullName>NCM OnDemand</fullName>
+                <default>false</default>
+                <label>NCM OnDemand</label>
+            </value>
+            <value>
+                <fullName>Retail Ops</fullName>
+                <default>false</default>
+                <label>Retail Ops</label>
+            </value>
+            <value>
+                <fullName>Travel Solutions</fullName>
+                <default>false</default>
+                <label>Travel Solutions</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

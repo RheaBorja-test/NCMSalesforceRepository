@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DS_20_Group_CIP_App_to_Prospect</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>DS 20 Group CIP App to Prospect</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}//********* Option Declarations (Do not modify )*********//
+var RC = &#39;&#39;;var RSL=&#39;&#39;;var RSRO=&#39;&#39;;var RROS=&#39;&#39;;var CCRM=&#39;&#39;;var CCTM=&#39;&#39;;var CCNM=&#39;&#39;;var CRCL=&#39;&#39;; var CRL=&#39;&#39;;var OCO=&#39;&#39;;var DST=&#39;&#39;;var LA=&#39;&#39;;var CEM=&#39;&#39;;var CES=&#39;&#39;;var STB=&#39;&#39;;var SSB=&#39;&#39;;var SES=&#39;&#39;;var SEM=&#39;&#39;;var SRS=&#39;&#39;;var SCS =&#39;&#39;;var RES=&#39;&#39;;
+//*************************************************//
+RC = &#39;GetRelContentIDs(&quot;{!Opportunity.Id}&quot;)&#39;;  RSL = &#39;&#39;; RSRO = &#39;&#39;; RROS = &#39;&#39;; CCRM = &#39;&#39;; CCTM = &#39;&#39;; CCNM = &#39;&#39;; CRCL = &#39;&#39;; CRL = &#39;&#39;; OCO = &#39;&#39;; DST = &#39;0bf1fbbc-e49c-4fb3-8903-7fe22be55f2a&#39;; LA = &#39;&#39;; CEM = &#39;&#39;; CES = &#39;NCM Associates:{!Opportunity.Group_Id__c}&#39;; STB = &#39;&#39;; SSB = &#39;&#39;; SES = &#39;1&#39;; SEM = &#39;1&#39;; SRS = &#39;&#39;; SCS = &#39;&#39;; RES = &#39;&#39;; 
+//********* Page Callout (Do not modify) *********//
+window.location.href =&quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Opportunity.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES;
+//*******************************************//</url>
+</WebLink>

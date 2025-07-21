@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Coord_Prospect</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Send Coord Prospect</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/_ui/core/email/author/EmailAuthor?p2_lkid={!Opportunity.NCM_Support_StaffId__c}&amp;rtype=003&amp;p3_lkid={!Opportunity.Id}&amp;template_id=00X4A000002f9LT&amp;retURL=%2F{!Opportunity.Id}&amp;saveURL=%2F{!Opportunity.Id}</url>
+</WebLink>

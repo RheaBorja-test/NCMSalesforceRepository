@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructor_2_Learning_Environment__c</fullName>
+    <description>Survey Monkey Question: Please rate Instructor 2 in this area: The instructor created a safe and effective learning environment.</description>
+    <label>Instructor 2 Learning Environment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

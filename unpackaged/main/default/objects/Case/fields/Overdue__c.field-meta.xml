@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overdue__c</fullName>
+    <description>Indicates if the Due Date has passed.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(Due_Date__c), &quot;&quot;, 
+  IF( TODAY() &gt;  Due_Date__c , 
+    IMAGE(&quot;https://ncm.lightning.force.com/img/samples/flag_red.gif&quot;, &quot;RED&quot;), 
+    IMAGE(&quot;https://ncm.lightning.force.com/img/samples/flag_green.gif&quot;, &quot;GREEN&quot;)
+  )
+)</formula>
+    <inlineHelpText>Indicates if the Due Date has passed.</inlineHelpText>
+    <label>Overdue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

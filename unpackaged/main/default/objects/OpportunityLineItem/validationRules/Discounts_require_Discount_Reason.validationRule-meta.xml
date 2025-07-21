@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discounts_require_Discount_Reason</fullName>
+    <active>true</active>
+    <description>When a product&#39;s Sale Price is changed to a lower amount (indicating a discount given), the Discount Reason field must be filled out.</description>
+    <errorConditionFormula>AND(
+ $Profile.Name  &lt;&gt; &quot;System Administrator&quot;,
+ ISCHANGED(UnitPrice),
+ ListPrice &gt; UnitPrice,
+ ISBLANK( Discount_Reason__c )
+)</errorConditionFormula>
+    <errorMessage>Please provide an explanation of the discount given in the Discount Reason field whenever the Sales Price is lower than the List Price.</errorMessage>
+</ValidationRule>

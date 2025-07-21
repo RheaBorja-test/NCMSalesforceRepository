@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proprietary_Group_and_New_Prop_Group</fullName>
+    <active>true</active>
+    <description>If Proprietary Group is selected then the New Proprietary Group field should be blank.</description>
+    <errorConditionFormula>AND(
+  RecordType.Name = &#39;Proprietary&#39;,
+  OR(
+   PRIORVALUE(Proprietary_Group__c) &lt;&gt; Proprietary_Group__c,
+   PRIORVALUE(New_Proprietary_Group__c) &lt;&gt; New_Proprietary_Group__c
+  ),
+  NOT(ISBLANK(Proprietary_Group__c)),
+  NOT(ISBLANK(New_Proprietary_Group__c))
+)</errorConditionFormula>
+    <errorDisplayField>New_Proprietary_Group_Name__c</errorDisplayField>
+    <errorMessage>If a Proprietary Group has been selected, the New Proprietary Group field must be blank.</errorMessage>
+</ValidationRule>

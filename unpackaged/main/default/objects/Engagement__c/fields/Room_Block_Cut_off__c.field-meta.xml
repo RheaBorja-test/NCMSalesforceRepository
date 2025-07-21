@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Room_Block_Cut_off__c</fullName>
+    <description>Deadline for room reservations to be secured by to get the group rate.</description>
+    <inlineHelpText>Deadline for room reservations to be secured by to get the group rate.</inlineHelpText>
+    <label>Hotel Cut-Off Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

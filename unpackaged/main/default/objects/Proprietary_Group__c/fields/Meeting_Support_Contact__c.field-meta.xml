@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Support_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>NCM Employee who assists client and NCM Proprietor for this service or product</description>
+    <label>Meeting Support Contact</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>NCM_Associates</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Proprietary Groups (Meeting Support Contact)</relationshipLabel>
+    <relationshipName>Proprietary_Groups4</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Groups_New_Groups_Forming</fullName>
+    <columns>NAME</columns>
+    <columns>Franchise_s__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Status__c</columns>
+    <columns>Country__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Manager_Type__c</columns>
+    <columns>Meetings_per_Year_upload__c</columns>
+    <columns>Meeting_Length__c</columns>
+    <columns>Average_Meeting_Days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>deleted</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.NCM_Group</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New Group - Acquiring,New Group - Prospecting</value>
+    </filters>
+    <label>20 Groups - New Groups Forming</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Stages</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Stages</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Marketing_Project_Stages_Creation?
+varProjectID={!Marketing_Project__c.Id}
+&amp;varProjectNameInput={!Marketing_Project__c.Name}
+&amp;MarketingRequestID={!Marketing_Project__c.Marketing_RequestId__c}
+
+
+&amp;retURL=%2F{!Marketing_Project__c.Id}</url>
+</WebLink>

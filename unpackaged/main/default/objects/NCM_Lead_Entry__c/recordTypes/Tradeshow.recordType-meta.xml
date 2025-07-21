@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tradeshow</fullName>
+    <active>true</active>
+    <label>Tradeshow</label>
+    <picklistValues>
+        <picklist>Contract_Signed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department_NCM_Classification__c</picklist>
+        <values>
+            <fullName>Administrative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDC%2FInternet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Body Shop%2FCollision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial%2FFleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used%2FPre-Owned Car</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disqualify_Reason__c</picklist>
+        <values>
+            <fullName>Current client - product%2Fservices assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inaccurate%2Fnot enough information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to reach</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Follow_Up__c</picklist>
+        <values>
+            <fullName>2 Weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immediately</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Next Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Follow Up - Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Follow Up - Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Within One Week</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry__c</picklist>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Auction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Body Shop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Distributors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Retail New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Retail Used</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beer Distributors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Better Business Bureau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bobcat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charter%2FTour Bus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farm Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heavy Trucks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limousine Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motor Sport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorcycle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Water Distributors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office %26 Business Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Lube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreational Vehicle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Cars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Mobility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utility Trailers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Source__c</picklist>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Email%2FCall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Email%2FCall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAG%2FDHG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tradeshow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NCM_Additional_Products_Interested__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Talent Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General NCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcheck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM %2F Group Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Member Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>aXcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NCM_Product_Interest__c</picklist>
+        <values>
+            <fullName>20 Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Talent Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Echo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General NCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcheck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCM Institute Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM %2F Group Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private 20 Group Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Member Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>aXcessa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Converted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entered</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Title_NCM_Classification__c</picklist>
+        <values>
+            <fullName>Accounting Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts Payable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts Receivable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administration Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrative Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisor%2FConsultant%2FWriter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advocate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Area Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Office Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDC Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDC Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDC Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing%2FClerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEO%2F Chief Executive Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFO%2F Chief Financial Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COO%2F Chief Operating Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chairman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clerk%2FAdministrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collections Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Controller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counterperson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desk Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detail Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estimator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Express%2FQuicklane Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Ops Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Ops Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll Clerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Porter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receptionist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Car Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secretary%2FTreasurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Store Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Title Clerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variable Ops Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variable Ops Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variable Ops Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webmaster</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Attendees</fullName>
+    <columns>Engagement__c</columns>
+    <columns>NAME</columns>
+    <columns>Attendee_Type__c</columns>
+    <columns>Attendance_Status__c</columns>
+    <columns>Arrival__c</columns>
+    <columns>Departure__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement_Attendee__c.NCM_Attendee</value>
+    </filters>
+    <label>Instructor List</label>
+</ListView>

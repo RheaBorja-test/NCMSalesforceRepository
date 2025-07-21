@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Industry</fullName>
+    <active>false</active>
+    <description>Force Industry field to be filled in</description>
+    <errorConditionFormula>ISPICKVAL( Industry, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>Please select an Industry</errorMessage>
+</ValidationRule>

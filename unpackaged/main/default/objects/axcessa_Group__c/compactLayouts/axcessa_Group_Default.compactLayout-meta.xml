@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>axcessa_Group_Default</fullName>
+    <fields>Name</fields>
+    <fields>Group_Contact__c</fields>
+    <fields>Account__c</fields>
+    <fields>Group_Status__c</fields>
+    <fields>Number_of_Active_Stores__c</fields>
+    <fields>Number_of_Inactive_Stores__c</fields>
+    <fields>Number_of_Suspended_Stores__c</fields>
+    <label>axcessa Group Default</label>
+</CompactLayout>

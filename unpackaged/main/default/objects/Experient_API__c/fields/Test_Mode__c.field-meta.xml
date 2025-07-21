@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Mode__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>this field is used in order to accomplish test coverage for the Experient API</description>
+    <inlineHelpText>NEVER CHANGE THIS VALUE!!!</inlineHelpText>
+    <label>Test Mode (Code)</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

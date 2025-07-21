@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Owner_Required</fullName>
+    <active>true</active>
+    <description>The Group Owner field cannot be null</description>
+    <errorConditionFormula>ISBLANK( Group_Owner__c )</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>There must be a Group Owner.</errorMessage>
+</ValidationRule>

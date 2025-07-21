@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_Area_Detail__c</fullName>
+    <label>Focus Area Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PCM</fullName>
+                <default>false</default>
+                <label>PCM</label>
+            </value>
+            <value>
+                <fullName>Service Advisor</fullName>
+                <default>false</default>
+                <label>Service Advisor</label>
+            </value>
+            <value>
+                <fullName>UVPIP</fullName>
+                <default>false</default>
+                <label>UVPIP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+                <label>Dealer</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Proprietary</fullName>
+                <default>false</default>
+                <label>Proprietary</label>
+            </value>
+            <value>
+                <fullName>NCM Hosted</fullName>
+                <default>false</default>
+                <label>NCM Hosted</label>
+            </value>
+            <value>
+                <fullName>In-Dealership</fullName>
+                <default>false</default>
+                <label>In-Dealership</label>
+            </value>
+            <value>
+                <fullName>Sponsored</fullName>
+                <default>false</default>
+                <label>Sponsored</label>
+            </value>
+            <value>
+                <fullName>Composite</fullName>
+                <default>false</default>
+                <label>Composite</label>
+            </value>
+            <value>
+                <fullName>PTA</fullName>
+                <default>false</default>
+                <label>PTA</label>
+            </value>
+            <value>
+                <fullName>20 Group</fullName>
+                <default>false</default>
+                <label>20 Group</label>
+            </value>
+            <value>
+                <fullName>Personal</fullName>
+                <default>false</default>
+                <label>Personal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

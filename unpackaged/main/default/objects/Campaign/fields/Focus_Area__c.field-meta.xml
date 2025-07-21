@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_Area__c</fullName>
+    <label>Focus Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20 Group</fullName>
+                <default>false</default>
+                <label>20 Group</label>
+            </value>
+            <value>
+                <fullName>axcessa</fullName>
+                <default>false</default>
+                <label>axcessa</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Event / Tradeshow</fullName>
+                <default>false</default>
+                <label>Event / Tradeshow</label>
+            </value>
+            <value>
+                <fullName>General NCM</fullName>
+                <default>false</default>
+                <label>General NCM</label>
+            </value>
+            <value>
+                <fullName>NCM Institute</fullName>
+                <default>false</default>
+                <label>NCM Institute</label>
+            </value>
+            <value>
+                <fullName>NCM On-Demand</fullName>
+                <default>false</default>
+                <label>NCM On-Demand</label>
+            </value>
+            <value>
+                <fullName>OEM Project</fullName>
+                <default>false</default>
+                <label>OEM Project</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Travel Solutions</fullName>
+                <default>false</default>
+                <label>Travel Solutions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

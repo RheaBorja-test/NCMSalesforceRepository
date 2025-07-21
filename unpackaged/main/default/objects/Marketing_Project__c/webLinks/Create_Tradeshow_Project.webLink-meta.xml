@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Tradeshow_Project</fullName>
+    <availability>online</availability>
+    <description>Creates a new project that is a subset of the Tradeshow Master Record</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Tradeshow Project</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Marketing_Project_Generation?varMarketingRequestID={!Marketing_Project__c.Marketing_RequestId__c}
+&amp;varTradeshowCoreID={!Marketing_Project__c.Core_ServiceId__c}
+&amp;retURL=%2F{!Marketing_Project__c.Marketing_RequestId__c}</url>
+</WebLink>

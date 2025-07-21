@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Required_if_City_populated</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   ISNEW(),
+   NOT(ISBLANK(City__c)),
+   ISBLANK(TEXT(Country_pl__c)),
+   RecordType.DeveloperName != &quot;NCM_Institute_Class_Live_Session_Virtual_Training&quot;,
+   RecordType.DeveloperName != &quot;NCM_Institute_Class_Self_Study_Virtual_Training&quot; 
+)</errorConditionFormula>
+    <errorMessage>If a City is entered you must also enter a Country.</errorMessage>
+</ValidationRule>

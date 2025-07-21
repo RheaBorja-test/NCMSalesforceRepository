@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Approval_Comments_Reqd</fullName>
+    <active>true</active>
+    <description>Before this type of Task can be marked Completed, comments must be provided.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Candidate_Approval&quot;,
+ ISBLANK(  Description  ),
+ ISCHANGED( Status ),
+ ISPICKVAL( Status , &quot;Completed&quot;)
+)</errorConditionFormula>
+    <errorMessage>Comments must be provided before marking this task as Completed.</errorMessage>
+</ValidationRule>

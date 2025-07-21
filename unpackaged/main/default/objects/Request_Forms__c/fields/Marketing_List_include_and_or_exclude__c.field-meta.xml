@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_List_include_and_or_exclude__c</fullName>
+    <inlineHelpText>Please enter the criteria for the target audience for this marketing list</inlineHelpText>
+    <label>Marketing: List (include and/or exclude)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benchmark_Plan_Groups_Jessica_s</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Group_Number__c</columns>
+    <columns>Group_Owner__c</columns>
+    <columns>Support_Staff__c</columns>
+    <columns>Country__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Meetings_per_Year__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Support_Staff__c</field>
+        <operation>equals</operation>
+        <value>Jessica Wiemers</value>
+    </filters>
+    <label>Benchmark Plan Groups - Jessica&#39;s</label>
+</ListView>

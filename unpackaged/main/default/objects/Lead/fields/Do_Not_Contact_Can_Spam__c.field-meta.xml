@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Contact_Can_Spam__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for Canadian anti spam laws - when checked this will trigger a date stamp</description>
+    <inlineHelpText>Used for Canadian anti spam laws - when checked this will trigger a date stamp</inlineHelpText>
+    <label>CASL Email Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

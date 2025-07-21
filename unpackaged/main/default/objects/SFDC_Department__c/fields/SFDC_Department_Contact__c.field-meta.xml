@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Department_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Department Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Departments</relationshipLabel>
+    <relationshipName>R00N30000001WWy5EAG</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

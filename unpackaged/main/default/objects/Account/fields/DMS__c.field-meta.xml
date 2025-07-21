@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DMS__c</fullName>
+    <description>Dealer Managerment System</description>
+    <inlineHelpText>Dealer Management System (put additional DMS system information in notes)</inlineHelpText>
+    <label>DMS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>DMS</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

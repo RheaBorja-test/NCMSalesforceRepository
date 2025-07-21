@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_By_Check__c</fullName>
+    <defaultValue>&quot;Print this invoice and send to&quot; &amp; BR() &amp; BR() &amp;
+&quot;NCM Institute&quot; &amp; BR() &amp;
+&quot;Attn: Accounts Payable&quot; &amp; BR() &amp;
+&quot;10551 Barkley St Ste 200&quot; &amp; BR() &amp;
+&quot;Overland Park, KS 66212&quot;</defaultValue>
+    <description>Check payment address</description>
+    <label>Pay By Check</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

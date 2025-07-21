@@ -1,0 +1,93 @@
+<apex:page standardController="Client_Support_Ticket__c" extensions="cseRelAxcEXT" doctype="html-5.0" title="Relate Case: {!Client_Support_Ticket__c.Name}" sidebar="false" applyBodyTag="true" applyHtmlTag="true" standardStylesheets="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
+    <apex:slds />
+        
+        <script>
+        var j$ = jQuery.noConflict();
+    </script>
+    
+    <div class="slds-page-header">
+        <div class="slds-media">
+            <div class="slds-media__figure">
+                <span title="Description of icon when needed" class="slds-icon_container slds-icon-custom-custom86">
+                    <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/custom-sprite/svg/symbols.svg#custom86')}" />
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h1 title="Relate Case: {!Client_Support_Ticket__c.Name}" class="slds-page-header__title slds-truncate slds-align-middle">Relate Case: {!Client_Support_Ticket__c.Name}</h1>
+                <p class="slds-text-body_small slds-line-height_reset">Group: {!Client_Support_Ticket__c.axcessa_Group__c}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            <apex:form styleClass="slds-form"> 
+                <div class="slds-box">
+                    <div class="slds-grid slds-grid_pull-padded-small slds-wrap">
+                        <apex:repeat value="{!$ObjectType.Client_Support_Ticket__c.fieldsets.Highlight_Fields}" var="fieldValue">
+                            <div class="slds-col slds-p-horizontal_small slds-size_1-of-4">
+                                <div class="slds-form-element slds-form-element_edit slds-hint-parent">
+                                    <label class="slds-form-element__label" for="assigned-to">
+                                        {!fieldValue.Label}
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:outputField id="assigned-to" value="{!Client_Support_Ticket__c[fieldValue]}" styleClass="slds-form-element__static"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+                </div>
+            </apex:form>
+        </div>
+    </div>
+    
+    <apex:pageMessages />
+    
+    <div class="slds-scope">
+        <apex:form styleClass="slds-form">
+            
+            <div class="slds-p-around_small slds-button-group">
+                <apex:commandButton action="{!slctAll}" value="Select All" reRender="relTable" styleClass="slds-button slds-button_outline-brand"/>
+                <apex:commandButton action="{!unslctAll}" value="Unselect All" reRender="relTable" styleClass="slds-button slds-button_outline-brand"/>
+            </div>
+            <div class="slds-p-around_small slds-button-group">
+                <apex:commandButton action="{!updRel}" value="Update" styleClass="slds-button slds-button_success"/>
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" styleClass="slds-button slds-button_destructive"/>
+            </div>
+            <apex:outputPanel id="relTable">
+                <div class="slds-box">
+                    <div class="slds-table_edit_container slds-is-relative">
+                        <apex:dataTable value="{!wRels}" var="wRel" styleClass="slds-table slds-table_bordered slds-table_edit slds-table_fixed-layout" columnClasses="slds-truncate" html-role="grid">
+                            
+                            <apex:column >
+                                <apex:facet name="header"><div class="slds-text-title_caps">Select</div></apex:facet>
+                                
+                                <div class="slds-checkbox_add-button" >
+                                    <apex:inputCheckbox styleclass="slds-assistive-text" id="checkbox" value="{!wRel.selected}" />
+                                    <apex:outputLabel for="checkbox" styleClass="slds-checkbox_faux">
+                                        <apex:outputPanel styleClass="slds-assistive-text">Add Relation</apex:outputPanel>
+                                    </apex:outputLabel>
+                                </div>
+                                
+                            </apex:column>
+                            
+                            <apex:repeat value="{!$ObjectType.axcessa_Platform_Engagement__c.fieldsets.Highlight_Fields}" var="fieldValue">
+                                <apex:column >
+                                    <apex:facet name="header"><div class="slds-text-title_caps">{!fieldValue.Label}</div></apex:facet>
+                                    <apex:outputField value="{!wRel.str[fieldValue]}" styleClass="slds-truncate"/>
+                                </apex:column>
+                            </apex:repeat>
+                            
+                        </apex:dataTable>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            
+        </apex:form>
+    </div>
+    
+</apex:page>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_FF_Sales_Invoice</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create FF Sales Invoice</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&#39;/soap/ajax/43.0/connection.js&#39;)}
+if(&quot;{!Opportunity.StageName}&quot; != &#39;Closed Won&#39; 
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Added New Member&#39; 
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Registration Recd&#39; 
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Executive Committee Approved&#39;
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Closed Lost&#39; 
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Group Rejected / Did Not Attend&#39; 
+	&amp;&amp; &quot;{!Opportunity.StageName}&quot; != &#39;Forwarded to Moderator&#39;) 
+{ 
+	alert(&quot;Only closed won opportunity can be invoiced.&quot;); 
+} else {
+	window.top.location.href = &quot;/apex/createFFinvoice?id={!Opportunity.Id}&amp;returl%2F{!Opportunity.Id}&quot;;
+}</url>
+</WebLink>

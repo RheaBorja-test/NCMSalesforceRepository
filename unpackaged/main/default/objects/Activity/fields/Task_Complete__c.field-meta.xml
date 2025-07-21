@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Complete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marked Task Complete - Primarily used for Marketing Engine generated Events/Tasks for tracking</description>
+    <label>Task Complete?</label>
+    <type>Checkbox</type>
+</CustomField>

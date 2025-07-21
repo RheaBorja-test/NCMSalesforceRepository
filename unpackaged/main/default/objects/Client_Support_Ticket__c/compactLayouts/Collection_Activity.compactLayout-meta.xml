@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collection_Activity</fullName>
+    <fields>Name</fields>
+    <fields>Client_Case__c</fields>
+    <fields>Account__c</fields>
+    <fields>Status__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Number_of_Activities__c</fields>
+    <label>Collection Activity</label>
+</CompactLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UniqueGroupId__c</fullName>
+    <description>The Unique Id for this Group in Master</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Unique Id for this Group in Master</inlineHelpText>
+    <label>UniqueGroupId</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

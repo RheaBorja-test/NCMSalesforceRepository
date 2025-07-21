@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executive_Committee_Approved_Date__c</fullName>
+    <description>This date is driven from a workflow based on when the opportunity stage was changed to Executive Committee Approved.</description>
+    <inlineHelpText>This date is driven from a workflow based on when the opportunity stage was changed to Executive Committee Approved.</inlineHelpText>
+    <label>Executive Committee Approved Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

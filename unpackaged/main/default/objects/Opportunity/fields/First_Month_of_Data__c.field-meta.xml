@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Month_of_Data__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the first month of data in this format: &quot;Nov 2024&quot;</inlineHelpText>
+    <label>First Month of Data</label>
+    <length>8</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

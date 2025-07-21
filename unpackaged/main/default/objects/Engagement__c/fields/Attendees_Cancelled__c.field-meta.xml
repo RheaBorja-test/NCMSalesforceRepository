@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendees_Cancelled__c</fullName>
+    <label>Attendees Cancelled</label>
+    <summaryFilterItems>
+        <field>Engagement_Attendee__c.Attendance_Status__c</field>
+        <operation>equals</operation>
+        <value>Cancelled, Deferred, No Show</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Engagement_Attendee__c.Engagement__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

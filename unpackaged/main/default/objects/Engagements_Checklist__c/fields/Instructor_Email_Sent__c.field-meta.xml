@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instructor_Email_Sent__c</fullName>
+    <description>Determine general content work and materials, as well as financial data needs</description>
+    <inlineHelpText>Determine general content work and materials, as well as financial data needs</inlineHelpText>
+    <label>Instructor Email Sent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

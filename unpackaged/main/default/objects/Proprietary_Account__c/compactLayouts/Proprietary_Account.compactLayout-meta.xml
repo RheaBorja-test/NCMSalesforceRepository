@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proprietary_Account</fullName>
+    <fields>Name</fields>
+    <fields>Proprietary_Group__c</fields>
+    <fields>Group_Number__c</fields>
+    <fields>Group_Member_Number__c</fields>
+    <fields>Status__c</fields>
+    <fields>Start_Date__c</fields>
+    <fields>End_Date__c</fields>
+    <label>Proprietary Account</label>
+</CompactLayout>

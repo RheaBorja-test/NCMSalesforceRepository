@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dimension_2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Dimension 2</label>
+    <referenceTo>c2g__codaDimension2__c</referenceTo>
+    <relationshipLabel>Healthcheck Instances</relationshipLabel>
+    <relationshipName>Healthcheck_Instances</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

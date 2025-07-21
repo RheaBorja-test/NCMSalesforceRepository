@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Project_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Marketing_Tactic__c</fields>
+    <fields>Core_Service__c</fields>
+    <fields>Scheduled_Tactic_Start__c</fields>
+    <fields>Total_Spend_Expenses__c</fields>
+    <fields>Total_Opportunities_Generated__c</fields>
+    <label>Marketing Project Layout</label>
+</CompactLayout>

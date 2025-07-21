@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubType__c</fullName>
+    <label>SubType</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Super_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dlr 20 - Acura</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Acura</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - All GM</fullName>
+                <default>false</default>
+                <label>Dlr 20 - All GM</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - All GM - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - All GM - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Any Franchise</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Any Franchise</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Audi</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Audi</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Automotive Accessories</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Automotive Accessories</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - BMW</fullName>
+                <default>false</default>
+                <label>Dlr 20 - BMW</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - BMW Mini</fullName>
+                <default>false</default>
+                <label>Dlr 20 - BMW Mini</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - CH Chry Dodge Jeep</fullName>
+                <default>false</default>
+                <label>Dlr 20 - CH Chry Dodge Jeep</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - CH Chry Dodge Jeep - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - CH Chry Dodge Jeep - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Exotic</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Exotic</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford Metro</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford Metro</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford Metro - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford Metro - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford Regional</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford Regional</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford Regional - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford Regional - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Ford Single City</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Ford Single City</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - GM Cadillac</fullName>
+                <default>false</default>
+                <label>Dlr 20 - GM Cadillac</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - GM Chev Metro</fullName>
+                <default>false</default>
+                <label>Dlr 20 - GM Chev Metro</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - GM Chev Single</fullName>
+                <default>false</default>
+                <label>Dlr 20 - GM Chev Single</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - GM Pontiac</fullName>
+                <default>false</default>
+                <label>Dlr 20 - GM Pontiac</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Heavy Duty Trucks</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Heavy Duty Trucks</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Honda</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Honda</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Hyundai</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Hyundai</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Hyundai - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Hyundai - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Infiniti</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Infiniti</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Jaguar / Land Rover</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Jaguar / Land Rover</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Kia</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Kia</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 Kia - Canada</fullName>
+                <default>false</default>
+                <label>Dlr 20 Kia - Canada</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Land Rover</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Land Rover</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Lexus</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Lexus</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Lincoln Mercury</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Lincoln Mercury</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Mazda</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Mazda</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Mazda - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Mazda - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Mercedes-Benz</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Mercedes-Benz</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Mitsubishi</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Mitsubishi</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Nissan</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Nissan</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Nissan - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Nissan - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - One Pricing</fullName>
+                <default>false</default>
+                <label>Dlr 20 - One Pricing</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Porsche</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Porsche</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Subaru</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Subaru</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Subaru - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Subaru - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Toyota</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Toyota</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Toyota - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Toyota - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Used Vehicle - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Used Vehicle - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Volkswagen</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Volkswagen</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Volkswagen - CANADA</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Volkswagen - CANADA</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 - Volvo</fullName>
+                <default>false</default>
+                <label>Dlr 20 - Volvo</label>
+            </value>
+            <value>
+                <fullName>Dlr 20 Volvo - Canada</fullName>
+                <default>false</default>
+                <label>Dlr 20 Volvo - Canada</label>
+            </value>
+            <value>
+                <fullName>HealthCheck - Clients</fullName>
+                <default>false</default>
+                <label>HealthCheck - Clients</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Anheuser-Busch</fullName>
+                <default>false</default>
+                <label>Industry 20 - Anheuser-Busch</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Auction</fullName>
+                <default>false</default>
+                <label>Industry 20 - Auction</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - BBB</fullName>
+                <default>false</default>
+                <label>Industry 20 - BBB</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - BHPH</fullName>
+                <default>false</default>
+                <label>Industry 20 - BHPH</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - BMW Motorcycle</fullName>
+                <default>false</default>
+                <label>Industry 20 - BMW Motorcycle</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Carquest</fullName>
+                <default>false</default>
+                <label>Industry 20 - Carquest</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Caterpiller</fullName>
+                <default>false</default>
+                <label>Industry 20 - Caterpiller</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Compact Equipment</fullName>
+                <default>false</default>
+                <label>Industry 20 - Compact Equipment</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Culligan</fullName>
+                <default>false</default>
+                <label>Industry 20 - Culligan</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Digital Marketing</fullName>
+                <default>false</default>
+                <label>Industry 20 - Digital Marketing</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Harley-David</fullName>
+                <default>false</default>
+                <label>Industry 20 - Harley-David</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Internet</fullName>
+                <default>false</default>
+                <label>Industry 20 - Internet</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Limo</fullName>
+                <default>false</default>
+                <label>Industry 20 - Limo</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Motorcoach</fullName>
+                <default>false</default>
+                <label>Industry 20 - Motorcoach</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Oil Lube</fullName>
+                <default>false</default>
+                <label>Industry 20 - Oil Lube</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - PAC Lease</fullName>
+                <default>false</default>
+                <label>Industry 20 - PAC Lease</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Printers</fullName>
+                <default>false</default>
+                <label>Industry 20 - Printers</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Retail Furniture</fullName>
+                <default>false</default>
+                <label>Industry 20 - Retail Furniture</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Service</fullName>
+                <default>false</default>
+                <label>Industry 20 - Service</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Truck Lease</fullName>
+                <default>false</default>
+                <label>Industry 20 - Truck Lease</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Used Vehicle</fullName>
+                <default>false</default>
+                <label>Industry 20 - Used Vehicle</label>
+            </value>
+            <value>
+                <fullName>Industry 20 - Utility Trailer</fullName>
+                <default>false</default>
+                <label>Industry 20 - Utility Trailer</label>
+            </value>
+            <value>
+                <fullName>Manuf - GM</fullName>
+                <default>false</default>
+                <label>Manuf - GM</label>
+            </value>
+            <value>
+                <fullName>Manuf - H-D</fullName>
+                <default>false</default>
+                <label>Manuf - H-D</label>
+            </value>
+            <value>
+                <fullName>Manuf - Porsche</fullName>
+                <default>false</default>
+                <label>Manuf - Porsche</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - CFO or Controller</fullName>
+                <default>false</default>
+                <label>Mgr 20 - CFO or Controller</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Collision</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Collision</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Collision - CANADA</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Collision - CANADA</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - General Managers</fullName>
+                <default>false</default>
+                <label>Mgr 20 - General Managers</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Gen Sales Mgrs</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Gen Sales Mgrs</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - H/R Director</fullName>
+                <default>false</default>
+                <label>Mgr 20 - H/R Director</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - IT</fullName>
+                <default>false</default>
+                <label>Mgr 20 - IT</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Parts</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Parts</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Parts Wholesale</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Parts Wholesale</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Service Dir/Mgr</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Service Dir/Mgr</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Service Dir/Mgr - CANADA</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Service Dir/Mgr - CANADA</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Special Finance</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Special Finance</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Svc Dir Hi Line</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Svc Dir Hi Line</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - Svc Mgr Ford</fullName>
+                <default>false</default>
+                <label>Mgr 20 - Svc Mgr Ford</label>
+            </value>
+            <value>
+                <fullName>Mgr 20 - UV Mgr</fullName>
+                <default>false</default>
+                <label>Mgr 20 - UV Mgr</label>
+            </value>
+            <value>
+                <fullName>NCMi - Bootcamp</fullName>
+                <default>false</default>
+                <label>NCMi - Bootcamp</label>
+            </value>
+            <value>
+                <fullName>NCMi - NCMi On Demand</fullName>
+                <default>false</default>
+                <label>NCMi - NCMi On Demand</label>
+            </value>
+            <value>
+                <fullName>Prop-All Book Only</fullName>
+                <default>false</default>
+                <label>Prop-All Book Only</label>
+            </value>
+            <value>
+                <fullName>Prop - Mega</fullName>
+                <default>false</default>
+                <label>Prop - Mega</label>
+            </value>
+            <value>
+                <fullName>Prop - Proprietary</fullName>
+                <default>false</default>
+                <label>Prop - Proprietary</label>
+            </value>
+            <value>
+                <fullName>Prop - Proprietary - CANADA</fullName>
+                <default>false</default>
+                <label>Prop - Proprietary - CANADA</label>
+            </value>
+            <value>
+                <fullName>Prop - Proprietary - Multi</fullName>
+                <default>false</default>
+                <label>Prop - Proprietary - Multi</label>
+            </value>
+            <value>
+                <fullName>Prop - Proprietary - Multi - CANADA</fullName>
+                <default>false</default>
+                <label>Prop - Proprietary - Multi - CANADA</label>
+            </value>
+            <value>
+                <fullName>Public - Sonic</fullName>
+                <default>false</default>
+                <label>Public - Sonic</label>
+            </value>
+            <value>
+                <fullName>Run on Request</fullName>
+                <default>false</default>
+                <label>Run on Request</label>
+            </value>
+            <value>
+                <fullName>Sample - Composite</fullName>
+                <default>false</default>
+                <label>Sample - Composite</label>
+            </value>
+            <value>
+                <fullName>Sample - Proprietary</fullName>
+                <default>false</default>
+                <label>Sample - Proprietary</label>
+            </value>
+            <value>
+                <fullName>Sample - Service</fullName>
+                <default>false</default>
+                <label>Sample - Service</label>
+            </value>
+            <value>
+                <fullName>Sample - XSCEND</fullName>
+                <default>false</default>
+                <label>Sample - XSCEND</label>
+            </value>
+            <value>
+                <fullName>State - TADA - Chev</fullName>
+                <default>false</default>
+                <label>State - TADA - Chev</label>
+            </value>
+            <value>
+                <fullName>State - TADA - Chrysler</fullName>
+                <default>false</default>
+                <label>State - TADA - Chrysler</label>
+            </value>
+            <value>
+                <fullName>State - TADA - Ford</fullName>
+                <default>false</default>
+                <label>State - TADA - Ford</label>
+            </value>
+            <value>
+                <fullName>State - TADA - Ford LM</fullName>
+                <default>false</default>
+                <label>State - TADA - Ford LM</label>
+            </value>
+            <value>
+                <fullName>State - Texas - TADA</fullName>
+                <default>false</default>
+                <label>State - Texas - TADA</label>
+            </value>
+            <value>
+                <fullName>Subscription - FIDO</fullName>
+                <default>false</default>
+                <label>Subscription - FIDO</label>
+            </value>
+            <value>
+                <fullName>T &amp; C - Consultant</fullName>
+                <default>false</default>
+                <label>T &amp; C - Consultant</label>
+            </value>
+            <value>
+                <fullName>T &amp; C - Consultant - CANADA</fullName>
+                <default>false</default>
+                <label>T &amp; C - Consultant - CANADA</label>
+            </value>
+            <value>
+                <fullName>T &amp; C - Prof Mgmt</fullName>
+                <default>false</default>
+                <label>T &amp; C - Prof Mgmt</label>
+            </value>
+            <value>
+                <fullName>T &amp; C - Proprietary</fullName>
+                <default>false</default>
+                <label>T &amp; C - Proprietary</label>
+            </value>
+            <value>
+                <fullName>T &amp; C - Seminars</fullName>
+                <default>false</default>
+                <label>T &amp; C - Seminars</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consept_20_Groups</fullName>
+    <columns>NAME</columns>
+    <columns>Franchise__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>SuperType__c</columns>
+    <columns>SubType__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OBJECT_ID</field>
+        <operation>startsWith</operation>
+        <value>0124A000001Qd4Y</value>
+    </filters>
+    <label>Consept 20 Groups</label>
+</ListView>

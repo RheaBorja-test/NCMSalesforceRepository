@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Differs_From_Contact_Primary_Email__c</fullName>
+    <description>logic compares the email on the engagement attendee on the email on the contact the engagement attendee was created from. Checks a box if it evaluates to true.</description>
+    <formula>Contact_Email__c &lt;&gt; Primary_Email_from_Contact__c</formula>
+    <label>Differs From Contact Primary Email</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

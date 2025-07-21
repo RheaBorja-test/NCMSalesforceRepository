@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Active_Marketing_Projects</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>Scheduled_Tactic_Start__c</columns>
+    <columns>Projected_Close_Date__c</columns>
+    <columns>Tactic_Run_Time_Days__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Core_Service__c</columns>
+    <columns>Marketing_Request__c</columns>
+    <columns>Marketing_Tactic__c</columns>
+    <columns>NAME</columns>
+    <columns>Project_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Projects</label>
+</ListView>

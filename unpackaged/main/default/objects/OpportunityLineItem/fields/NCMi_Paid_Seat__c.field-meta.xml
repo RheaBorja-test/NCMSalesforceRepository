@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi_Paid_Seat__c</fullName>
+    <formula>OR(
+   ISPICKVAL( PricebookEntry.Product2.Type__c , &#39;Paid Seat&#39;),
+   ISPICKVAL( PricebookEntry.Product2.Type__c , &#39;GMEP&#39;),
+   ISPICKVAL( PricebookEntry.Product2.Type__c , &#39;Training Credits&#39;)
+)</formula>
+    <label>NCMi Paid Seat</label>
+    <type>Checkbox</type>
+</CustomField>

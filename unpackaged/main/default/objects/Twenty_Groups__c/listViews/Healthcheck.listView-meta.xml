@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Healthcheck</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Delete_Date__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Group_Name__c</field>
+        <operation>equals</operation>
+        <value>Healthcheck</value>
+    </filters>
+    <label>Healthcheck</label>
+</ListView>

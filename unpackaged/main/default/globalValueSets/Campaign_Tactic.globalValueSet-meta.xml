@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adwords - PPC Keywords</fullName>
+        <default>false</default>
+        <label>Adwords - PPC Keywords</label>
+    </customValue>
+    <customValue>
+        <fullName>Banner Ad External</fullName>
+        <default>false</default>
+        <label>Banner Ad External</label>
+    </customValue>
+    <customValue>
+        <fullName>Banner Ad Internal</fullName>
+        <default>false</default>
+        <label>Banner Ad Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>Beep DVM</fullName>
+        <default>false</default>
+        <label>Beep DVM</label>
+    </customValue>
+    <customValue>
+        <fullName>Collateral Complex</fullName>
+        <default>false</default>
+        <label>Collateral Complex</label>
+    </customValue>
+    <customValue>
+        <fullName>Collateral Simple</fullName>
+        <default>false</default>
+        <label>Collateral Simple</label>
+    </customValue>
+    <customValue>
+        <fullName>Composite Ads</fullName>
+        <default>false</default>
+        <label>Composite Ads</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Mail</fullName>
+        <default>false</default>
+        <label>Direct Mail</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>General Advertising</fullName>
+        <default>false</default>
+        <label>General Advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>Landing Page</fullName>
+        <default>false</default>
+        <label>Landing Page</label>
+    </customValue>
+    <customValue>
+        <fullName>Presentation</fullName>
+        <default>false</default>
+        <label>Presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Press Release</fullName>
+        <default>false</default>
+        <label>Press Release</label>
+    </customValue>
+    <customValue>
+        <fullName>Print Ads</fullName>
+        <default>false</default>
+        <label>Print Ads</label>
+    </customValue>
+    <customValue>
+        <fullName>Promoted Social Post Facebook</fullName>
+        <default>false</default>
+        <label>Promoted Social Post Facebook</label>
+    </customValue>
+    <customValue>
+        <fullName>Promoted Social Post Linked In</fullName>
+        <default>false</default>
+        <label>Promoted Social Post Linked In</label>
+    </customValue>
+    <customValue>
+        <fullName>Promoted Social Post Twitter</fullName>
+        <default>false</default>
+        <label>Promoted Social Post Twitter</label>
+    </customValue>
+    <customValue>
+        <fullName>Remarketing</fullName>
+        <default>false</default>
+        <label>Remarketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Ad Facebook</fullName>
+        <default>false</default>
+        <label>Social Ad Facebook</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Ad Linked In</fullName>
+        <default>false</default>
+        <label>Social Ad Linked In</label>
+    </customValue>
+    <customValue>
+        <fullName>Tradeshow</fullName>
+        <default>false</default>
+        <label>Tradeshow</label>
+    </customValue>
+    <customValue>
+        <fullName>Video In Studio</fullName>
+        <default>false</default>
+        <label>Video In Studio</label>
+    </customValue>
+    <customValue>
+        <fullName>Video On Location</fullName>
+        <default>false</default>
+        <label>Video On Location</label>
+    </customValue>
+    <customValue>
+        <fullName>Promotional Blog</fullName>
+        <default>false</default>
+        <label>Promotional Blog</label>
+    </customValue>
+    <description>Tactics Used in Marketing Campaigns</description>
+    <masterLabel>Campaign Tactic</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

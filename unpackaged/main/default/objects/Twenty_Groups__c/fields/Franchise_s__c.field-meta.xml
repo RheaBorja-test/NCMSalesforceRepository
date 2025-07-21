@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Franchise_s__c</fullName>
+    <label>Franchise(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Industry__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Automotive_Franchises</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Acura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Alfa Romeo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Aston Martin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Audi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Bentley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>BMW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Bugatti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Buick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Buy Here Pay Here</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Cadillac</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Chevrolet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Chrysler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Dodge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Ferrari</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Fiat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Ford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>General Motors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Genesis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>GMC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Hino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Honda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Hummer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Hyundai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Independent Auto Dealers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Independent Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Infiniti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Jaguar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Jeep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Kia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Lamborghini</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Land Rover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Lexus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Limousine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Lincoln</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Lotus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Maserati</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mazda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>McLaren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mercedes-Benz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mini</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mitsubishi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mitsubishi Fuso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <controllingFieldValue>Printers</controllingFieldValue>
+            <valueName>Mixed Franchise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Mixed Franchise - Luxury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Nissan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Porsche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Ram</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Rolls-Royce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Smart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Subaru</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Tesla</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Toyota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <valueName>Volkswagon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Automotive Retail</controllingFieldValue>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Volvo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Freightliner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Kenworth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Mack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>PacLease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Peterbilt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heavy Truck</controllingFieldValue>
+            <valueName>Western Star</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>BMW Motorcycle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Harley-Davidson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Honda Motorcycle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Kawasaki</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Polaris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Suzuki Motorcycle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Powersports</controllingFieldValue>
+            <valueName>Yamaha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culligan Water</controllingFieldValue>
+            <valueName>Culligan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auto Auction</controllingFieldValue>
+            <valueName>ServNet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Printers</controllingFieldValue>
+            <valueName>Printer</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

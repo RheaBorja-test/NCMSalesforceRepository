@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>aXcessa_Contract_Date_Sent_Contact_Roles</fullName>
+    <active>false</active>
+    <description>checks if there&#39;s data missing in aXcessa Opportunity contact roles in the data pipeline validation rule.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK( Contract_Date_Sent__c )),
+RecordType.DeveloperName = &quot;axcessa&quot;,
+OR(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( StageName, &quot;Contract Sent&quot;),
+ISPICKVAL( StageName, &quot;Contract Received&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Data missing in Contact Roles. Check again.</errorMessage>
+</ValidationRule>

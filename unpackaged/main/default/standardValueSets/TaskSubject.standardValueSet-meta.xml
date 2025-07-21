@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Phoned - Talked With Prospect</fullName>
+        <default>false</default>
+        <label>Phoned - Talked With Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phoned - Left Message</fullName>
+        <default>false</default>
+        <label>Phoned - Left Message</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phoned - No Contact</fullName>
+        <default>false</default>
+        <label>Phoned - No Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed Prospect</fullName>
+        <default>false</default>
+        <label>Emailed Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up Call</fullName>
+        <default>false</default>
+        <label>Follow Up Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transferred to NCMi</fullName>
+        <default>false</default>
+        <label>Transferred to NCMi</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Personal Mail To Prospect</fullName>
+        <default>false</default>
+        <label>Personal Mail To Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Salesforce Coordinator Notes</fullName>
+        <default>false</default>
+        <label>Salesforce Coordinator Notes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Remove &quot;New&quot; from Account name</fullName>
+        <default>false</default>
+        <label>Remove &quot;New&quot; from Account name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail/Call Back</fullName>
+        <default>false</default>
+        <label>Voicemail/Call Back</label>
+    </standardValue>
+</StandardValueSet>

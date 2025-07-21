@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmed_Hotel_TEMP__c</fullName>
+    <description>This is a TEMPORARY FIELD - will be used to replace the LOOKUP field CONFIRMED HOTEL. When the intranet conversion is complete this field will be deleted and replaced with the CONFIRMED HOTEL</description>
+    <externalId>false</externalId>
+    <inlineHelpText>-- DEPRECATED -- This is a TEMPORARY FIELD - will be used to replace the LOOKUP field CONFIRMED HOTEL. When the intranet conversion is complete this field will be deleted and replaced with the CONFIRMED HOTEL</inlineHelpText>
+    <label>Confirmed Hotel (DO NOT USE)</label>
+    <length>70</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

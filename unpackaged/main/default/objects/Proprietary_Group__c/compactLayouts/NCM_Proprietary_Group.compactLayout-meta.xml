@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCM_Proprietary_Group</fullName>
+    <fields>Name</fields>
+    <fields>Group_Name__c</fields>
+    <fields>Status__c</fields>
+    <fields>Start_Date__c</fields>
+    <fields>End_Date__c</fields>
+    <fields>Moderator_Team_Manager__c</fields>
+    <fields>Group_Owner__c</fields>
+    <label>NCM Proprietary Group</label>
+</CompactLayout>

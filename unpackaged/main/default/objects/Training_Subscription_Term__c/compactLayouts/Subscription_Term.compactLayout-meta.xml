@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Term</fullName>
+    <fields>Name</fields>
+    <fields>Status_Formula__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Account__c</fields>
+    <fields>Contact__c</fields>
+    <fields>Subscription_Accounts__c</fields>
+    <fields>Start_Date__c</fields>
+    <fields>Attended_Classes__c</fields>
+    <fields>Cancelled_Classes__c</fields>
+    <fields>Upcoming_Classes__c</fields>
+    <label>Subscription Term</label>
+</CompactLayout>

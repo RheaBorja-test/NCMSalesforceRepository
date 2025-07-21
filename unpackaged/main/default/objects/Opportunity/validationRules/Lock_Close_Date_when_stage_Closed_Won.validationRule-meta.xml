@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Close_Date_when_stage_Closed_Won</fullName>
+    <active>true</active>
+    <description>OR(
+RecordTypeId = &quot;012G0000000qGWX&quot;,
+RecordTypeId = &quot;012A00000000M29&quot;,
+RecordTypeId = &quot;012A00000000M2E&quot;,
+RecordTypeId = &quot;012A00000000M24&quot;,
+AND(
+NOT(ISNEW()),</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(CloseDate), 
+NOT(  $Profile.Id = &quot;00eA0000000Va9G&quot;),
+NOT( RecordTypeId = &quot;012G0000000VnSd&quot;),
+ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Won&quot;))</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>You cannot change the Close Date once the stage has reached Closed Won. Please contact your Salesforce Administrator. Thanks!</errorMessage>
+</ValidationRule>

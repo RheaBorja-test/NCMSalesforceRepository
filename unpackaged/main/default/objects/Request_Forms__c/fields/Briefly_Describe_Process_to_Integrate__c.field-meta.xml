@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Briefly_Describe_Process_to_Integrate__c</fullName>
+    <inlineHelpText>Please summarize the process that you would like to automate in Salesforce.</inlineHelpText>
+    <label>Briefly Describe Process to Integrate</label>
+    <length>10000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

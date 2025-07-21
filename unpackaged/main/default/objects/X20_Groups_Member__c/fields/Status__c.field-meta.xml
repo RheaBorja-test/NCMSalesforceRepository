@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Global_Product_Service_Status</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Candidate</controllingFieldValue>
+            <valueName>Submitted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Candidate</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Candidate</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Member</controllingFieldValue>
+            <controllingFieldValue>Special_Composite</controllingFieldValue>
+            <controllingFieldValue>Additional_Store</controllingFieldValue>
+            <valueName>Active</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Member</controllingFieldValue>
+            <controllingFieldValue>Special_Composite</controllingFieldValue>
+            <controllingFieldValue>Additional_Store</controllingFieldValue>
+            <valueName>Active - Don&#39;t Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Member</controllingFieldValue>
+            <controllingFieldValue>Special_Composite</controllingFieldValue>
+            <controllingFieldValue>Additional_Store</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Member</controllingFieldValue>
+            <controllingFieldValue>Special_Composite</controllingFieldValue>
+            <controllingFieldValue>Additional_Store</controllingFieldValue>
+            <valueName>Disconnected</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X20_Groups_Jessica_s_Mods_Groups</fullName>
+    <columns>NAME</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <columns>Country__c</columns>
+    <columns>Franchise_s__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Meeting_Length__c</columns>
+    <columns>Meetings_per_Year_upload__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>deleted</value>
+    </filters>
+    <filters>
+        <field>SuperType__c</field>
+        <operation>equals</operation>
+        <value>Dealer 20 Groups,Industry 20 Groups,Manager 20 Groups,Manufacturers Groups</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Twenty_Groups__c.NCM_Group,Twenty_Groups__c.X20_Group_ConSept</value>
+    </filters>
+    <filters>
+        <field>NCM_Support_Staff__c</field>
+        <operation>equals</operation>
+        <value>Jessica Wiemers</value>
+    </filters>
+    <label>20 Groups - Jessica&#39;s Mods/Groups</label>
+</ListView>

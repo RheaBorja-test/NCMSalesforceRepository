@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tradeshow_Tactic</fullName>
+    <active>true</active>
+    <description>Specific to Tradeshow Sub Projects</description>
+    <label>Tradeshow Tactic</label>
+    <picklistValues>
+        <picklist>Campaign_Tactic__c</picklist>
+        <values>
+            <fullName>Adwords - PPC Keywords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ad External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ad Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beep DVM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Complex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Simple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Composite Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Linked In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoted Social Post Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Ad Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Ad Linked In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tradeshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video In Studio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video On Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initiating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

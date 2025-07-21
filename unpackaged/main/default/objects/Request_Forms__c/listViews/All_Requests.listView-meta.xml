@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Requests</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Request_Name__c</columns>
+    <columns>NCM_Services_Supported__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Total_Projects_in_Request__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Department__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Name__c</field>
+        <operation>notContain</operation>
+        <value>RFP -</value>
+    </filters>
+    <label>All Requests</label>
+</ListView>

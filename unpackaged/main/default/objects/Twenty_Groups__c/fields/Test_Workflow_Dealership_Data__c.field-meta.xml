@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Workflow_Dealership_Data__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://workflow.appextremes.com/apps/Conga/PointMerge.aspx?SessionId=&quot; &amp; $Api.Session_ID &amp; &quot;&amp;ServerUrl=&quot; &amp; $Api.Partner_Server_URL_80 &amp; Conductor_URL_Dealership_Data_Form__c , &quot;Test Conga Workflow URL via UI&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Test Workflow Dealership Data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>4th Floor - Central A</fullName>
+        <default>false</default>
+        <label>4th Floor - Central A</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - Central B</fullName>
+        <default>false</default>
+        <label>4th Floor - Central B</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - Central C</fullName>
+        <default>false</default>
+        <label>4th Floor - Central C</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - DAB</fullName>
+        <default>false</default>
+        <label>4th Floor - DAB</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - Central ABC</fullName>
+        <default>false</default>
+        <label>4th Floor - Central ABC</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - 47 A</fullName>
+        <default>false</default>
+        <label>4th Floor - 47 A</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - 47 B</fullName>
+        <default>false</default>
+        <label>4th Floor - 47 B</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - 47 AB</fullName>
+        <default>false</default>
+        <label>4th Floor - 47 AB</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - Central BC</fullName>
+        <default>false</default>
+        <label>4th Floor - Central BC</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - Central AB</fullName>
+        <default>false</default>
+        <label>4th Floor - Central AB</label>
+    </customValue>
+    <customValue>
+        <fullName>4th Floor - 88</fullName>
+        <default>false</default>
+        <label>4th Floor - 88</label>
+    </customValue>
+    <customValue>
+        <fullName>Self _-_Study_VT</fullName>
+        <default>false</default>
+        <label>Self - Study VT</label>
+    </customValue>
+    <customValue>
+        <fullName>Live Session - VT</fullName>
+        <default>false</default>
+        <label>Live Session - VT</label>
+    </customValue>
+    <customValue>
+        <fullName>Offsite</fullName>
+        <default>false</default>
+        <label>Offsite</label>
+    </customValue>
+    <customValue>
+        <fullName>6th Floor - North Star</fullName>
+        <default>false</default>
+        <label>6th Floor - North Star</label>
+    </customValue>
+    <customValue>
+        <fullName>6th Floor - Legacy</fullName>
+        <default>false</default>
+        <label>6th Floor - Legacy</label>
+    </customValue>
+    <customValue>
+        <fullName>6th Floor - Lighthouse</fullName>
+        <default>false</default>
+        <label>6th Floor - Lighthouse</label>
+    </customValue>
+    <customValue>
+        <fullName>47 A</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>47 A</label>
+    </customValue>
+    <customValue>
+        <fullName>88</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>88</label>
+    </customValue>
+    <customValue>
+        <fullName>Central BC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central BC</label>
+    </customValue>
+    <customValue>
+        <fullName>Central ABC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central ABC</label>
+    </customValue>
+    <customValue>
+        <fullName>DAB</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>DAB</label>
+    </customValue>
+    <customValue>
+        <fullName>Central C</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central C</label>
+    </customValue>
+    <customValue>
+        <fullName>Central B</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central B</label>
+    </customValue>
+    <customValue>
+        <fullName>Central A</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central A</label>
+    </customValue>
+    <customValue>
+        <fullName>Central AB</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central AB</label>
+    </customValue>
+    <customValue>
+        <fullName>47 AB</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>47 AB</label>
+    </customValue>
+    <customValue>
+        <fullName>47 B</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>47 B</label>
+    </customValue>
+    <description>Room the class will be held in the NCM Campus building</description>
+    <masterLabel>NCM Campus Room</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

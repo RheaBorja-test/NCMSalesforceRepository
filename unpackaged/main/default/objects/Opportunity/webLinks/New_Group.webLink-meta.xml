@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Group</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Group</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a0h/e?00N5B000001Hfqb=Yes&amp;retURL={!Opportunity.Id}</url>
+</WebLink>

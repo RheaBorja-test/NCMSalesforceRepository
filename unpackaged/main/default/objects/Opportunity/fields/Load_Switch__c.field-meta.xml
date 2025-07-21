@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Load_Switch__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for kicking records to cause updates - only used by administrators to mark as a record data change.</description>
+    <label>Load Switch (code)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

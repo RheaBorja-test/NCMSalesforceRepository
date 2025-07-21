@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>actcode__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Only need to utilize if there are multiple Experient Events active at the same time, otherwise only adjust at the Org Default level</inlineHelpText>
+    <label>actcode</label>
+    <length>16</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

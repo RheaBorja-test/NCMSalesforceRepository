@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_No_Bill__c</fullName>
+    <label>Active - No Bill</label>
+    <summaryFilterItems>
+        <field>X20_Groups_Member__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Active - Don&#39;t Bill</value>
+    </summaryFilterItems>
+    <summaryForeignKey>X20_Groups_Member__c.Group_ID__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

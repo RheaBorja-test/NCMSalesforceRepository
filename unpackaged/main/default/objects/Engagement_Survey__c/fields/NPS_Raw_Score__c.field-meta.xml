@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NPS_Raw_Score__c</fullName>
+    <description>Stores the string value of the NPS score if the survey provider only sends NPS as a string (ex: &quot;3&quot;) instead of a proper integer value.</description>
+    <externalId>false</externalId>
+    <label>NPS Raw Score</label>
+    <length>5</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

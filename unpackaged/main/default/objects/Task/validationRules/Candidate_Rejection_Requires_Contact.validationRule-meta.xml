@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Rejection_Requires_Contact</fullName>
+    <active>true</active>
+    <description>When a candidate is rejected, the &quot;Candidate has been notified&quot; checkbox has to be checked before the task can be marked complete.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Candidate_Approval&quot;,
+ ISPICKVAL( Approval_Decision__c , &quot;Reject&quot; ),
+ Candidate_has_been_notified__c = FALSE,
+ ISCHANGED( Status ),
+ ISPICKVAL( Status , &quot;Completed&quot;)
+)</errorConditionFormula>
+    <errorMessage>Because the Approval Decision is &quot;Rejected&quot; the &quot;Candidate has been notified&quot; checkbox must be checked before this Task can be marked &quot;Completed&quot;.</errorMessage>
+</ValidationRule>

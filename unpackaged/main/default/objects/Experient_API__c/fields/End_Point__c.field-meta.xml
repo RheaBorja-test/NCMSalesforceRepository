@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Point__c</fullName>
+    <inlineHelpText>Shouldn&#39;t ever have to change. Better to adjust at the Org Default Level</inlineHelpText>
+    <label>End Point</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

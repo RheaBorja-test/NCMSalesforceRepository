@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Stamp_Can_Spam__c</fullName>
+    <description>Date the Canadian customer declined any further &quot;spam&quot; marketing emails</description>
+    <inlineHelpText>Date the Canadian customer declined any further &quot;spam&quot; marketing emails</inlineHelpText>
+    <label>Date Stamp (CASL)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

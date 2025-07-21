@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Curriculum__c</fullName>
+    <label>Curriculum Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BHPH</fullName>
+                <default>false</default>
+                <label>BHPH</label>
+            </value>
+            <value>
+                <fullName>Virtual Training</fullName>
+                <default>false</default>
+                <label>Virtual Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

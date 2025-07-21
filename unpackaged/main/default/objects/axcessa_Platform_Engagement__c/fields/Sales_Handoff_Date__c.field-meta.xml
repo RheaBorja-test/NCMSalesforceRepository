@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Handoff_Date__c</fullName>
+    <inlineHelpText>Date the aXcessa salesperson and SES completed customer handoff after Training is complete</inlineHelpText>
+    <label>Sales Hand-off Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

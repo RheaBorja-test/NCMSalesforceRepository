@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Rating_Code__c</fullName>
+    <externalId>false</externalId>
+    <formula>Active_User_Change_Code__c + 
+Active_User_Rating_Code__c + 
+Report_Usage_Change_Code__c + 
+Report_Usage_Rating_Code__c + 
+Tenure_Code__c +  
+Engagement_Rating_Code__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Client Rating Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

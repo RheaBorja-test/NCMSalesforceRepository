@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Franchise__c</fullName>
+    <label>Franchise - Deprecated</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BMW</fullName>
+                <default>false</default>
+                <label>BMW</label>
+            </value>
+            <value>
+                <fullName>BMW MOTORCYCLE</fullName>
+                <default>false</default>
+                <label>BMW MOTORCYCLE</label>
+            </value>
+            <value>
+                <fullName>BODY SHOP</fullName>
+                <default>false</default>
+                <label>BODY SHOP</label>
+            </value>
+            <value>
+                <fullName>BUICK</fullName>
+                <default>false</default>
+                <label>BUICK</label>
+            </value>
+            <value>
+                <fullName>BUY HERE PAY HERE</fullName>
+                <default>false</default>
+                <label>BUY HERE PAY HERE</label>
+            </value>
+            <value>
+                <fullName>CADILLAC</fullName>
+                <default>false</default>
+                <label>CADILLAC</label>
+            </value>
+            <value>
+                <fullName>CHEVROLET</fullName>
+                <default>false</default>
+                <label>CHEVROLET</label>
+            </value>
+            <value>
+                <fullName>CHRYSLER</fullName>
+                <default>false</default>
+                <label>CHRYSLER</label>
+            </value>
+            <value>
+                <fullName>CHRYSLER/PLYMOUTH</fullName>
+                <default>false</default>
+                <label>CHRYSLER/PLYMOUTH</label>
+            </value>
+            <value>
+                <fullName>COMPACT EQUIPMENT</fullName>
+                <default>false</default>
+                <label>COMPACT EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>CULLIGAN WATER</fullName>
+                <default>false</default>
+                <label>CULLIGAN WATER</label>
+            </value>
+            <value>
+                <fullName>FORD</fullName>
+                <default>false</default>
+                <label>FORD</label>
+            </value>
+            <value>
+                <fullName>GENERAL MOTORS</fullName>
+                <default>false</default>
+                <label>GENERAL MOTORS</label>
+            </value>
+            <value>
+                <fullName>HARLEY-DAVIDSON</fullName>
+                <default>false</default>
+                <label>HARLEY-DAVIDSON</label>
+            </value>
+            <value>
+                <fullName>HONDA</fullName>
+                <default>false</default>
+                <label>HONDA</label>
+            </value>
+            <value>
+                <fullName>HYUNDAI</fullName>
+                <default>false</default>
+                <label>HYUNDAI</label>
+            </value>
+            <value>
+                <fullName>IND. HVY TRK LEASE/RENTAL</fullName>
+                <default>false</default>
+                <label>IND. HVY TRK LEASE/RENTAL</label>
+            </value>
+            <value>
+                <fullName>HINO</fullName>
+                <default>false</default>
+                <label>HINO</label>
+            </value>
+            <value>
+                <fullName>INDEPENDENT AUCTION</fullName>
+                <default>false</default>
+                <label>INDEPENDENT AUCTION</label>
+            </value>
+            <value>
+                <fullName>INFINITI</fullName>
+                <default>false</default>
+                <label>INFINITI</label>
+            </value>
+            <value>
+                <fullName>JAGUAR</fullName>
+                <default>false</default>
+                <label>JAGUAR</label>
+            </value>
+            <value>
+                <fullName>KENWORTH HEAVY TRUCK</fullName>
+                <default>false</default>
+                <label>KENWORTH HEAVY TRUCK</label>
+            </value>
+            <value>
+                <fullName>KIA</fullName>
+                <default>false</default>
+                <label>KIA</label>
+            </value>
+            <value>
+                <fullName>LAND ROVER</fullName>
+                <default>false</default>
+                <label>LAND ROVER</label>
+            </value>
+            <value>
+                <fullName>LEXUS</fullName>
+                <default>false</default>
+                <label>LEXUS</label>
+            </value>
+            <value>
+                <fullName>MAZDA</fullName>
+                <default>false</default>
+                <label>MAZDA</label>
+            </value>
+            <value>
+                <fullName>MERCEDES-BENZ</fullName>
+                <default>false</default>
+                <label>MERCEDES-BENZ</label>
+            </value>
+            <value>
+                <fullName>MITSUBISHI</fullName>
+                <default>false</default>
+                <label>MITSUBISHI</label>
+            </value>
+            <value>
+                <fullName>MULTI-FRANCHISE</fullName>
+                <default>false</default>
+                <label>MULTI-FRANCHISE</label>
+            </value>
+            <value>
+                <fullName>NISSAN</fullName>
+                <default>false</default>
+                <label>NISSAN</label>
+            </value>
+            <value>
+                <fullName>OLDSMOBILE</fullName>
+                <default>false</default>
+                <label>OLDSMOBILE</label>
+            </value>
+            <value>
+                <fullName>PONTIAC</fullName>
+                <default>false</default>
+                <label>PONTIAC</label>
+            </value>
+            <value>
+                <fullName>PORSCHE</fullName>
+                <default>false</default>
+                <label>PORSCHE</label>
+            </value>
+            <value>
+                <fullName>SERVICE CENTER</fullName>
+                <default>false</default>
+                <label>SERVICE CENTER</label>
+            </value>
+            <value>
+                <fullName>SUBARU</fullName>
+                <default>false</default>
+                <label>SUBARU</label>
+            </value>
+            <value>
+                <fullName>TOYOTA</fullName>
+                <default>false</default>
+                <label>TOYOTA</label>
+            </value>
+            <value>
+                <fullName>UTILITY TRAILERS</fullName>
+                <default>false</default>
+                <label>UTILITY TRAILERS</label>
+            </value>
+            <value>
+                <fullName>VOLKSWAGEN</fullName>
+                <default>false</default>
+                <label>VOLKSWAGEN</label>
+            </value>
+            <value>
+                <fullName>VOLVO</fullName>
+                <default>false</default>
+                <label>VOLVO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_One_Setup_Fee_for_20G_or_Prop_Group</fullName>
+    <active>true</active>
+    <description>Setup Fee products can only have a quantity of 1 for 20 Group and Prop Group opportunities.</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Product2.Type__c, &quot;Setup Fee&quot;),
+ OR(
+   Opportunity.RecordType.DeveloperName = &quot;X20_Groups&quot;,
+   Opportunity.RecordType.DeveloperName = &quot;Proprietary&quot;
+ ),
+ Quantity &gt; 1
+)</errorConditionFormula>
+    <errorDisplayField>Quantity</errorDisplayField>
+    <errorMessage>Setup Fees can only have a quantity of 1 for 20 Group and Proprietary/Benchmark opportunities.</errorMessage>
+</ValidationRule>

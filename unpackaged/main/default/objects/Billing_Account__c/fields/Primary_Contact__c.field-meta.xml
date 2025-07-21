@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Primary contact for all billing related items related to this Billing Account - may be an authorized user, the card holder or finance personnel.</inlineHelpText>
+    <label>Billing Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Finance Accounts</relationshipLabel>
+    <relationshipName>Billing_Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

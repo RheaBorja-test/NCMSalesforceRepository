@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Moderator_Consultant_Instructor__c</fullName>
+    <label>NCM Associate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bob Sloan</fullName>
+                <default>false</default>
+                <label>Bob Sloan</label>
+            </value>
+            <value>
+                <fullName>Brain Faulkenberry</fullName>
+                <default>false</default>
+                <label>Brain Faulkenberry</label>
+            </value>
+            <value>
+                <fullName>Brent Carmichael</fullName>
+                <default>false</default>
+                <label>Brent Carmichael</label>
+            </value>
+            <value>
+                <fullName>Chris Kahrs</fullName>
+                <default>false</default>
+                <label>Chris Kahrs</label>
+            </value>
+            <value>
+                <fullName>Don Rothrauff</fullName>
+                <default>false</default>
+                <label>Don Rothrauff</label>
+            </value>
+            <value>
+                <fullName>Dustin Kerr</fullName>
+                <default>false</default>
+                <label>Dustin Kerr</label>
+            </value>
+            <value>
+                <fullName>George Gowen</fullName>
+                <default>false</default>
+                <label>George Gowen</label>
+            </value>
+            <value>
+                <fullName>Jeff Lampton</fullName>
+                <default>false</default>
+                <label>Jeff Lampton</label>
+            </value>
+            <value>
+                <fullName>Jerry Powers</fullName>
+                <default>false</default>
+                <label>Jerry Powers</label>
+            </value>
+            <value>
+                <fullName>Joe Basil</fullName>
+                <default>false</default>
+                <label>Joe Basil</label>
+            </value>
+            <value>
+                <fullName>John Gilbert</fullName>
+                <default>false</default>
+                <label>John Gilbert</label>
+            </value>
+            <value>
+                <fullName>Ken Runnells</fullName>
+                <default>false</default>
+                <label>Ken Runnells</label>
+            </value>
+            <value>
+                <fullName>Kevin Cunningham</fullName>
+                <default>false</default>
+                <label>Kevin Cunningham</label>
+            </value>
+            <value>
+                <fullName>Kirk Felix</fullName>
+                <default>false</default>
+                <label>Kirk Felix</label>
+            </value>
+            <value>
+                <fullName>Lee Michaelson</fullName>
+                <default>false</default>
+                <label>Lee Michaelson</label>
+            </value>
+            <value>
+                <fullName>Leo Hart</fullName>
+                <default>false</default>
+                <label>Leo Hart</label>
+            </value>
+            <value>
+                <fullName>Lycia Jedlicki</fullName>
+                <default>false</default>
+                <label>Lycia Jedlicki</label>
+            </value>
+            <value>
+                <fullName>Mark Shackelford</fullName>
+                <default>false</default>
+                <label>Mark Shackelford</label>
+            </value>
+            <value>
+                <fullName>Richard Ackman</fullName>
+                <default>false</default>
+                <label>Richard Ackman</label>
+            </value>
+            <value>
+                <fullName>Rick Wegley</fullName>
+                <default>false</default>
+                <label>Rick Wegley</label>
+            </value>
+            <value>
+                <fullName>Robert Neuman</fullName>
+                <default>false</default>
+                <label>Robert Neuman</label>
+            </value>
+            <value>
+                <fullName>Robin Cunningham</fullName>
+                <default>false</default>
+                <label>Robin Cunningham</label>
+            </value>
+            <value>
+                <fullName>Ron Caruso</fullName>
+                <default>false</default>
+                <label>Ron Caruso</label>
+            </value>
+            <value>
+                <fullName>Steve Emery</fullName>
+                <default>false</default>
+                <label>Steve Emery</label>
+            </value>
+            <value>
+                <fullName>Steve Hall</fullName>
+                <default>false</default>
+                <label>Steve Hall</label>
+            </value>
+            <value>
+                <fullName>Steve Kain</fullName>
+                <default>false</default>
+                <label>Steve Kain</label>
+            </value>
+            <value>
+                <fullName>Terry Wichmann</fullName>
+                <default>false</default>
+                <label>Terry Wichmann</label>
+            </value>
+            <value>
+                <fullName>Tony Albertson</fullName>
+                <default>false</default>
+                <label>Tony Albertson</label>
+            </value>
+            <value>
+                <fullName>Wayne George</fullName>
+                <default>false</default>
+                <label>Wayne George</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

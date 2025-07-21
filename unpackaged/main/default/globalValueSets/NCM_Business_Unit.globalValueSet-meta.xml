@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>20 Group</fullName>
+        <default>false</default>
+        <label>20 Group</label>
+    </customValue>
+    <customValue>
+        <fullName>aXcessa</fullName>
+        <default>false</default>
+        <label>aXcessa</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Talent Solutions</fullName>
+        <default>false</default>
+        <label>Business Talent Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <label>Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Performance Solutions</fullName>
+        <default>false</default>
+        <label>Digital Performance Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Echo</fullName>
+        <default>false</default>
+        <label>Echo</label>
+    </customValue>
+    <customValue>
+        <fullName>General NCM</fullName>
+        <default>false</default>
+        <label>General NCM</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck</fullName>
+        <default>false</default>
+        <label>Healthcheck</label>
+    </customValue>
+    <customValue>
+        <fullName>Leadership Development</fullName>
+        <default>false</default>
+        <label>Leadership Development</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Institute</fullName>
+        <default>false</default>
+        <label>NCM Institute</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM Institute Subscription</fullName>
+        <default>false</default>
+        <label>NCM Institute Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM / Group Program</fullName>
+        <default>false</default>
+        <label>OEM / Group Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Private 20 Group Training</fullName>
+        <default>false</default>
+        <label>Private 20 Group Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Proprietary</fullName>
+        <default>false</default>
+        <label>Proprietary</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Member Product</fullName>
+        <default>false</default>
+        <label>Single Member Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel Solutions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Travel Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Core</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Core</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcheck for 20 Groups</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Healthcheck for 20 Groups</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Management Solutions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business Management Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>TAG/DHG</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TAG/DHG</label>
+    </customValue>
+    <customValue>
+        <fullName>Benchmark Product/Composite</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Benchmark Product/Composite</label>
+    </customValue>
+    <customValue>
+        <fullName>LiveAudit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>LiveAudit</label>
+    </customValue>
+    <description>All NCM Business Units</description>
+    <masterLabel>NCM Business Unit</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

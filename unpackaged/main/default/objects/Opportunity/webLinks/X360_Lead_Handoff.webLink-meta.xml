@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X360_Lead_Handoff</fullName>
+    <availability>online</availability>
+    <description>Handsoff a lead to selected division.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>360 Lead Handoff</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Leads_Pipeline_360_Lead_Creation?varOpportunityID={!Opportunity.Id}
+&amp;retURL={!Opportunity.Id}</url>
+</WebLink>

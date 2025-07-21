@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_LOE_Total__c</fullName>
+    <label>Stage LOE Total</label>
+    <summarizedField>Marketing_Project_Stage__c.Stage_LOE__c</summarizedField>
+    <summaryForeignKey>Marketing_Project_Stage__c.Marketing_Project__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Sponsor of engagement attendee. This can be the Member of a 20 Group, the point of contact for an attendee etc.</inlineHelpText>
+    <label>Sponsor</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Engagement Attendees (Sponsor)</relationshipLabel>
+    <relationshipName>Engagement_Attendees1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

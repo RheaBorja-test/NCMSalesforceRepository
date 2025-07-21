@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_Field_Numbers_only</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(REGEX(MobilePhone,&quot;^[0-9]+$&quot;)) &amp;&amp; NOT(ISBLANK(MobilePhone))</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Enter only numeric values into a Mobile field.</errorMessage>
+</ValidationRule>

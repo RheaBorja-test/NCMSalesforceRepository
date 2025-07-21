@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Months_on_axcessa__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(MONTH(Disconnected_Program__c)&gt;0,
+
+
+
+((YEAR(Disconnected_Program__c) *12)+MONTH(Disconnected_Program__c))
+
+ +
+
+(
+IF((MONTH (Disconnected_Program__c) = MONTH(Program_Start__c)),0,1)
+) 
+
+- 
+
+((YEAR(Program_Start__c) * 12) + MONTH(Program_Start__c))
+
+,
+
+
+
+((YEAR(Today()) *12)+MONTH(Today()))
+
+ +
+
+(
+IF((MONTH (Today()) = MONTH(Program_Start__c)),0,1)
+) 
+
+- 
+
+((YEAR(Program_Start__c) * 12) + MONTH(Program_Start__c))
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Months on aXcessa</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

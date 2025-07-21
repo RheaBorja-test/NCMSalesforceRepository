@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Year__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to the Marketing Year record (Campaign Parent Super Hiearchy)</description>
+    <label>Marketing Year</label>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Campaigns (Marketing Year)</relationshipLabel>
+    <relationshipName>Campaigns4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

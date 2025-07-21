@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Send_Mod_Candidate</fullName>
+    <availability>online</availability>
+    <description>Created by Conga Solution Manager. Record link: https://ncm--apxtconga4.visualforce.com/a0F4w00001mf2RZEAY.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Send Mod Candidate</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!X20_Groups_Member__c.Id}
+
+&amp;QueryId=[20GATT]0Q_036MAK335001
+
+&amp;CongaEmailTemplateId=0E_032MAK692138
+
+&amp;EmailToId={!X20_Groups_Member__c.Group_Owner_Contact_Id__c}
+&amp;EmailAdditionalTo={!X20_Groups_Member__c.Support_Staff_Contact_Id__c}</url>
+    <width>900</width>
+</WebLink>

@@ -1,0 +1,3 @@
+<apex:page standardController="c2g__codaInvoice__c">
+        <apex:iframe src="https://ncmassociates.secure.force.com/pmtx/p2f__SiteInvoiceFF?id={!c2g__codaInvoice__c.id}" width="100%" height="500" scrolling="true"/>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Discarded_Need_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(Discarded__c = TRUE,Discard_Reason__c = NULL),
+AND(Discarded__c = TRUE,LEN(Discard_Reason__c)&lt;10
+))</errorConditionFormula>
+    <errorMessage>Reason is required or is less than 10 characters in length!</errorMessage>
+</ValidationRule>

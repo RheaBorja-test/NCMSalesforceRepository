@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_20_Groups</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Membership_Count__c</columns>
+    <columns>Current_Candidates__c</columns>
+    <columns>Disconnected_Members__c</columns>
+    <columns>Rejected_Candidates__c</columns>
+    <columns>NCM_Proprietor__c</columns>
+    <columns>Group_Name__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>NCM_Support_Staff__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Delete_Date__c</columns>
+    <columns>Date_Last_Verfied__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Delete_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>My 20 Groups</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Email__c</fullName>
+    <description>Displays either the 20 Group Member Contact Email or the Proprietary Account Contact Email</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( X20_Group_Member_Contact__c )),
+   X20_Group_Member_Contact__r.Member_Email__c,
+    Proprietary_Account_Contact__r.Member_Email__c 
+)</formula>
+    <label>Member Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

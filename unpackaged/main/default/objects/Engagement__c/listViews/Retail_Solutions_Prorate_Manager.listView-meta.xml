@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail_Solutions_Prorate_Manager</fullName>
+    <columns>Engagement_Start_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Engagement_Owner__c</columns>
+    <columns>Group_No__c</columns>
+    <columns>Engagement_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>No_Prorate_Required__c</columns>
+    <columns>Prorate_Submitted_to_Accounting__c</columns>
+    <columns>Prorate_Invoiced__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Engagement_Type__c</field>
+        <operation>equals</operation>
+        <value>20 Group,Special Meeting (20 Group)</value>
+    </filters>
+    <filters>
+        <field>Engagement_Start_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Engagement__c.X20_Group</value>
+    </filters>
+    <filters>
+        <field>No_Prorate_Required__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Firm,In Progress,Cancelled,Engagement Complete</value>
+    </filters>
+    <filters>
+        <field>Prorate_Invoiced__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Retail Solutions - Prorate Management</label>
+</ListView>

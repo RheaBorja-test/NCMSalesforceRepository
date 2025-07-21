@@ -1,0 +1,121 @@
+<apex:page doctype="html-5.0" sidebar="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false" lightningStylesheets="true">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
+    <apex:slds />
+    <apex:includeLightning />
+    
+    <script>
+        var j$ = jQuery.noConflict();
+    </script>
+    
+    <html style="height:100%">
+        <body class="slds-scope" style="height:100%">
+                <div class="slds-text-heading_large slds-p-around_medium">
+                    Welcome to Salesforce!
+                </div>
+            
+            <div class="slds-section">
+                <h3 class="slds-section__title">
+                    <div aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="false">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                 xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#switch" />
+                        </svg>
+                        <span class="slds-truncate" title="Navigation">Login to a Different Environment</span>
+                    </div>
+                </h3>
+                
+                <div aria-hidden="false" class="slds-section__content" id="expando-unique-id"> 
+                    <div class="slds-grid slds-wrap slds-p-around_small">
+                        
+                        <apex:outputPanel layout="block" styleClass="slds-col slds-p-horizontal_small slds-size_1-of-3">
+                            <a href="https://ncm.my.salesforce.com" target="_blank" rel="noreferrer" class="slds-box slds-box_link slds-box_x-small slds-media">
+                                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                                    <span class="slds-icon_container slds-icon-utility-salesforce1 slds-current-color">
+                                        <svg class="slds-icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                                 xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#salesforce1" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body slds-border_left slds-p-around_small">
+                                    <h2 class="slds-truncate slds-text-heading_small" title="Production">Production</h2>
+                                    <p class="slds-m-top_small">Click here to navigate back to Production</p>
+                                </div>
+                            </a>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel layout="block" styleClass="slds-col slds-p-horizontal_small slds-size_1-of-3">
+                            <a href="https://ncm--NCMUAT.sandbox.my.salesforce.com" target="_blank" rel="noreferrer" class="slds-box slds-box_link slds-box_x-small slds-media">
+                                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                                    <span class="slds-icon_container slds-icon-utility-setup_assistant_guide">
+                                        <svg class="slds-icon slds-icon-text-success" aria-hidden="true">
+                                            <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#setup_assistant_guide" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body slds-border_left slds-p-around_small">
+                                    <h2 class="slds-truncate slds-text-heading_small" title="User Acceptance Testing">UAT</h2>
+                                    <p class="slds-m-top_small">Click here to navigate to our User Acceptance Testing Sandbox</p>
+                                </div>
+                            </a>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel layout="block" styleClass="slds-col slds-p-horizontal_small slds-size_1-of-3">
+                            <a href="https://ncm--NCMSIT.sandbox.my.salesforce.com" target="_blank" rel="noreferrer" class="slds-box slds-box_link slds-box_x-small slds-media">
+                                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                                    <span class="slds-icon_container slds-icon-utility-magicwand">
+                                        <svg class="slds-icon slds-icon-text-warning" aria-hidden="true">
+                                            <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#magicwand" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body slds-border_left slds-p-around_small">
+                                    <h2 class="slds-truncate slds-text-heading_small" title="Systems Integration Testing">SIT</h2>
+                                    <p class="slds-m-top_small">Click here to navigate to our Systems Integration Testing Sandbox</p>
+                                </div>
+                            </a>
+                        </apex:outputPanel>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-tabs_default" style="height: calc(100% - 200px); ">
+                <ul class="slds-tabs_default__nav" role="tablist">
+                    <li class="slds-tabs_default__item slds-is-active" title="Sandbox Instructions" role="presentation">
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" 
+                           tabindex="-1" aria-selected="true" aria-controls="tab-default-2" id="tab-default-2__item">
+                            Sandbox Instructions
+                        </a>
+                    </li>
+                </ul>
+                
+                
+                <div id="tab-default-2" style="height:100%;" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">
+                    <apex:iframe id="loginTraining" src="https://ncm.my.salesforce.com/sfc/p/A0000000HxFl/a/4A000000U0dm/7PSJD.IJQV1ZAOViwpFW87VHDEmvl1qqQLn1wGlvmfw" frameborder="false" scrolling="true" height="100%" width="100%"/>
+                </div>
+            </div>
+            
+        </body>
+    </html>
+    
+    <script>
+    j$('.slds-tabs_default__link,.slds-tabs_scoped__link').click(function(){
+        j$(this).parent().parent().find('.slds-tabs_default__link,.slds-tabs_scoped__link').attr('aria-selected','false');
+        j$(this).attr('aria-selected','true');
+        j$(this).parent().parent().find('.slds-tabs_default__link,.slds-tabs_scoped__link').attr('tabindex','-1');
+        j$(this).attr('tabindex','0');
+        j$(this).parent().addClass('slds-is-active').siblings().removeClass('slds-is-active');
+        j$(this).parent().parent().parent().find('.'+j$(this).parent().parent().parent().find('.slds-tabs_default__content,.slds-tabs_scoped__content')[0].classList[0]).removeClass('slds-show').addClass('slds-hide');
+        j$(this).parent().parent().parent().find('#'+j$(this).attr('aria-controls')).removeClass('slds-hide').addClass('slds-show');
+    }); 
+    </script>
+    
+    <script>
+    j$('.slds-section__title-action').click(function(){
+        j$(this).parent().parent().toggleClass('slds-is-open');
+    }); 
+    </script>
+    
+</apex:page>

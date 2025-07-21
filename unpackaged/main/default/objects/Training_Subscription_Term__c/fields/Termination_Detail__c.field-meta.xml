@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Termination_Detail__c</fullName>
+    <label>Termination Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Termination_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Cancel_and_Disconnect_Details</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Ally Academy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>AMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>ATI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>AutoSoft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Budget Constraint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>CADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>CDK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Changed Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Changed Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Class Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>College of Automotive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Company Purchased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Cox</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Dealer Bible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Dealer Ops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Dealer Phoenix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Deceased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Decreasing Company Expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>DSP 20 Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Executive Eye/Dealer Dashboard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Frog Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Georgian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Group Dissolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Group Excellence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Individual Cancelled - Illness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Individual Cancelled - Unknown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Individual - No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Internal Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Kintz Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Lost Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Maritz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Meeting Format</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Moderator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>MSX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>NADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>NIADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Northwood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Online Dealer Academy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Out of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>PBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>PDI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Personnel Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Price Increase/DRF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Price Reduction/too expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Quorumn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Reynolds Ownership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Serti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Spader</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Strategic Alliance Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Terminated by Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>The Academy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Time Constraint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Incompatible</controllingFieldValue>
+            <controllingFieldValue>Employment Status</controllingFieldValue>
+            <controllingFieldValue>Buy/Sell</controllingFieldValue>
+            <controllingFieldValue>Timing</controllingFieldValue>
+            <valueName>Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Transferring to Subscription</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCMi_Cancellation_Policy__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	NOT( ISBLANK( Training_Credit__c ) ),
+	&quot;Individual classes that are canceled will need to be rescheduled by the agreement date found on your Contract. If the credit is not rescheduled by this date, it will be forfeited.&quot;,
+	IF(
+	    ISBLANK( Training_Subscription_Account__c ),
+	    &quot;Cancellations under 30 days prior to session can be made without penalty, as long as the class is rescheduled and attended within 6 months of the original date.&quot; &amp; BR() &amp; BR() &amp;
+	    &quot;If a refund is requested, the refund schedule is as follows:&quot; &amp; BR() &amp; BR() &amp;
+	    &quot;· Greater than 30 days prior to session, 100% refund&quot; &amp; BR() &amp;
+	    &quot;· 30-15 days prior to session, 75% refund&quot; &amp; BR() &amp;
+	    &quot;· Less than 15 days prior to session, 50% refund&quot; &amp; BR() &amp;
+	    &quot;· No-show, 0% refund&quot; &amp; BR() &amp; BR() &amp;
+	    &quot;Refunds must be requested within 1 year of original class date. All credits for cancelled classes expire in 1 year and will not be eligible for a refund.&quot;,
+	    IF(
+	        CONTAINS( Engagement__r.RecordType.Name, &#39;Onsite&#39;),
+	        &quot;We request a 3-week notice, at a minimum, for any class cancellations. If, for some reason, you are unable to notify us within that time frame, you and the contact listed on the subscription will receive documentation of the occurrence. Thereafter, for each additional occurrence for that subscription, you will be charged a $50/pp fee to the credit card on file for you subscription to cover the cost of the materials generated.&quot;,
+	        &quot;All cancellations must be received 3 weeks prior to the start of class. If, for some reason, you are unable to notify us within that time frame, the subscription account will be charged a $150/pp late cancellation fee. Both the attendee and subscription contact on file.&quot;
+	    )
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NCMi Cancellation Policy</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

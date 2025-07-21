@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reynolds_Invoiced_to_NCM__c</fullName>
+    <inlineHelpText>Amount Reynolds will invoice       Total -    (NCM (Total-DRF)*.30)</inlineHelpText>
+    <label>Reynolds Invoiced to NCM</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Email_Hard_Bounce__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Marketo has not been able to successfully email this address without a failure message from client side</inlineHelpText>
+    <label>Marketing Email Hard Bounce</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

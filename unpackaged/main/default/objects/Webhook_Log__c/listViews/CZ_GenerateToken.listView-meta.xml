@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CZ_GenerateToken</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Source__c</columns>
+    <columns>ChargeZoomId__c</columns>
+    <columns>data__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source__c</field>
+        <operation>equals</operation>
+        <value>CZ::GenerateToken</value>
+    </filters>
+    <label>CZ::GenerateToken</label>
+</ListView>

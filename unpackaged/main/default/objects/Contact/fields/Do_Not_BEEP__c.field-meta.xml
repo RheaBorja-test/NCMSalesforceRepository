@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_BEEP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Through BEEP Campaigns these contacts have been sent back to us that it&#39;s the dealerships policy not to transfer to voicemail, We exclude them from future BEEP lists to reduce costs and increase response rates.</inlineHelpText>
+    <label>Do Not BEEP</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
